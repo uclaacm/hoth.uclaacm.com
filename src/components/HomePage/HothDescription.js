@@ -16,7 +16,7 @@ function HothDescription() {
 
     return (
       <div>
-        <Container maxwidth="med">
+        <Container maxWidth="md">
           <Grid
             container
             justify="center"
