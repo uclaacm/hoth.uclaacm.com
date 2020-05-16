@@ -6,4 +6,4 @@ const IndexPage = () => (
   <HothDescription />
 )
 
-export default IndexPage
+export default IndexPage;
