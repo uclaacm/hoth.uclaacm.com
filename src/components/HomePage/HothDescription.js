@@ -11,41 +11,41 @@ for hackers to check out and hack with. Learn more about our planned workshops,
 prize tracks and hardware below!`;
 
 const useStyles = makeStyles({
-  desc: {
-    textTransform: "uppercase"
-  },
+	desc: {
+		textTransform: 'uppercase'
+	}
 });
 
 export default function HothDescription() {
-    const theme = useTheme();
-    const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
+	const theme = useTheme();
+	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
-    const classes = useStyles();
+	const classes = useStyles();
 
-    return (
-      <div>
-        <Container maxWidth="md">
-          <Grid
-            container
-            justify="center"
-            alignItems="center"
-            spacing={isSmall ? 1 : 6}
-          >
-            <Grid item sm={9} md={5}>
-              <Typography
-                variant={isSmall ? "h4" : "h3"}
-                className={classes.desc}
-                align={isSmall ? "center" : "right"}
-                component="h3"
-              >
-                What is Hack on the Hill?
-              </Typography>
-            </Grid>
-            <Grid item sm={9} md={7}>
-              <Typography variant="p">{description}</Typography>
-            </Grid>
-          </Grid>
-        </Container>
-      </div>
-    );
+	return (
+		<div>
+			<Container maxWidth='md'>
+				<Grid
+					container
+					justify='center'
+					alignItems='center'
+					spacing={isSmall ? 1 : 6}
+				>
+					<Grid item sm={9} md={5}>
+						<Typography
+							variant={isSmall ? 'h4' : 'h3'}
+							className={classes.desc}
+							align={isSmall ? 'center' : 'right'}
+							component='h3'
+						>
+							What is Hack on the Hill?
+						</Typography>
+					</Grid>
+					<Grid item sm={9} md={7}>
+						<Typography variant='p'>{description}</Typography>
+					</Grid>
+				</Grid>
+			</Container>
+		</div>
+	);
 }

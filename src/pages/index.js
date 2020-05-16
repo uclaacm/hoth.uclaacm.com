@@ -1,9 +1,7 @@
-import React from "react"
+import React from 'react';
 
-import HothDescription from "../components/HomePage/HothDescription"
+import HothDescription from '../components/HomePage/HothDescription';
 
-const IndexPage = () => (
-  <HothDescription />
-)
+const IndexPage = () => <HothDescription />;
 
 export default IndexPage;
