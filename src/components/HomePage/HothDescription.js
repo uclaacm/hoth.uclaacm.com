@@ -3,7 +3,7 @@ import { Container, Typography, Grid } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-const description = `Hack on the Hill (HOTH) 7 is a 12-hour, beginner-friendly
+const description = `Hack on the Hill (HOTH) is a 12-hour, beginner-friendly
 hackathon designed to give beginners a glimpse into what a real hackathon would
 be and feel like. During HOTH, there will be workshops, mentors, and amazing
 prizes for the best hacks. We will also be providing a selection of hardware
