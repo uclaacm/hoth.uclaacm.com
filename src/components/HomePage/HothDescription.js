@@ -23,10 +23,10 @@ function HothDescription() {
             alignItems="center"
             spacing={isSmall ? 1 : 6}
           >
-            <Grid item sm={12} md={5}>
+            <Grid item sm={9} md={5}>
               <Typography variant={isSmall ? "h4" : "h3"} align={isSmall ? "center" : "right"}>WHAT IS HACK ON THE HILL?</Typography>
             </Grid>
-            <Grid item sm={12} md={7}>
+            <Grid item sm={9} md={7}>
               <Typography variant="p">{description}</Typography>
             </Grid>
           </Grid>
