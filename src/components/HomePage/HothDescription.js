@@ -10,6 +10,10 @@ prizes for the best hacks. We will also be providing a selection of hardware
 for hackers to check out and hack with. Learn more about our planned workshops,
 prize tracks and hardware below!`;
 
+const styles = theme => ({
+
+})
+
 function HothDescription() {
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
@@ -24,7 +28,7 @@ function HothDescription() {
             spacing={isSmall ? 1 : 6}
           >
             <Grid item sm={9} md={5}>
-              <Typography variant={isSmall ? "h4" : "h3"} align={isSmall ? "center" : "right"}>WHAT IS HACK ON THE HILL?</Typography>
+              <Typography variant={isSmall ? "h4" : "h3"} align={isSmall ? "center" : "right"}>What is Hack on the Hill?</Typography>
             </Grid>
             <Grid item sm={9} md={7}>
               <Typography variant="p">{description}</Typography>
