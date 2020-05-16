@@ -33,7 +33,7 @@ export default function HothDescription() {
           >
             <Grid item sm={9} md={5}>
               <Typography
-                variant="h3"
+                variant={isSmall ? "h4" : "h3"}
                 className={classes.desc}
                 align={isSmall ? "center" : "right"}
                 component="h3"
