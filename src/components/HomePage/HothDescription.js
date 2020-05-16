@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Typography, Grid } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import { useTheme, makeStyles } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const description = `Hack on the Hill (HOTH) is a 12-hour, beginner-friendly
@@ -10,13 +10,17 @@ prizes for the best hacks. We will also be providing a selection of hardware
 for hackers to check out and hack with. Learn more about our planned workshops,
 prize tracks and hardware below!`;
 
-const styles = theme => ({
+const useStyles = makeStyles({
+  desc: {
+    textTransform: "uppercase"
+  },
+});
 
-})
-
-function HothDescription() {
+export default function HothDescription() {
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
+
+    const classes = useStyles();
 
     return (
       <div>
@@ -28,7 +32,14 @@ function HothDescription() {
             spacing={isSmall ? 1 : 6}
           >
             <Grid item sm={9} md={5}>
-              <Typography variant={isSmall ? "h4" : "h3"} align={isSmall ? "center" : "right"}>What is Hack on the Hill?</Typography>
+              <Typography
+                variant="h3"
+                className={classes.desc}
+                align={isSmall ? "center" : "right"}
+                component="h3"
+              >
+                What is Hack on the Hill?
+              </Typography>
             </Grid>
             <Grid item sm={9} md={7}>
               <Typography variant="p">{description}</Typography>
@@ -38,5 +49,3 @@ function HothDescription() {
       </div>
     );
 }
-
-export default HothDescription;
