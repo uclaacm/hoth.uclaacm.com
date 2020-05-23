@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
-import { withStyles, ThemeProvider } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
@@ -10,8 +10,6 @@ import { ReactComponent as FacebookIcon } from './facebook.svg';
 import { ReactComponent as GitHubIcon } from './github.svg';
 import { ReactComponent as MediumIcon } from './medium.svg';
 import { ReactComponent as TwitterIcon } from './twitter.svg';
-import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
-import { colors } from '@material-ui/core';
 
 const styles = theme => ({
 	container: {
@@ -71,7 +69,7 @@ function Footer({ classes }) {
 						<div className={classes.copyright}>© ACM Hack 2020</div>
 					</Grid>
 					<Grid item xs={12} sm={12} md={4}>
-						<Button variant="contained">Join acm's mailing list</Button>
+						<Button variant="contained">Join ACM&rsquo;s mailing list</Button>
 					</Grid>
 				</Grid>
 			</Container>
