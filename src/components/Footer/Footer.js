@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, ThemeProvider } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
@@ -11,6 +11,7 @@ import { ReactComponent as GitHubIcon } from './github.svg';
 import { ReactComponent as MediumIcon } from './medium.svg';
 import { ReactComponent as TwitterIcon } from './twitter.svg';
 import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { colors } from '@material-ui/core';
 
 const styles = theme => ({
 	container: {
@@ -36,13 +37,19 @@ const styles = theme => ({
 		textTransform: 'uppercase'
 	},
 	button: {
-		fontSize: theme.typography.fontSize * 0.875
+		fontSize: theme.typography.fontSize * 0.875,
+		textTransform: 'uppercase'
 	},
 	buttonLink: {
 		textDecoration: 'none'
 	},
 	copyright: {
 		textTransform: 'uppercase'
+	},
+	input: {
+		backgroundColor: 'white',
+		paddingTop: '7px',
+		borderRadius: '10px'
 	}
 });
 
@@ -61,15 +68,10 @@ function Footer({ classes }) {
 						</div>
 					</Grid>
 					<Grid item xs={12} sm={12} md={4}>
-						<div>uclaacmhack@gmail.com</div>
-						<div className={classes.copyright}>© ACM Hack</div>
+						<div className={classes.copyright}>© ACM Hack 2020</div>
 					</Grid>
 					<Grid item xs={12} sm={12} md={4}>
-						<a className={classes.buttonLink} href="http://eepurl.com/c5pE6P" target="_blank" rel="noopener noreferrer">
-							<Button className={classes.button} variant="contained" color="secondary">
-								Join ACM’s Mailing List
-							</Button>
-						</a>
+						<Button variant="contained">Join acm's mailing list</Button>
 					</Grid>
 				</Grid>
 			</Container>
