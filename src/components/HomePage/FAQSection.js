@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Typography, Link } from '@material-ui/core';
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 
 import Add from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
@@ -28,7 +28,6 @@ const ExpansionPanel = withStyles({
 
 const ExpansionPanelSummary = withStyles({
 	root: {
-		// marginBottom: -1,
 		minHeight: 20,
 		'&$expanded': {
 			minHeight: 20
@@ -36,7 +35,7 @@ const ExpansionPanelSummary = withStyles({
 	},
 	content: {
 		'&$expanded': {
-			margin: '12px 0px'
+			margin: 0
 		}
 	},
 	expanded: {},
@@ -47,83 +46,63 @@ const ExpansionPanelSummary = withStyles({
 	}
 })(MuiExpansionPanelSummary);
 
-const ExpansionPanelDetails = withStyles({
-	root: {}
-})(MuiExpansionPanelDetails);
-
 function FAQSection() {
-	const [expanded, setExpanded] = React.useState('panel1');
+	const [expanded, setExpanded] = React.useState('faqPanel0');
 
 	const handleChange = panel => (event, newExpanded) => {
 		setExpanded(newExpanded ? panel : false);
 	};
 
-	const FAQs = [
+	const faqs = [
 		{
-			question: `What's a hackathon?`,
-			answer:
-				<Typography variant='p'>
-					A hackathon is an event where individuals get together for a short
-					period of time to work on a project. These events usually last 24 or
-					36 hours and take place during the weekend. Hack on the Hill is
-					designed to simulate a real hackathon over a 12 hour period.
-				</Typography>
+			question: `What’s a hackathon?`,
+			answer: `A hackathon is an event where individuals get together for a
+				short period of time to work on a project. These events usually last 24
+				or 36 hours and take place during the weekend. Hack on the Hill is
+				designed to simulate a real hackathon over a 12 hour period.`
 		},
 		{
 			question: `Who can join?`,
-			answer:
-				<Typography variant='p'>
-					Any UCLA student can join! And you don’t necessarily have to be a
-					programmer - designers, entrepreneurs, and even those who are curious
-					as to what a hackathon is like can attend. Whether you’ve never been
-					to a hackathon before or you’ve been to several, everyone is welcome
-					to participate in Hack on the Hill.
-				</Typography>
+			answer: `Any UCLA student can join! And you don’t necessarily have to be
+				a programmer - designers, entrepreneurs, and even those who are curious
+				as to what a hackathon is like can attend. Whether you’ve never been to
+				a hackathon before or you’ve been to several, everyone is welcome to
+				participate in Hack on the Hill.`
 		},
 		{
 			question: `What do I bring?`,
-			answer:
-				<Typography variant='p'>
-					All you need is your laptop, charger, and any other materials you
-					plan to bring for your project. We will not be providing laptops for
-					this hackathon.
-				</Typography>
+			answer: `All you need is your laptop, charger, and any other materials
+				you plan to bring for your project. We will not be providing laptops
+				for this hackathon.`
 		},
 		{
 			question: `How many people can I work with?`,
-			answer:
-				<Typography variant='p'>
-						Submissions must be by groups with a maximum size of 4 people.
-				</Typography>
+			answer: `Submissions must be by groups with a maximum size of 4 people.`
 		},
 		{
 			question: `How do I sign up?`,
-			answer:
-				<Typography variant='p'>
-					Hit the sign-up button above and fill out the form. After the
-					deadline has passed, you will be emailed a confirmation that will ask
-					for additional information. Sign up as soon as possible as space is
-					limited!
-				</Typography>
+			answer: `Hit the sign-up button above and fill out the form. After the
+				deadline has passed, you will be emailed a confirmation that will ask
+				for additional information. Sign up as soon as possible as space is
+				limited!`
 		},
 		{
 			question: `What can I possibly build in 12 hours?!`,
 			answer:
-				<Typography variant='p'>
-					Don&rsquo;t think it&rsquo;s possible? Check out previous submissions from <Link
+				<>
+					Don’t think it’s possible? Check out previous submissions from <Link
 						href='https://hoth6.devpost.com/submissions' >HOTH 6</Link>, <Link
 						href='https://hoth5.devpost.com/submissions' >HOTH 5</Link>, and <Link
 						href='https://hoth4.devpost.com/submissions'>HOTH 4</Link>.
-				</Typography>
+				</>
 		}
 	];
 
-	const FAQComponents = [];
-	let i = 1;
-	FAQs.forEach(({ question, answer }) => {
-		const panelName = 'panel' + i.toString();
-		FAQComponents.push(
+	const faqComponents = faqs.map(({ question, answer }, i) => {
+		const panelName = 'faqPanel' + i;
+		return (
 			<ExpansionPanel
+				key={panelName}
 				square
 				expanded={expanded === panelName}
 				onChange={handleChange(panelName)}>
@@ -135,24 +114,23 @@ function FAQSection() {
 						{question}
 					</Typography>
 				</ExpansionPanelSummary>
-				<ExpansionPanelDetails>
-					{answer}
+				<ExpansionPanelDetails id={panelName + '-content'}>
+					<Typography variant='p'>
+						{answer}
+					</Typography>
 				</ExpansionPanelDetails>
 			</ExpansionPanel>
 		);
-		i++;
 	});
 
 	return (
 		<>
 			<Typography
 				variant='h5'
-				align='center'
-				component='h5'
-			>
+				align='center'>
 				Frequently Asked Questions (FAQ)
 			</Typography>
-			{FAQComponents}
+			{faqComponents}
 		</>
 	);
 }
