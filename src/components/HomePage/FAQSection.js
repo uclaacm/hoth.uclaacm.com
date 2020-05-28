@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { Typography, Link } from '@material-ui/core';
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -7,20 +7,6 @@ import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 
 import Add from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
-
-const useStyles = makeStyles({
-	title: {
-		fontWeight: 'bold'
-	},
-	question: {
-		color: '#FB4469',
-		fontWeight: 'bold'
-	},
-	link: {
-		color: '#FB4469',
-		fontWeight: 'bold'
-	}
-});
 
 const ExpansionPanel = withStyles({
 	root: {
@@ -71,8 +57,6 @@ function FAQSection() {
 	const handleChange = panel => (event, newExpanded) => {
 		setExpanded(newExpanded ? panel : false);
 	};
-
-	const classes = useStyles();
 
 	const FAQs = [
 		{
@@ -127,12 +111,9 @@ function FAQSection() {
 			answer:
 				<Typography variant='p'>
 					Don&rsquo;t think it&rsquo;s possible? Check out previous submissions from <Link
-						href='https://hoth6.devpost.com/submissions'
-						className={classes.link}>HOTH 6</Link>, <Link
-						href='https://hoth5.devpost.com/submissions'
-						className={classes.link}>HOTH 5</Link>, and <Link
-						href='https://hoth4.devpost.com/submissions'
-						className={classes.link}>HOTH 4</Link>.
+						href='https://hoth6.devpost.com/submissions' >HOTH 6</Link>, <Link
+						href='https://hoth5.devpost.com/submissions' >HOTH 5</Link>, and <Link
+						href='https://hoth4.devpost.com/submissions'>HOTH 4</Link>.
 				</Typography>
 		}
 	];
@@ -150,8 +131,7 @@ function FAQSection() {
 					expandIcon={expanded === panelName ? <Remove /> : <Add />}
 					aria-controls={panelName + '-content'}
 					id={panelName + '-header'}>
-					<Typography variant='p'
-						className={classes.question}>
+					<Typography variant='p'>
 						{question}
 					</Typography>
 				</ExpansionPanelSummary>
@@ -169,7 +149,6 @@ function FAQSection() {
 				variant='h5'
 				align='center'
 				component='h5'
-				className={classes.title}
 			>
 				Frequently Asked Questions (FAQ)
 			</Typography>
