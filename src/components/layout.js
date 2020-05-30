@@ -40,6 +40,7 @@ const overwrittenTheme = responsiveFontSizes(createMuiTheme({
 		h4: { fontFamily: '"Palanquin Dark", sans-serif' },
 		h5: { fontFamily: '"Palanquin Dark", sans-serif' },
 		h6: { fontFamily: '"Palanquin Dark", sans-serif' },
+		subtitle1: { fontFamily: '"Palanquin Dark", sans-serif' },
 		body1: { fontFamily: '"Chivo", sans-serif' },
 		button: { fontFamily: '"Chivo", sans-serif' }
 	}

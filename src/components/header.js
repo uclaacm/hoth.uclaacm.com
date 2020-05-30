@@ -27,6 +27,17 @@ const Header = ({ siteTitle }) =>
 					{siteTitle}
 				</Link>
 			</h1>
+			<h2 style={{ margin: 0 }}>
+				<Link
+					to="/schedule"
+					style={{
+						color: `white`,
+						textDecoration: `none`
+					}}
+				>
+					Squedool
+				</Link>
+			</h2>
 		</div>
 	</header>;
 
