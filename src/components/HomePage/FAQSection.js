@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Typography, Link } from '@material-ui/core';
+import Container from '@material-ui/core/Container';
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -8,8 +9,11 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Add from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
 
-const ExpansionPanel = withStyles({
+// const useStyles = makeStyles
+
+const ExpansionPanel = withStyles(theme => ({
 	root: {
+		backgroundColor: theme.palette.background.default,
 		borderTop: '1px solid rgba(0, 0, 0, 1)',
 		borderBottom: '1px solid rgba(0, 0, 0, 1)',
 		boxShadow: 'none',
@@ -24,7 +28,7 @@ const ExpansionPanel = withStyles({
 		}
 	},
 	expanded: {}
-})(MuiExpansionPanel);
+}))(MuiExpansionPanel);
 
 const ExpansionPanelSummary = withStyles({
 	root: {
@@ -110,12 +114,12 @@ function FAQSection() {
 					expandIcon={expanded === panelName ? <Remove /> : <Add />}
 					aria-controls={panelName + '-content'}
 					id={panelName + '-header'}>
-					<Typography variant='p'>
+					<Typography variant='body1'>
 						{question}
 					</Typography>
 				</ExpansionPanelSummary>
 				<ExpansionPanelDetails id={panelName + '-content'}>
-					<Typography variant='p'>
+					<Typography variant='body1'>
 						{answer}
 					</Typography>
 				</ExpansionPanelDetails>
@@ -124,14 +128,14 @@ function FAQSection() {
 	});
 
 	return (
-		<>
+		<Container maxWidth='md'>
 			<Typography
 				variant='h5'
 				align='center'>
 				Frequently Asked Questions (FAQ)
 			</Typography>
 			{faqComponents}
-		</>
+		</Container>
 	);
 }
 
