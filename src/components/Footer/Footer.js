@@ -69,8 +69,8 @@ function Footer({ classes }) {
 						<div className={classes.copyright}>© ACM Hack 2020</div>
 					</Grid>
 					<Grid item xs={12} sm={12} md={4}>
-						<a className={classes.buttonLink} href="http://eepurl.com/c5pE6P" target="_blank" rel="noopener noreferrer">
-							<Button variant="contained" color="secondary">Join ACM&rsquo;s mailing list</Button>
+						<a className={classes.buttonLink} href="https://eepurl.com/c5pE6P" target="_blank" rel="noopener noreferrer">
+							<Button variant="contained" color="secondary">Join ACM’s mailing list</Button>
 						</a>
 					</Grid>
 				</Grid>
