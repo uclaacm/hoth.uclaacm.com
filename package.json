@@ -6,6 +6,7 @@
   "author": "Timothy Rediehs <trediehs@g.ucla.edu>",
   "dependencies": {
     "@material-ui/core": "^4.9.13",
+    "@material-ui/icons": "^4.9.1",
     "@material-ui/styles": "^4.9.13",
     "@svgr/webpack": "^5.4.0",
     "classnames": "^2.2.6",
