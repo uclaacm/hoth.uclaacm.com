@@ -4,7 +4,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
-import { Collapse } from '@material-ui/core';
+import json2mq from 'json2mq';
+import { Collapse, useMediaQuery } from '@material-ui/core';
 import { navigate } from 'gatsby';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -16,7 +17,7 @@ const useStyles = makeStyles(theme => {
 	 * This is the limit of the screensize where the MenuBar
 	 * should switch between desktop and mobile.
 	 */
-	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm * 1.3;
+	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm;
 	return {
 		logohome: {
 			display: 'flex',
@@ -79,8 +80,32 @@ function MenuBar() {
 	const classes = useStyles();
 	const [menuOpen, setMenuOpen] = useState(false);
 	const toggleMenu = () => setMenuOpen(open => !open);
+	const isMobile = useMediaQuery(
+		// TODO: migrate to use theme.breakpoints.down('sm') when we have a themeprovider
+		json2mq({
+			maxWidth: 600
+		})
+	);
 
-	return (
+	const desktopMenuBar = isMobile ?
+		null :
+		<AppBar position="sticky">
+			<Toolbar className={classes.toolbar}>
+				<div
+					className={classes.logohome}
+					onClick={() => navigate('/')}
+				>
+					{/* TODO: Replace with Logo and Wordmark */}
+					ACM Hack
+				</div>
+				{/* Desktop menu Bar */}
+				<div className={classes.desktopMenuBar}>
+					<ButtonBar />
+				</div>
+			</Toolbar>
+		</AppBar>;
+
+	const mobileMenuBar = isMobile ?
 		<>
 			<AppBar position="sticky">
 				<Toolbar className={classes.toolbar}>
@@ -88,12 +113,8 @@ function MenuBar() {
 						className={classes.logohome}
 						onClick={() => navigate('/')}
 					>
-						ACM Hack
 						{/* TODO: Replace with Logo and Wordmark */}
-					</div>
-					{/* Desktop menu Bar */}
-					<div className={classes.desktopMenuBar}>
-						<ButtonBar />
+						ACM Hack
 					</div>
 					{/* This button only shows on mobile */}
 					<IconButton onClick={toggleMenu} className={classes.menubtn}>
@@ -101,8 +122,6 @@ function MenuBar() {
 					</IconButton>
 				</Toolbar>
 			</AppBar>
-
-			{/* Mobile menu Bar */}
 			<div className={classes.mobileMenuBar}>
 				<Collapse in={menuOpen}>
 					<div className={classes.mobileBtnContainer}>
@@ -110,7 +129,13 @@ function MenuBar() {
 					</div>
 				</Collapse>
 			</div>
+		</> :
+		null;
 
+	return (
+		<>
+			{desktopMenuBar}
+			{mobileMenuBar}
 		</>
 	);
 }

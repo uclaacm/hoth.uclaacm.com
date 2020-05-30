@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
-
 import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -40,8 +39,8 @@ function ButtonBar({ isMobile }) {
 		</LinkNoStyle>;
 
 	const BorderLink = ({ to, ...props }) =>
-		<LinkNoStyle>
-			<Button variant='outlined' fullWidth={isMobile} className={classNames(classes.btn, classes.borderBtn)} {...props} />
+		<LinkNoStyle to={to}>
+			<Button variant='outlined' disabled fullWidth={isMobile} className={classNames(classes.btn, classes.borderBtn)} {...props} />
 		</LinkNoStyle>;
 	/* eslint-enable */
 
