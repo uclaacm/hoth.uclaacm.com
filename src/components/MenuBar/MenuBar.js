@@ -1,17 +1,17 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
-import { Collapse, Typography } from '@material-ui/core';
+import { Collapse } from '@material-ui/core';
 import { navigate } from 'gatsby';
 
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 import ButtonBar from './ButtonBar';
 
-const styles = theme => {
+const useStyles = makeStyles(theme => {
 	/**
 	 * This is the limit of the screensize where the MenuBar
 	 * should switch between desktop and mobile.
@@ -73,13 +73,15 @@ const styles = theme => {
 			padding: '3%'
 		}
 	};
-};
-function MenuBar({ classes }) {
+});
+
+function MenuBar() {
+	const classes = useStyles();
 	const [menuOpen, setMenuOpen] = useState(false);
 	const toggleMenu = () => setMenuOpen(open => !open);
 
 	return (
-		<React.Fragment>
+		<>
 			<AppBar position="sticky">
 				<Toolbar className={classes.toolbar}>
 					<div
@@ -93,7 +95,7 @@ function MenuBar({ classes }) {
 					</div>
 					{/* This button only shows on mobile */}
 					<IconButton onClick={toggleMenu} className={classes.menubtn}>
-						<MenuIcon/>
+						<MenuIcon />
 					</IconButton>
 				</Toolbar>
 			</AppBar>
@@ -102,17 +104,17 @@ function MenuBar({ classes }) {
 			<div className={classes.mobileMenuBar}>
 				<Collapse in={menuOpen}>
 					<div className={classes.mobileBtnContainer}>
-						<ButtonBar isMobile/>
+						<ButtonBar isMobile />
 					</div>
 				</Collapse>
 			</div>
 
-	</React.Fragment>
-	)
+		</>
+	);
 }
 
 MenuBar.propTypes = {
 	classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(MenuBar);
+export default MenuBar;
