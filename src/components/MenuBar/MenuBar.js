@@ -88,6 +88,8 @@ function MenuBar() {
 						className={classes.logohome}
 						onClick={() => navigate('/')}
 					>
+						ACM Hack
+						{/* TODO: Replace with Logo and Wordmark */}
 					</div>
 					{/* Desktop menu Bar */}
 					<div className={classes.desktopMenuBar}>
