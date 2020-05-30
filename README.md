@@ -1,4 +1,4 @@
-<img align=left width=30 src=src/images/hack-logo.svg alt="Hack logo">
+<img align=left width=100 src=src/images/hack-logo.svg alt="Hack logo">
 
 # Hack on the Hill (HOTH) Website
 
