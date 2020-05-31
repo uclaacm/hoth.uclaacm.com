@@ -25,7 +25,7 @@ website](https://hack.uclaacm.com/) to learn more about who we are and what we
 do!
 
 ## Getting Started
-You'll need:
+You’ll need:
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/en/)
 - [Yarn 1.x](https://classic.yarnpkg.com/en/) (Note that we don’t yet work with
