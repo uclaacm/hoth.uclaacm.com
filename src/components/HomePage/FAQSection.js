@@ -9,8 +9,6 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Add from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
 
-// const useStyles = makeStyles
-
 const ExpansionPanel = withStyles(theme => ({
 	root: {
 		backgroundColor: theme.palette.background.default,
