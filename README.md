@@ -13,7 +13,7 @@ There is also hardware available for hackers to check out and hack with.
 
 This website is developed with [Gatsby](https://www.gatsbyjs.org/) and
 [Material UI](https://material-ui.com/), and is a work-in-progress being
-developed by ACM Hack's Dev Team: Timothy Gu
+developed by ACM Hack’s Dev Team: Timothy Gu
 [(@TimothyGu)](https://github.com/TimothyGu/), Jamie Liu
 [(@jamieliu386)](https://github.com/jamieliu386/), Timothy Rediehs
 [(@Timthetic)](https://github.com/Timthetic), and Miles Wu
