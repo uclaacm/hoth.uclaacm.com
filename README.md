@@ -55,7 +55,8 @@ website!
   automatically run when you try to make a Git commit, though this can be
   overridden in exigent circumstances with `--no-verify`. To run ESLint
   manually, do `yarn lint`.
-  
-  ---
-  We're currently trying to get [Netlify](https://www.netlify.com/) set up 
-  for pull request previews and automatic deployment.
+
+---
+
+We're currently trying to get [Netlify](https://www.netlify.com/) set up
+for pull request previews and automatic deployment.
