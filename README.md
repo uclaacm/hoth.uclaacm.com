@@ -1,4 +1,4 @@
-<img align=left width=30 src=src/images/hack-logo.svg alt="Hack logo">
+<img align=left width=100 src=src/images/hack-logo.svg alt="Hack logo">
 
 # Hack on the Hill (HOTH) Website
 
@@ -29,10 +29,10 @@ You'll need:
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/en/)
 - [Yarn 1.x](https://classic.yarnpkg.com/en/) (Note that we don’t yet work with
-Yarn 2.)
+  Yarn 2.)
 - if you use VSCode, we recommend you install the
-[EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-extension
+  [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+  extension
 
 ### Running the Project
 Type the following lines in your command line:
@@ -42,15 +42,16 @@ $ cd hoth.uclaacm.com
 $ yarn
 $ yarn develop
 ```
-You can then navigate to `http://localhost:8000/` in your browser to see the website!
+You can then navigate to `http://localhost:8000/` in your browser to see the
+website!
 
 ### Notes
 - Be sure to run `yarn` every time there are changes to `package.json`. Usually
-you’ll want to run `yarn` in the following scenarios:
+  you’ll want to run `yarn` in the following scenarios:
   - after pulling from master
   - after merging master into your branch
   - after switching branches (that may have different dependencies)
 - This project uses ESLint to ensure code style compliance. ESLint is
-automatically run when you try to make a Git commit, though this can be
-overridden in exigent circumstances with `--no-verify`. To run ESLint manually,
-do `yarn lint`.
+  automatically run when you try to make a Git commit, though this can be
+  overridden in exigent circumstances with `--no-verify`. To run ESLint
+  manually, do `yarn lint`.
