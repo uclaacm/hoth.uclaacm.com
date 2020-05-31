@@ -2,7 +2,7 @@
 
 # Hack on the Hill (HOTH) Website
 
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code-of-conduct.md)
 
 This repository contains the code for ACM Hack’s Hack on the Hill website! Hack
 on the Hill (HOTH) is a 12-hour, beginner-friendly hackathon hosted by ACM Hack
