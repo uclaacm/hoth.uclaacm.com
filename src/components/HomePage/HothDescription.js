@@ -42,7 +42,7 @@ export default function HothDescription() {
 						</Typography>
 					</Grid>
 					<Grid item sm={9} md={7}>
-						<Typography variant='p'>{description}</Typography>
+						<Typography variant='body1'>{description}</Typography>
 					</Grid>
 				</Grid>
 			</Container>
