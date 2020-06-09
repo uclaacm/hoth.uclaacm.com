@@ -66,12 +66,19 @@ function Footer({ classes }) {
 						</div>
 					</Grid>
 					<Grid item xs={12} sm={12} md={4}>
-						<div className={classes.copyright}>© ACM Hack 2020</div>
+						<a href="https://www.netlify.com">
+							<img src="https://www.netlify.com/img/global/badges/netlify-light.svg" alt="Deploys by Netlify" />
+						</a>
 					</Grid>
 					<Grid item xs={12} sm={12} md={4}>
 						<a className={classes.buttonLink} href="https://eepurl.com/c5pE6P" target="_blank" rel="noopener noreferrer">
 							<Button variant="contained" color="secondary">Join ACM’s mailing list</Button>
 						</a>
+					</Grid>
+				</Grid>
+				<Grid container spacing={1} className={classes.content}>
+					<Grid item xs={12}>
+						<div className={classes.copyright}>© ACM Hack 2020</div>
 					</Grid>
 				</Grid>
 			</Container>
