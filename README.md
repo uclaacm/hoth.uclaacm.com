@@ -56,6 +56,13 @@ website!
   overridden in exigent circumstances with `--no-verify`. To run ESLint
   manually, do `yarn lint`.
 
+### Troubleshooting
+If something breaks in a weird way, try the following in order:
+- run `yarn`
+- delete the `public`, `.cache`, and `node_modules/.cache` directories
+- delete the `node_modules` directory entirely and reinstall dependencies
+  by running `yarn`
+
 ---
 
 We're currently trying to get [Netlify](https://www.netlify.com/) set up
