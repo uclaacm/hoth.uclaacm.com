@@ -3,6 +3,7 @@
 # Hack on the Hill (HOTH) Website
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code-of-conduct.md)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4825a1ca-c270-4bfb-980e-8c616ef8e123/deploy-status)](https://app.netlify.com/sites/acm-hoth/deploys)
 
 This repository contains the code for ACM Hack’s Hack on the Hill website! Hack
 on the Hill (HOTH) is a 12-hour, beginner-friendly hackathon hosted by ACM Hack
@@ -62,8 +63,3 @@ If something breaks in a weird way, try the following in order:
 - delete the `public`, `.cache`, and `node_modules/.cache` directories
 - delete the `node_modules` directory entirely and reinstall dependencies
   by running `yarn`
-
----
-
-We're currently trying to get [Netlify](https://www.netlify.com/) set up
-for pull request previews and automatic deployment.
