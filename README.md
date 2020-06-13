@@ -28,7 +28,9 @@ do!
 ## Getting Started
 You’ll need:
 - [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en/)
+- [Node.js](https://nodejs.org/en/) – we are currently using v14. In the event
+  that this changes, we will need to modify `package.json` and `.nvmrc` to reflect
+  the change.
 - [Yarn 1.x](https://classic.yarnpkg.com/en/) (Note that we don’t yet work with
   Yarn 2.)
 - if you use VSCode, we recommend you install the
