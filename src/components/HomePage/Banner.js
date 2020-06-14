@@ -13,7 +13,6 @@ import hothLogo from './hoth7-logo.svg';
 import hothBanner from './hoth-banner.png';
 
 const hothStart = new Date('2021-01-23T09:00:00-07:00');
-// const hothEnd = new Date('2021-01-23T22:00:00-07:00');
 
 const useStyles = makeStyles(theme => ({
 	colon: {
@@ -46,9 +45,6 @@ const useStyles = makeStyles(theme => ({
 		[theme.breakpoints.down('sm')]: {
 			width: 150
 		}
-		// [theme.breakpoints.down('xs')]: {
-		// 	display: 'none'
-		// }
 	},
 	time: {
 		color: 'white',
@@ -152,7 +148,6 @@ function Banner() {
 				<Grid
 					container
 					direction='row'
-					// justify='space-evenly'
 					alignItems={theme.breakpoints.up('sm') ? 'flex-start' : 'center'}
 				>
 					<Grid
