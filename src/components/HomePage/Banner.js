@@ -51,10 +51,33 @@ const useStyles = makeStyles(theme => ({
 		fontWeight: 600,
 		fontSize: theme.typography.fontSize * 3
 	},
-	timeDesc: {
-		color: 'white',
-		fontWeight: 'semibold',
-		fontSize: theme.typography.fontSize * 0.6
+	timeDescD: {
+		'&::after': {
+			content: '"days"',
+			fontWeight: 400,
+			fontSize: theme.typography.fontSize * 0.6
+		}
+	},
+	timeDescH: {
+		'&::after': {
+			content: '"hours"',
+			fontWeight: 400,
+			fontSize: theme.typography.fontSize * 0.6
+		}
+	},
+	timeDescM: {
+		'&::after': {
+			content: '"minutes"',
+			fontWeight: 400,
+			fontSize: theme.typography.fontSize * 0.6
+		}
+	},
+	timeDescS: {
+		'&::after': {
+			content: '"seconds"',
+			fontWeight: 400,
+			fontSize: theme.typography.fontSize * 0.6
+		}
 	}
 }));
 
@@ -85,52 +108,54 @@ function Banner() {
 		}
 
 		return (
-			<Box
-				display='flex'
-				flexDirection='row'
-				justifyContent='center'
-				className={classes.countdown}
-			>
+			<Container className={classes.countdown}>
 				<Box
 					display='flex'
-					flexDirection='column'
+					flexDirection='row'
 					justifyContent='center'
-					alignItems='center'
+					className={classes.time}
 				>
-					<Box className={classes.time}>{days.toString().padStart(2, '0')}</Box>
-					<Box className={classes.timeDesc}>days</Box>
+					<Box
+						display='flex'
+						flexDirection='column'
+						justifyContent='center'
+						alignItems='center'
+						className={classes.timeDescD}
+					>
+						{days.toString().padStart(2, '0')}
+					</Box>
+					<Box className={classes.colon}>:</Box>
+					<Box
+						display='flex'
+						flexDirection='column'
+						justifyContent='center'
+						alignItems='center'
+						className={classes.timeDescH}
+					>
+						{hours.toString().padStart(2, '0')}
+					</Box>
+					<Box className={classes.colon}>:</Box>
+					<Box
+						display='flex'
+						flexDirection='column'
+						justifyContent='center'
+						alignItems='center'
+						className={classes.timeDescM}
+					>
+						{minutes.toString().padStart(2, '0')}
+					</Box>
+					<Box className={classes.colon}>:</Box>
+					<Box
+						display='flex'
+						flexDirection='column'
+						justifyContent='center'
+						alignItems='center'
+						className={classes.timeDescS}
+					>
+						{seconds.toString().padStart(2, '0')}
+					</Box>
 				</Box>
-				<Box className={classes.colon}>:</Box>
-				<Box
-					display='flex'
-					flexDirection='column'
-					justifyContent='center'
-					alignItems='center'
-				>
-					<Box className={classes.time}>{hours.toString().padStart(2, '0')}</Box>
-					<Box className={classes.timeDesc}>hours</Box>
-				</Box>
-				<Box className={classes.colon}>:</Box>
-				<Box
-					display='flex'
-					flexDirection='column'
-					justifyContent='center'
-					alignItems='center'
-				>
-					<Box className={classes.time}>{minutes.toString().padStart(2, '0')}</Box>
-					<Box className={classes.timeDesc}>minutes</Box>
-				</Box>
-				<Box className={classes.colon}>:</Box>
-				<Box
-					display='flex'
-					flexDirection='column'
-					justifyContent='center'
-					alignItems='center'
-				>
-					<Box className={classes.time}>{seconds.toString().padStart(2, '0')}</Box>
-					<Box className={classes.timeDesc}>seconds</Box>
-				</Box>
-			</Box>
+			</Container>
 		);
 	};
 
