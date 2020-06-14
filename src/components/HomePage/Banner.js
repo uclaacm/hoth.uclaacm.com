@@ -92,7 +92,7 @@ function renderInfo(classes) {
 			<Typography variant='h3' className={classes.text}>Hack on the Hill 7</Typography>
 			<Typography variant='h5' className={classes.text}>Explore. Build. Empower.</Typography>
 			<SvgImg src={hothLogo} className={classes.logo} width={258} height={250} />
-			<Typography variant='h5' className={classes.text}>Feb 23rd, 2020</Typography>
+			<Typography variant='h5' className={classes.text}>Feb 23rd, 2021</Typography>
 			<Typography variant='h5' className={classes.text}>De Neve Plaza Room</Typography>
 		</Grid>
 	);
