@@ -5,7 +5,6 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import PropTypes from 'prop-types';
-
 import Countdown from 'react-countdown';
 
 import SvgImg from '../SvgImg';
@@ -15,12 +14,6 @@ import hothBanner from './hoth-banner.png';
 const hothStart = new Date('2021-01-23T09:00:00-07:00');
 
 const useStyles = makeStyles(theme => ({
-	colon: {
-		fontFamily: 'open-sans',
-		color: 'white',
-		fontWeight: 600,
-		fontSize: theme.typography.fontSize * 3
-	},
 	container: {
 		backgroundColor: theme.palette.primary.dark,
 		height: 'auto',
@@ -31,9 +24,6 @@ const useStyles = makeStyles(theme => ({
 			backgroundPosition: 'right bottom'
 		},
 		padding: 25
-	},
-	countdown: {
-		padding: 20
 	},
 	text: {
 		color: 'white',
@@ -46,37 +36,20 @@ const useStyles = makeStyles(theme => ({
 			width: 150
 		}
 	},
-	time: {
+	colon: {
 		color: 'white',
 		fontWeight: 600,
-		fontSize: theme.typography.fontSize * 3
+		fontSize: '1.9em'
 	},
-	timeDescD: {
+	timeDesc: {
+		color: 'white',
+		fontWeight: 600,
+		fontSize: '1.9em',
 		'&::after': {
-			content: '"days"',
+			color: 'white',
+			content: 'attr(dataField)',
 			fontWeight: 400,
-			fontSize: theme.typography.fontSize * 0.6
-		}
-	},
-	timeDescH: {
-		'&::after': {
-			content: '"hours"',
-			fontWeight: 400,
-			fontSize: theme.typography.fontSize * 0.6
-		}
-	},
-	timeDescM: {
-		'&::after': {
-			content: '"minutes"',
-			fontWeight: 400,
-			fontSize: theme.typography.fontSize * 0.6
-		}
-	},
-	timeDescS: {
-		'&::after': {
-			content: '"seconds"',
-			fontWeight: 400,
-			fontSize: theme.typography.fontSize * 0.6
+			fontSize: '0.23em'
 		}
 	}
 }));
@@ -92,7 +65,7 @@ function renderInfo(classes) {
 			<Typography variant='h3' className={classes.text}>Hack on the Hill 7</Typography>
 			<Typography variant='h5' className={classes.text}>Explore. Build. Empower.</Typography>
 			<SvgImg src={hothLogo} className={classes.logo} width={258} height={250} />
-			<Typography variant='h5' className={classes.text}>Feb 23rd, 2021</Typography>
+			<Typography variant='h5' className={classes.text}>Feb 23<sup>rd</sup>, 2021</Typography>
 			<Typography variant='h5' className={classes.text}>De Neve Plaza Room</Typography>
 		</Grid>
 	);
@@ -108,19 +81,20 @@ function Banner() {
 		}
 
 		return (
-			<Container className={classes.countdown}>
+			<Container>
 				<Box
 					display='flex'
 					flexDirection='row'
 					justifyContent='center'
-					className={classes.time}
+					className={classes.colon}
 				>
 					<Box
 						display='flex'
 						flexDirection='column'
 						justifyContent='center'
 						alignItems='center'
-						className={classes.timeDescD}
+						dataField={days === 1 ? 'day' : 'days'}
+						className={classes.timeDesc}
 					>
 						{days.toString().padStart(2, '0')}
 					</Box>
@@ -130,7 +104,8 @@ function Banner() {
 						flexDirection='column'
 						justifyContent='center'
 						alignItems='center'
-						className={classes.timeDescH}
+						dataField={hours === 1 ? 'hour' : 'hours'}
+						className={classes.timeDesc}
 					>
 						{hours.toString().padStart(2, '0')}
 					</Box>
@@ -140,7 +115,8 @@ function Banner() {
 						flexDirection='column'
 						justifyContent='center'
 						alignItems='center'
-						className={classes.timeDescM}
+						dataField={minutes === 1 ? 'minute' : 'minutes'}
+						className={classes.timeDesc}
 					>
 						{minutes.toString().padStart(2, '0')}
 					</Box>
@@ -150,7 +126,8 @@ function Banner() {
 						flexDirection='column'
 						justifyContent='center'
 						alignItems='center'
-						className={classes.timeDescS}
+						dataField={seconds === 1 ? 'second' : 'seconds'}
+						className={classes.timeDesc}
 					>
 						{seconds.toString().padStart(2, '0')}
 					</Box>
@@ -160,11 +137,11 @@ function Banner() {
 	};
 
 	countdownRenderer.propTypes = {
-		days: PropTypes.object.isRequired,
-		hours: PropTypes.object.isRequired,
-		minutes: PropTypes.object.isRequired,
-		seconds: PropTypes.object.isRequired,
-		completed: PropTypes.object.isRequired
+		days: PropTypes.number.isRequired,
+		hours: PropTypes.number.isRequired,
+		minutes: PropTypes.number.isRequired,
+		seconds: PropTypes.number.isRequired,
+		completed: PropTypes.bool.isRequired
 	};
 
 	return (
@@ -175,18 +152,10 @@ function Banner() {
 					direction='row'
 					alignItems={theme.breakpoints.up('sm') ? 'flex-start' : 'center'}
 				>
-					<Grid
-						item
-						xs={12}
-						md={6}
-					>
+					<Grid item xs={12} md={6}>
 						{renderInfo(classes)}
 					</Grid>
-					<Grid
-						item
-						xs={12}
-						md={6}
-					>
+					<Grid item xs={12} md={6}>
 						<Countdown
 							date={hothStart}
 							renderer={countdownRenderer}
