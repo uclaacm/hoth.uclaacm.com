@@ -3,37 +3,36 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-
-import { Typography } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
-	eventName: {
+	name: {
 		fontFamily: theme.typography.fontFamily,
 		color: theme.palette.secondary.main,
 		fontWeight: 'bold',
 		textTransform: 'uppercase'
 	},
-	eventLocation: {
+	location: {
 		fontFamily: theme.typography.fontFamily,
 		fontWeight: theme.typography.fontWeightMedium
 	}
 });
 
-function Event(props) {
+function Event({ classes, name, location, description }) {
 	return (
 		<Container maxWidth="md">
 			<Grid container spacing={1}>
 				<Grid item xs={12} sm={12} md={4}>
-					<Typography variant='subtitle1' className={props.classes.eventName}>
-						{props.eventName}
+					<Typography variant='subtitle1' className={classes.name}>
+						{name}
 					</Typography>
-					<Typography variant='body1' className={props.classes.eventLocation}>
-						{props.eventLocation}
+					<Typography variant='body1' className={classes.location}>
+						{location}
 					</Typography>
 				</Grid>
 				<Grid item xs={12} sm={12} md={8}>
 					<Typography variant='body1'>
-						{props.eventDescription}
+						{description}
 					</Typography>
 				</Grid>
 			</Grid>
@@ -43,9 +42,9 @@ function Event(props) {
 
 Event.propTypes = {
 	classes: PropTypes.object.isRequired,
-	eventName: PropTypes.string.isRequired,
-	eventLocation: PropTypes.string.isRequired,
-	eventDescription: PropTypes.string.isRequired
+	name: PropTypes.string.isRequired,
+	location: PropTypes.string.isRequired,
+	description: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(Event);
