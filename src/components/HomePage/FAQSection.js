@@ -93,8 +93,8 @@ function FAQSection() {
 			answer:
 				<>
 					Don’t think it’s possible? Check out previous submissions from <Link
-						href='https://hoth6.devpost.com/submissions' >HOTH 6</Link>, <Link
-						href='https://hoth5.devpost.com/submissions' >HOTH 5</Link>, and <Link
+						href='https://hoth6.devpost.com/submissions'>HOTH 6</Link>, <Link
+						href='https://hoth5.devpost.com/submissions'>HOTH 5</Link>, and <Link
 						href='https://hoth4.devpost.com/submissions'>HOTH 4</Link>.
 				</>
 		}
@@ -116,7 +116,7 @@ function FAQSection() {
 						{question}
 					</Typography>
 				</ExpansionPanelSummary>
-				<ExpansionPanelDetails id={panelName + '-content'}>
+				<ExpansionPanelDetails>
 					<Typography variant='body1'>
 						{answer}
 					</Typography>
@@ -129,6 +129,7 @@ function FAQSection() {
 		<Container maxWidth='md'>
 			<Typography
 				variant='h5'
+				component='h2'
 				align='center'>
 				Frequently Asked Questions (FAQ)
 			</Typography>
