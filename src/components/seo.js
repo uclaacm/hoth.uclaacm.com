@@ -26,6 +26,13 @@ function SEO({ description, meta, title }) {
 			title={title}
 			titleTemplate={`%s | ${site.siteMetadata.title}`}
 			meta={[
+				// Security/privacy-related.
+				{
+					name: 'referrer',
+					contnet: 'strict-origin-when-cross-origin'
+				},
+
+				// SEO-related.
 				{
 					name: 'description',
 					content: metaDescription
