@@ -34,7 +34,7 @@ const ExpansionPanelSummary = withStyles(theme => ({
 		'&$expanded': {
 			minHeight: 'auto'
 		},
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('xs')]: {
 			paddingLeft: 8,
 			paddingRight: 8
 		}
@@ -50,7 +50,7 @@ const ExpansionPanelSummary = withStyles(theme => ({
 
 const ExpansionPanelDetails = withStyles(theme => ({
 	root: {
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('xs')]: {
 			paddingLeft: 8,
 			paddingRight: 8
 		}
