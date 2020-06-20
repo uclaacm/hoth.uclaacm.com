@@ -51,8 +51,8 @@ website!
 ### Notes
 - Be sure to run `yarn` every time there are changes to `package.json`. Usually
   you’ll want to run `yarn` in the following scenarios:
-  - after pulling from master
-  - after merging master into your branch
+  - after pulling from main
+  - after merging main into your branch
   - after switching branches (that may have different dependencies)
 - This project uses ESLint to ensure code style compliance. ESLint is
   automatically run when you try to make a Git commit, though this can be
