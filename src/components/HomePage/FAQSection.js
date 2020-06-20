@@ -4,7 +4,7 @@ import { Typography, Link } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 
 import Add from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
@@ -12,41 +12,50 @@ import Remove from '@material-ui/icons/Remove';
 const ExpansionPanel = withStyles(theme => ({
 	root: {
 		backgroundColor: theme.palette.background.default,
-		borderTop: '1px solid rgba(0, 0, 0, 1)',
-		borderBottom: '1px solid rgba(0, 0, 0, 1)',
+		borderTop: '1px solid black',
+		borderBottom: '1px solid black',
 		boxShadow: 'none',
 		'&:not(:last-child)': {
 			borderBottom: 0
 		},
-		'&:before': {
+		'&::before': {
 			display: 'none'
 		},
 		'&$expanded': {
-			margin: 'auto'
+			margin: 0
 		}
 	},
 	expanded: {}
 }))(MuiExpansionPanel);
 
-const ExpansionPanelSummary = withStyles({
+const ExpansionPanelSummary = withStyles(theme => ({
 	root: {
-		minHeight: 20,
+		minHeight: 'auto',
 		'&$expanded': {
-			minHeight: 20
+			minHeight: 'auto'
+		},
+		[theme.breakpoints.down('xs')]: {
+			paddingLeft: 8,
+			paddingRight: 8
 		}
 	},
 	content: {
+		margin: '12px 0',
 		'&$expanded': {
-			margin: 0
+			margin: '12px 0'
 		}
 	},
-	expanded: {},
-	expandIcon: {
-		'&$expanded': {
-			transform: 'rotate(180deg)'
+	expanded: {}
+}))(MuiExpansionPanelSummary);
+
+const ExpansionPanelDetails = withStyles(theme => ({
+	root: {
+		[theme.breakpoints.down('xs')]: {
+			paddingLeft: 8,
+			paddingRight: 8
 		}
 	}
-})(MuiExpansionPanelSummary);
+}))(MuiExpansionPanelDetails);
 
 function FAQSection() {
 	const [expanded, setExpanded] = React.useState('faqPanel0');
