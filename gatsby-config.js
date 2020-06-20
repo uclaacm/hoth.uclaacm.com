@@ -1,7 +1,11 @@
 module.exports = {
 	siteMetadata: {
 		title: `Hack on the Hill`,
-		description: `Hack on the Hill`,
+		description: `
+			Hack on the Hill (HOTH) is a 12-hour, beginner-friendly hackathon
+			designed to give beginners a glimpse into what a real hackathon would be
+			and feel like.
+		`,
 		author: `ACM Hack at UCLA`
 	},
 	plugins: [
