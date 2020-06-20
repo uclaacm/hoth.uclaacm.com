@@ -21,15 +21,17 @@ module.exports = {
 		`gatsby-plugin-sharp`,
 		{
 			resolve: `gatsby-plugin-manifest`,
+			/* eslint-disable camelcase */
 			options: {
-				name: `gatsby-starter-default`,
-				short_name: `starter`, //eslint-disable-line
-				start_url: `/`, //eslint-disable-line
-				background_color: `#663399`, //eslint-disable-line
-				theme_color: `#663399`, //eslint-disable-line
+				name: `Hack on the Hill`,
+				short_name: `HOTH`,
+				start_url: `/`,
+				background_color: `#fff`,
+				theme_color: `#c960ff`,
 				display: `minimal-ui`,
 				icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
 			}
+			/* eslint-enable camelcase */
 		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline
