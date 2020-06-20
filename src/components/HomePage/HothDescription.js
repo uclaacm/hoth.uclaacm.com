@@ -36,7 +36,7 @@ export default function HothDescription() {
 							variant={isSmall ? 'h4' : 'h3'}
 							className={classes.desc}
 							align={isSmall ? 'center' : 'right'}
-							component='h3'
+							component='h2'
 						>
 							What is Hack on the Hill?
 						</Typography>
