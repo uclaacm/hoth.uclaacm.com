@@ -9,7 +9,8 @@ import Countdown from 'react-countdown';
 
 import SvgImg from '../SvgImg';
 import hothLogo from './hoth7-logo.svg';
-import hothBanner from './hoth-banner.png';
+// import hothBanner from './hoth-banner.png';
+import hothBanner from './hoth-banner.svg';
 
 const hothStart = new Date('2021-01-23T09:00:00-07:00');
 
@@ -19,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 		height: 'auto',
 		[theme.breakpoints.up('md')]: {
 			backgroundImage: `url(${hothBanner})`,
-			backgroundSize: '960px 327px',
+			backgroundSize: '574px 346px',
 			backgroundRepeat: 'no-repeat',
 			backgroundPosition: 'right bottom'
 		},
