@@ -27,7 +27,8 @@ const useStyles = makeStyles(theme => ({
 	},
 	text: {
 		color: 'white',
-		fontWeight: 500
+		fontWeight: 600,
+		fontFamily: theme.typography.fontFamily
 	},
 	logo: {
 		width: 150,
@@ -62,11 +63,11 @@ function renderInfo(classes) {
 			justify='center'
 			alignItems='center'
 		>
-			<Typography variant='h3' className={classes.text}>Hack on the Hill 7</Typography>
-			<Typography variant='h5' className={classes.text}>Explore. Build. Empower.</Typography>
+			<Typography variant='h3' className={classes.text} component='h2'>Hack on the Hill 7</Typography>
+			<Typography variant='h5' className={classes.text} component='h3'>Explore. Build. Empower.</Typography>
 			<SvgImg src={hothLogo} className={classes.logo} width={258} height={250} />
-			<Typography variant='h5' className={classes.text}>Feb 23<sup>rd</sup>, 2021</Typography>
-			<Typography variant='h5' className={classes.text}>De Neve Plaza Room</Typography>
+			<Typography variant='h5' className={classes.text} component='h3'>Feb 23<sup>rd</sup>, 2021</Typography>
+			<Typography variant='h5' className={classes.text} component='h3'>De Neve Plaza Room</Typography>
 		</Grid>
 	);
 }
