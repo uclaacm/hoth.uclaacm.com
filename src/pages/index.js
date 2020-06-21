@@ -1,15 +1,20 @@
 import React from 'react';
 
 import Layout from '../components/layout';
-import FAQSection from '../components/HomePage/FAQSection';
-import HothDescription from '../components/HomePage/HothDescription';
+import SEO from '../components/seo';
 import Banner from '../components/HomePage/Banner';
+import HothDescription from '../components/HomePage/HothDescription';
+import FAQSection from '../components/HomePage/FAQSection';
 
-const IndexPage = () =>
-	<Layout>
-		<Banner />
-		<HothDescription />
-		<FAQSection />
-	</Layout>;
+function IndexPage() {
+	return (
+		<Layout>
+			<SEO title='Home' />
+			<Banner />
+			<HothDescription />
+			<FAQSection />
+		</Layout>
+	);
+}
 
 export default IndexPage;
