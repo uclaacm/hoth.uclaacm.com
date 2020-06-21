@@ -10,7 +10,6 @@ import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-// import { useStaticQuery, graphql } from 'gatsby';
 
 import Footer from './Footer/Footer';
 import MenuBar from './MenuBar/MenuBar';
@@ -46,16 +45,6 @@ const overwrittenTheme = responsiveFontSizes(createMuiTheme({
 }));
 
 const Layout = ({ children }) => {
-	// const data = useStaticQuery(graphql`
-	//   query SiteTitleQuery {
-	//     site {
-	//       siteMetadata {
-	//         title
-	//       }
-	//     }
-	//   }
-	// `);
-
 	return (
 		<MuiThemeProvider theme={overwrittenTheme}>
 			<CssBaseline />
