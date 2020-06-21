@@ -35,11 +35,11 @@ const useStyles = makeStyles(theme => {
 		},
 		logo: {
 			height: '1.8rem',
-			marginRight: theme.spacing(2)
+			marginRight: theme.spacing(1.5)
 		},
 		wordmark: {
 			color: 'black',
-			fontWeight: 600,
+			fontWeight: 700,
 			fontSize: '1.5em',
 			fontFamily: theme.typography.fontFamily
 		},
