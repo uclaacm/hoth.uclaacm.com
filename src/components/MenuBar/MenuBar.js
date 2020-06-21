@@ -20,7 +20,6 @@ const useStyles = makeStyles(theme => {
 	 * This is the limit of the screensize where the MenuBar
 	 * should switch between desktop and mobile.
 	 */
-	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm * 1.3;
 	return {
 		logohome: {
 			display: 'flex',
@@ -43,30 +42,7 @@ const useStyles = makeStyles(theme => {
 			fontSize: '1.5em',
 			fontFamily: theme.typography.fontFamily
 		},
-		menubtn: {
-			// desktop
-			display: 'none',
-			[theme.breakpoints.down(menuBarAdaptiveThreshold)]: {
-				// mobile
-				display: 'inline'
-			}
-		},
-		desktopMenuBar: {
-			// desktop
-			display: 'inline',
-			[theme.breakpoints.down(menuBarAdaptiveThreshold)]: {
-				// mobile
-				display: 'none'
-			}
-		},
 		mobileMenuBar: {
-			// desktop
-			display: 'none',
-			[theme.breakpoints.down(menuBarAdaptiveThreshold)]: {
-				// mobile
-				display: 'inline'
-			},
-			// default styling
 			boxShadow: theme.shadows[4],
 			position: 'fixed',
 			zIndex: '1',
@@ -89,16 +65,18 @@ function MenuBar() {
 	const toggleMenu = () => setMenuOpen(open => !open);
 	const isMobile = useMediaQuery(theme.breakpoints.down(theme.breakpoints.values.sm * 1.3));
 
+	const wordmark = useMediaQuery(theme.breakpoints.down('xs')) ? 'HOTH' : 'Hack On The Hill';
+
 	const desktopMenuBar =
 		<AppBar position="sticky">
-			<Toolbar className={classes.toolbar}>
+			<Toolbar className={classes.toolbar} component='nav'>
 				<div
 					className={classes.logohome}
 					onClick={() => navigate('/')}
 				>
 					<HackLogo className={classes.logo} />
-					<Typography variant='h6' className={classes.wordmark} component='h6'>
-						HOTH
+					<Typography variant='h6' className={classes.wordmark} component='h1'>
+						{wordmark}
 					</Typography>
 				</div>
 				<div className={classes.desktopMenuBar}>
@@ -116,8 +94,8 @@ function MenuBar() {
 						onClick={() => navigate('/')}
 					>
 						<HackLogo className={classes.logo} />
-						<Typography variant='h6' className={classes.wordmark} component='h6'>
-							HOTH
+						<Typography variant='h6' className={classes.wordmark} component='h1'>
+							{wordmark}
 						</Typography>
 					</div>
 					<IconButton onClick={toggleMenu} className={classes.menubtn}>
@@ -134,11 +112,7 @@ function MenuBar() {
 			</div>
 		</>;
 
-	return (
-		<>
-			{isMobile ? mobileMenuBar : desktopMenuBar}
-		</>
-	);
+	return isMobile ? mobileMenuBar : desktopMenuBar;
 }
 
 MenuBar.propTypes = {
