@@ -9,7 +9,6 @@ import Countdown from 'react-countdown';
 
 import SvgImg from '../SvgImg';
 import hothLogo from './hoth7-logo.svg';
-// import hothBanner from './hoth-banner.png';
 import hothBanner from './hoth-banner.svg';
 
 const hothStart = new Date('2021-01-23T09:00:00-07:00');
