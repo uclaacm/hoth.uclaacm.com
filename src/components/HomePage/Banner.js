@@ -8,8 +8,8 @@ import PropTypes from 'prop-types';
 import Countdown from 'react-countdown';
 
 import SvgImg from '../SvgImg';
-import hothLogo from './hoth7-logo.svg';
-import hothBanner from './hoth-banner.svg';
+import hothLogo from '../../images/hoth7-logo.svg';
+import hothBanner from '../../images/hoth-banner.svg';
 
 const hothStart = new Date('2021-01-23T09:00:00-07:00');
 
@@ -37,18 +37,14 @@ const useStyles = makeStyles(theme => ({
 			width: 150
 		}
 	},
-	colon: {
+	timer: {
 		color: 'white',
 		fontWeight: 600,
-		fontSize: '1.9em'
+		fontSize: '4em'
 	},
 	timeDesc: {
-		color: 'white',
-		fontWeight: 600,
-		fontSize: '1.9em',
 		'&::after': {
-			color: 'white',
-			content: 'attr(dataField)',
+			content: 'attr(data-field)',
 			fontWeight: 400,
 			fontSize: '0.23em'
 		}
@@ -87,47 +83,47 @@ function Banner() {
 					display='flex'
 					flexDirection='row'
 					justifyContent='center'
-					className={classes.colon}
+					className={classes.timer}
 				>
 					<Box
 						display='flex'
 						flexDirection='column'
 						justifyContent='center'
 						alignItems='center'
-						dataField={days === 1 ? 'day' : 'days'}
+						data-field={days === 1 ? 'day' : 'days'}
 						className={classes.timeDesc}
 					>
 						{days.toString().padStart(2, '0')}
 					</Box>
-					<Box className={classes.colon}>:</Box>
+					:
 					<Box
 						display='flex'
 						flexDirection='column'
 						justifyContent='center'
 						alignItems='center'
-						dataField={hours === 1 ? 'hour' : 'hours'}
+						data-field={hours === 1 ? 'hour' : 'hours'}
 						className={classes.timeDesc}
 					>
 						{hours.toString().padStart(2, '0')}
 					</Box>
-					<Box className={classes.colon}>:</Box>
+					:
 					<Box
 						display='flex'
 						flexDirection='column'
 						justifyContent='center'
 						alignItems='center'
-						dataField={minutes === 1 ? 'minute' : 'minutes'}
+						data-field={minutes === 1 ? 'minute' : 'minutes'}
 						className={classes.timeDesc}
 					>
 						{minutes.toString().padStart(2, '0')}
 					</Box>
-					<Box className={classes.colon}>:</Box>
+					:
 					<Box
 						display='flex'
 						flexDirection='column'
 						justifyContent='center'
 						alignItems='center'
-						dataField={seconds === 1 ? 'second' : 'seconds'}
+						data-field={seconds === 1 ? 'second' : 'seconds'}
 						className={classes.timeDesc}
 					>
 						{seconds.toString().padStart(2, '0')}
@@ -153,10 +149,10 @@ function Banner() {
 					direction='row'
 					alignItems={theme.breakpoints.up('sm') ? 'flex-start' : 'center'}
 				>
-					<Grid item xs={12} md={6}>
+					<Grid item sm={12} md={6}>
 						{renderInfo(classes)}
 					</Grid>
-					<Grid item xs={12} md={6}>
+					<Grid item sm={12} md={6}>
 						<Countdown
 							date={hothStart}
 							renderer={countdownRenderer}
