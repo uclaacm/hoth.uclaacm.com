@@ -7,18 +7,20 @@ import IconButton from '@material-ui/core/IconButton';
 import useTheme from '@material-ui/core/styles/useTheme';
 import Collapse from '@material-ui/core/Collapse';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Typography from '@material-ui/core/Typography';
 import { navigate } from 'gatsby';
 
 import { makeStyles } from '@material-ui/core/styles';
 
 import ButtonBar from './ButtonBar';
+import { ReactComponent as HackLogo } from '../../images/hack-logo.svg';
 
 const useStyles = makeStyles(theme => {
 	/**
 	 * This is the limit of the screensize where the MenuBar
 	 * should switch between desktop and mobile.
 	 */
-	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm;
+	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm * 1.3;
 	return {
 		logohome: {
 			display: 'flex',
@@ -33,10 +35,13 @@ const useStyles = makeStyles(theme => {
 		},
 		logo: {
 			height: '1.8rem',
-			marginRight: theme.spacing(1)
+			marginRight: theme.spacing(2)
 		},
 		wordmark: {
-			height: '1.2rem'
+			color: 'black',
+			fontWeight: 600,
+			fontSize: '1.5em',
+			fontFamily: theme.typography.fontFamily
 		},
 		menubtn: {
 			// desktop
@@ -82,17 +87,19 @@ function MenuBar() {
 	const theme = useTheme();
 	const [menuOpen, setMenuOpen] = useState(false);
 	const toggleMenu = () => setMenuOpen(open => !open);
-	const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
+	const isMobile = useMediaQuery(theme.breakpoints.down(theme.breakpoints.values.sm * 1.3));
 
 	const desktopMenuBar =
-		<AppBar position="sticky" style={{ marginBottom: 20 }}>
+		<AppBar position="sticky">
 			<Toolbar className={classes.toolbar}>
 				<div
 					className={classes.logohome}
 					onClick={() => navigate('/')}
 				>
-					{/* TODO: Replace with Logo and Wordmark */}
-					ACM Hack
+					<HackLogo className={classes.logo} />
+					<Typography variant='h6' className={classes.wordmark} component='h6'>
+						HOTH
+					</Typography>
 				</div>
 				<div className={classes.desktopMenuBar}>
 					<ButtonBar />
@@ -102,14 +109,16 @@ function MenuBar() {
 
 	const mobileMenuBar =
 		<>
-			<AppBar position="sticky" style={{ marginBottom: 20 }}>
+			<AppBar position="sticky">
 				<Toolbar className={classes.toolbar}>
 					<div
 						className={classes.logohome}
 						onClick={() => navigate('/')}
 					>
-						{/* TODO: Replace with Logo and Wordmark */}
-						ACM Hack
+						<HackLogo className={classes.logo} />
+						<Typography variant='h6' className={classes.wordmark} component='h6'>
+							HOTH
+						</Typography>
 					</div>
 					<IconButton onClick={toggleMenu} className={classes.menubtn}>
 						<MenuIcon />
