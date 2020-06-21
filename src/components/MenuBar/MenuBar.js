@@ -16,10 +16,6 @@ import ButtonBar from './ButtonBar';
 import { ReactComponent as HackLogo } from '../../images/hack-logo.svg';
 
 const useStyles = makeStyles(theme => {
-	/**
-	 * This is the limit of the screensize where the MenuBar
-	 * should switch between desktop and mobile.
-	 */
 	return {
 		logohome: {
 			display: 'flex',
@@ -65,7 +61,7 @@ function MenuBar() {
 	const toggleMenu = () => setMenuOpen(open => !open);
 	const isMobile = useMediaQuery(theme.breakpoints.down(theme.breakpoints.values.sm * 1.3));
 
-	const wordmark = useMediaQuery(theme.breakpoints.down('xs')) ? 'HOTH' : 'Hack On The Hill';
+	const wordmark = useMediaQuery(theme.breakpoints.down('xs')) ? 'HOTH' : 'Hack on the Hill';
 
 	const desktopMenuBar =
 		<AppBar position="sticky">
