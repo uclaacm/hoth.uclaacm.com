@@ -84,7 +84,7 @@ function MenuBar() {
 	const mobileMenuBar =
 		<>
 			<AppBar position="sticky">
-				<Toolbar className={classes.toolbar}>
+				<Toolbar className={classes.toolbar} component='nav'>
 					<div
 						className={classes.logohome}
 						onClick={() => navigate('/')}
@@ -94,18 +94,20 @@ function MenuBar() {
 							{wordmark}
 						</Typography>
 					</div>
-					<IconButton onClick={toggleMenu} className={classes.menubtn}>
+					<IconButton onClick={toggleMenu} className={classes.menubtn}
+						aria-expanded={String(menuOpen)}
+						aria-controls='menubar-collapse'
+						aria-label='Show navigation bar'
+					>
 						<MenuIcon />
 					</IconButton>
 				</Toolbar>
 			</AppBar>
-			<div className={classes.mobileMenuBar}>
-				<Collapse in={menuOpen}>
-					<div className={classes.mobileBtnContainer}>
-						<ButtonBar isMobile />
-					</div>
-				</Collapse>
-			</div>
+			<Collapse in={menuOpen} className={classes.mobileMenuBar} id='menubar-collapse'>
+				<div className={classes.mobileBtnContainer}>
+					<ButtonBar isMobile />
+				</div>
+			</Collapse>
 		</>;
 
 	return isMobile ? mobileMenuBar : desktopMenuBar;
