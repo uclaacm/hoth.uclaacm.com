@@ -85,7 +85,7 @@ function MenuBar() {
 	const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
 
 	const desktopMenuBar =
-		<AppBar position="sticky">
+		<AppBar position="sticky" style={{ marginBottom: 20 }}>
 			<Toolbar className={classes.toolbar}>
 				<div
 					className={classes.logohome}
@@ -94,7 +94,6 @@ function MenuBar() {
 					{/* TODO: Replace with Logo and Wordmark */}
 					ACM Hack
 				</div>
-				{/* Desktop menu Bar */}
 				<div className={classes.desktopMenuBar}>
 					<ButtonBar />
 				</div>
@@ -103,7 +102,7 @@ function MenuBar() {
 
 	const mobileMenuBar =
 		<>
-			<AppBar position="sticky">
+			<AppBar position="sticky" style={{ marginBottom: 20 }}>
 				<Toolbar className={classes.toolbar}>
 					<div
 						className={classes.logohome}
@@ -112,7 +111,6 @@ function MenuBar() {
 						{/* TODO: Replace with Logo and Wordmark */}
 						ACM Hack
 					</div>
-					{/* This button only shows on mobile */}
 					<IconButton onClick={toggleMenu} className={classes.menubtn}>
 						<MenuIcon />
 					</IconButton>

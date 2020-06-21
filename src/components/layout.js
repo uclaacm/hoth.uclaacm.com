@@ -10,9 +10,8 @@ import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { useStaticQuery, graphql } from 'gatsby';
+// import { useStaticQuery, graphql } from 'gatsby';
 
-import Header from './header';
 import Footer from './Footer/Footer';
 import MenuBar from './MenuBar/MenuBar';
 
@@ -47,15 +46,15 @@ const overwrittenTheme = responsiveFontSizes(createMuiTheme({
 }));
 
 const Layout = ({ children }) => {
-	const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+	// const data = useStaticQuery(graphql`
+	//   query SiteTitleQuery {
+	//     site {
+	//       siteMetadata {
+	//         title
+	//       }
+	//     }
+	//   }
+	// `);
 
 	return (
 		<MuiThemeProvider theme={overwrittenTheme}>
@@ -65,17 +64,8 @@ const Layout = ({ children }) => {
 				<link href="https://fonts.googleapis.com/css?family=Chivo:300,400|Palanquin+Dark|Palanquin" rel="stylesheet"/>
 			</Helmet>
 			<MenuBar />
-			<Header siteTitle={data.site.siteMetadata.title} />
-			<div
-				style={{
-					margin: `0 auto`,
-					maxWidth: 960,
-					padding: `0 1.0875rem 1.45rem`
-				}}
-			>
-				<main>{children}</main>
-				<Footer />
-			</div>
+			<main>{children}</main>
+			<Footer />
 		</MuiThemeProvider>
 	);
 };
