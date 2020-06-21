@@ -4,8 +4,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
-import json2mq from 'json2mq';
-import { Collapse, useMediaQuery } from '@material-ui/core';
+import useTheme from '@material-ui/core/styles/useTheme';
+import Collapse from '@material-ui/core/Collapse';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { navigate } from 'gatsby';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -78,17 +79,12 @@ const useStyles = makeStyles(theme => {
 
 function MenuBar() {
 	const classes = useStyles();
+	const theme = useTheme();
 	const [menuOpen, setMenuOpen] = useState(false);
 	const toggleMenu = () => setMenuOpen(open => !open);
-	const isMobile = useMediaQuery(
-		// TODO: migrate to use theme.breakpoints.down('sm') when we have a themeprovider
-		json2mq({
-			maxWidth: 600
-		})
-	);
+	const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
 
-	const desktopMenuBar = isMobile ?
-		null :
+	const desktopMenuBar =
 		<AppBar position="sticky">
 			<Toolbar className={classes.toolbar}>
 				<div
@@ -105,7 +101,7 @@ function MenuBar() {
 			</Toolbar>
 		</AppBar>;
 
-	const mobileMenuBar = isMobile ?
+	const mobileMenuBar =
 		<>
 			<AppBar position="sticky">
 				<Toolbar className={classes.toolbar}>
@@ -129,13 +125,11 @@ function MenuBar() {
 					</div>
 				</Collapse>
 			</div>
-		</> :
-		null;
+		</>;
 
 	return (
 		<>
-			{desktopMenuBar}
-			{mobileMenuBar}
+			{isMobile ? mobileMenuBar : desktopMenuBar}
 		</>
 	);
 }
