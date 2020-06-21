@@ -1,50 +1,61 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Typography, Link } from '@material-ui/core';
+import Container from '@material-ui/core/Container';
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 
 import Add from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
 
-const ExpansionPanel = withStyles({
+const ExpansionPanel = withStyles(theme => ({
 	root: {
-		borderTop: '1px solid rgba(0, 0, 0, 1)',
-		borderBottom: '1px solid rgba(0, 0, 0, 1)',
+		backgroundColor: theme.palette.background.default,
+		borderTop: '1px solid black',
+		borderBottom: '1px solid black',
 		boxShadow: 'none',
 		'&:not(:last-child)': {
 			borderBottom: 0
 		},
-		'&:before': {
+		'&::before': {
 			display: 'none'
 		},
-		'&$expanded': {
-			margin: 'auto'
-		}
-	},
-	expanded: {}
-})(MuiExpansionPanel);
-
-const ExpansionPanelSummary = withStyles({
-	root: {
-		minHeight: 20,
-		'&$expanded': {
-			minHeight: 20
-		}
-	},
-	content: {
 		'&$expanded': {
 			margin: 0
 		}
 	},
-	expanded: {},
-	expandIcon: {
+	expanded: {}
+}))(MuiExpansionPanel);
+
+const ExpansionPanelSummary = withStyles(theme => ({
+	root: {
+		minHeight: 'auto',
 		'&$expanded': {
-			transform: 'rotate(180deg)'
+			minHeight: 'auto'
+		},
+		[theme.breakpoints.down('xs')]: {
+			paddingLeft: 8,
+			paddingRight: 8
+		}
+	},
+	content: {
+		margin: '12px 0',
+		'&$expanded': {
+			margin: '12px 0'
+		}
+	},
+	expanded: {}
+}))(MuiExpansionPanelSummary);
+
+const ExpansionPanelDetails = withStyles(theme => ({
+	root: {
+		[theme.breakpoints.down('xs')]: {
+			paddingLeft: 8,
+			paddingRight: 8
 		}
 	}
-})(MuiExpansionPanelSummary);
+}))(MuiExpansionPanelDetails);
 
 function FAQSection() {
 	const [expanded, setExpanded] = React.useState('faqPanel0');
@@ -91,8 +102,8 @@ function FAQSection() {
 			answer:
 				<>
 					Don’t think it’s possible? Check out previous submissions from <Link
-						href='https://hoth6.devpost.com/submissions' >HOTH 6</Link>, <Link
-						href='https://hoth5.devpost.com/submissions' >HOTH 5</Link>, and <Link
+						href='https://hoth6.devpost.com/submissions'>HOTH 6</Link>, <Link
+						href='https://hoth5.devpost.com/submissions'>HOTH 5</Link>, and <Link
 						href='https://hoth4.devpost.com/submissions'>HOTH 4</Link>.
 				</>
 		}
@@ -110,12 +121,12 @@ function FAQSection() {
 					expandIcon={expanded === panelName ? <Remove /> : <Add />}
 					aria-controls={panelName + '-content'}
 					id={panelName + '-header'}>
-					<Typography variant='p'>
+					<Typography variant='body1'>
 						{question}
 					</Typography>
 				</ExpansionPanelSummary>
-				<ExpansionPanelDetails id={panelName + '-content'}>
-					<Typography variant='p'>
+				<ExpansionPanelDetails>
+					<Typography variant='body1'>
 						{answer}
 					</Typography>
 				</ExpansionPanelDetails>
@@ -124,14 +135,15 @@ function FAQSection() {
 	});
 
 	return (
-		<>
+		<Container maxWidth='md'>
 			<Typography
 				variant='h5'
+				component='h2'
 				align='center'>
 				Frequently Asked Questions (FAQ)
 			</Typography>
 			{faqComponents}
-		</>
+		</Container>
 	);
 }
 

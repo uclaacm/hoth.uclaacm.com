@@ -36,13 +36,13 @@ export default function HothDescription() {
 							variant={isSmall ? 'h4' : 'h3'}
 							className={classes.desc}
 							align={isSmall ? 'center' : 'right'}
-							component='h3'
+							component='h2'
 						>
 							What is Hack on the Hill?
 						</Typography>
 					</Grid>
 					<Grid item sm={9} md={7}>
-						<Typography variant='p'>{description}</Typography>
+						<Typography variant='body1'>{description}</Typography>
 					</Grid>
 				</Grid>
 			</Container>
