@@ -7,6 +7,9 @@ import MuiTableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import useTheme from '@material-ui/core/styles/useTheme';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import withStyles from '@material-ui/core/styles/withStyles';
 
@@ -60,16 +63,18 @@ const useStyles = makeStyles({
 	header: {
 		fontWeight: 700,
 		textDecoration: 'underline',
-		fontSize: '1.8em'
+		fontSize: '1.5em'
 	},
 	item: {
 		fontWeight: 600,
-		fontSize: '1.2em'
+		fontSize: '1em'
 	}
 });
 
 export default function Prizes() {
 	const classes = useStyles();
+	const theme = useTheme();
+	const hideImg = useMediaQuery(theme.breakpoints.down('xs'));
 
 	return (
 		<Container maxWidth='md'>
@@ -77,7 +82,7 @@ export default function Prizes() {
 				<Table aria-label="prize table">
 					<TableHead>
 						<TableRow>
-							<TableCell></TableCell>
+							{ hideImg ? null : <TableCell></TableCell> }
 							<TableCell align='center' className={classes.header}>Track</TableCell>
 							<TableCell align='center' className={classes.header}>Prize</TableCell>
 						</TableRow>
@@ -85,9 +90,12 @@ export default function Prizes() {
 					<TableBody>
 						{allPrizes.map(row =>
 							<TableRow key={row.track}>
-								<TableCell align='center' width='20%'>
-									<img src={row.img} height='80px'/>
-								</TableCell>
+								{ hideImg ?
+									null :
+									<TableCell align='center' width='20%'>
+										<img src={row.img} height='60px'/>
+									</TableCell>
+								}
 								<TableCell align='center' width='40%' className={classes.item}>
 									{row.track}
 								</TableCell>

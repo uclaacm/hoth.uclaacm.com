@@ -9,8 +9,8 @@ import wrench from '../../images/wrench.svg';
 const useStyles = makeStyles(theme => ({
 	title: {
 		textAlign: 'center',
-		padding: '0.5em',
-		fontSize: '2.5em',
+		padding: '15px 10px',
+		fontSize: '2em',
 		fontWeight: 700,
 		fontFamily: theme.typography.fontFamily
 	},
