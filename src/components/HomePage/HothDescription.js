@@ -15,7 +15,8 @@ const useStyles = makeStyles(theme => ({
 		textTransform: 'uppercase',
 		fontSize: '3.3em',
 		fontFamily: theme.typography.fontFamily,
-		fontWeight: 700
+		fontWeight: 700,
+		color: theme.palette.primary.main
 	}
 }));
 
@@ -34,7 +35,7 @@ export default function HothDescription() {
 					alignItems='center'
 					spacing={isSmall ? 1 : 6}
 				>
-					<Grid item sm={9} md={5}>
+					<Grid item sm={9} md={4}>
 						<Typography
 							variant={isSmall ? 'h4' : 'h3'}
 							className={classes.desc}

@@ -5,6 +5,7 @@ import Container from '@material-ui/core/Container';
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 
 import Add from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
@@ -57,7 +58,16 @@ const ExpansionPanelDetails = withStyles(theme => ({
 	}
 }))(MuiExpansionPanelDetails);
 
+const useStyles = makeStyles(theme => ({
+	question: {
+		fontWeight: 600,
+		fontFamily: theme.typography.fontFamily,
+		color: theme.palette.secondary.main
+	}
+}));
+
 function FAQSection() {
+	const classes = useStyles();
 	const [expanded, setExpanded] = React.useState('faqPanel0');
 
 	const handleChange = panel => (event, newExpanded) => {
@@ -121,7 +131,7 @@ function FAQSection() {
 					expandIcon={expanded === panelName ? <Remove /> : <Add />}
 					aria-controls={panelName + '-content'}
 					id={panelName + '-header'}>
-					<Typography variant='body1'>
+					<Typography variant='body1' className={classes.question}>
 						{question}
 					</Typography>
 				</ExpansionPanelSummary>
