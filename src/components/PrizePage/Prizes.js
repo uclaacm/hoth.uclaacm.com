@@ -1,0 +1,103 @@
+import React from 'react';
+
+import Container from '@material-ui/core/Container';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import MuiTableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import withStyles from '@material-ui/core/styles/withStyles';
+
+import DesignHack from './images/design-hack.png';
+import GameHack from './images/game-hack.png';
+import MLHack from './images/ml-hack.png';
+import MobileHack from './images/mobile-hack.png';
+import OverallHack from './images/overall-hack.png';
+import WebHack from './images/web-hack.png';
+
+const allPrizes = [
+	{
+		img: MLHack,
+		track: 'Best Machine Learning',
+		prize: 'GeForce RTX 2080 Graphics Card'
+	},
+	{
+		img: DesignHack,
+		track: 'Best Design',
+		prize: 'Original Da Vinci Painting of Your Choice'
+	},
+	{
+		img: MobileHack,
+		track: 'Best Mobile Hack',
+		prize: 'iPhone 11 Pro'
+	},
+	{
+		img: WebHack,
+		track: 'Best Web Hack',
+		prize: '$1000'
+	},
+	{
+		img: GameHack,
+		track: 'Best Game Design',
+		prize: 'Nintendo Switch'
+	},
+	{
+		img: OverallHack,
+		track: 'Best Overall Hack',
+		prize: 'Hack Sticker'
+	}
+];
+
+const TableCell = withStyles({
+	root: {
+		borderBottom: 'none'
+	}
+})(MuiTableCell);
+
+const useStyles = makeStyles({
+	header: {
+		fontWeight: 700,
+		textDecoration: 'underline',
+		fontSize: '1.8em'
+	},
+	item: {
+		fontWeight: 600,
+		fontSize: '1.2em'
+	}
+});
+
+export default function Prizes() {
+	const classes = useStyles();
+
+	return (
+		<Container maxWidth='md'>
+			<TableContainer>
+				<Table aria-label="prize table">
+					<TableHead>
+						<TableRow>
+							<TableCell></TableCell>
+							<TableCell align='center' className={classes.header}>Track</TableCell>
+							<TableCell align='center' className={classes.header}>Prize</TableCell>
+						</TableRow>
+					</TableHead>
+					<TableBody>
+						{allPrizes.map(row =>
+							<TableRow key={row.track}>
+								<TableCell align='center' width='20%'>
+									<img src={row.img} height='80px'/>
+								</TableCell>
+								<TableCell align='center' width='40%' className={classes.item}>
+									{row.track}
+								</TableCell>
+								<TableCell align='center' width='40%' className={classes.item}>
+									{row.prize}
+								</TableCell>
+							</TableRow>)}
+					</TableBody>
+				</Table>
+			</TableContainer>
+		</Container>
+	);
+}

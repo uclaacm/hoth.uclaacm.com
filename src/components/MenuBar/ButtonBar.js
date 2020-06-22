@@ -55,7 +55,7 @@ function ButtonBar({ isMobile }) {
 		},
 		{
 			name: 'Prizes',
-			to: '/'
+			to: '/prizes'
 		},
 		{
 			name: 'Gallery',
