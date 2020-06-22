@@ -135,7 +135,7 @@ function FAQSection() {
 	});
 
 	return (
-		<Container maxWidth='md'>
+		<Container maxWidth='md' style={{ paddingTop: '40px' }}>
 			<Typography
 				variant='h5'
 				component='h2'

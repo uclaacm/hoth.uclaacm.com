@@ -10,11 +10,14 @@ prizes for the best hacks. We will also be providing a selection of hardware
 for hackers to check out and hack with. Learn more about our planned workshops,
 prize tracks and hardware below!`;
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
 	desc: {
-		textTransform: 'uppercase'
+		textTransform: 'uppercase',
+		fontSize: '3.3em',
+		fontFamily: theme.typography.fontFamily,
+		fontWeight: 700
 	}
-});
+}));
 
 export default function HothDescription() {
 	const theme = useTheme();
@@ -23,7 +26,7 @@ export default function HothDescription() {
 	const classes = useStyles();
 
 	return (
-		<div>
+		<div style={{ paddingTop: '40px' }}>
 			<Container maxWidth='md'>
 				<Grid
 					container
