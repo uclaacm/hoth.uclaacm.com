@@ -9,13 +9,14 @@ import wrench from '../../images/wrench.svg';
 const useStyles = makeStyles(theme => ({
 	title: {
 		textAlign: 'center',
-		padding: '15px 10px',
+		margin: '60px 10px 30px',
 		fontSize: '2em',
 		fontWeight: 700,
 		fontFamily: theme.typography.fontFamily
 	},
 	wrench: {
-		width: '40px'
+		width: '40px',
+		marginTop: '30px'
 	}
 }));
 
