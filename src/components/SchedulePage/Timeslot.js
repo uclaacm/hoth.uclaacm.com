@@ -6,10 +6,16 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import Event from '../SchedulePage/Event';
+import ScheduleRoundedIcon from '@material-ui/icons/ScheduleRounded';
 
 const useStyles = makeStyles(theme => ({
 	time: {
-		fontFamily: theme.typography.fontFamily
+		fontFamily: theme.typography.fontFamily,
+		marginLeft: 4
+	},
+	timeContainer: {
+		display: 'flex',
+		alignItems: 'center'
 	}
 }));
 
@@ -20,7 +26,10 @@ function Timeslot({ time, events }) {
 			<Grid container spacing={1}>
 				<Grid item xs={12}>
 					<Divider />
-					<Typography className={classes.time}>{time}</Typography>
+					<div className={classes.timeContainer}>
+						<ScheduleRoundedIcon fontSize={'small'} className={classes.clockImage}/>
+						<Typography className={classes.time}>{time}</Typography>
+					</div>
 					{events.map(event => {
 						return <Event {...event} key={event.name}/>;
 					})}
