@@ -9,7 +9,7 @@ const testEvents = [
 		name: 'ACM-W X ACM Hack | Hackathon 101 + Team Formation',
 		location: 'Sycamore Room',
 		// eslint-disable-next-line no-multi-str
-		description: 'First hackathon? We\'ll show you all the tips and tricks you\'ll ' +
+		description: 'First hackathon? We’ll show you all the tips and tricks you’ll ' +
 		'need to know to be successful and most importantly, have fun!',
 		startTime: '9:30 AM'
 	},
