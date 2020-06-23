@@ -32,7 +32,7 @@ function Timeslot({ classes, time, events }) {
 Timeslot.propTypes = {
 	classes: PropTypes.object.isRequired,
 	time: PropTypes.string.isRequired,
-	events: PropTypes.object.isRequired
+	events: PropTypes.array.isRequired
 };
 
 export default withStyles(styles)(Timeslot);

@@ -4,28 +4,34 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import TimeSlot from '../SchedulePage/Timeslot';
 
+// Must be ordered
 const testEvents = [
 	{
-		name: 'ACM Hack Does a Back Flip',
-		location: 'Bolter Hall',
+		name: 'ACM-W X ACM Hack | Hackathon 101 + Team Formation',
+		location: 'Sycamore Room',
 		// eslint-disable-next-line no-multi-str
-		description: 'Tim Gu is very athletic and will demonstrate multiple back flipping techniques.\
-		Come by to learn about back flips and their history.',
-		time: Date(2020, 4, 19, 10, 30)
+		description: 'First hackathon? We\'ll show you all the tips and tricks you\'ll\
+		 need to know to be successful and most importantly, have fun!',
+		startTime: '9:30 AM'
 	},
 	{
-		name: 'UWU',
+		name: 'Git and Github',
 		location: 'Bolter Hall',
 		// eslint-disable-next-line no-multi-str
-		description: 'owowowowowowowowowowowo',
-		time: Date(2020, 4, 19, 10, 30)
+		description: 'With multiple developers each working on \
+		a different feature of a project, bringing things together \
+		can get messy pretty easily. Come learn how to use Git to \
+		manage code across multiple collaborators and versions!',
+		startTime: '10:00 AM'
 	},
 	{
-		name: 'NYEP',
-		location: 'Bolter Hall',
+		name: 'INTRO TO IOS',
+		location: 'Sycamore Room',
 		// eslint-disable-next-line no-multi-str
-		description: 'Nwawawawaw',
-		time: Date(2020, 4, 19, 11, 30)
+		description: 'Learn all about the fundamentals of iOS development\
+		 by making a simple app in Swift and XCode! \
+		 You must have a Mac to be able to code along in this workshop.',
+		startTime: '10:00 AM'
 	}
 ];
 
@@ -36,11 +42,27 @@ const styles = theme => ({
 		paddingBottom: 16
 	}
 });
-
+/*
+Organize the events into bins by time and display each bin as a time slot
+NOT DONE. VERY BAD. DO NOT COMMIT.
+*/
 const SchedulePage = ({ classes }) => {
+	// Create array of pairs: (time, [events])
+	const timeslots = [];
+	let time = '';
+	for (const event of testEvents) {
+		if (event.startTime === time) {
+			timeslots[timeslots.length - 1][1].push(event);
+		} else {
+			timeslots.push([event.startTime, [event]]);
+			time = event.startTime;
+		}
+	}
 	return <>
 		<Typography align='center' variant='h4' className={classes.title}>Schedule</Typography>
-		<TimeSlot events={testEvents} time="1:30 P.M."/>
+		{timeslots.map(timeslot => {
+			return <TimeSlot events={timeslot[1]} time={timeslot[0]} key={timeslot[0]} />;
+		})}
 	</>;
 };
 

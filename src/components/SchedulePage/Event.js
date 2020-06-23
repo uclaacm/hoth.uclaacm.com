@@ -28,7 +28,7 @@ function Event({ classes, name, location, description }) {
 	return (
 		<Container maxWidth="md">
 			<Grid container spacing={1} className={classes.container}>
-				<Grid item xs={12} sm={12} md={4}>
+				<Grid item sm={12} md={4}>
 					<Typography variant='subtitle1' className={classes.name}>
 						{name}
 					</Typography>
@@ -36,7 +36,7 @@ function Event({ classes, name, location, description }) {
 						{location}
 					</Typography>
 				</Grid>
-				<Grid item xs={12} sm={12} md={8}>
+				<Grid item sm={12} md={8}>
 					<Typography variant='body1' className={classes.description}>
 						{description}
 					</Typography>
