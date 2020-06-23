@@ -24,32 +24,36 @@ const allPrizes = [
 	{
 		img: MLHack,
 		track: 'Best Machine Learning',
-		prize: 'GeForce RTX 2080 Graphics Card'
+		prize: 'Echo Dot'
 	},
 	{
 		img: DesignHack,
 		track: 'Best Design',
-		prize: 'Original Da Vinci Painting of Your Choice'
+		prize: 'Drawing Tablet'
 	},
 	{
 		img: MobileHack,
 		track: 'Best Mobile Hack',
-		prize: 'iPhone 11 Pro'
+		prize: 'Mini Phone Printer'
 	},
 	{
 		img: WebHack,
 		track: 'Best Web Hack',
-		prize: '$1000'
+		prize: 'Solar Phone Charger'
 	},
 	{
 		img: GameHack,
 		track: 'Best Game Design',
-		prize: 'Nintendo Switch'
+		prize: 'Google Cardboard'
 	},
 	{
 		img: OverallHack,
 		track: 'Best Overall Hack',
-		prize: 'Hack Sticker'
+		prize: 'Mini Projector'
+	},
+	{
+		track: '"You do You"',
+		prize: 'Seat Cushion'
 	}
 ];
 
