@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
 	name: {
 		fontFamily: theme.typography.fontFamily,
 		color: theme.palette.secondary.main,
@@ -22,9 +22,10 @@ const styles = theme => ({
 	container: {
 		paddingBottom: 12
 	}
-});
+}));
 
-function Event({ classes, name, location, description }) {
+function Event({ name, location, description }) {
+	const classes = useStyles();
 	return (
 		<Container maxWidth="md">
 			<Grid container spacing={1} className={classes.container}>
@@ -47,10 +48,9 @@ function Event({ classes, name, location, description }) {
 }
 
 Event.propTypes = {
-	classes: PropTypes.object.isRequired,
 	name: PropTypes.string.isRequired,
 	location: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired
 };
 
-export default withStyles(styles)(Event);
+export default Event;

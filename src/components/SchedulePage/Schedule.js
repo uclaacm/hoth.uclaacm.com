@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import TimeSlot from '../SchedulePage/Timeslot';
 
@@ -35,18 +34,19 @@ const testEvents = [
 	}
 ];
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
 	title: {
 		fontFamily: theme.typography.fontFamily,
 		fontWeight: 'bold',
 		paddingBottom: 16
 	}
-});
+}));
 /*
 Organize the events into bins by time and display each bin as a time slot
 NOT DONE. VERY BAD. DO NOT COMMIT.
 */
-const SchedulePage = ({ classes }) => {
+const SchedulePage = () => {
+	const classes = useStyles();
 	// Create array of pairs: (time, [events])
 	const timeslots = [];
 	let time = '';
@@ -66,8 +66,4 @@ const SchedulePage = ({ classes }) => {
 	</>;
 };
 
-SchedulePage.propTypes = {
-	classes: PropTypes.object.isRequired
-};
-
-export default withStyles(styles)(SchedulePage);
+export default SchedulePage;
