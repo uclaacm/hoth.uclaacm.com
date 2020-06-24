@@ -26,7 +26,7 @@ const events = [
 		startTime: new Date(getDateObj('10:30:00')),
 		events: [
 			{
-				name: 'Git and Github',
+				name: 'Git and GitHub',
 				location: 'De Neve Auditorium',
 				description: `With multiple developers each working on
 				a different feature of a project, bringing things together
@@ -34,7 +34,7 @@ const events = [
 				manage code across multiple collaborators and versions!`
 			},
 			{
-				name: 'INTRO TO IOS',
+				name: 'Intro to iOS',
 				location: 'Sycamore Room',
 				description: `Learn all about the fundamentals of iOS development
 				by making a simple app in Swift and XCode!
@@ -46,7 +46,7 @@ const events = [
 		startTime: new Date(getDateObj('11:00:00')),
 		events: [
 			{
-				name: 'FACEBOOK | ZERO TO HERO WITH REACT NATIVE',
+				name: 'Facebook | Zero to Hero with React Native',
 				location: 'De Never Auditorium ',
 				description: `In this workshop we will learn how to quickly create a mobile app
 				using React Native. We will be covering the React fundamentals (such as props
@@ -55,14 +55,14 @@ const events = [
 				If possible, come in with Node.js, Git, and a text editor of your choice installed already!`
 			},
 			{
-				name: 'INTRO TO WEB DEV: HTML AND CSS',
+				name: 'Intro to Web Dev: HTML and CSS',
 				location: 'Sycamore Room',
 				description: `Ever wanted to create and design your own website?
 				Come learn about HTML and CSS, the basic components behind every
 				website, and how you can use them to build unique and impressive web pages!`
 			},
 			{
-				name: 'INTRO TO ANDROID',
+				name: 'Intro to Android',
 				location: 'De Neve Learning Center',
 				description: `Learn all about the fundamentals of iOS development
 				by making a simple app in Swift and XCode!
