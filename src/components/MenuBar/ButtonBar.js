@@ -3,8 +3,7 @@ import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
-
-import LinkNoStyle from '../LinkNoStyle/LinkNoStyle';
+import { Link } from 'gatsby';
 
 const useStyles = makeStyles(theme => {
 	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm * 1.3;
@@ -32,17 +31,13 @@ const useStyles = makeStyles(theme => {
 
 function ButtonBar({ isMobile }) {
 	const classes = useStyles();
-	/* eslint-disable */
-	const PoppinLink = ({ to, ...props }) =>
-		<LinkNoStyle to={to}>
-			<Button fullWidth={isMobile} className={classes.btn} {...props} />
-		</LinkNoStyle>;
 
-	const BorderLink = ({ to, ...props }) =>
-		<LinkNoStyle to={to}>
-			<Button variant='outlined' disabled fullWidth={isMobile} className={classNames(classes.btn, classes.borderBtn)} {...props} />
-		</LinkNoStyle>;
-	/* eslint-enable */
+	const PoppinLink = ({ ...props }) =>
+		<Button component={Link} role='link' fullWidth={isMobile} className={classes.btn} {...props} />;
+
+	const BorderLink = ({ ...props }) =>
+		<Button component={Link} role='link' fullWidth={isMobile}
+			className={classNames(classes.btn, classes.borderBtn)} variant='outlined' {...props} />;
 
 	const links = [
 		{
@@ -69,7 +64,7 @@ function ButtonBar({ isMobile }) {
 				<PoppinLink to={link.to} key={`nav-${index}`}>
 					{link.name}
 				</PoppinLink>)}
-			<BorderLink to='/'>
+			<BorderLink disabled to='/'>
 				Apply
 			</BorderLink>
 		</>
