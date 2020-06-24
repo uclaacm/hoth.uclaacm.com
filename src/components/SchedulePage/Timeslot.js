@@ -8,12 +8,15 @@ import ScheduleRoundedIcon from '@material-ui/icons/ScheduleRounded';
 
 const useStyles = makeStyles(theme => ({
 	time: {
-		fontFamily: theme.typography.fontFamily,
-		marginLeft: 4
+		fontFamily: theme.typography.fontFamily
+	},
+	clockImage: {
+		marginTop: '1px',
+		marginBottom: '1px',
+		marginRight: '4px'
 	},
 	timeContainer: {
-		display: 'flex',
-		alignItems: 'center'
+		display: 'flex'
 	},
 	timeSlot: {
 		paddingLeft: '16px',
@@ -34,12 +37,14 @@ function Timeslot({ time, events }) {
 		<div className={classes.timeSlot}>
 			<Divider />
 			<div className={classes.timeContainer}>
-				<ScheduleRoundedIcon fontSize={'inherit'} className={classes.clockImage}/>
-				<Typography className={classes.time}>{timeFormatter.format(time)}</Typography>
+				<ScheduleRoundedIcon fontSize={'small'} className={classes.clockImage}/>
+				<div>
+					<Typography className={classes.time}>{timeFormatter.format(time)}</Typography>
+					{events.map(event => {
+						return <Event {...event} key={event.name}/>;
+					})}
+				</div>
 			</div>
-			{events.map(event => {
-				return <Event {...event} key={event.name}/>;
-			})}
 		</div>
 	);
 }
