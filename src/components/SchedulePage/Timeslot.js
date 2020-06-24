@@ -19,16 +19,7 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-const formatTime = time => {
-	let hours = time.getHours();
-	let minutes = time.getMinutes();
-	const ampm = hours >= 12 ? 'PM' : 'AM';
-	hours %= 12;
-	hours = hours ? hours : 12; // the hour '0' should be '12'
-	minutes = minutes < 10 ? '0' + minutes : minutes;
-	const strTime = hours + ':' + minutes + ' ' + ampm;
-	return strTime;
-};
+const timeFormatter = new Intl.DateTimeFormat('en-US', { timeStyle: 'short' });
 
 function Timeslot({ time, events }) {
 	const classes = useStyles();
@@ -39,7 +30,7 @@ function Timeslot({ time, events }) {
 					<Divider />
 					<div className={classes.timeContainer}>
 						<ScheduleRoundedIcon fontSize={'small'} className={classes.clockImage}/>
-						<Typography className={classes.time}>{formatTime(time)}</Typography>
+						<Typography className={classes.time}>{timeFormatter.format(time)}</Typography>
 					</div>
 					{events.map(event => {
 						return <Event {...event} key={event.name}/>;

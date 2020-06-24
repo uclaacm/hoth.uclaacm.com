@@ -47,7 +47,7 @@ const events = [
 		events: [
 			{
 				name: 'Facebook | Zero to Hero with React Native',
-				location: 'De Never Auditorium ',
+				location: 'De Neve Auditorium ',
 				description: `In this workshop we will learn how to quickly create a mobile app
 				using React Native. We will be covering the React fundamentals (such as props
 				and state) and apply them to quickly build a simple cross-platform app using
@@ -84,7 +84,7 @@ const useStyles = makeStyles(theme => ({
 const SchedulePage = () => {
 	const classes = useStyles();
 	return <>
-		<Typography align='center' variant='h4' className={classes.title}>Schedule</Typography>
+		<Typography align='center' component='h1' variant='h4' className={classes.title}>Schedule</Typography>
 		{events.map(timeslot => {
 			return <TimeSlot events={timeslot.events} time={timeslot.startTime} key={timeslot.startTime} />;
 		})}
