@@ -48,6 +48,9 @@ const useStyles = makeStyles(theme => ({
 		fontSize: '3em',
 		[theme.breakpoints.down('xs')]: {
 			fontSize: '2.3rem'
+		},
+		'&>:nth-child(even)': {
+			padding: '0 6px'
 		}
 	},
 	timeDesc: {
@@ -95,6 +98,7 @@ function Banner() {
 					flexDirection='row'
 					justifyContent='center'
 					className={classes.timer}
+					role='timer'
 				>
 					<Box
 						display='flex'
@@ -106,7 +110,7 @@ function Banner() {
 					>
 						{days.toString().padStart(2, '0')}
 					</Box>
-					<div style={{ padding: '0px 5px' }}>:</div>
+					<div>:</div>
 					<Box
 						display='flex'
 						flexDirection='column'
@@ -117,7 +121,7 @@ function Banner() {
 					>
 						{hours.toString().padStart(2, '0')}
 					</Box>
-					<div style={{ padding: '0px 5px' }}>:</div>
+					<div>:</div>
 					<Box
 						display='flex'
 						flexDirection='column'
@@ -128,7 +132,7 @@ function Banner() {
 					>
 						{minutes.toString().padStart(2, '0')}
 					</Box>
-					<div style={{ padding: '0px 5px' }}>:</div>
+					<div>:</div>
 					<Box
 						display='flex'
 						flexDirection='column'
