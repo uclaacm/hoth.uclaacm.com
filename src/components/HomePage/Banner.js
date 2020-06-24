@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PropTypes from 'prop-types';
 import Countdown from 'react-countdown';
 
@@ -11,7 +12,7 @@ import SvgImg from '../SvgImg';
 import hothLogo from '../../images/hoth7-logo.svg';
 import hothBanner from '../../images/hoth-banner.svg';
 
-const hothStart = new Date('2021-01-23T09:00:00-07:00');
+const hothStart = new Date('2021-02-23T09:00:00-07:00');
 
 const useStyles = makeStyles(theme => ({
 	container: {
@@ -23,12 +24,16 @@ const useStyles = makeStyles(theme => ({
 			backgroundRepeat: 'no-repeat',
 			backgroundPosition: 'right bottom'
 		},
-		padding: 25
+		padding: 25,
+		[theme.breakpoints.down('sm')]: {
+			padding: '12px 2px'
+		}
 	},
 	text: {
 		color: 'white',
 		fontWeight: 600,
-		fontFamily: theme.typography.fontFamily
+		fontFamily: theme.typography.fontFamily,
+		textAlign: 'center'
 	},
 	logo: {
 		width: 150,
@@ -40,13 +45,19 @@ const useStyles = makeStyles(theme => ({
 	timer: {
 		color: 'white',
 		fontWeight: 600,
-		fontSize: '4em'
+		fontSize: '3em',
+		[theme.breakpoints.down('xs')]: {
+			fontSize: '2.3rem'
+		},
+		'&>:nth-child(even)': {
+			padding: '0 6px'
+		}
 	},
 	timeDesc: {
 		'&::after': {
 			content: 'attr(data-field)',
 			fontWeight: 400,
-			fontSize: '0.23em'
+			fontSize: '0.9rem'
 		}
 	}
 }));
@@ -73,6 +84,7 @@ function renderInfo(classes) {
 function Banner() {
 	const classes = useStyles();
 	const theme = useTheme();
+	const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
 	const countdownRenderer = ({ days, hours, minutes, seconds, completed }) => {
 		if (completed) {
@@ -80,12 +92,13 @@ function Banner() {
 		}
 
 		return (
-			<Container>
+			<>
 				<Box
 					display='flex'
 					flexDirection='row'
 					justifyContent='center'
 					className={classes.timer}
+					role='timer'
 				>
 					<Box
 						display='flex'
@@ -97,7 +110,7 @@ function Banner() {
 					>
 						{days.toString().padStart(2, '0')}
 					</Box>
-					:
+					<div>:</div>
 					<Box
 						display='flex'
 						flexDirection='column'
@@ -108,7 +121,7 @@ function Banner() {
 					>
 						{hours.toString().padStart(2, '0')}
 					</Box>
-					:
+					<div>:</div>
 					<Box
 						display='flex'
 						flexDirection='column'
@@ -119,7 +132,7 @@ function Banner() {
 					>
 						{minutes.toString().padStart(2, '0')}
 					</Box>
-					:
+					<div>:</div>
 					<Box
 						display='flex'
 						flexDirection='column'
@@ -131,7 +144,7 @@ function Banner() {
 						{seconds.toString().padStart(2, '0')}
 					</Box>
 				</Box>
-			</Container>
+			</>
 		);
 	};
 
@@ -148,8 +161,8 @@ function Banner() {
 			<Container maxWidth='lg'>
 				<Grid
 					container
-					direction='row'
-					alignItems={theme.breakpoints.up('sm') ? 'flex-start' : 'center'}
+					direction={smallScreen ? 'column' : 'row' }
+					alignItems={smallScreen ? 'center' : 'flex-start'}
 				>
 					<Grid item sm={12} md={6}>
 						{renderInfo(classes)}
