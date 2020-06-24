@@ -15,7 +15,7 @@ const events = [
 		startTime: new Date(getDateObj('09:30:00')),
 		events: [
 			{
-				name: 'ACM-W X ACM Hack | Hackathon 101 + Team Formation',
+				name: 'ACM-W × ACM Hack | Hackathon 101 + Team Formation',
 				location: 'Sycamore Room',
 				description: `First hackathon? We’ll show you all the tips and tricks you’ll
 				need to know to be successful and most importantly, have fun!`
