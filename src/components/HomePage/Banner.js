@@ -32,7 +32,8 @@ const useStyles = makeStyles(theme => ({
 	text: {
 		color: 'white',
 		fontWeight: 600,
-		fontFamily: theme.typography.fontFamily
+		fontFamily: theme.typography.fontFamily,
+		textAlign: 'center'
 	},
 	logo: {
 		width: 150,
