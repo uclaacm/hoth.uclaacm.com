@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
@@ -27,23 +26,21 @@ const useStyles = makeStyles(theme => ({
 function Event({ name, location, description }) {
 	const classes = useStyles();
 	return (
-		<Container maxWidth="md">
-			<Grid container spacing={1} className={classes.container}>
-				<Grid item sm={12} md={4}>
-					<Typography variant='subtitle1' className={classes.name}>
-						{name}
-					</Typography>
-					<Typography variant='body1' className={classes.location}>
-						{location}
-					</Typography>
-				</Grid>
-				<Grid item sm={12} md={8}>
-					<Typography variant='body1' className={classes.description}>
-						{description}
-					</Typography>
-				</Grid>
+		<Grid container spacing={1} className={classes.container}>
+			<Grid item sm={12} md={4}>
+				<Typography variant='subtitle1' className={classes.name}>
+					{name}
+				</Typography>
+				<Typography variant='body1' className={classes.location}>
+					{location}
+				</Typography>
 			</Grid>
-		</Container>
+			<Grid item sm={12} md={8}>
+				<Typography variant='body1' className={classes.description}>
+					{description}
+				</Typography>
+			</Grid>
+		</Grid>
 	);
 }
 

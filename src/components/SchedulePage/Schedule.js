@@ -86,7 +86,8 @@ const SchedulePage = () => {
 	return <>
 		<Typography align='center' component='h1' variant='h4' className={classes.title}>Schedule</Typography>
 		{events.map(timeslot => {
-			return <TimeSlot events={timeslot.events} time={timeslot.startTime} key={timeslot.startTime} />;
+			return <TimeSlot events={timeslot.events}
+				time={timeslot.startTime} key={timeslot.startTime} />;
 		})}
 	</>;
 };
