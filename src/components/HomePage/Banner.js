@@ -24,7 +24,10 @@ const useStyles = makeStyles(theme => ({
 			backgroundRepeat: 'no-repeat',
 			backgroundPosition: 'right bottom'
 		},
-		padding: 25
+		padding: 25,
+		[theme.breakpoints.down('sm')]: {
+			padding: '12px 2px'
+		}
 	},
 	text: {
 		color: 'white',
@@ -42,17 +45,16 @@ const useStyles = makeStyles(theme => ({
 	timer: {
 		color: 'white',
 		fontWeight: 600,
-		fontSize: '4em',
-		textAlign: 'center',
+		fontSize: '3em',
 		[theme.breakpoints.down('xs')]: {
-			fontSize: '2em'
+			fontSize: '2.3rem'
 		}
 	},
 	timeDesc: {
 		'&::after': {
 			content: 'attr(data-field)',
 			fontWeight: 400,
-			fontSize: '0.23em'
+			fontSize: '0.9rem'
 		}
 	}
 }));
@@ -79,6 +81,7 @@ function renderInfo(classes) {
 function Banner() {
 	const classes = useStyles();
 	const theme = useTheme();
+	const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
 	const countdownRenderer = ({ days, hours, minutes, seconds, completed }) => {
 		if (completed) {
@@ -103,7 +106,7 @@ function Banner() {
 					>
 						{days.toString().padStart(2, '0')}
 					</Box>
-					:
+					<div style={{ padding: '0px 5px' }}>:</div>
 					<Box
 						display='flex'
 						flexDirection='column'
@@ -114,7 +117,7 @@ function Banner() {
 					>
 						{hours.toString().padStart(2, '0')}
 					</Box>
-					:
+					<div style={{ padding: '0px 5px' }}>:</div>
 					<Box
 						display='flex'
 						flexDirection='column'
@@ -125,7 +128,7 @@ function Banner() {
 					>
 						{minutes.toString().padStart(2, '0')}
 					</Box>
-					:
+					<div style={{ padding: '0px 5px' }}>:</div>
 					<Box
 						display='flex'
 						flexDirection='column'
@@ -148,8 +151,6 @@ function Banner() {
 		seconds: PropTypes.number.isRequired,
 		completed: PropTypes.bool.isRequired
 	};
-
-	const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
 	return (
 		<div className={classes.container}>
