@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-const timeFormatter = new Intl.DateTimeFormat('en-US', { timeStyle: 'short' });
+const timeFormatter = new Intl.DateTimeFormat('en-US', { timeStyle: 'short', hour: 'numeric', minute: '2-digit' });
 
 function Timeslot({ time, events }) {
 	const classes = useStyles();
