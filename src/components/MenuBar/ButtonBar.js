@@ -77,8 +77,7 @@ function ButtonBar({ isMobile }) {
 }
 
 ButtonBar.propTypes = {
-	classes: PropTypes.object.isRequired,
-	isMobile: PropTypes.bool.isRequired
+	isMobile: PropTypes.bool
 };
 
 ButtonBar.defaultProps = {

@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import useTheme from '@material-ui/core/styles/useTheme';
 import Collapse from '@material-ui/core/Collapse';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Typography from '@material-ui/core/Typography';
 import { navigate } from 'gatsby';
-
-import { makeStyles } from '@material-ui/core/styles';
 
 import ButtonBar from './ButtonBar';
 import { ReactComponent as HackLogo } from '../../images/hack-logo.svg';
@@ -112,9 +110,5 @@ function MenuBar() {
 
 	return isMobile ? mobileMenuBar : desktopMenuBar;
 }
-
-MenuBar.propTypes = {
-	classes: PropTypes.object.isRequired
-};
 
 export default MenuBar;
