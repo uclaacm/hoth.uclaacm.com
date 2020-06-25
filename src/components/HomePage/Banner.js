@@ -61,8 +61,9 @@ const useStyles = makeStyles(theme => ({
 				fontWeight: 400,
 				fontSize: '0.9rem',
 				// The browser generally leaves space for any descenders in the text.
-				// Numbers in Poppins don't have descenders though.
-				marginTop: '0.5em'
+				// Numbers in Poppins don't have descenders though, so we recover some
+				// extraneous spacing.
+				marginTop: '-0.5em'
 			}
 		},
 
