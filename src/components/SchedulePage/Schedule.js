@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import TimeSlot from '../SchedulePage/Timeslot';
+import TimeSlot from '../SchedulePage/TimeSlot';
 
 const hothDate = '2021-02-23'; // replace with real date later
 const utcOffset = '-08:00'; // PST
