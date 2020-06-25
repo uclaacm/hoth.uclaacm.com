@@ -1,0 +1,17 @@
+schedule:
+- any: ['src/components/SchedulePage/**/*', 'src/pages/schedule.js']
+
+homepage:
+- any: ['src/components/HomePage/**/*', 'src/pages/index.js']
+
+prizes:
+- any: ['src/components/PrizePage/**/*', 'src/pages/prizes.js']
+
+page:
+- any: ['src/components/MenuBar/**/*', 'src/components/Footer/**/*', 'src/components/layout.js']
+
+gallery:
+- any: ['src/components/GalleryPage/**/*', 'src/pages/gallery.js']
+
+infra:
+- any: ['.github/**/*', '!.github/FUNDING.yml']
