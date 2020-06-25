@@ -35,29 +35,41 @@ const useStyles = makeStyles(theme => ({
 		fontFamily: theme.typography.fontFamily,
 		textAlign: 'center'
 	},
-	logo: {
-		width: 150,
-		margin: 20,
-		[theme.breakpoints.down('sm')]: {
-			width: 150
-		}
-	},
 	timer: {
+		display: 'flex',
+		flexDirection: 'row',
+		justifyContent: 'center',
+		alignItems: 'baseline',
+
 		color: 'white',
 		fontWeight: 600,
 		fontSize: '3em',
 		[theme.breakpoints.down('xs')]: {
 			fontSize: '2.3rem'
 		},
+
+		// Numbers
+		'&>:nth-child(odd)': {
+			display: 'flex',
+			flexDirection: 'column',
+			justifyContent: 'center',
+			alignItems: 'center',
+			textAlign: 'center',
+
+			'&::after': {
+				content: 'attr(data-field)',
+				fontWeight: 400,
+				fontSize: '0.9rem',
+				// The browser generally leaves space for any descenders in the text.
+				// Numbers in Poppins don't have descenders though, so we recover some
+				// extraneous spacing.
+				marginTop: '-0.5em'
+			}
+		},
+
+		// Colons
 		'&>:nth-child(even)': {
 			padding: '0 6px'
-		}
-	},
-	timeDesc: {
-		'&::after': {
-			content: 'attr(data-field)',
-			fontWeight: 400,
-			fontSize: '0.9rem'
 		}
 	}
 }));
@@ -74,8 +86,16 @@ function renderInfo(classes) {
 				Hack on the Hill 7
 			</Typography>
 			<Typography variant='h5' className={classes.text} component='h3'>Explore. Build. Empower.</Typography>
-			<SvgImg src={hothLogo} className={classes.logo} width={258} height={250} />
-			<Typography variant='h5' className={classes.text} component='h3'>Feb 23<sup>rd</sup>, 2021</Typography>
+			<SvgImg src={hothLogo} className={classes.logo} width={258} height={250}
+				style={{
+					width: 150,
+					margin: 20
+				}} />
+			<Typography variant='h5' className={classes.text} component='h3'>
+				<time dateTime={hothStart.toISOString()}>
+					Feb 23<sup>rd</sup>, 2021
+				</time>
+			</Typography>
 			<Typography variant='h5' className={classes.text} component='h3'>De Neve Plaza Room</Typography>
 		</Grid>
 	);
@@ -92,59 +112,23 @@ function Banner() {
 		}
 
 		return (
-			<>
-				<Box
-					display='flex'
-					flexDirection='row'
-					justifyContent='center'
-					className={classes.timer}
-					role='timer'
-				>
-					<Box
-						display='flex'
-						flexDirection='column'
-						justifyContent='center'
-						alignItems='center'
-						data-field={days === 1 ? 'day' : 'days'}
-						className={classes.timeDesc}
-					>
-						{days.toString().padStart(2, '0')}
-					</Box>
-					<div>:</div>
-					<Box
-						display='flex'
-						flexDirection='column'
-						justifyContent='center'
-						alignItems='center'
-						data-field={hours === 1 ? 'hour' : 'hours'}
-						className={classes.timeDesc}
-					>
-						{hours.toString().padStart(2, '0')}
-					</Box>
-					<div>:</div>
-					<Box
-						display='flex'
-						flexDirection='column'
-						justifyContent='center'
-						alignItems='center'
-						data-field={minutes === 1 ? 'minute' : 'minutes'}
-						className={classes.timeDesc}
-					>
-						{minutes.toString().padStart(2, '0')}
-					</Box>
-					<div>:</div>
-					<Box
-						display='flex'
-						flexDirection='column'
-						justifyContent='center'
-						alignItems='center'
-						data-field={seconds === 1 ? 'second' : 'seconds'}
-						className={classes.timeDesc}
-					>
-						{seconds.toString().padStart(2, '0')}
-					</Box>
+			<Box className={classes.timer} role='timer'>
+				<Box data-field={days === 1 ? 'day' : 'days'}>
+					{days.toString().padStart(2, '0')}
 				</Box>
-			</>
+				<Box>:</Box>
+				<Box data-field={hours === 1 ? 'hour' : 'hours'}>
+					{hours.toString().padStart(2, '0')}
+				</Box>
+				<Box>:</Box>
+				<Box data-field={minutes === 1 ? 'minute' : 'minutes'}>
+					{minutes.toString().padStart(2, '0')}
+				</Box>
+				<Box>:</Box>
+				<Box data-field={seconds === 1 ? 'second' : 'seconds'}>
+					{seconds.toString().padStart(2, '0')}
+				</Box>
+			</Box>
 		);
 	};
 

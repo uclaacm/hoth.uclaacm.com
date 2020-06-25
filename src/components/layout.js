@@ -30,7 +30,6 @@ const overwrittenTheme = responsiveFontSizes(createMuiTheme({
 		}
 	},
 	typography: {
-		useNextVariants: true,
 		fontSize: 16,
 		fontFamily: '"Poppins", sans-serif',
 		h1: { fontFamily: '"Palanquin Dark", sans-serif' },
