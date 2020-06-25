@@ -1,6 +1,8 @@
 import React from 'react';
+
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
 import TimeSlot from '../SchedulePage/TimeSlot';
 
 const hothDate = '2021-02-23'; // replace with real date later
@@ -12,7 +14,7 @@ function getDateObj(time) {
 
 const events = [
 	{
-		startTime: new Date(getDateObj('09:30:00')),
+		startTime: getDateObj('09:30:00'),
 		events: [
 			{
 				name: 'ACM-W × ACM Hack | Hackathon 101 + Team Formation',
@@ -23,7 +25,7 @@ const events = [
 		]
 	},
 	{
-		startTime: new Date(getDateObj('10:30:00')),
+		startTime: getDateObj('10:30:00'),
 		events: [
 			{
 				name: 'Git and GitHub',
@@ -43,7 +45,7 @@ const events = [
 		]
 	},
 	{
-		startTime: new Date(getDateObj('11:00:00')),
+		startTime: getDateObj('11:00:00'),
 		events: [
 			{
 				name: 'Facebook | Zero to Hero with React Native',
@@ -83,13 +85,13 @@ const useStyles = makeStyles(theme => ({
 
 const SchedulePage = () => {
 	const classes = useStyles();
-	return <>
+	return <Container maxWidth='md'>
 		<Typography align='center' component='h1' variant='h4' className={classes.title}>Schedule</Typography>
 		{events.map(timeslot => {
 			return <TimeSlot events={timeslot.events}
 				time={timeslot.startTime} key={timeslot.startTime} />;
 		})}
-	</>;
+	</Container>;
 };
 
 export default SchedulePage;

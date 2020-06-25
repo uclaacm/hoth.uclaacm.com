@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import Event from '../SchedulePage/Event';
 import ScheduleRoundedIcon from '@material-ui/icons/ScheduleRounded';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles(theme => ({
 	time: {
@@ -17,15 +18,6 @@ const useStyles = makeStyles(theme => ({
 	},
 	timeContainer: {
 		display: 'flex'
-	},
-	timeSlot: {
-		paddingLeft: '16px',
-		paddingRight: '16px',
-		[theme.breakpoints.up('md')]: {
-			width: theme.breakpoints.values.md,
-			marginLeft: 'auto',
-			marginRight: 'auto'
-		}
 	}
 }));
 
@@ -34,18 +26,20 @@ const timeFormatter = new Intl.DateTimeFormat('en-US', { timeStyle: 'short', hou
 function Timeslot({ time, events }) {
 	const classes = useStyles();
 	return (
-		<div className={classes.timeSlot}>
+		<>
 			<Divider />
-			<div className={classes.timeContainer}>
-				<ScheduleRoundedIcon fontSize={'small'} className={classes.clockImage}/>
+			<Box display='flex'>
+				<ScheduleRoundedIcon fontSize={'small'} className={classes.clockImage} />
 				<div>
-					<Typography className={classes.time}>{timeFormatter.format(time)}</Typography>
+					<Typography component='h2' className={classes.time}>
+						<time dateTime={time.toISOString()}>{timeFormatter.format(time)}</time>
+					</Typography>
 					{events.map(event => {
-						return <Event {...event} key={event.name}/>;
+						return <Event {...event} key={event.name} />;
 					})}
 				</div>
-			</div>
-		</div>
+			</Box>
+		</>
 	);
 }
 

@@ -28,7 +28,7 @@ function Event({ name, location, description }) {
 	return (
 		<Grid container spacing={1} className={classes.container}>
 			<Grid item sm={12} md={4}>
-				<Typography variant='subtitle1' className={classes.name}>
+				<Typography component='h3' variant='subtitle1' className={classes.name}>
 					{name}
 				</Typography>
 				<Typography variant='body1' className={classes.location}>
