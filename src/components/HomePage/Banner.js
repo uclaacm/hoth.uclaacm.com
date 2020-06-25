@@ -64,7 +64,11 @@ function renderInfo(classes) {
 			</Typography>
 			<Typography variant='h5' className={classes.text} component='h3'>Explore. Build. Empower.</Typography>
 			<SvgImg src={hothLogo} className={classes.logo} width={258} height={250} />
-			<Typography variant='h5' className={classes.text} component='h3'>Feb 23<sup>rd</sup>, 2021</Typography>
+			<Typography variant='h5' className={classes.text} component='h3'>
+				<time dateTime={hothStart.toISOString()}>
+					Feb 23<sup>rd</sup>, 2021
+				</time>
+			</Typography>
 			<Typography variant='h5' className={classes.text} component='h3'>De Neve Plaza Room</Typography>
 		</Grid>
 	);
