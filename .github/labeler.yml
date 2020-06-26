@@ -1,0 +1,39 @@
+documentation:
+- any: ['*.md']
+- LICENSE*
+- .github/FUNDING.yml
+
+schedule:
+- src/components/SchedulePage/**/*
+- src/pages/schedule.js
+
+homepage:
+- src/components/HomePage/**/*
+- src/pages/index.js
+
+prizes:
+- src/components/PrizePage/**/*
+- src/pages/prizes.js
+
+page:
+- src/components/MenuBar/**/*
+- src/components/Footer/**/*
+- src/components/layout.js
+- src/components/seo.js
+
+gallery:
+- src/components/GalleryPage/**/*
+- src/pages/gallery.js
+
+infra:
+- any: ['.github/**/*', '!.github/FUNDING.yml']
+- src/components/SvgImg.js
+- .editorconfig
+- .eslint*
+- .huskyrc.js
+- .nvmrc
+- .prettier*
+- .svgo*
+- gatsby-*.js
+- package.json
+- yarn.lock
