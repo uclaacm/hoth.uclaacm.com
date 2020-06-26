@@ -1,17 +1,40 @@
+documentation:
+- LICENSE*
+- *.md
+- .github/FUNDING.yml
+
 schedule:
-- any: ['src/components/SchedulePage/**/*', 'src/pages/schedule.js']
+- src/components/SchedulePage/**/*
+- src/pages/schedule.js
 
 homepage:
-- any: ['src/components/HomePage/**/*', 'src/pages/index.js']
+- src/components/HomePage/**/*
+- src/pages/index.js
 
 prizes:
-- any: ['src/components/PrizePage/**/*', 'src/pages/prizes.js']
+- src/components/PrizePage/**/*
+- src/pages/prizes.js
 
 page:
-- any: ['src/components/MenuBar/**/*', 'src/components/Footer/**/*', 'src/components/layout.js']
+- src/components/MenuBar/**/*
+- src/components/Footer/**/*
+- src/components/layout.js
+- src/components/seo.js
 
 gallery:
-- any: ['src/components/GalleryPage/**/*', 'src/pages/gallery.js']
+- src/components/GalleryPage/**/*
+- src/pages/gallery.js
 
 infra:
-- any: ['.github/**/*', '!.github/FUNDING.yml']
+- any: ['.github/**/*']
+  all: ['!.github/FUNDING.yml']
+- src/components/SvgImg.js
+- .editorconfig
+- .eslint*
+- .huskyrc.js
+- .nvmrc
+- .prettier*
+- .svgo*
+- gatsby-*.js
+- package.json
+- yarn.lock
