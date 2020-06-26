@@ -1,6 +1,6 @@
 documentation:
+- any: ['*.md']
 - LICENSE*
-- *.md
 - .github/FUNDING.yml
 
 schedule:
