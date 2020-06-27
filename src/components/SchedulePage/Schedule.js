@@ -4,7 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import TimeSlot from '../SchedulePage/TimeSlot';
-import workshopSchedule from '../../data/WorkshopSchedule'
+import Divider from '@material-ui/core/Divider';
+import workshopSchedule from '../../data/WorkshopSchedule';
 
 const useStyles = makeStyles(theme => ({
 	title: {
@@ -20,8 +21,11 @@ const SchedulePage = () => {
 	return <Container maxWidth='md'>
 		<Typography align='center' component='h1' variant='h4' className={classes.title}>Schedule</Typography>
 		{workshopSchedule.map(timeslot => {
-			return <TimeSlot events={timeslot.events}
-				time={timeslot.startTime} key={timeslot.startTime} />;
+			return <>
+				<Divider />
+				<TimeSlot events={timeslot.events}
+					time={timeslot.startTime} key={timeslot.startTime} />;
+			</>;
 		})}
 	</Container>;
 };
