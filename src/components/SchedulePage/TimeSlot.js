@@ -14,9 +14,6 @@ const useStyles = makeStyles(theme => ({
 		marginTop: '1px',
 		marginBottom: '1px',
 		marginRight: '4px'
-	},
-	timeContainer: {
-		display: 'flex'
 	}
 }));
 
