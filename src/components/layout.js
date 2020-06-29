@@ -31,16 +31,7 @@ const overwrittenTheme = responsiveFontSizes(createMuiTheme({
 	},
 	typography: {
 		fontSize: 16,
-		fontFamily: '"Poppins", sans-serif',
-		h1: { fontFamily: '"Palanquin Dark", sans-serif' },
-		h2: { fontFamily: '"Palanquin Dark", sans-serif' },
-		h3: { fontFamily: '"Palanquin Dark", sans-serif' },
-		h4: { fontFamily: '"Palanquin Dark", sans-serif' },
-		h5: { fontFamily: '"Palanquin Dark", sans-serif' },
-		h6: { fontFamily: '"Palanquin Dark", sans-serif' },
-		subtitle1: { fontFamily: '"Palanquin Dark", sans-serif' },
-		body1: { fontFamily: '"Chivo", sans-serif' },
-		button: { fontFamily: '"Chivo", sans-serif' }
+		fontFamily: '"Poppins", sans-serif'
 	}
 }));
 

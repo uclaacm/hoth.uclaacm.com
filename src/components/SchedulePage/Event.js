@@ -6,17 +6,12 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
 	name: {
-		fontFamily: theme.typography.fontFamily,
 		color: theme.palette.secondary.main,
 		fontWeight: 'bold',
 		textTransform: 'uppercase'
 	},
 	location: {
-		fontFamily: theme.typography.fontFamily,
 		fontWeight: theme.typography.fontWeightMedium
-	},
-	description: {
-		fontFamily: theme.typography.fontFamily
 	},
 	container: {
 		paddingBottom: 12
@@ -36,7 +31,7 @@ function Event({ name, location, description }) {
 				</Typography>
 			</Grid>
 			<Grid item sm={12} md={8}>
-				<Typography variant='body1' className={classes.description}>
+				<Typography variant='body1'>
 					{description}
 				</Typography>
 			</Grid>

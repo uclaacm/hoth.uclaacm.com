@@ -61,7 +61,6 @@ const ExpansionPanelDetails = withStyles(theme => ({
 const useStyles = makeStyles(theme => ({
 	question: {
 		fontWeight: 600,
-		fontFamily: theme.typography.fontFamily,
 		color: theme.palette.secondary.main
 	}
 }));
