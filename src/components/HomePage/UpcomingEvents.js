@@ -24,7 +24,8 @@ const UpcomingEvents = () => {
 	const classes = useStyles();
 	const currentTime = new Date();
 	const nextTimeSlot = workshopSchedule.reduce((closestTimeSlot, timeSlot) => {
-		if (closestTimeSlot.startTime > currentTime && closestTimeSlot.startTime < timeSlot.startTime) {
+		if ((currentTime < timeSlot.startTime && timeSlot.startTime < closestTimeSlot.startTime) ||
+			currentTime > closestTimeSlot.startTime) {
 			return timeSlot;
 		}
 		return closestTimeSlot;
