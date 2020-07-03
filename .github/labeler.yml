@@ -35,5 +35,6 @@ infra:
 - .prettier*
 - .svgo*
 - gatsby-*.js
+- netlify.toml
 - package.json
 - yarn.lock
