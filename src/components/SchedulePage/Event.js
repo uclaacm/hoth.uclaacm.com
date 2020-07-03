@@ -26,7 +26,7 @@ function Event({ name, location, description }) {
 				<Typography component='h3' variant='subtitle1' className={classes.name}>
 					{name}
 				</Typography>
-				<Typography variant='body1' className={classes.location}>
+				<Typography variant='body2' className={classes.location}>
 					{location}
 				</Typography>
 			</Grid>
