@@ -24,7 +24,7 @@ const SchedulePage = () => {
 			return <>
 				<Divider />
 				<TimeSlot events={timeslot.events}
-					time={timeslot.startTime} key={timeslot.startTime} />;
+					time={timeslot.startTime} key={timeslot.startTime} />
 			</>;
 		})}
 	</Container>;

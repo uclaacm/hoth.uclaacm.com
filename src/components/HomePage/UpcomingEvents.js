@@ -1,11 +1,12 @@
 import React from 'react';
-
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import TimeSlot from '../SchedulePage/TimeSlot';
 import Grid from '@material-ui/core/Grid';
-const workshopSchedule = require('../../data/WorkshopSchedule');
+import Button from '@material-ui/core/Button';
+import { Link } from 'gatsby';
+import workshopSchedule from '../../data/WorkshopSchedule';
 
 const useStyles = makeStyles(theme => ({
 	title: {
@@ -17,29 +18,40 @@ const useStyles = makeStyles(theme => ({
 	eventsContainer: {
 		paddingTop: '16px',
 		paddingBottom: '24px'
+	},
+	moreWorkshopsButton: {
+		marginTop: '8px'
 	}
 }));
 
-const UpcomingEvents = () => {
+function UpcomingEvents() {
 	const classes = useStyles();
 	const currentTime = new Date();
-	const nextTimeSlot = workshopSchedule.reduce((closestTimeSlot, timeSlot) => {
-		if ((currentTime < timeSlot.startTime && timeSlot.startTime < closestTimeSlot.startTime) ||
-			currentTime > closestTimeSlot.startTime) {
-			return timeSlot;
+	let eventsDisplayed = 0;
+	const numEventsToDisplay = 2;
+	const timeSlots = [];
+	// Assumes workshopSchedule is ordered by time
+	for (let i = 0; i < workshopSchedule.length && eventsDisplayed < numEventsToDisplay; i++) {
+		const workshop = workshopSchedule[i];
+		if (currentTime < workshop.startTime) {
+			timeSlots.push(workshop);
+			eventsDisplayed += workshop.events.length;
 		}
-		return closestTimeSlot;
-	}, workshopSchedule[0]);
+	}
+	if (eventsDisplayed === 0) {
+		return <></>; // Abort entirely
+	}
 	return <Container maxWidth='md' className={classes.eventsContainer}>
 		<Grid container justify='center' spacing={1}>
-			<Grid item md={11}>
-				<Typography align='center' component='h1' variant='h4'
-					className={classes.title}>Upcoming Workshops</Typography>
-				<TimeSlot events={nextTimeSlot.events}
-					time={nextTimeSlot.startTime} key={nextTimeSlot.startTime} />
-			</Grid>
+			<Typography align='center' component='h1' variant='h4'
+				className={classes.title}>Upcoming Workshops</Typography>
+			{timeSlots.map(timeslot => {
+				return <TimeSlot key={timeslot.startTime} time={timeslot.startTime} events={timeslot.events} />;
+			})}
+			<Button component={Link} role='link' className={classes.moreWorkshopsButton}
+				variant='outlined' to='/schedule'>More Workshops</Button>
 		</Grid>
 	</Container>;
-};
+}
 
 export default UpcomingEvents;

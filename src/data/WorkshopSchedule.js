@@ -67,4 +67,4 @@ const workshopSchedule = [
 	}
 ];
 
-module.exports = workshopSchedule;
+export default workshopSchedule;
