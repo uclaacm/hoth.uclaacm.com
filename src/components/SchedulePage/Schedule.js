@@ -74,14 +74,13 @@ const events = [
 	}
 ];
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
 	title: {
-		fontFamily: theme.typography.fontFamily,
 		fontWeight: 'bold',
 		paddingTop: 24,
 		paddingBottom: 16
 	}
-}));
+});
 
 const SchedulePage = () => {
 	const classes = useStyles();

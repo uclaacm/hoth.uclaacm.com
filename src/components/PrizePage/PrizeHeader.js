@@ -6,19 +6,18 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import SvgImg from '../SvgImg';
 import wrench from '../../images/wrench.svg';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
 	title: {
 		textAlign: 'center',
 		margin: '60px 10px 30px',
 		fontSize: '2em',
-		fontWeight: 700,
-		fontFamily: theme.typography.fontFamily
+		fontWeight: 700
 	},
 	wrench: {
 		width: '40px',
 		marginTop: '30px'
 	}
-}));
+});
 
 export default function PrizeHeader() {
 	const classes = useStyles();

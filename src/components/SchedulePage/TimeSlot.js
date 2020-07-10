@@ -7,10 +7,7 @@ import Event from '../SchedulePage/Event';
 import ScheduleRoundedIcon from '@material-ui/icons/ScheduleRounded';
 import Box from '@material-ui/core/Box';
 
-const useStyles = makeStyles(theme => ({
-	time: {
-		fontFamily: theme.typography.fontFamily
-	},
+const useStyles = makeStyles({
 	clockImage: {
 		marginTop: '1px',
 		marginBottom: '1px',
@@ -19,7 +16,7 @@ const useStyles = makeStyles(theme => ({
 	timeContainer: {
 		display: 'flex'
 	}
-}));
+});
 
 const timeFormatter = new Intl.DateTimeFormat('en-US', { timeStyle: 'short', hour: 'numeric', minute: '2-digit' });
 
@@ -31,7 +28,7 @@ function Timeslot({ time, events }) {
 			<Box display='flex'>
 				<ScheduleRoundedIcon fontSize={'small'} className={classes.clockImage} />
 				<div>
-					<Typography component='h2' className={classes.time}>
+					<Typography component='h2'>
 						<time dateTime={time.toISOString()}>{timeFormatter.format(time)}</time>
 					</Typography>
 					{events.map(event => {
