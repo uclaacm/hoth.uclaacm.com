@@ -18,7 +18,6 @@ const styles = theme => ({
 	content: {
 		padding: theme.spacing(1, 3),
 		alignItems: 'center',
-		fontFamily: ['Poppins', 'sans-serif'],
 		fontSize: theme.typography.fontSize,
 		color: '#FFFFFF',
 		textAlign: 'center'

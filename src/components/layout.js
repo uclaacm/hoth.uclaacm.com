@@ -32,13 +32,6 @@ const overwrittenTheme = responsiveFontSizes(createMuiTheme({
 	typography: {
 		fontSize: 16,
 		fontFamily: '"Poppins", sans-serif',
-		h1: { fontFamily: '"Palanquin Dark", sans-serif' },
-		h2: { fontFamily: '"Palanquin Dark", sans-serif' },
-		h3: { fontFamily: '"Palanquin Dark", sans-serif' },
-		h4: { fontFamily: '"Palanquin Dark", sans-serif' },
-		h5: { fontFamily: '"Palanquin Dark", sans-serif' },
-		h6: { fontFamily: '"Palanquin Dark", sans-serif' },
-		subtitle1: { fontFamily: '"Palanquin Dark", sans-serif' },
 		body1: { fontFamily: '"Chivo", sans-serif' },
 		button: { fontFamily: '"Chivo", sans-serif' }
 	}
@@ -50,7 +43,7 @@ const Layout = ({ children }) => {
 			<CssBaseline />
 			<Helmet>
 				<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet"/>
-				<link href="https://fonts.googleapis.com/css?family=Chivo:300,400|Palanquin+Dark|Palanquin" rel="stylesheet"/>
+				<link href="https://fonts.googleapis.com/css?family=Chivo:300,400" rel="stylesheet"/>
 			</Helmet>
 			<MenuBar />
 			<main>{children}</main>
