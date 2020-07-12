@@ -1,14 +1,12 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
-import useTheme from '@material-ui/core/styles/useTheme';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import makeStyles from '@material-ui/styles/makeStyles';
 
 import MeteorImg from './images/meteor.jpg';
-import WaveImg from './images/wave.png';
+import WaveImg from './images/wave.jpg';
 
 const winners = [
 	{
@@ -30,9 +28,7 @@ const winners = [
 			computers. Wave sits in the background as you use your device. It
 			recognizes gestures to perform relevant tasks based on your activity. It
 			runs completely locally on your device, so your information is kept
-			private, and stores no identifying data anywhere. Although this beta
-			version runs only on a Mac, the system can be easily expanded to support
-			other devices as well.`,
+			private, and stores no identifying data anywhere.`,
 		link: 'https://devpost.com/software/wave-m1pz20',
 		image: WaveImg
 	}
@@ -40,9 +36,8 @@ const winners = [
 
 const useStyles = makeStyles(theme => ({
 	projectImg: {
-		width: '40%',
-		marginRight: 20,
-		[theme.breakpoints.down('sm')]: {
+		width: '100%',
+		[theme.breakpoints.down('xs')]: {
 			width: '100%',
 			padding: '10px 0px'
 		}
@@ -51,20 +46,15 @@ const useStyles = makeStyles(theme => ({
 
 function Winners() {
 	const classes = useStyles();
-	const theme = useTheme();
-	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
 	const winnerCards = winners.map(item => {
 		return (
-			<Box
-				display='flex'
-				flexDirection={isSmall ? 'column' : 'row' }
-				key={item.title}
-				alignItems='flex-start'
-				style={{ marginTop: 20 }}
-			>
-				<img src={item.image} className={classes.projectImg} />
-				<div>
+			<Grid container key={item.title} spacing={2} alignItems='center'
+				style={{ paddingTop: 60 }}>
+				<Grid item md={5} sm={12}>
+					<img src={item.image} className={classes.projectImg} />
+				</Grid>
+				<Grid item md={7} sm={12}>
 					<Typography variant='h5'>{item.title} –{' '}
 						<span style={{ fontStyle: 'italic' }}>
 							{item.category}
@@ -74,8 +64,8 @@ function Winners() {
 					<Link href={item.link} target='_blank' rel='noreferrer noopener'>
 						See Project
 					</Link>
-				</div>
-			</Box>
+				</Grid>
+			</Grid>
 		);
 	});
 
