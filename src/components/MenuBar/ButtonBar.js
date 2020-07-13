@@ -9,7 +9,6 @@ const useStyles = makeStyles(theme => {
 	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm * 1.3;
 	return {
 		btn: {
-			fontFamily: theme.typography.fontFamily,
 			fontWeight: 500
 		},
 		borderBtn: {

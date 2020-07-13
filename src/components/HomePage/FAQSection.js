@@ -61,8 +61,8 @@ const ExpansionPanelDetails = withStyles(theme => ({
 const useStyles = makeStyles(theme => ({
 	question: {
 		fontWeight: 600,
-		fontFamily: theme.typography.fontFamily,
-		color: theme.palette.secondary.main
+		color: theme.palette.secondary.main,
+		fontFamily: theme.typography.fontFamily
 	}
 }));
 
@@ -149,7 +149,8 @@ function FAQSection() {
 			<Typography
 				variant='h5'
 				component='h2'
-				align='center'>
+				align='center'
+				style={{ fontWeight: 'bold' }}>
 				Frequently Asked Questions (FAQ)
 			</Typography>
 			{faqComponents}
