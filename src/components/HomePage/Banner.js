@@ -7,12 +7,29 @@ import Box from '@material-ui/core/Box';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PropTypes from 'prop-types';
 import Countdown from 'react-countdown';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import SvgImg from '../SvgImg';
 import hothLogo from '../../images/hoth7-logo.svg';
 import hothBanner from '../../images/hoth-banner.svg';
 
-const hothStart = new Date('2021-02-23T09:00:00-07:00');
+const hothStart = new Date('2021-02-23T09:00:00-09:00');
+const hothEnd = new Date('2021-02-23T09:00:00-21:00');
+const timeFormatter = new Intl.DateTimeFormat('en-US',
+	{ timeZoneName: 'short', month: 'short' });
+
+// Handles 1st, 2nd, 3rd, etc
+const englishOrdinalRules = new Intl.PluralRules('en', { type: 'ordinal' });
+const suffixes = {
+	one: 'st',
+	two: 'nd',
+	few: 'rd',
+	other: 'th'
+};
+function ordinal(number) {
+	const suffix = suffixes[englishOrdinalRules.select(number)];
+	return suffix;
+}
 
 const useStyles = makeStyles(theme => ({
 	container: {
@@ -28,6 +45,11 @@ const useStyles = makeStyles(theme => ({
 		[theme.breakpoints.down('sm')]: {
 			padding: '12px 2px'
 		}
+	},
+	horizontalBox: {
+		display: 'flex',
+		alignItems: 'center',
+		color: 'white'
 	},
 	text: {
 		color: 'white',
@@ -74,6 +96,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function renderInfo(classes) {
+	const [{ value: month },, { value: tz }] = timeFormatter.formatToParts(hothStart);
+	const startDay = hothStart.getDate();
+	const endDay = hothEnd.getDate();
+	const eventCrossesDate = startDay !== endDay;
+	const endDayElement = eventCrossesDate ? <> – {endDay}<sup>{ordinal(endDay)}</sup></> : <></>;
 	return (
 		<Grid
 			container
@@ -90,11 +117,19 @@ function renderInfo(classes) {
 					width: 150,
 					margin: 20
 				}} />
-			<Typography variant='h5' className={classes.text} component='h3'>
-				<time dateTime={hothStart.toISOString()}>
-					Feb 23<sup>rd</sup>, 2021
-				</time>
-			</Typography>
+			<Box className={classes.horizontalBox}>
+				<Tooltip title={eventCrossesDate ?
+					`It looks like HOTH crosses between dates in your timezone! (${tz})` :
+					''}
+				placement='top'
+				arrow='true'>
+					<Typography variant='h5' className={classes.text} component='h3'>
+						<time dateTime={hothStart.toISOString()}>
+							{month} {startDay}<sup>{ordinal(startDay)}</sup>{endDayElement}, 2021
+						</time>
+					</Typography>
+				</Tooltip>
+			</Box>
 			<Typography variant='h5' className={classes.text} component='h3'>De Neve Plaza Room</Typography>
 		</Grid>
 	);
