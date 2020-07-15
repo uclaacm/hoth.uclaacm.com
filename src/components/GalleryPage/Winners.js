@@ -5,8 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import makeStyles from '@material-ui/styles/makeStyles';
 
-import MeteorImg from './images/meteor.jpg';
-import WaveImg from './images/wave.jpg';
+import MeteorImg from './images/winners/meteor.jpg';
+import WaveImg from './images/winners/wave.jpg';
 
 const winners = [
 	{
