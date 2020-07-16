@@ -70,7 +70,10 @@ function Winners() {
 	});
 
 	return (
-		<Container maxWidth='md' style={{ paddingTop: '100px' }}>
+		<Container maxWidth='md' style={{ paddingTop: '50px', paddingBottom: '40px' }}>
+			<Typography variant='h4' component='h1' style={{
+				marginBottom: '-50px'
+			}}>Past Winners</Typography>
 			{winnerCards}
 		</Container>
 	);
