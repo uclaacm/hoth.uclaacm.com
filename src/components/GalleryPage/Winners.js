@@ -60,7 +60,9 @@ function Winners() {
 							{item.category}
 						</span>
 					</Typography>
-					<Typography variant='body1'>{item.description}</Typography>
+					<Typography variant='body1' style={{ paddingBottom: 5, paddingTop: 5 }}>
+						{item.description}
+					</Typography>
 					<Link href={item.link} target='_blank' rel='noreferrer noopener'>
 						See Project
 					</Link>
@@ -72,7 +74,7 @@ function Winners() {
 	return (
 		<Container maxWidth='md' style={{ paddingTop: '50px', paddingBottom: '40px' }}>
 			<Typography variant='h4' component='h1' style={{
-				marginBottom: '-50px'
+				marginBottom: '-50px', fontWeight: 500
 			}}>Past Winners</Typography>
 			{winnerCards}
 		</Container>
