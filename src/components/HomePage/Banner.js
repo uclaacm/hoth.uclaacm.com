@@ -46,11 +46,6 @@ const useStyles = makeStyles(theme => ({
 			padding: '12px 2px'
 		}
 	},
-	horizontalBox: {
-		display: 'flex',
-		alignItems: 'center',
-		color: 'white'
-	},
 	text: {
 		color: 'white',
 		fontWeight: 600,
@@ -117,7 +112,7 @@ function renderInfo(classes) {
 					width: 150,
 					margin: 20
 				}} />
-			<Box className={classes.horizontalBox}>
+			<Box display='flex' alignItems='center' color='white'>
 				<Tooltip title={eventCrossesDate ?
 					`It looks like HOTH crosses between dates in your timezone! (${tz})` :
 					''}
