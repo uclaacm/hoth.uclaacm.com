@@ -23,7 +23,7 @@ function Timeslot({ time, events }) {
 	const classes = useStyles();
 	return (
 		<Box display='flex'>
-			<ScheduleRoundedIcon fontSize={'small'} className={classes.clockImage} />
+			<ScheduleRoundedIcon fontSize='small' className={classes.clockImage} />
 			<div>
 				<Typography component='h2' className={classes.time}>
 					<time dateTime={time.toISOString()}>{timeFormatter.format(time)}</time>
