@@ -13,8 +13,8 @@ import SvgImg from '../SvgImg';
 import hothLogo from '../../images/hoth7-logo.svg';
 import hothBanner from '../../images/hoth-banner.svg';
 
-const hothStart = new Date('2021-02-23T09:00:00-09:00');
-const hothEnd = new Date('2021-02-23T09:00:00-21:00');
+const hothStart = new Date('2021-02-23T07:00:00-07:00');
+const hothEnd = new Date('2021-02-23T21:00:00-07:00');
 const timeFormatter = new Intl.DateTimeFormat('en-US',
 	{ timeZoneName: 'short', month: 'short' });
 
