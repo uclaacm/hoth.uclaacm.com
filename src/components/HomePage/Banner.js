@@ -18,19 +18,6 @@ const hothEnd = new Date('2021-02-23T21:00:00-07:00');
 const timeFormatter = new Intl.DateTimeFormat('en-US',
 	{ timeZoneName: 'short', month: 'short' });
 
-// Handles 1st, 2nd, 3rd, etc
-const englishOrdinalRules = new Intl.PluralRules('en', { type: 'ordinal' });
-const suffixes = {
-	one: 'st',
-	two: 'nd',
-	few: 'rd',
-	other: 'th'
-};
-function ordinal(number) {
-	const suffix = suffixes[englishOrdinalRules.select(number)];
-	return suffix;
-}
-
 const useStyles = makeStyles(theme => ({
 	container: {
 		backgroundColor: theme.palette.primary.dark,
@@ -95,7 +82,7 @@ function renderInfo(classes) {
 	const startDay = hothStart.getDate();
 	const endDay = hothEnd.getDate();
 	const eventCrossesDate = startDay !== endDay;
-	const endDayElement = eventCrossesDate ? <> – {endDay}<sup>{ordinal(endDay)}</sup></> : <></>;
+	const endDayElement = eventCrossesDate ? <>–{endDay}</> : <></>;
 	return (
 		<Grid
 			container
@@ -120,7 +107,7 @@ function renderInfo(classes) {
 				arrow='true'>
 					<Typography variant='h5' className={classes.text} component='h3'>
 						<time dateTime={hothStart.toISOString()}>
-							{month} {startDay}<sup>{ordinal(startDay)}</sup>{endDayElement}, 2021
+							{month} {startDay}{endDayElement}, 2021
 						</time>
 					</Typography>
 				</Tooltip>
