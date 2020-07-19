@@ -33,8 +33,7 @@ const useStyles = makeStyles(theme => {
 		wordmark: {
 			color: 'black',
 			fontWeight: 700,
-			fontSize: '1.5em',
-			fontFamily: theme.typography.fontFamily
+			fontSize: '1.5em'
 		},
 		mobileMenuBar: {
 			boxShadow: theme.shadows[4],

@@ -7,14 +7,13 @@ import TimeSlot from '../SchedulePage/TimeSlot';
 import Divider from '@material-ui/core/Divider';
 import workshopSchedule from '../../data/WorkshopSchedule';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
 	title: {
-		fontFamily: theme.typography.fontFamily,
 		fontWeight: 'bold',
 		paddingTop: 24,
 		paddingBottom: 16
 	}
-}));
+});
 
 const SchedulePage = () => {
 	const classes = useStyles();

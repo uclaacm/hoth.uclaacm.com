@@ -6,16 +6,13 @@ import Event from '../SchedulePage/Event';
 import ScheduleRoundedIcon from '@material-ui/icons/ScheduleRounded';
 import Box from '@material-ui/core/Box';
 
-const useStyles = makeStyles(theme => ({
-	time: {
-		fontFamily: theme.typography.fontFamily
-	},
+const useStyles = makeStyles({
 	clockImage: {
 		marginTop: '1px',
 		marginBottom: '1px',
 		marginRight: '4px'
 	}
-}));
+});
 
 const timeFormatter = new Intl.DateTimeFormat('en-US', { timeStyle: 'short', hour: 'numeric', minute: '2-digit' });
 
