@@ -39,7 +39,7 @@ function UpcomingEvents() {
 		}
 	}
 	if (eventsDisplayed === 0) {
-		return <></>; // Abort entirely
+		return null; // Abort entirely
 	}
 	return <Container maxWidth='md' className={classes.eventsContainer}>
 		<Grid container justify='center' spacing={1}>
