@@ -19,7 +19,7 @@ export default function Gallery() {
 
 	const data = useStaticQuery(graphql`
 		{
-			carouselImages: allFile(filter: {relativePath: {glob:"gallery-carousel/*"}}) {
+			carouselImages: allFile(filter: {relativePath: {glob:"homepage-carousel/*"}}) {
 				nodes {
 					id
 					relativePath
@@ -35,15 +35,17 @@ export default function Gallery() {
 
 	const theme = useTheme();
 	const wideImg = useMediaQuery(theme.breakpoints.up('md'));
-	const imageWidth = wideImg ? 2.5 : 2;
+	const imageWidth = wideImg ? 3 : 2;
 
 	const images = data.carouselImages.nodes.map(node => {
 		return <Img fluid={{ ...node.childImageSharp.fluid, aspectRatio: imageWidth }} key={node.id} />;
 	});
 
 	return (
-		<Slider {...settings}>
-			{images}
-		</Slider>
+		<div style={{ paddingTop: 40, paddingBottom: 40 }}>
+			<Slider {...settings}>
+				{images}
+			</Slider>
+		</div>
 	);
 }
