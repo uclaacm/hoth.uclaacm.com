@@ -1,25 +1,24 @@
 import React from 'react';
+import { basename } from 'path';
+import { graphql, useStaticQuery } from 'gatsby';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
-import makeStyles from '@material-ui/styles/makeStyles';
-
-import MeteorImg from './images/winners/meteor.jpg';
-import WaveImg from './images/winners/wave.jpg';
+import Img from 'gatsby-image';
 
 const winners = [
 	{
 		title: 'Meteor Metronome',
 		category: 'Best Game',
-		description: `Asteroids - with rhythm. Combining the latest innovations in
+		description: `Asteroids – with rhythm. Combining the latest innovations in
 			rhythm-based gaming with the classic asteroids arcade game. Meteor
 			Metronome is a game in which players shoot asteroids and avoid
 			collisions, but must do so to a regular beat. Players build up a combo by
 			shooting with each beat, and earn points with each asteroid shot, with a
 			bonus of the combo squared.`,
 		link: 'https://devpost.com/software/meteor-metronome',
-		image: MeteorImg
+		id: 'meteor'
 	},
 	{
 		title: 'Wave',
@@ -30,29 +29,38 @@ const winners = [
 			runs completely locally on your device, so your information is kept
 			private, and stores no identifying data anywhere.`,
 		link: 'https://devpost.com/software/wave-m1pz20',
-		image: WaveImg
+		id: 'wave'
 	}
 ];
 
-const useStyles = makeStyles(theme => ({
-	projectImg: {
-		width: '100%',
-		[theme.breakpoints.down('xs')]: {
-			width: '100%',
-			padding: '10px 0px'
-		}
-	}
-}));
-
 function Winners() {
-	const classes = useStyles();
+	const data = useStaticQuery(graphql`
+		{
+			winnerImages: allFile(filter: {relativePath: {glob:"gallery-winners/*"}}) {
+				nodes {
+					relativePath
+					childImageSharp {
+						fluid {
+							...GatsbyImageSharpFluid
+						}
+					}
+				}
+			}
+		}
+	`);
+
+	const winnerImageMap = new Map();
+	for (const { relativePath, childImageSharp } of data.winnerImages.nodes) {
+		const id = basename(relativePath).split('.')[0];
+		winnerImageMap.set(id, childImageSharp.fluid);
+	}
 
 	const winnerCards = winners.map(item => {
 		return (
 			<Grid container key={item.title} spacing={2} alignItems='center'
 				style={{ paddingTop: 60 }}>
 				<Grid item md={5} sm={12}>
-					<img src={item.image} className={classes.projectImg} />
+					<Img fluid={winnerImageMap.get(item.id)} />
 				</Grid>
 				<Grid item md={7} sm={12}>
 					<Typography variant='h5'>{item.title} –{' '}
