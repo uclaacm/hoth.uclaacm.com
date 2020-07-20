@@ -8,7 +8,7 @@ import Winners from '../components/GalleryPage/Winners';
 function GalleryPage() {
 	return (
 		<Layout>
-			<SEO title='Home' />
+			<SEO title='Gallery' />
 			<Gallery />
 			<Winners />
 		</Layout>
