@@ -30,6 +30,24 @@ const winners = [
 			private, and stores no identifying data anywhere.`,
 		link: 'https://devpost.com/software/wave-m1pz20',
 		id: 'wave'
+	},
+	{
+		title: 'Bruin Dining',
+		category: 'Best Design, Best React Native',
+		description: `A more beautiful and insightful way to dine on the Hill. It's
+			no fun going to a dining hall and being surprised or disappointed by the
+			food. We made a UCLA Dining Hall Menus app with crowdsourced images and
+			ratings.`,
+		link: 'https://devpost.com/software/bruin-dining-table-16',
+		id: 'bruindining'
+	},
+	{
+		title: 'SYFGames',
+		category: 'Best Hack',
+		description: `A multi-platform game that you can play with friends to
+			compete and see who can recognize music the most quickly and accurately!`,
+		link: 'https://devpost.com/software/spuckfotify',
+		id: 'syfgames'
 	}
 ];
 
