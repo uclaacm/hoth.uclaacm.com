@@ -77,10 +77,10 @@ function Winners() {
 		return (
 			<Grid container key={item.title} spacing={2} alignItems='center'
 				style={{ paddingTop: 60 }}>
-				<Grid item md={5} sm={12}>
+				<Grid item md={5} xs={12}>
 					<Img fluid={winnerImageMap.get(item.id)} />
 				</Grid>
-				<Grid item md={7} sm={12}>
+				<Grid item md={7} xs={12}>
 					<Typography variant='h5'>{item.title} –{' '}
 						<span style={{ fontStyle: 'italic' }}>
 							{item.category}
