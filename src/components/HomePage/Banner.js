@@ -82,7 +82,7 @@ function renderInfo(classes) {
 	const startDay = hothStart.getDate();
 	const endDay = hothEnd.getDate();
 	const eventCrossesDate = startDay !== endDay;
-	const endDayElement = eventCrossesDate ? <>–{endDay}</> : <></>;
+	const endDayString = eventCrossesDate ? `–${endDay}` : '';
 	return (
 		<Grid
 			container
