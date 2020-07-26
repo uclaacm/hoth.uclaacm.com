@@ -107,7 +107,7 @@ function renderInfo(classes) {
 				arrow='true'>
 					<Typography variant='h5' className={classes.text} component='h3'>
 						<time dateTime={hothStart.toISOString()}>
-							{month} {startDay}{endDayElement}, 2021
+							{month} {startDay}{endDayString}, 2021
 						</time>
 					</Typography>
 				</Tooltip>

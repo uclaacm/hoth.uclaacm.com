@@ -6,7 +6,17 @@ import Divider from '@material-ui/core/Divider';
 import Event from '../SchedulePage/Event';
 import ScheduleRoundedIcon from '@material-ui/icons/ScheduleRounded';
 import Box from '@material-ui/core/Box';
+/*
+import { currentTimeZoneShort } from './timezone_names.js'
 
+const timeFormatter = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit' });
+return (
+  <time dateTime={time.toISOString()}>
+    {timeFormatter.format(time)} <Box component='span' paddingLeft='2em'>{currentTimeZoneShort}</Box>
+  </time>
+);
+
+*/
 const useStyles = makeStyles({
 	clockImage: {
 		marginTop: '1px',
@@ -22,6 +32,7 @@ const timeFormatter = new Intl.DateTimeFormat('en-US', { timeZoneName: 'short', 
 
 function Timeslot({ time, events }) {
 	const classes = useStyles();
+	timeFormatter.formatToParts(time);
 	return (
 		<>
 			<Divider />
