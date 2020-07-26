@@ -25,6 +25,9 @@ const useStyles = makeStyles(theme => {
 			[theme.breakpoints.up('sm')]: {
 				top: '64px'
 			}
+		},
+		eventItem: {
+			marginLeft: '20px' // width + margin of svg
 		}
 	};
 });
@@ -44,7 +47,7 @@ function StickyTimeslot({ time, events }) {
 				</Box>
 			</ListSubheader>
 			{events.map(event => {
-				return <ListItem key={event.name}>
+				return <ListItem key={event.name} className={classes.eventItem}>
 					<Event {...event} />
 				</ListItem>;
 			})}

@@ -14,8 +14,7 @@ const useStyles = makeStyles(theme => ({
 		fontWeight: theme.typography.fontWeightMedium
 	},
 	container: {
-		paddingBottom: 12,
-		marginLeft: '20px' // width + margin of svg
+		paddingBottom: 12
 	}
 }));
 
