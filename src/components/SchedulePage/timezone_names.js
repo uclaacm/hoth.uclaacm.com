@@ -1,7 +1,9 @@
 function getTimeZoneWithFormat(format) {
 	try {
 		const formatter = new Intl.DateTimeFormat('en-US', { timeZoneName: format });
-		return formatter.formatToParts(new Date()).slice(-1)[0] || '';
+		return formatter.formatToParts(new Date()).find(part => {
+			return part.type === 'timeZoneName';
+		}) || '';
 	} catch {
 		return '';
 	}

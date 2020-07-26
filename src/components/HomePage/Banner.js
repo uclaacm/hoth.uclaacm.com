@@ -8,6 +8,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PropTypes from 'prop-types';
 import Countdown from 'react-countdown';
 import Tooltip from '@material-ui/core/Tooltip';
+import { currentTimeZoneShort } from '../SchedulePage/timezone_names.js';
 
 import SvgImg from '../SvgImg';
 import hothLogo from '../../images/hoth7-logo.svg';
@@ -15,8 +16,7 @@ import hothBanner from '../../images/hoth-banner.svg';
 
 const hothStart = new Date('2021-02-23T07:00:00-07:00');
 const hothEnd = new Date('2021-02-23T21:00:00-07:00');
-const timeFormatter = new Intl.DateTimeFormat('en-US',
-	{ timeZoneName: 'short', month: 'short' });
+const monthFormatter = new Intl.DateTimeFormat('en-US', { month: 'short' });
 
 const useStyles = makeStyles(theme => ({
 	container: {
@@ -78,7 +78,8 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function renderInfo(classes) {
-	const [{ value: month },, { value: tz }] = timeFormatter.formatToParts(hothStart);
+	const tz = currentTimeZoneShort;
+	const month = monthFormatter.format(hothStart);
 	const startDay = hothStart.getDate();
 	const endDay = hothEnd.getDate();
 	const eventCrossesDate = startDay !== endDay;
@@ -104,7 +105,7 @@ function renderInfo(classes) {
 					`It looks like HOTH crosses between dates in your timezone! (${tz})` :
 					''}
 				placement='top'
-				arrow='true'>
+				arrow={true}>
 					<Typography variant='h5' className={classes.text} component='h3'>
 						<time dateTime={hothStart.toISOString()}>
 							{month} {startDay}{endDayString}, 2021

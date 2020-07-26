@@ -6,17 +6,10 @@ import Divider from '@material-ui/core/Divider';
 import Event from '../SchedulePage/Event';
 import ScheduleRoundedIcon from '@material-ui/icons/ScheduleRounded';
 import Box from '@material-ui/core/Box';
-/*
-import { currentTimeZoneShort } from './timezone_names.js'
+import { currentTimeZoneShort } from './timezone_names.js';
 
 const timeFormatter = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit' });
-return (
-  <time dateTime={time.toISOString()}>
-    {timeFormatter.format(time)} <Box component='span' paddingLeft='2em'>{currentTimeZoneShort}</Box>
-  </time>
-);
 
-*/
 const useStyles = makeStyles({
 	clockImage: {
 		marginTop: '1px',
@@ -28,8 +21,6 @@ const useStyles = makeStyles({
 	}
 });
 
-const timeFormatter = new Intl.DateTimeFormat('en-US', { timeZoneName: 'short', hour: 'numeric', minute: '2-digit' });
-
 function Timeslot({ time, events }) {
 	const classes = useStyles();
 	timeFormatter.formatToParts(time);
@@ -40,7 +31,12 @@ function Timeslot({ time, events }) {
 				<ScheduleRoundedIcon fontSize={'small'} className={classes.clockImage} />
 				<div>
 					<Typography component='h2'>
-						<time dateTime={time.toISOString()}>{timeFormatter.format(time)}</time>
+						<time dateTime={time.toISOString()}>
+							{timeFormatter.format(time).toString()}
+							<Box component='span' paddingLeft='1em'>
+								{currentTimeZoneShort.value}
+							</Box>
+						</time>
 					</Typography>
 					{events.map(event => {
 						return <Event {...event} key={event.name} />;
