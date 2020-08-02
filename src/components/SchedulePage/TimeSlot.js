@@ -33,7 +33,8 @@ function Timeslot({ time, events }) {
 					<Typography component='h2'>
 						<time dateTime={time.toISOString()}>
 							{timeFormatter.format(time).toString()}
-							<Box component='span' paddingLeft='1em'>
+							<Box color='gray' component='span'>
+								{' '}
 								{currentTimeZoneShort.value}
 							</Box>
 						</time>
