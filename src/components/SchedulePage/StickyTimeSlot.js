@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => {
 		},
 		timeSlotHeader: {
 			backgroundColor: '#fafafa',
-			color: 'rgba(0,0,0)',
+			color: '#000000',
 			top: '56px',
 			[theme.breakpoints.up('sm')]: {
 				top: '64px'
