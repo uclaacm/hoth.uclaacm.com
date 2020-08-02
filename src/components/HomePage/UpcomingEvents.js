@@ -2,11 +2,11 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import TimeSlot from '../SchedulePage/TimeSlot';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { Link } from 'gatsby';
 import workshopSchedule from '../../data/WorkshopSchedule';
+import TimeSlot from './TimeSlot';
 
 const useStyles = makeStyles(theme => ({
 	title: {

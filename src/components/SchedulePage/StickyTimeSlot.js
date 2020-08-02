@@ -10,13 +10,12 @@ import ListItem from '@material-ui/core/ListItem';
 
 const useStyles = makeStyles(theme => {
 	return {
-		clockImage: {
-			marginTop: '1px',
-			marginBottom: '1px',
-			marginRight: '4px'
+		ul: {
+			padding: 0
 		},
-		timeContainer: {
-			display: 'flex'
+		clockImage: {
+			marginLeft: '-8px',
+			marginRight: '4px'
 		},
 		timeSlotHeader: {
 			backgroundColor: '#fafafa',
@@ -32,15 +31,15 @@ const useStyles = makeStyles(theme => {
 	};
 });
 
-const timeFormatter = new Intl.DateTimeFormat('en-US', { timeStyle: 'short', hour: 'numeric', minute: '2-digit' });
+const timeFormatter = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit' });
 
 function StickyTimeslot({ time, events }) {
 	const classes = useStyles();
 	return (
-		<>
+		<ul className={classes.ul}>
 			<ListSubheader className={classes.timeSlotHeader}>
-				<Box display='flex'>
-					<ScheduleRoundedIcon fontSize={'small'} className={classes.clockImage} />
+				<Box display='flex' alignItems='center'>
+					<ScheduleRoundedIcon fontSize='small' className={classes.clockImage} />
 					<Typography component='h2'>
 						<time dateTime={time.toISOString()}>{timeFormatter.format(time)}</time>
 					</Typography>
@@ -51,7 +50,7 @@ function StickyTimeslot({ time, events }) {
 					<Event {...event} />
 				</ListItem>;
 			})}
-		</>
+		</ul>
 	);
 }
 

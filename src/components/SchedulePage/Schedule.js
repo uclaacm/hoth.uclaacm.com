@@ -20,16 +20,15 @@ const SchedulePage = () => {
 	const classes = useStyles();
 	return <Container maxWidth='md'>
 		<Typography align='center' component='h1' variant='h4' className={classes.title}>Schedule</Typography>
-		<List subheader={<li />}>
+		<List>
 			{workshopSchedule.map(timeslot => {
 				return (
-					<li key={timeslot.startTime}>
-						<ul>
-							<Divider />
-							<StickyTimeSlot events={timeslot.events}
-								time={timeslot.startTime} />
-						</ul>
-					</li>);
+					<React.Fragment key={timeslot.startTime}>
+						<Divider component='li' />
+						<li>
+							<StickyTimeSlot events={timeslot.events} time={timeslot.startTime} />
+						</li>
+					</React.Fragment>);
 			})}
 		</List>
 	</Container>;
