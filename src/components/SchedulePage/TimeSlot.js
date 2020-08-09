@@ -23,7 +23,6 @@ const useStyles = makeStyles({
 
 function Timeslot({ time, events }) {
 	const classes = useStyles();
-	timeFormatter.formatToParts(time);
 	return (
 		<>
 			<Divider />
@@ -32,10 +31,10 @@ function Timeslot({ time, events }) {
 				<div>
 					<Typography component='h2'>
 						<time dateTime={time.toISOString()}>
-							{timeFormatter.format(time).toString()}
+							{timeFormatter.format(time)}
 							<Box color='gray' component='span'>
 								{' '}
-								{currentTimeZoneShort.value}
+								{currentTimeZoneShort}
 							</Box>
 						</time>
 					</Typography>

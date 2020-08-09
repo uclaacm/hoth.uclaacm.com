@@ -8,5 +8,5 @@ function getTimeZoneWithFormat(format) {
 		return '';
 	}
 }
-export const currentTimeZoneShort = getTimeZoneWithFormat('short');
-export const currentTimeZoneLong = getTimeZoneWithFormat('long');
+export const currentTimeZoneShort = getTimeZoneWithFormat('short').value;
+export const currentTimeZoneLong = getTimeZoneWithFormat('long').value;

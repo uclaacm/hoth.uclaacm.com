@@ -14,7 +14,8 @@ import SvgImg from '../SvgImg';
 import hothLogo from '../../images/hoth7-logo.svg';
 import hothBanner from '../../images/hoth-banner.svg';
 
-const hothStart = new Date('2021-02-23T07:00:00-07:00');
+// These dates are represented in the user's timezone
+const hothStart = new Date('2021-02-23T09:00:00-07:00');
 const hothEnd = new Date('2021-02-23T21:00:00-07:00');
 const monthFormatter = new Intl.DateTimeFormat('en-US', { month: 'short' });
 
