@@ -1,23 +1,28 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { Typography, Link } from '@material-ui/core';
+import useTheme from '@material-ui/core/styles/useTheme';
+import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
-import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
-import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Link from '@material-ui/core/Link';
+import Typography from '@material-ui/core/Typography';
+import MuiAccordion from '@material-ui/core/Accordion';
+import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
+import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
 import Add from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
 
-const ExpansionPanel = withStyles(theme => ({
+const Accordion = withStyles(theme => ({
 	root: {
-		backgroundColor: theme.palette.background.default,
-		borderTop: '1px solid black',
-		borderBottom: '1px solid black',
+		backgroundColor: theme.palette.background.grey,
 		boxShadow: 'none',
-		'&:not(:last-child)': {
-			borderBottom: 0
+		borderColor: theme.palette.grey[400],
+		borderTopWidth: 2,
+		borderTopStyle: 'solid',
+		'&:last-child': {
+			borderBottomWidth: 2,
+			borderBottomStyle: 'solid'
 		},
 		'&::before': {
 			display: 'none'
@@ -27,17 +32,17 @@ const ExpansionPanel = withStyles(theme => ({
 		}
 	},
 	expanded: {}
-}))(MuiExpansionPanel);
+}))(MuiAccordion);
 
-const ExpansionPanelSummary = withStyles(theme => ({
+const AccordionSummary = withStyles(theme => ({
 	root: {
 		minHeight: 'auto',
 		'&$expanded': {
 			minHeight: 'auto'
 		},
 		[theme.breakpoints.down('xs')]: {
-			paddingLeft: 8,
-			paddingRight: 8
+			paddingLeft: theme.spacing(1),
+			paddingRight: theme.spacing(1)
 		}
 	},
 	content: {
@@ -47,20 +52,22 @@ const ExpansionPanelSummary = withStyles(theme => ({
 		}
 	},
 	expanded: {}
-}))(MuiExpansionPanelSummary);
+}))(MuiAccordionSummary);
 
-const ExpansionPanelDetails = withStyles(theme => ({
+const AccordionDetails = withStyles(theme => ({
 	root: {
+		paddingBottom: theme.spacing(6),
 		[theme.breakpoints.down('xs')]: {
-			paddingLeft: 8,
-			paddingRight: 8
+			paddingBottom: theme.spacing(4),
+			paddingLeft: theme.spacing(1),
+			paddingRight: theme.spacing(1)
 		}
 	}
-}))(MuiExpansionPanelDetails);
+}))(MuiAccordionDetails);
 
 const useStyles = makeStyles(theme => ({
 	question: {
-		fontWeight: 600,
+		fontWeight: theme.typography.fontWeightMedium,
 		color: theme.palette.secondary.main,
 		fontFamily: theme.typography.fontFamily
 	}
@@ -85,7 +92,7 @@ function FAQSection() {
 		{
 			question: `Who can join?`,
 			answer: `Any UCLA student can join! And you don’t necessarily have to be
-				a programmer - designers, entrepreneurs, and even those who are curious
+				a programmer – designers, entrepreneurs, and even those who are curious
 				as to what a hackathon is like can attend. Whether you’ve never been to
 				a hackathon before or you’ve been to several, everyone is welcome to
 				participate in Hack on the Hill.`
@@ -122,39 +129,50 @@ function FAQSection() {
 	const faqComponents = faqs.map(({ question, answer }, i) => {
 		const panelName = 'faqPanel' + i;
 		return (
-			<ExpansionPanel
+			<Accordion
 				key={panelName}
 				square
 				expanded={expanded === panelName}
 				onChange={handleChange(panelName)}>
-				<ExpansionPanelSummary
+				<AccordionSummary
 					expandIcon={expanded === panelName ? <Remove /> : <Add />}
 					aria-controls={panelName + '-content'}
 					id={panelName + '-header'}>
 					<Typography variant='body1' className={classes.question}>
 						{question}
 					</Typography>
-				</ExpansionPanelSummary>
-				<ExpansionPanelDetails>
+				</AccordionSummary>
+				<AccordionDetails>
 					<Typography variant='body1'>
 						{answer}
 					</Typography>
-				</ExpansionPanelDetails>
-			</ExpansionPanel>
+				</AccordionDetails>
+			</Accordion>
 		);
 	});
 
+	const theme = useTheme();
+
 	return (
-		<Container maxWidth='md' style={{ paddingTop: '40px' }}>
-			<Typography
-				variant='h5'
-				component='h2'
-				align='center'
-				style={{ fontWeight: 'bold' }}>
-				Frequently Asked Questions (FAQ)
-			</Typography>
-			{faqComponents}
-		</Container>
+		<Box paddingY={{ xs: 8, md: 10 }} bgcolor='background.grey'>
+			<Container maxWidth='md'>
+				<Box component='hgroup' paddingBottom={{ xs: 4, md: 8 }}>
+					<Typography
+						variant='h4'
+						component='h2'
+						style={{ fontWeight: 'bold' }}>
+						FAQ
+					</Typography>
+					<Typography
+						variant='h6'
+						component='h3'
+						style={{ color: theme.palette.grey[600] }}>
+						Frequently Asked Questions
+					</Typography>
+				</Box>
+				{faqComponents}
+			</Container>
+		</Box>
 	);
 }
 
