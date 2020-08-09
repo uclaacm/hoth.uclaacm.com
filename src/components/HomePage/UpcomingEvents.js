@@ -41,7 +41,7 @@ function UpcomingEvents() {
 	if (eventsDisplayed === 0) {
 		return null; // Abort entirely
 	}
-	return <Container maxWidth='md' className={classes.eventsContainer}>
+	return <Container component='section' maxWidth='md' className={classes.eventsContainer}>
 		<Grid container justify='center' spacing={1}>
 			<Typography align='center' component='h1' variant='h4'
 				className={classes.title}>Upcoming Workshops</Typography>

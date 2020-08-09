@@ -154,7 +154,7 @@ function FAQSection() {
 	const theme = useTheme();
 
 	return (
-		<Box paddingY={{ xs: 8, md: 10 }} bgcolor='background.grey'>
+		<Box component='section' paddingY={{ xs: 8, md: 10 }} bgcolor='background.grey'>
 			<Container maxWidth='md'>
 				<Box component='hgroup' paddingBottom={{ xs: 4, md: 8 }}>
 					<Typography
