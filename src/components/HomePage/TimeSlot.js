@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Event from '../SchedulePage/Event';
 import ScheduleRoundedIcon from '@material-ui/icons/ScheduleRounded';
 import Box from '@material-ui/core/Box';
-import { currentTimeZoneShort } from '../SchedulePage/timezone_names.js';
+import { currentTimeZoneShort } from '../../utils/timezone_names.js';
 
 const timeFormatter = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit' });
 

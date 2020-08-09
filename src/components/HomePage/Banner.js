@@ -8,7 +8,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PropTypes from 'prop-types';
 import Countdown from 'react-countdown';
 import Tooltip from '@material-ui/core/Tooltip';
-import { currentTimeZoneShort } from '../SchedulePage/timezone_names.js';
+import { currentTimeZoneShort } from '../../utils/timezone_names.js';
 
 import SvgImg from '../SvgImg';
 import hothLogo from '../../images/hoth7-logo.svg';
