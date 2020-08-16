@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
@@ -21,8 +22,7 @@ const useStyles = makeStyles(theme => ({
 	eventsContainer: {
 		display: 'flex',
 		flexDirection: 'column',
-		justifyContent: 'center',
-		minHeight: '100vh'
+		justifyContent: 'center'
 	},
 	moreWorkshopsButton: {
 		alignSelf: 'center',
@@ -69,13 +69,15 @@ function UpcomingEvents() {
 			);
 		});
 
-	return <Container maxWidth='md' className={classes.eventsContainer}>
-		<Typography align='left' component='h1' variant='h4'
-			className={classes.title}>Upcoming Workshops</Typography>
-		{renderEvents}
-		<Button component={Link} role='link' className={classes.moreWorkshopsButton}
-			variant='contained' disableElevation color="secondary" to='/schedule'>More Workshops</Button>
-	</Container>;
+	return <Box component="section" paddingY={{ xs: 8, md: 10 }} bgcolor='background.grey'>
+		<Container maxWidth='md' className={classes.eventsContainer}>
+			<Typography align='left' component='h1' variant='h4'
+				className={classes.title}>Upcoming Workshops</Typography>
+			{renderEvents}
+			<Button component={Link} role='link' className={classes.moreWorkshopsButton}
+				variant='contained' disableElevation color="secondary" to='/schedule'>More Workshops</Button>
+		</Container>
+	</Box>;
 }
 
 export default UpcomingEvents;
