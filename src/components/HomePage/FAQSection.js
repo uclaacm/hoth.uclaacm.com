@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import useTheme from '@material-ui/core/styles/useTheme';
 import Box from '@material-ui/core/Box';
@@ -73,14 +74,42 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-function FAQSection() {
+function AccordionQA({ index, question, answer }) {
+	const [expanded, setExpanded] = useState(index === 0);
 	const classes = useStyles();
-	const [expanded, setExpanded] = React.useState('faqPanel0');
+	const panelName = 'faqPanel' + index;
+	const theme = useTheme();
 
-	const handleChange = panel => (event, newExpanded) => {
-		setExpanded(newExpanded ? panel : false);
-	};
+	return (
+		<Accordion
+			key={panelName}
+			square
+			expanded={expanded}
+			onChange={() => setExpanded(e => !e)}>
+			<AccordionSummary
+				expandIcon={expanded ? <Remove /> : <Add />}
+				aria-controls={panelName + '-content'}
+				id={panelName + '-header'}>
+				<Typography variant='body1' className={classes.question}>
+					{question}
+				</Typography>
+			</AccordionSummary>
+			<AccordionDetails>
+				<Typography variant='body1' style={{ maxWidth: theme.breakpoints.values.md * 0.8 }}>
+					{answer}
+				</Typography>
+			</AccordionDetails>
+		</Accordion>
+	);
+}
 
+AccordionQA.propTypes = {
+	question: PropTypes.node.isRequired,
+	answer: PropTypes.node.isRequired,
+	index: PropTypes.number.isRequired
+};
+
+function FAQSection() {
 	const faqs = [
 		{
 			question: `What’s a hackathon?`,
@@ -126,31 +155,6 @@ function FAQSection() {
 		}
 	];
 
-	const faqComponents = faqs.map(({ question, answer }, i) => {
-		const panelName = 'faqPanel' + i;
-		return (
-			<Accordion
-				key={panelName}
-				square
-				expanded={expanded === panelName}
-				onChange={handleChange(panelName)}>
-				<AccordionSummary
-					expandIcon={expanded === panelName ? <Remove /> : <Add />}
-					aria-controls={panelName + '-content'}
-					id={panelName + '-header'}>
-					<Typography variant='body1' className={classes.question}>
-						{question}
-					</Typography>
-				</AccordionSummary>
-				<AccordionDetails>
-					<Typography variant='body1'>
-						{answer}
-					</Typography>
-				</AccordionDetails>
-			</Accordion>
-		);
-	});
-
 	const theme = useTheme();
 
 	return (
@@ -160,7 +164,7 @@ function FAQSection() {
 					<Typography
 						variant='h4'
 						component='h2'
-						style={{ fontWeight: 'bold' }}>
+						style={{ fontWeight: theme.typography.fontWeightBold }}>
 						FAQ
 					</Typography>
 					<Typography
@@ -170,7 +174,7 @@ function FAQSection() {
 						Frequently Asked Questions
 					</Typography>
 				</Box>
-				{faqComponents}
+				{faqs.map((faq, i) => <AccordionQA key={i} index={i} {...faq} />)}
 			</Container>
 		</Box>
 	);
