@@ -74,7 +74,7 @@ function UpcomingEvents() {
 			className={classes.title}>Upcoming Workshops</Typography>
 		{renderEvents}
 		<Button component={Link} role='link' className={classes.moreWorkshopsButton}
-			variant='outlined' to='/schedule'>More Workshops</Button>
+			variant='contained' disableElevation color="secondary" to='/schedule'>More Workshops</Button>
 	</Container>;
 }
 
