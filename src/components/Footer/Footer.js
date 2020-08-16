@@ -12,8 +12,7 @@ import { ReactComponent as MediumIcon } from './medium.svg';
 
 const styles = theme => ({
 	container: {
-		backgroundColor: theme.palette.primary.dark,
-		marginTop: theme.spacing(4)
+		backgroundColor: theme.palette.primary.dark
 	},
 	content: {
 		padding: theme.spacing(1, 3),

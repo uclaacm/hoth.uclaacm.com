@@ -26,7 +26,7 @@ export default function HothDescription() {
 	const classes = useStyles();
 
 	return (
-		<div style={{ paddingTop: '40px' }}>
+		<section style={{ paddingTop: '40px' }}>
 			<Container maxWidth='md'>
 				<Grid
 					container
@@ -49,6 +49,6 @@ export default function HothDescription() {
 					</Grid>
 				</Grid>
 			</Container>
-		</div>
+		</section>
 	);
 }
