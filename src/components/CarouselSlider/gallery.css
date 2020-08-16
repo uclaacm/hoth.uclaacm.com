@@ -20,3 +20,16 @@
 .slick-prev::before, .slick-next::before {
 	font-size: 30px;
 }
+
+.slick-dots {
+	bottom: 25px;
+}
+
+.slick-dots li button:before {
+	font-size: 8px;
+	color: #bbb;
+}
+
+.slick-dots li.slick-active button:before {
+	color: white;
+}

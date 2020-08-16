@@ -1,10 +1,12 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import { Link } from 'gatsby';
+import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
-import { Link } from 'gatsby';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+
 import workshopSchedule from '../../data/WorkshopSchedule';
 import TimeSlot from './TimeSlot';
 
@@ -41,17 +43,21 @@ function UpcomingEvents() {
 	if (eventsDisplayed === 0) {
 		return null; // Abort entirely
 	}
-	return <Container component='section' maxWidth='md' className={classes.eventsContainer}>
-		<Grid container justify='center' spacing={1}>
-			<Typography align='center' component='h1' variant='h4'
-				className={classes.title}>Upcoming Workshops</Typography>
-			{timeSlots.map(timeslot => {
-				return <TimeSlot key={timeslot.startTime} time={timeslot.startTime} events={timeslot.events} />;
-			})}
-			<Button component={Link} role='link' className={classes.moreWorkshopsButton}
-				variant='outlined' to='/schedule'>More Workshops</Button>
-		</Grid>
-	</Container>;
+	return (
+		<Box component='section' paddingY={{ xs: 8, md: 10 }} bgcolor='background.grey'>
+			<Container component='section' maxWidth='md' className={classes.eventsContainer}>
+				<Grid container justify='center' spacing={1}>
+					<Typography align='center' component='h1' variant='h4'
+						className={classes.title}>Upcoming Workshops</Typography>
+					{timeSlots.map(timeslot => {
+						return <TimeSlot key={timeslot.startTime} time={timeslot.startTime} events={timeslot.events} />;
+					})}
+					<Button component={Link} role='link' className={classes.moreWorkshopsButton}
+						variant='outlined' to='/schedule'>More Workshops</Button>
+				</Grid>
+			</Container>
+		</Box>
+	);
 }
 
 export default UpcomingEvents;
