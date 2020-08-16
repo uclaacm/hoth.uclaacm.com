@@ -8,7 +8,7 @@ import hothImage1 from '../../images/homepage-carousel/IMG_1914.jpg';
 import hothImage2 from '../../images/homepage-carousel/IMG_2030.jpg';
 import fbLogo from '../../images/fb_logo.png';
 
-const eventURL = '';
+const eventURL = 'https://facebook.com';
 
 const useStyles = makeStyles(theme => ({
 	subtitle: {
@@ -93,7 +93,8 @@ export default function HothDescription() {
 					flexDirection='column'
 					alignItems='center'
 					width={ isSmall ? '80%' : '40%' }
-					margin='0 auto'>
+					margin='0 auto'
+					paddingTop={theme.spacing(1)}>
 					<Typography variant='body1' style={{
 						textAlign: 'center'
 					}}>
