@@ -3,10 +3,10 @@ import { Container, Typography, Grid, Box } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Img from 'gatsby-image';
 
-import hothImage1 from '../../images/homepage-carousel/IMG_1914.jpg';
-import hothImage2 from '../../images/homepage-carousel/IMG_2030.jpg';
 import fbLogo from '../../images/fb_logo.png';
+import { useStaticQuery, graphql } from 'gatsby';
 
 const eventURL = 'https://facebook.com';
 
@@ -42,6 +42,25 @@ export default function HothDescription() {
 	const classes = useStyles();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
+	const data = useStaticQuery(graphql`
+		query {
+			image1: file(relativePath: {eq: "hoth-description/IMG_1914.jpg"}) {
+				childImageSharp {
+					fluid {
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
+			image2: file(relativePath: {eq: "hoth-description/IMG_2030.jpg"}) {
+				childImageSharp {
+					fluid {
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
+		}
+	`);
+
 	return (
 		<Container maxWidth='md' style={{ paddingTop: '40px' }}>
 			<hgroup>
@@ -52,7 +71,7 @@ export default function HothDescription() {
 			</hgroup>
 			<Grid container spacing={isSmall ? 3 : 8} alignItems='center' justify='center'>
 				<Grid item sm={8} md={6}>
-					<img src={hothImage1} width='100%' style={{
+					<Img fluid={data.image1.childImageSharp.fluid} width='100%' style={{
 						borderRadius: '14px'
 					}}/>
 				</Grid>
@@ -80,7 +99,7 @@ export default function HothDescription() {
 					</Typography>
 				</Grid>
 				<Grid item sm={8} md={6}>
-					<img src={hothImage2} width='100%' style={{
+					<Img fluid={data.image2.childImageSharp.fluid} width='100%' style={{
 						borderRadius: '14px'
 					}}/>
 				</Grid>
