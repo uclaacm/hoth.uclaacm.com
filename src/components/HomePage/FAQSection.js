@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import { Typography, Link } from '@material-ui/core';
+import useTheme from '@material-ui/core/styles/useTheme';
+import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
-import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
-import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Link from '@material-ui/core/Link';
+import Typography from '@material-ui/core/Typography';
+import MuiAccordion from '@material-ui/core/Accordion';
+import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
+import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
 import Add from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
 
-const ExpansionPanel = withStyles(theme => ({
+const Accordion = withStyles(theme => ({
 	root: {
-		backgroundColor: theme.palette.background.default,
-		borderTop: '1px solid black',
-		borderBottom: '1px solid black',
+		backgroundColor: theme.palette.background.grey,
 		boxShadow: 'none',
-		'&:not(:last-child)': {
-			borderBottom: 0
+		borderColor: theme.palette.grey[400],
+		borderTopWidth: 2,
+		borderTopStyle: 'solid',
+		'&:last-child': {
+			borderBottomWidth: 2,
+			borderBottomStyle: 'solid'
 		},
 		'&::before': {
 			display: 'none'
@@ -27,17 +33,17 @@ const ExpansionPanel = withStyles(theme => ({
 		}
 	},
 	expanded: {}
-}))(MuiExpansionPanel);
+}))(MuiAccordion);
 
-const ExpansionPanelSummary = withStyles(theme => ({
+const AccordionSummary = withStyles(theme => ({
 	root: {
 		minHeight: 'auto',
 		'&$expanded': {
 			minHeight: 'auto'
 		},
 		[theme.breakpoints.down('xs')]: {
-			paddingLeft: 8,
-			paddingRight: 8
+			paddingLeft: theme.spacing(1),
+			paddingRight: theme.spacing(1)
 		}
 	},
 	content: {
@@ -47,45 +53,75 @@ const ExpansionPanelSummary = withStyles(theme => ({
 		}
 	},
 	expanded: {}
-}))(MuiExpansionPanelSummary);
+}))(MuiAccordionSummary);
 
-const ExpansionPanelDetails = withStyles(theme => ({
+const AccordionDetails = withStyles(theme => ({
 	root: {
+		paddingBottom: theme.spacing(6),
 		[theme.breakpoints.down('xs')]: {
-			paddingLeft: 8,
-			paddingRight: 8
+			paddingBottom: theme.spacing(4),
+			paddingLeft: theme.spacing(1),
+			paddingRight: theme.spacing(1)
 		}
 	}
-}))(MuiExpansionPanelDetails);
+}))(MuiAccordionDetails);
 
 const useStyles = makeStyles(theme => ({
 	question: {
-		fontWeight: 600,
+		fontWeight: theme.typography.fontWeightMedium,
 		color: theme.palette.secondary.main,
 		fontFamily: theme.typography.fontFamily
 	}
 }));
 
-function FAQSection() {
+function AccordionQA({ index, question, answer }) {
+	const [expanded, setExpanded] = useState(index === 0);
 	const classes = useStyles();
-	const [expanded, setExpanded] = React.useState('faqPanel0');
+	const panelName = 'faqPanel' + index;
+	const theme = useTheme();
 
-	const handleChange = panel => (event, newExpanded) => {
-		setExpanded(newExpanded ? panel : false);
-	};
+	return (
+		<Accordion
+			key={panelName}
+			square
+			expanded={expanded}
+			onChange={() => setExpanded(e => !e)}>
+			<AccordionSummary
+				expandIcon={expanded ? <Remove /> : <Add />}
+				aria-controls={panelName + '-content'}
+				id={panelName + '-header'}>
+				<Typography variant='body1' className={classes.question}>
+					{question}
+				</Typography>
+			</AccordionSummary>
+			<AccordionDetails>
+				<Typography variant='body1' style={{ maxWidth: theme.breakpoints.values.md * 0.8 }}>
+					{answer}
+				</Typography>
+			</AccordionDetails>
+		</Accordion>
+	);
+}
 
+AccordionQA.propTypes = {
+	question: PropTypes.node.isRequired,
+	answer: PropTypes.node.isRequired,
+	index: PropTypes.number.isRequired
+};
+
+function FAQSection() {
 	const faqs = [
 		{
 			question: `What’s a hackathon?`,
 			answer: `A hackathon is an event where individuals get together for a
 				short period of time to work on a project. These events usually last 24
 				or 36 hours and take place during the weekend. Hack on the Hill is
-				designed to simulate a real hackathon over a 12 hour period.`
+				designed to simulate a real hackathon over a 12-hour period.`
 		},
 		{
 			question: `Who can join?`,
 			answer: `Any UCLA student can join! And you don’t necessarily have to be
-				a programmer - designers, entrepreneurs, and even those who are curious
+				a programmer – designers, entrepreneurs, and even those who are curious
 				as to what a hackathon is like can attend. Whether you’ve never been to
 				a hackathon before or you’ve been to several, everyone is welcome to
 				participate in Hack on the Hill.`
@@ -119,42 +155,28 @@ function FAQSection() {
 		}
 	];
 
-	const faqComponents = faqs.map(({ question, answer }, i) => {
-		const panelName = 'faqPanel' + i;
-		return (
-			<ExpansionPanel
-				key={panelName}
-				square
-				expanded={expanded === panelName}
-				onChange={handleChange(panelName)}>
-				<ExpansionPanelSummary
-					expandIcon={expanded === panelName ? <Remove /> : <Add />}
-					aria-controls={panelName + '-content'}
-					id={panelName + '-header'}>
-					<Typography variant='body1' className={classes.question}>
-						{question}
-					</Typography>
-				</ExpansionPanelSummary>
-				<ExpansionPanelDetails>
-					<Typography variant='body1'>
-						{answer}
-					</Typography>
-				</ExpansionPanelDetails>
-			</ExpansionPanel>
-		);
-	});
+	const theme = useTheme();
 
 	return (
-		<Container maxWidth='md' style={{ paddingTop: '40px' }}>
-			<Typography
-				variant='h5'
-				component='h2'
-				align='center'
-				style={{ fontWeight: 'bold' }}>
-				Frequently Asked Questions (FAQ)
-			</Typography>
-			{faqComponents}
-		</Container>
+		<Box component='section' paddingY={{ xs: 8, md: 10 }} bgcolor='background.grey'>
+			<Container maxWidth='md'>
+				<Box component='hgroup' paddingBottom={{ xs: 4, md: 8 }}>
+					<Typography
+						variant='h4'
+						component='h2'
+						style={{ fontWeight: theme.typography.fontWeightBold }}>
+						FAQ
+					</Typography>
+					<Typography
+						variant='h6'
+						component='h3'
+						style={{ color: theme.palette.grey[600] }}>
+						Frequently Asked Questions
+					</Typography>
+				</Box>
+				{faqs.map((faq, i) => <AccordionQA key={i} index={i} {...faq} />)}
+			</Container>
+		</Box>
 	);
 }
 

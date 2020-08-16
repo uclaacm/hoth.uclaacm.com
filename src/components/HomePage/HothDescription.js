@@ -62,7 +62,7 @@ export default function HothDescription() {
 	`);
 
 	return (
-		<Container maxWidth='md' style={{ paddingTop: '40px' }}>
+		<Container component='section' maxWidth='md' style={{ paddingTop: '40px' }}>
 			<hgroup>
 				<Typography variant='h2' className={classes.subtitle}>What’s</Typography>
 				<Typography variant='h2' className={classes.title} style={{
@@ -126,7 +126,6 @@ export default function HothDescription() {
 					</a>
 				</Box>
 			}
-
 		</Container>
 	);
 }

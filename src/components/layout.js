@@ -10,6 +10,7 @@ import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import grey from '@material-ui/core/colors/grey';
 
 import Footer from './Footer/Footer';
 import MenuBar from './MenuBar/MenuBar';
@@ -27,6 +28,9 @@ const overwrittenTheme = responsiveFontSizes(createMuiTheme({
 			light: '#f05b84',
 			dark: '#a52347',
 			contrastText: '#fff'
+		},
+		background: {
+			grey: grey[200]
 		}
 	},
 	typography: {
