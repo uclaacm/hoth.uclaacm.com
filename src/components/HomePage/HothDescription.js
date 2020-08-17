@@ -75,7 +75,7 @@ export default function HothDescription() {
 					}}>Hack on the Hill?</Typography>
 				</hgroup>
 				<Grid container spacing={isSmall ? 3 : 8} alignItems='center' justify='center'>
-					<Grid item sm={8} md={6}>
+					<Grid item xs={12} sm={8} md={6}>
 						<Img fluid={data.image1.childImageSharp.fluid} width='100%' style={{
 							borderRadius: '14px'
 						}}/>
@@ -103,7 +103,7 @@ export default function HothDescription() {
 							hardware for hackers to check out and hack with.
 						</Typography>
 					</Grid>
-					<Grid item sm={8} md={6}>
+					<Grid item xs={12} sm={8} md={6}>
 						<Img fluid={data.image2.childImageSharp.fluid} width='100%' style={{
 							borderRadius: '14px'
 						}}/>
