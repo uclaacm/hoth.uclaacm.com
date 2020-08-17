@@ -16,11 +16,11 @@ const useStyles = makeStyles(theme => ({
 		color: '#858585',
 		display: 'flex',
 		alignItems: 'center',
-		marginTop: '1em'
-	},
-	firstSubtitleItem: {
-		marginRight: '1.5em',
-		fontSize: '1.1em'
+		marginTop: '1ex',
+		'& > :nth-child(1)': {
+			marginRight: '1.5em',
+			fontSize: '1.1em' // up for debate
+		}
 	},
 	description: {
 		fontSize: '1em',
@@ -33,28 +33,26 @@ const useStyles = makeStyles(theme => ({
 function Event({ startTime, name, location, description }) {
 	const classes = useStyles();
 	return (
-		<>
-			<Grid container spacing={1}>
-				<Grid item sm={12} md={4}>
-					<Typography component='h3' variant='subtitle1' className={classes.name}>
-						{name}
+		<Grid container spacing={1}>
+			<Grid item sm={12} md={4}>
+				<Typography component='h3' variant='subtitle1' className={classes.name}>
+					{name}
+				</Typography>
+				<Box className={classes.subtitle}>
+					<Typography variant='body2'>
+						{startTime}
 					</Typography>
-					<Box className={classes.subtitle}>
-						<Typography variant='body2' className={classes.firstSubtitleItem}>
-							{startTime}
-						</Typography>
-						<Typography variant='body2' >
-							{location}
-						</Typography>
-					</Box>
-				</Grid>
-				<Grid item sm={12} md={8}>
-					<Typography variant='body1' className={classes.description}>
-						{description}
+					<Typography variant='body2' >
+						{location}
 					</Typography>
-				</Grid>
+				</Box>
 			</Grid>
-		</>
+			<Grid item sm={12} md={8}>
+				<Typography variant='body1' className={classes.description}>
+					{description}
+				</Typography>
+			</Grid>
+		</Grid>
 	);
 }
 
