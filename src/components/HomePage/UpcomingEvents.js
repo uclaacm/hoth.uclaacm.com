@@ -29,8 +29,13 @@ const useStyles = makeStyles(theme => ({
 		marginTop: '3.5em'
 	},
 	divider: {
-		margin: '3.5em 0 3.5em 3em',
-		height: '2px'
+		height: '2px',
+		margin: theme.spacing(3),
+		marginRight: 0, // comment out this line for centered divider
+		[theme.breakpoints.up('sm')]: {
+			margin: theme.spacing(7),
+			marginRight: 0 // comment out this line for centered divider
+		}
 	}
 }));
 
@@ -45,33 +50,32 @@ function UpcomingEvents() {
 	for (let i = 0; i < workshopSchedule.length && eventsDisplayed < numEventsToDisplay; i++) {
 		const timeSlot = workshopSchedule[i];
 		if (currentTime < timeSlot.startTime) {
-			timeSlot.events.forEach(event => {
-				const eventFormat = {
+			for (const event of timeSlot.events) {
+				events.push({
 					startTime: `${timeFormatter.format(timeSlot.startTime)} ${currentTimeZoneShort}`,
 					...event
-				};
-				events.push(eventFormat);
-			});
-			eventsDisplayed += timeSlot.events.length;
+				});
+				eventsDisplayed += timeSlot.events.length;
+			}
 		}
 	}
+
 	if (eventsDisplayed === 0) {
 		return null; // Abort entirely
 	}
-	const renderEvents = eventsDisplayed === 0 ?
-		null :
-		events.map((event, index) => {
-			return (
-				<>
-					<Event key={index} {...event} />
-					{index === events.length - 1 ? null : <Divider variant='inset' className={classes.divider} />}
-				</>
-			);
-		});
+
+	const renderEvents = events.map((event, index) => {
+		return (
+			<>
+				<Event key={index} {...event} />
+				{index === events.length - 1 ? null : <Divider className={classes.divider} />}
+			</>
+		);
+	});
 
 	return <Box component="section" paddingY={{ xs: 8, md: 10 }} bgcolor='background.grey'>
 		<Container maxWidth='md' className={classes.eventsContainer}>
-			<Typography align='left' component='h1' variant='h4'
+			<Typography component='h2' variant='h4'
 				className={classes.title}>Upcoming Workshops</Typography>
 			{renderEvents}
 			<Button component={Link} role='link' className={classes.moreWorkshopsButton}
