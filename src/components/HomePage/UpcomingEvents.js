@@ -1,26 +1,41 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
 import { Link } from 'gatsby';
 import workshopSchedule from '../../data/WorkshopSchedule';
-import TimeSlot from './TimeSlot';
+import Event from './Event';
+import { currentTimeZoneShort } from '../../utils/timezone_names.js';
+
+const timeFormatter = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit' });
+
 
 const useStyles = makeStyles(theme => ({
 	title: {
 		fontFamily: theme.typography.fontFamily,
 		fontWeight: 'bold',
-		paddingTop: '24px',
-		paddingBottom: '16px'
+		padding: '1.2em 0'
 	},
 	eventsContainer: {
-		paddingTop: '16px',
-		paddingBottom: '24px'
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'center'
 	},
 	moreWorkshopsButton: {
-		marginTop: '8px'
+		alignSelf: 'center',
+		marginTop: '3.5em'
+	},
+	divider: {
+		height: '2px',
+		margin: theme.spacing(3),
+		marginRight: 0, // comment out this line for centered divider
+		[theme.breakpoints.up('sm')]: {
+			margin: theme.spacing(7),
+			marginRight: 0 // comment out this line for centered divider
+		}
 	}
 }));
 
@@ -29,29 +44,44 @@ function UpcomingEvents() {
 	const currentTime = new Date();
 	let eventsDisplayed = 0;
 	const numEventsToDisplay = 2;
-	const timeSlots = [];
+
+	const events = [];
 	// Assumes workshopSchedule is ordered by time
 	for (let i = 0; i < workshopSchedule.length && eventsDisplayed < numEventsToDisplay; i++) {
-		const workshop = workshopSchedule[i];
-		if (currentTime < workshop.startTime) {
-			timeSlots.push(workshop);
-			eventsDisplayed += workshop.events.length;
+		const timeSlot = workshopSchedule[i];
+		if (currentTime < timeSlot.startTime) {
+			for (const event of timeSlot.events) {
+				events.push({
+					startTime: `${timeFormatter.format(timeSlot.startTime)} ${currentTimeZoneShort}`,
+					...event
+				});
+				eventsDisplayed += timeSlot.events.length;
+			}
 		}
 	}
+
 	if (eventsDisplayed === 0) {
 		return null; // Abort entirely
 	}
-	return <Container component='section' maxWidth='md' className={classes.eventsContainer}>
-		<Grid container justify='center' spacing={1}>
-			<Typography align='center' component='h1' variant='h4'
+
+	const renderEvents = events.map((event, index) => {
+		return (
+			<>
+				<Event key={index} {...event} />
+				{index === events.length - 1 ? null : <Divider className={classes.divider} />}
+			</>
+		);
+	});
+
+	return <Box component="section" paddingY={{ xs: 8, md: 10 }} bgcolor='background.grey'>
+		<Container maxWidth='md' className={classes.eventsContainer}>
+			<Typography component='h2' variant='h4'
 				className={classes.title}>Upcoming Workshops</Typography>
-			{timeSlots.map(timeslot => {
-				return <TimeSlot key={timeslot.startTime} time={timeslot.startTime} events={timeslot.events} />;
-			})}
+			{renderEvents}
 			<Button component={Link} role='link' className={classes.moreWorkshopsButton}
-				variant='outlined' to='/schedule'>More Workshops</Button>
-		</Grid>
-	</Container>;
+				variant='contained' disableElevation color="secondary" to='/schedule'>More Workshops</Button>
+		</Container>
+	</Box>;
 }
 
 export default UpcomingEvents;
