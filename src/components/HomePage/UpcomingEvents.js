@@ -26,15 +26,13 @@ const useStyles = makeStyles(theme => ({
 	},
 	moreWorkshopsButton: {
 		alignSelf: 'center',
-		marginTop: '3.5em'
+		marginTop: '4em'
 	},
 	divider: {
 		height: '2px',
-		margin: theme.spacing(3),
-		marginRight: 0, // comment out this line for centered divider
+		margin: theme.spacing(4),
 		[theme.breakpoints.up('sm')]: {
-			margin: theme.spacing(7),
-			marginRight: 0 // comment out this line for centered divider
+			margin: theme.spacing(7)
 		}
 	}
 }));
