@@ -8,9 +8,8 @@ import Divider from '@material-ui/core/Divider';
 import { Link } from 'gatsby';
 import workshopSchedule from '../../data/WorkshopSchedule';
 import Event from './Event';
-import { currentTimeZoneShort } from '../../utils/timezone_names.js';
 
-const timeFormatter = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit' });
+const timeFormatter = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
 
 
 const useStyles = makeStyles(theme => ({
@@ -50,7 +49,7 @@ function UpcomingEvents() {
 		if (currentTime < timeSlot.startTime) {
 			for (const event of timeSlot.events) {
 				events.push({
-					startTime: `${timeFormatter.format(timeSlot.startTime)} ${currentTimeZoneShort}`,
+					startTime: timeFormatter.format(timeSlot.startTime),
 					...event
 				});
 				eventsDisplayed += timeSlot.events.length;
