@@ -18,8 +18,7 @@ const useStyles = makeStyles(theme => ({
 		alignItems: 'center',
 		marginTop: '1ex',
 		'& > :nth-child(1)': {
-			marginRight: '1.5em',
-			fontSize: '1.1em' // up for debate
+			marginRight: '1.5em'
 		}
 	},
 	description: {
