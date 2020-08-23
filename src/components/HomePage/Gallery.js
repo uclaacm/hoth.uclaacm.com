@@ -21,7 +21,7 @@ export default function Gallery() {
 	`);
 
 	return (
-		<Box component='section' marginTop={5} paddingBottom={5} bgcolor='background.grey'>
+		<Box component='section' bgcolor='background.grey'>
 			<CarouselSlider imageNodes={data.carouselImages.nodes} />
 		</Box>
 	);
