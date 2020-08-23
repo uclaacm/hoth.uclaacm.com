@@ -45,7 +45,7 @@ function UpcomingEvents() {
 	}
 	return (
 		<Box component='section' paddingY={{ xs: 8, md: 10 }} bgcolor='background.grey'>
-			<Container component='section' maxWidth='md' className={classes.eventsContainer}>
+			<Container maxWidth='md' className={classes.eventsContainer}>
 				<Grid container justify='center' spacing={1}>
 					<Typography align='center' component='h1' variant='h4'
 						className={classes.title}>Upcoming Workshops</Typography>
