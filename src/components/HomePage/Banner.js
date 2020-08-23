@@ -8,7 +8,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PropTypes from 'prop-types';
 import Countdown from 'react-countdown';
 import Tooltip from '@material-ui/core/Tooltip';
-import { currentTimeZoneShort } from '../../utils/timezone_names.js';
+import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
 
 import SvgImg from '../SvgImg';
 import hothLogo from '../../images/hoth7-logo.svg';
@@ -79,7 +79,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function renderInfo(classes) {
-	const tz = currentTimeZoneShort;
+	const tz = getTimeZoneWithFormat(hothStart, 'short');
 	const month = monthFormatter.format(hothStart);
 	const startDay = hothStart.getDate();
 	const endDay = hothEnd.getDate();

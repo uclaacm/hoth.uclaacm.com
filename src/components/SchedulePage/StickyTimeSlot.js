@@ -7,7 +7,7 @@ import ScheduleRoundedIcon from '@material-ui/icons/ScheduleRounded';
 import Box from '@material-ui/core/Box';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import ListItem from '@material-ui/core/ListItem';
-import { currentTimeZoneShort } from '../../utils/timezone_names.js';
+import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
 
 const useStyles = makeStyles(theme => {
 	return {
@@ -45,7 +45,7 @@ function StickyTimeslot({ time, events }) {
 						<time dateTime={time.toISOString()}>{timeFormatter.format(time)}</time>
 						<Box color='gray' component='span'>
 							{' '}
-							{currentTimeZoneShort}
+							{getTimeZoneWithFormat(time, 'short')}
 						</Box>
 					</Typography>
 				</Box>

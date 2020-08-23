@@ -1,28 +1,38 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
+import { Link } from 'gatsby';
 import workshopSchedule from '../../data/WorkshopSchedule';
-import TimeSlot from './TimeSlot';
+import Event from './Event';
+
+const timeFormatter = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+
 
 const useStyles = makeStyles(theme => ({
 	title: {
 		fontFamily: theme.typography.fontFamily,
 		fontWeight: 'bold',
-		paddingTop: '24px',
-		paddingBottom: '16px'
+		padding: '1.2em 0'
 	},
 	eventsContainer: {
-		paddingTop: '16px',
-		paddingBottom: '24px'
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'center'
 	},
 	moreWorkshopsButton: {
-		marginTop: '8px'
+		alignSelf: 'center',
+		marginTop: '4em'
+	},
+	divider: {
+		height: '2px',
+		margin: theme.spacing(4),
+		[theme.breakpoints.up('sm')]: {
+			margin: theme.spacing(7)
+		}
 	}
 }));
 
@@ -31,33 +41,44 @@ function UpcomingEvents() {
 	const currentTime = new Date();
 	let eventsDisplayed = 0;
 	const numEventsToDisplay = 2;
-	const timeSlots = [];
+
+	const events = [];
 	// Assumes workshopSchedule is ordered by time
 	for (let i = 0; i < workshopSchedule.length && eventsDisplayed < numEventsToDisplay; i++) {
-		const workshop = workshopSchedule[i];
-		if (currentTime < workshop.startTime) {
-			timeSlots.push(workshop);
-			eventsDisplayed += workshop.events.length;
+		const timeSlot = workshopSchedule[i];
+		if (currentTime < timeSlot.startTime) {
+			for (const event of timeSlot.events) {
+				events.push({
+					startTime: timeFormatter.format(timeSlot.startTime),
+					...event
+				});
+				eventsDisplayed += timeSlot.events.length;
+			}
 		}
 	}
+
 	if (eventsDisplayed === 0) {
 		return null; // Abort entirely
 	}
-	return (
-		<Box component='section' paddingY={{ xs: 8, md: 10 }} bgcolor='background.grey'>
-			<Container maxWidth='md' className={classes.eventsContainer}>
-				<Grid container justify='center' spacing={1}>
-					<Typography align='center' component='h1' variant='h4'
-						className={classes.title}>Upcoming Workshops</Typography>
-					{timeSlots.map(timeslot => {
-						return <TimeSlot key={timeslot.startTime} time={timeslot.startTime} events={timeslot.events} />;
-					})}
-					<Button component={Link} role='link' className={classes.moreWorkshopsButton}
-						variant='outlined' to='/schedule'>More Workshops</Button>
-				</Grid>
-			</Container>
-		</Box>
-	);
+
+	const renderEvents = events.map((event, index) => {
+		return (
+			<>
+				<Event key={index} {...event} />
+				{index === events.length - 1 ? null : <Divider className={classes.divider} />}
+			</>
+		);
+	});
+
+	return <Box component="section" paddingY={{ xs: 8, md: 10 }} bgcolor='background.grey'>
+		<Container maxWidth='md' className={classes.eventsContainer}>
+			<Typography component='h2' variant='h4'
+				className={classes.title}>Upcoming Workshops</Typography>
+			{renderEvents}
+			<Button component={Link} role='link' className={classes.moreWorkshopsButton}
+				variant='contained' disableElevation color="secondary" to='/schedule'>More Workshops</Button>
+		</Container>
+	</Box>;
 }
 
 export default UpcomingEvents;
