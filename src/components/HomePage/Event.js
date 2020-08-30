@@ -9,6 +9,7 @@ const useStyles = makeStyles(theme => ({
 	name: {
 		color: theme.palette.secondary.main,
 		fontWeight: 'bold',
+		fontSize: '1.5em',
 		textTransform: 'uppercase'
 	},
 	subtitle: {
@@ -22,7 +23,6 @@ const useStyles = makeStyles(theme => ({
 		}
 	},
 	description: {
-		fontSize: '1em',
 		[theme.breakpoints.up('md')]: {
 			paddingLeft: '2.75em'
 		}
