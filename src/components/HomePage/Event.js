@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-function Event({ startTime, name, location, description }) {
+function Event({ startTime, name, duration, location, description }) {
 	const classes = useStyles();
 	return (
 		<Grid container spacing={1}>
@@ -45,9 +45,16 @@ function Event({ startTime, name, location, description }) {
 					{name}
 				</Typography>
 				<Box className={classes.subtitle}>
+					{startTime ?
+						<Typography variant='body2' >
+							{startTime}
+						</Typography> :
+						null}
 					<Typography variant='body2'>
-						{startTime}
+						{duration}
 					</Typography>
+				</Box>
+				<Box className={classes.subtitle}>
 					<Typography variant='body2' >
 						{location}
 					</Typography>
@@ -63,8 +70,9 @@ function Event({ startTime, name, location, description }) {
 }
 
 Event.propTypes = {
-	startTime: PropTypes.string.isRequired,
+	startTime: PropTypes.string,
 	name: PropTypes.string.isRequired,
+	duration: PropTypes.string.isRequired,
 	location: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired
 };
