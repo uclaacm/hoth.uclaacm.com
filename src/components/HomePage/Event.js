@@ -18,12 +18,19 @@ const useStyles = makeStyles(theme => ({
 		alignItems: 'center',
 		marginTop: '1ex',
 		'& > :nth-child(1)': {
-			marginRight: '1.5em'
+			marginRight: '1em'
+		},
+		[theme.breakpoints.up('sm')]: {
+			'& > :nth-child(1)': {
+				marginRight: '1.5em'
+			}
 		}
 	},
 	description: {
 		fontSize: '1em',
+		paddingTop: theme.spacing(1),
 		[theme.breakpoints.up('md')]: {
+			paddingTop: 0,
 			paddingLeft: '2.75em'
 		}
 	}
