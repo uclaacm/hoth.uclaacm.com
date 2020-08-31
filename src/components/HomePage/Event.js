@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
 	name: {
 		color: theme.palette.secondary.main,
 		fontWeight: 'bold',
-		fontSize: '1.5em',
+		fontSize: '1.4em',
 		textTransform: 'uppercase'
 	},
 	subtitle: {
