@@ -1,6 +1,9 @@
 import React from 'react';
 
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import MuiTableCell from '@material-ui/core/TableCell';
@@ -19,6 +22,10 @@ import MLHack from './images/ml-hack.png';
 import MobileHack from './images/mobile-hack.png';
 import OverallHack from './images/overall-hack.png';
 import WebHack from './images/web-hack.png';
+import { Typography } from '@material-ui/core';
+
+// import Squiggle from './swiggly.js';
+import { ReactComponent as Squiggle } from './images/squiggle.svg';
 
 const allPrizes = [
 	{
@@ -64,6 +71,9 @@ const TableCell = withStyles({
 })(MuiTableCell);
 
 const useStyles = makeStyles({
+	prizeCard: {
+		textAlign: 'center'
+	},
 	header: {
 		fontWeight: 700,
 		textDecoration: 'underline',
@@ -81,35 +91,55 @@ export default function Prizes() {
 	const hideImg = useMediaQuery(theme.breakpoints.down('xs'));
 
 	return (
-		<Container maxWidth='md'>
-			<TableContainer>
-				<Table aria-label="prize table">
-					<TableHead>
-						<TableRow>
-							{ hideImg ? null : <TableCell></TableCell> }
-							<TableCell align='center' className={classes.header}>Track</TableCell>
-							<TableCell align='center' className={classes.header}>Prize</TableCell>
-						</TableRow>
-					</TableHead>
-					<TableBody>
-						{allPrizes.map(row =>
-							<TableRow key={row.track}>
-								{ hideImg ?
-									null :
-									<TableCell align='center' width='20%'>
-										<img src={row.img} height='60px'/>
+		<>
+			<Container maxWidth='md'>
+				<Grid maxWidth='md' container spacing={3} className={classes.prizeCard}>
+					{allPrizes.map(prize =>
+						<Grid item xs={4} key={prize.track}>
+							<Card>
+								<CardContent>
+									<Typography>
+										{prize.track}
+									</Typography>
+									<Squiggle />
+									<Typography>
+										{prize.prize}
+									</Typography>
+								</CardContent>
+							</Card>
+						</Grid>)}
+				</Grid>
+			</Container>
+			<Container maxWidth='md'>
+				<TableContainer>
+					<Table aria-label="prize table">
+						<TableHead>
+							<TableRow>
+								{ hideImg ? null : <TableCell></TableCell> }
+								<TableCell align='center' className={classes.header}>Track</TableCell>
+								<TableCell align='center' className={classes.header}>Prize</TableCell>
+							</TableRow>
+						</TableHead>
+						<TableBody>
+							{allPrizes.map(row =>
+								<TableRow key={row.track}>
+									{ hideImg ?
+										null :
+										<TableCell align='center' width='20%'>
+											<img src={row.img} height='60px'/>
+										</TableCell>
+									}
+									<TableCell align='center' width='40%' className={classes.item}>
+										{row.track}
 									</TableCell>
-								}
-								<TableCell align='center' width='40%' className={classes.item}>
-									{row.track}
-								</TableCell>
-								<TableCell align='center' width='40%' className={classes.item}>
-									{row.prize}
-								</TableCell>
-							</TableRow>)}
-					</TableBody>
-				</Table>
-			</TableContainer>
-		</Container>
+									<TableCell align='center' width='40%' className={classes.item}>
+										{row.prize}
+									</TableCell>
+								</TableRow>)}
+						</TableBody>
+					</Table>
+				</TableContainer>
+			</Container>
+		</>
 	);
 }
