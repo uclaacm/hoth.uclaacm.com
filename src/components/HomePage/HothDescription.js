@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import classNames from 'classnames';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -10,6 +11,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
+import { useUppercase } from '../shared-style';
 import { ReactComponent as FacebookLogo } from '../../images/fb_logo.svg';
 
 const eventURL = 'https://facebook.com/';
@@ -27,7 +29,6 @@ const useStyles = makeStyles(theme => ({
 		}
 	},
 	title: {
-		textTransform: 'uppercase',
 		textAlign: 'center',
 		fontSize: '4em',
 		fontWeight: theme.typography.fontWeightBold,
@@ -45,6 +46,7 @@ export default function HothDescription() {
 	const theme = useTheme();
 	const classes = useStyles();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+	const uppercase = useUppercase();
 
 	const data = useStaticQuery(graphql`
 		query {
@@ -70,7 +72,7 @@ export default function HothDescription() {
 			<Container maxWidth='md'>
 				<hgroup>
 					<Typography variant='h2' className={classes.subtitle}>What’s</Typography>
-					<Typography variant='h2' className={classes.title} style={{
+					<Typography variant='h2' className={classNames(classes.title, uppercase.root)} style={{
 						paddingBottom: isSmall ? theme.spacing(2) : theme.spacing(8)
 					}}>Hack on the Hill?</Typography>
 				</hgroup>
