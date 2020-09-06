@@ -59,7 +59,7 @@ const allPrizes = [
 		prize: 'Mini Projector'
 	},
 	{
-		track: '"You do You"',
+		track: '“You do You”',
 		prize: 'Seat Cushion'
 	}
 ];
