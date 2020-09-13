@@ -7,6 +7,8 @@ import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import useTheme from '@material-ui/core/styles/useTheme';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const winners = [
 	{
@@ -21,7 +23,7 @@ const winners = [
 	},
 	{
 		title: 'Wave',
-		category: 'Best Machine Learning Project',
+		category: 'Best Machine Learning',
 		description: `Wave allows for people to use hand gestures to control their
 			computers. Wave sits in the background as you use your device. It
 			recognizes gestures to perform relevant tasks based on your activity.`,
@@ -48,6 +50,9 @@ const winners = [
 ];
 
 function Winners() {
+	const theme = useTheme();
+	const isSmall = useMediaQuery(theme.breakpoints.down('xs'));
+
 	const data = useStaticQuery(graphql`
 		{
 			winnerImages: allFile(filter: {relativePath: {glob:"gallery-winners/*"}}) {
@@ -72,19 +77,20 @@ function Winners() {
 	const winnerCards = winners.map(item => {
 		const image = winnerImageMap.get(item.id);
 		return (
-			<Grid item key={item.title} sm={6}>
+			<Grid item key={item.title} sm={6} style={{ paddingBottom: isSmall ? theme.spacing(4) : theme.spacing(8) }}>
 				<Box display='flex' flexDirection='column'>
 					<Img fluid={{ ...image, aspectRatio: 1.5 }} style={{ borderRadius: '14px', marginBottom: '1em' }}/>
-					<Typography variant='h5'>{item.title} –{' '}
-						<span style={{ fontStyle: 'italic' }}>
-							{item.category}
-						</span>
+					<Typography variant='h5'>{item.title}</Typography>
+					<Typography variant='h6' style={{ fontWeight: theme.typography.fontWeightRegular,
+						textTransform: 'uppercase', fontSize: '1em', letterSpacing: '.5px' }}>
+						{item.category}
 					</Typography>
-					<Typography variant='body1' style={{ paddingBottom: 5, paddingTop: 5 }}>
+					<Typography variant='body1' style={{ padding: '0.5em 0em 1em' }}>
 						{item.description}
 					</Typography>
 					<a href={item.link} target='_blank' rel='noreferrer noopener' style={{ textDecoration: 'none' }}>
-						<Button variant='contained' disableElevation color="secondary">
+						<Button variant='contained' disableElevation color="secondary"
+							style={{ textTransform: 'none', padding: '4px 1.5em' }}>
 							See Project
 						</Button>
 					</a>
@@ -94,8 +100,11 @@ function Winners() {
 	});
 
 	return (
-		<Container maxWidth='md' style={{ paddingTop: '50px', paddingBottom: '40px' }}>
-			<Typography variant='h4' component='h1' style={{ fontWeight: 500, marginBottom: '40px' }}>
+		<Container maxWidth='md' style={{ paddingBottom: theme.spacing(8) }}>
+			<Typography variant='h4' component='h1'
+				style={{ fontWeight: theme.typography.fontWeightBold,
+					paddingTop: isSmall ? theme.spacing(4) : theme.spacing(8),
+					paddingBottom: isSmall ? theme.spacing(4) : theme.spacing(8) }}>
 				Past Winners 🎉
 			</Typography>
 			<Grid container spacing={8}>
