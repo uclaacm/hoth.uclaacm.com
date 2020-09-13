@@ -24,7 +24,6 @@ const useStyles = makeStyles(theme => ({
 		}
 	},
 	description: {
-		fontSize: '1em',
 		[theme.breakpoints.up('md')]: {
 			paddingLeft: '2.75em'
 		}
