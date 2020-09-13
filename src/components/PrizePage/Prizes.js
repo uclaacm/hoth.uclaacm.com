@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
+import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Table from '@material-ui/core/Table';
@@ -30,7 +29,7 @@ import { ReactComponent as Squiggle } from './images/squiggle.svg';
 const allPrizes = [
 	{
 		img: MLHack,
-		track: 'Best Machine Learning',
+		track: 'Best ML',
 		prize: 'Echo Dot'
 	},
 	{
@@ -40,22 +39,22 @@ const allPrizes = [
 	},
 	{
 		img: MobileHack,
-		track: 'Best Mobile Hack',
+		track: 'Best Mobile',
 		prize: 'Mini Phone Printer'
 	},
 	{
 		img: WebHack,
-		track: 'Best Web Hack',
+		track: 'Best Web',
 		prize: 'Solar Phone Charger'
 	},
 	{
 		img: GameHack,
-		track: 'Best Game Design',
+		track: 'Best Game',
 		prize: 'Google Cardboard'
 	},
 	{
 		img: OverallHack,
-		track: 'Best Overall Hack',
+		track: 'Best Overall',
 		prize: 'Mini Projector'
 	},
 	{
@@ -71,8 +70,18 @@ const TableCell = withStyles({
 })(MuiTableCell);
 
 const useStyles = makeStyles({
-	prizeCard: {
+	prizeGrid: {
 		textAlign: 'center'
+	},
+	prizeCard: {
+		backgroundColor: '#e6e6e6',
+		borderRadius: '10px',
+		height: '100%',
+		paddingTop: '20px',
+		paddingBottom: '20px'
+	},
+	prizeDescription: {
+		paddingBottom: '20px'
 	},
 	header: {
 		fontWeight: 700,
@@ -93,20 +102,29 @@ export default function Prizes() {
 	return (
 		<>
 			<Container maxWidth='md'>
-				<Grid maxWidth='md' container spacing={3} className={classes.prizeCard}>
+				<Grid maxWidth='md' container spacing={3} className={classes.prizeGrid}>
 					{allPrizes.map(prize =>
-						<Grid item xs={4} key={prize.track}>
-							<Card>
-								<CardContent>
-									<Typography>
+						<Grid item xs={12} sm={4} key={prize.track}>
+							<Box>
+								<img src={prize.img} height='60px'/>
+								<Box className={classes.prizeCard}>
+									<Typography variant='h6' component='h3'>
 										{prize.track}
 									</Typography>
-									<Squiggle />
-									<Typography>
-										{prize.prize}
-									</Typography>
-								</CardContent>
-							</Card>
+									<Box paddingLeft='20%' paddingRight='20%'>
+										<Squiggle />
+									</Box>
+									<Box className={classes.prizeDescription}>
+										<Typography style={{ color: '#a1a1a1', fontSize: '14px' }}>
+											PRIZE
+										</Typography>
+										<Typography>
+											{prize.prize}
+										</Typography>
+									</Box>
+									<img height='120px' src='https://upload.wikimedia.org/wikipedia/commons/6/6e/Golde33443.jpg'/>
+								</Box>
+							</Box>
 						</Grid>)}
 				</Grid>
 			</Container>

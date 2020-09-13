@@ -1,3 +1,58 @@
-<svg width="168" height="29" viewBox="0 0 168 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M7 7L10.5147 10.5147C15.201 15.201 22.799 15.201 27.4853 10.5147L31.0147 6.98528C35.701 2.29899 43.299 2.29899 47.9853 6.98528L51.5147 10.5147C56.201 15.201 63.799 15.201 68.4853 10.5147L72.0147 6.98528C76.701 2.29899 84.299 2.29899 88.9853 6.98528L92.5147 10.5147C97.201 15.201 104.799 15.201 109.485 10.5147L113.015 6.98528C117.701 2.29899 125.299 2.29899 129.985 6.98528L137.015 14.0147C141.701 18.701 149.299 18.701 153.985 14.0147L161 7" stroke="#C960FF" strokeWidth="6" strokeLinecap="round"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="168"
+   height="29"
+   viewBox="0 0 168 29"
+   fill="none"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="squiggle.svg"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="900"
+     id="namedview14"
+     showgrid="false"
+     inkscape:zoom="5.2619048"
+     inkscape:cx="67.656109"
+     inkscape:cy="14.5"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg12" />
+  <path
+     d="M7 7L10.5147 10.5147C15.201 15.201 22.799 15.201 27.4853 10.5147L31.0147 6.98528C35.701 2.29899 43.299 2.29899 47.9853 6.98528L51.5147 10.5147C56.201 15.201 63.799 15.201 68.4853 10.5147L72.0147 6.98528C76.701 2.29899 84.299 2.29899 88.9853 6.98528L92.5147 10.5147C97.201 15.201 104.799 15.201 109.485 10.5147L113.015 6.98528C117.701 2.29899 125.299 2.29899 129.985 6.98528L137.015 14.0147C141.701 18.701 149.299 18.701 153.985 14.0147L161 7"
+     stroke="#C960FF"
+     strokeWidth="6"
+     strokeLinecap="round"
+     id="path10"
+     style="stroke-width:4;stroke-miterlimit:4;stroke-dasharray:none" />
 </svg>
