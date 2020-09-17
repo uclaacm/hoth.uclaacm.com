@@ -5,6 +5,8 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
+const timeFormatter = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+
 const useStyles = makeStyles(theme => ({
 	name: {
 		color: theme.palette.secondary.main,
@@ -27,8 +29,6 @@ const useStyles = makeStyles(theme => ({
 		}
 	},
 	description: {
-		fontSize: '1em',
-		paddingTop: theme.spacing(1),
 		[theme.breakpoints.up('md')]: {
 			paddingTop: 0,
 			paddingLeft: '2.75em'
@@ -46,8 +46,8 @@ function Event({ startTime, name, duration, location, description }) {
 				</Typography>
 				<Box className={classes.subtitle}>
 					{startTime ?
-						<Typography variant='body2' >
-							{startTime}
+						<Typography component='time' variant='body2' dateTime={startTime.toISOString()}>
+							{timeFormatter.format(startTime)}
 						</Typography> :
 						null}
 					<Typography variant='body2'>
@@ -55,7 +55,7 @@ function Event({ startTime, name, duration, location, description }) {
 					</Typography>
 				</Box>
 				<Box className={classes.subtitle}>
-					<Typography variant='body2' >
+					<Typography component='span' variant='body2' >
 						{location}
 					</Typography>
 				</Box>
@@ -70,7 +70,7 @@ function Event({ startTime, name, duration, location, description }) {
 }
 
 Event.propTypes = {
-	startTime: PropTypes.string,
+	startTime: PropTypes.instanceOf(Date),
 	name: PropTypes.string.isRequired,
 	duration: PropTypes.string.isRequired,
 	location: PropTypes.string.isRequired,

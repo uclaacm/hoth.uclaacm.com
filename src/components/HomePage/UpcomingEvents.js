@@ -9,9 +9,6 @@ import { Link } from 'gatsby';
 import workshopSchedule from '../../data/WorkshopSchedule';
 import Event from './Event';
 
-const timeFormatter = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
-
-
 const useStyles = makeStyles(theme => ({
 	title: {
 		fontFamily: theme.typography.fontFamily,
@@ -49,7 +46,7 @@ function UpcomingEvents() {
 		if (currentTime < timeSlot.startTime) {
 			for (const event of timeSlot.events) {
 				events.push({
-					startTime: timeFormatter.format(timeSlot.startTime),
+					startTime: timeSlot.startTime,
 					...event
 				});
 				eventsDisplayed += timeSlot.events.length;
@@ -63,10 +60,10 @@ function UpcomingEvents() {
 
 	const renderEvents = events.map((event, index) => {
 		return (
-			<>
-				<Event key={index} {...event} />
+			<React.Fragment key={index} >
+				<Event {...event} />
 				{index === events.length - 1 ? null : <Divider className={classes.divider} />}
-			</>
+			</React.Fragment>
 		);
 	});
 

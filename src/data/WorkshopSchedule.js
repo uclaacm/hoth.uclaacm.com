@@ -1,3 +1,5 @@
+import React from 'react';
+
 const hothDate = '2021-02-23'; // replace with real date later
 const utcOffset = '-08:00'; // PST
 // time is a string of the form "HH:mm:ss"
@@ -31,7 +33,7 @@ const workshopSchedule = [
 				manage code across multiple collaborators and versions!`
 			},
 			{
-				name: 'Intro to iOS',
+				name: <>Intro to <i>i</i>OS</>,
 				duration: '60 min',
 				location: 'Sycamore Room',
 				description: `Learn all about the fundamentals of iOS development
