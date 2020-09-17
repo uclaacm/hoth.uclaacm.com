@@ -54,7 +54,11 @@ function StickyTimeslot({ time, events }) {
 			</ListSubheader>
 			{events.map(event => {
 				return <ListItem key={event.name} className={classes.eventItem}>
-					<Event {...event} />
+					<Event
+						name={event.name}
+						subtitles={[event.duration, event.location]}
+						description={event.description}
+					/>
 				</ListItem>;
 			})}
 		</ul>

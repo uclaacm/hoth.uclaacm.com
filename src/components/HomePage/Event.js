@@ -5,7 +5,6 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-const timeFormatter = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
 
 const useStyles = makeStyles(theme => ({
 	name: {
@@ -36,29 +35,49 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-function Event({ startTime, name, duration, location, description }) {
+function Event({ name, subtitles, description }) {
 	const classes = useStyles();
+
+	const renderSubtitle = [];
+	const chunkSize = 2;
+
+	// split subtitles array into chunks of 2 (only two items should be shown on the same line of any subtitle)
+	for (let i = 0; i < subtitles.length; i += chunkSize) {
+		const subtitleChunk = subtitles.slice(i, i + chunkSize);
+		const renderChunk = subtitleChunk.map((subtitle, index) => {
+			return (
+				<Typography variant='body2' key={`${name}-subtitle-${index}`}>
+					{subtitle}
+				</Typography>);
+		});
+		renderSubtitle.push(
+			<Box className={classes.subtitle}>
+				{renderChunk}
+			</Box>
+		);
+	}
+
 	return (
 		<Grid container spacing={1}>
 			<Grid item sm={12} md={4}>
 				<Typography component='h3' variant='subtitle1' className={classes.name}>
 					{name}
 				</Typography>
-				<Box className={classes.subtitle}>
-					{startTime ?
-						<Typography component='time' variant='body2' dateTime={startTime.toISOString()}>
-							{timeFormatter.format(startTime)}
-						</Typography> :
-						null}
+				{renderSubtitle}
+				{/* <Box className={classes.subtitle}>
+					<Typography component='time' variant='body2'>
+						{subtitle[0]}
+					</Typography> :
 					<Typography variant='body2'>
-						{duration}
+						{subtitle[1]}
 					</Typography>
 				</Box>
+				{subtitle.length}
 				<Box className={classes.subtitle}>
-					<Typography component='span' variant='body2' >
+					<Typography component='span' variant='body2'>
 						{location}
 					</Typography>
-				</Box>
+				</Box> */}
 			</Grid>
 			<Grid item sm={12} md={8}>
 				<Typography variant='body1' className={classes.description}>
@@ -70,10 +89,11 @@ function Event({ startTime, name, duration, location, description }) {
 }
 
 Event.propTypes = {
-	startTime: PropTypes.instanceOf(Date),
 	name: PropTypes.string.isRequired,
-	duration: PropTypes.string.isRequired,
-	location: PropTypes.string.isRequired,
+	// startTime: PropTypes.instanceOf(Date),
+	// duration: PropTypes.string.isRequired,
+	// location: PropTypes.string.isRequired,
+	subtitles: PropTypes.array.isRequired,
 	description: PropTypes.string.isRequired
 };
 
