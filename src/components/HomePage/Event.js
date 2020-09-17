@@ -64,20 +64,6 @@ function Event({ name, subtitles, description }) {
 					{name}
 				</Typography>
 				{renderSubtitle}
-				{/* <Box className={classes.subtitle}>
-					<Typography component='time' variant='body2'>
-						{subtitle[0]}
-					</Typography> :
-					<Typography variant='body2'>
-						{subtitle[1]}
-					</Typography>
-				</Box>
-				{subtitle.length}
-				<Box className={classes.subtitle}>
-					<Typography component='span' variant='body2'>
-						{location}
-					</Typography>
-				</Box> */}
 			</Grid>
 			<Grid item sm={12} md={8}>
 				<Typography variant='body1' className={classes.description}>
@@ -90,9 +76,6 @@ function Event({ name, subtitles, description }) {
 
 Event.propTypes = {
 	name: PropTypes.string.isRequired,
-	// startTime: PropTypes.instanceOf(Date),
-	// duration: PropTypes.string.isRequired,
-	// location: PropTypes.string.isRequired,
 	subtitles: PropTypes.array.isRequired,
 	description: PropTypes.string.isRequired
 };
