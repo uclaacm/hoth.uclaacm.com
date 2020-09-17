@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => {
 		},
 		eventItem: {
 			paddingTop: theme.spacing(3),
-			paddingBottom: theme.spacing(9),
+			paddingBottom: theme.spacing(8),
 			marginLeft: '20px' // width + margin of svg
 		}
 	};
