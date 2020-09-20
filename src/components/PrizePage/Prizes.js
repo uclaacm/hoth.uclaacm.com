@@ -26,6 +26,7 @@ import { Typography } from '@material-ui/core';
 // import Squiggle from './swiggly.js';
 import { ReactComponent as Squiggle } from './images/squiggle.svg';
 
+const prizeImageRadius = '50px';
 const allPrizes = [
 	{
 		img: MLHack,
@@ -77,8 +78,10 @@ const useStyles = makeStyles({
 		backgroundColor: '#e6e6e6',
 		borderRadius: '10px',
 		height: '100%',
-		paddingTop: '20px',
-		paddingBottom: '20px'
+		paddingTop: `${prizeImageRadius}`,
+		paddingBottom: '20px',
+		position: 'relative',
+		zIndex: '-1'
 	},
 	prizeDescription: {
 		paddingBottom: '20px'
@@ -87,6 +90,24 @@ const useStyles = makeStyles({
 		fontWeight: 700,
 		textDecoration: 'underline',
 		fontSize: '1.5em'
+	},
+	imageBox: {
+		alignItems: 'center',
+		alignSelf: 'center',
+		backgroundColor: '#fafafa',
+		border: '6px solid',
+		borderColor: '#e6e6e6',
+		borderRadius: prizeImageRadius,
+		display: 'flex',
+		justifyContent: 'center',
+		marginBottom: `calc(-1 * ${prizeImageRadius})`,
+		width: `calc(2 * ${prizeImageRadius})`,
+		height: `calc(2 * ${prizeImageRadius})`
+	},
+	prizeBox: {
+		display: 'flex',
+		justifyContent: 'center',
+		flexDirection: 'column'
 	},
 	item: {
 		fontWeight: 600,
@@ -105,8 +126,10 @@ export default function Prizes() {
 				<Grid maxWidth='md' container spacing={3} className={classes.prizeGrid}>
 					{allPrizes.map(prize =>
 						<Grid item xs={12} sm={4} key={prize.track}>
-							<Box>
-								<img src={prize.img} height='60px'/>
+							<Box className={classes.prizeBox}>
+								<Box className={classes.imageBox}>
+									<img src={prize.img} height='60px'/>
+								</Box>
 								<Box className={classes.prizeCard}>
 									<Typography variant='h6' component='h3'>
 										{prize.track}
