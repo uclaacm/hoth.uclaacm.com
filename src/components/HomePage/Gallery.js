@@ -11,7 +11,7 @@ export default function Gallery() {
 					id
 					relativePath
 					childImageSharp {
-						fluid(quality: 100) {
+						fluid {
 							...GatsbyImageSharpFluid
 						}
 					}
