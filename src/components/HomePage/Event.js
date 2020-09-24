@@ -5,7 +5,6 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-
 const useStyles = makeStyles(theme => ({
 	name: {
 		color: theme.palette.secondary.main,
@@ -19,10 +18,8 @@ const useStyles = makeStyles(theme => ({
 		alignItems: 'center',
 		marginTop: '1ex',
 		'& > :nth-child(1)': {
-			marginRight: '1em'
-		},
-		[theme.breakpoints.up('sm')]: {
-			'& > :nth-child(1)': {
+			marginRight: '1em',
+			[theme.breakpoints.up('sm')]: {
 				marginRight: '1.5em'
 			}
 		}
@@ -48,7 +45,8 @@ function Event({ name, subtitles, description }) {
 			return (
 				<Typography variant='body2' key={`${name}-subtitle-${index}`}>
 					{subtitle}
-				</Typography>);
+				</Typography>
+			);
 		});
 		renderSubtitle.push(
 			<Box className={classes.subtitle}>
@@ -76,7 +74,7 @@ function Event({ name, subtitles, description }) {
 
 Event.propTypes = {
 	name: PropTypes.string.isRequired,
-	subtitles: PropTypes.array.isRequired,
+	subtitles: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 	description: PropTypes.string.isRequired
 };
 

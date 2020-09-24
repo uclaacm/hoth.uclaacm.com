@@ -38,8 +38,10 @@ const SchedulePage = () => {
 					<React.Fragment key={timeslot.startTime}>
 						<li>
 							<StickyTimeSlot events={timeslot.events} time={timeslot.startTime} />
-							{index === workshopSchedule.length - 1 ? null : <Divider className={classes.divider} />}
 						</li>
+						{index === workshopSchedule.length - 1 ?
+							null :
+							<Divider component='li' className={classes.divider} />}
 					</React.Fragment>);
 			})}
 		</List>
