@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Event from '../SchedulePage/Event';
+import Event from '../HomePage/Event';
 import ScheduleRoundedIcon from '@material-ui/icons/ScheduleRounded';
 import Box from '@material-ui/core/Box';
 import ListSubheader from '@material-ui/core/ListSubheader';
@@ -27,6 +27,8 @@ const useStyles = makeStyles(theme => {
 			}
 		},
 		eventItem: {
+			marginTop: theme.spacing(2),
+			marginBottom: theme.spacing(6),
 			marginLeft: '20px' // width + margin of svg
 		}
 	};
@@ -52,7 +54,11 @@ function StickyTimeslot({ time, events }) {
 			</ListSubheader>
 			{events.map(event => {
 				return <ListItem key={event.name} className={classes.eventItem}>
-					<Event {...event} />
+					<Event
+						name={event.name}
+						subtitles={[event.duration, event.location]}
+						description={event.description}
+					/>
 				</ListItem>;
 			})}
 		</ul>
