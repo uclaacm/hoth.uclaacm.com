@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
+import classNames from 'classnames';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import { useUppercase } from '../shared-style';
 
 const useStyles = makeStyles(theme => ({
 	name: {
 		color: theme.palette.secondary.main,
-		fontWeight: 'bold',
-		textTransform: 'uppercase'
+		fontWeight: 'bold'
 	},
 	subtitle: {
 		fontWeight: theme.typography.fontWeightMedium,
@@ -34,6 +35,7 @@ const useStyles = makeStyles(theme => ({
 
 function Event({ name, subtitles, description }) {
 	const classes = useStyles();
+	const uppercase = useUppercase();
 
 	const renderSubtitle = [];
 	const chunkSize = 2;
@@ -58,7 +60,7 @@ function Event({ name, subtitles, description }) {
 	return (
 		<Grid container spacing={1}>
 			<Grid item sm={12} md={4}>
-				<Typography component='h3' variant='subtitle1' className={classes.name}>
+				<Typography component='h3' variant='subtitle1' className={classNames(classes.name, uppercase.root)}>
 					{name}
 				</Typography>
 				{renderSubtitle}
