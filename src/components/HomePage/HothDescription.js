@@ -53,14 +53,14 @@ export default function HothDescription() {
 			image1: file(relativePath: {eq: "hoth-description/IMG_1914.jpg"}) {
 				childImageSharp {
 					fluid {
-						...GatsbyImageSharpFluid
+						...GatsbyImageSharpFluid_withWebp
 					}
 				}
 			}
 			image2: file(relativePath: {eq: "hoth-description/IMG_2030.jpg"}) {
 				childImageSharp {
 					fluid {
-						...GatsbyImageSharpFluid
+						...GatsbyImageSharpFluid_withWebp
 					}
 				}
 			}
