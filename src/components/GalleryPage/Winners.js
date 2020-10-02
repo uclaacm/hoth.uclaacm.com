@@ -59,7 +59,7 @@ function Winners() {
 					relativePath
 					childImageSharp {
 						fluid {
-							...GatsbyImageSharpFluid
+							...GatsbyImageSharpFluid_withWebp
 						}
 					}
 				}

@@ -12,7 +12,7 @@ export default function Gallery() {
 					relativePath
 					childImageSharp {
 						fluid {
-							...GatsbyImageSharpFluid
+							...GatsbyImageSharpFluid_withWebp
 						}
 					}
 				}
