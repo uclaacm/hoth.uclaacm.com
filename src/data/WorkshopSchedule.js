@@ -1,3 +1,5 @@
+import React from 'react';
+
 const hothDate = '2021-02-23'; // replace with real date later
 const utcOffset = '-08:00'; // PST
 // time is a string of the form "HH:mm:ss"
@@ -11,6 +13,7 @@ const workshopSchedule = [
 		events: [
 			{
 				name: 'ACM-W × ACM Hack | Hackathon 101 + Team Formation',
+				duration: '30 min',
 				location: 'Sycamore Room',
 				description: `First hackathon? We’ll show you all the tips and tricks you’ll
 				need to know to be successful and most importantly, have fun!`
@@ -22,6 +25,7 @@ const workshopSchedule = [
 		events: [
 			{
 				name: 'Git and GitHub',
+				duration: '30 min',
 				location: 'De Neve Auditorium',
 				description: `With multiple developers each working on
 				a different feature of a project, bringing things together
@@ -29,7 +33,8 @@ const workshopSchedule = [
 				manage code across multiple collaborators and versions!`
 			},
 			{
-				name: 'Intro to iOS',
+				name: <>Intro to <i>i</i>OS</>,
+				duration: '60 min',
 				location: 'Sycamore Room',
 				description: `Learn all about the fundamentals of iOS development
 				by making a simple app in Swift and XCode!
@@ -42,6 +47,7 @@ const workshopSchedule = [
 		events: [
 			{
 				name: 'Facebook | Zero to Hero with React Native',
+				duration: '60 min',
 				location: 'De Neve Auditorium ',
 				description: `In this workshop we will learn how to quickly create a mobile app
 				using React Native. We will be covering the React fundamentals (such as props
@@ -51,6 +57,7 @@ const workshopSchedule = [
 			},
 			{
 				name: 'Intro to Web Dev: HTML and CSS',
+				duration: '60 min',
 				location: 'Sycamore Room',
 				description: `Ever wanted to create and design your own website?
 				Come learn about HTML and CSS, the basic components behind every
@@ -58,6 +65,7 @@ const workshopSchedule = [
 			},
 			{
 				name: 'Intro to Android',
+				duration: '60 min',
 				location: 'De Neve Learning Center',
 				description: `Learn all about the fundamentals of iOS development
 				by making a simple app in Swift and XCode!

@@ -1,18 +1,19 @@
 import React from 'react';
-import { useTheme, makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import PropTypes from 'prop-types';
+import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import PropTypes from 'prop-types';
-import Countdown from 'react-countdown';
+import NoSsr from '@material-ui/core/NoSsr';
 import Tooltip from '@material-ui/core/Tooltip';
-import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
+import Typography from '@material-ui/core/Typography';
+import { useTheme, makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Countdown from 'react-countdown';
 
 import SvgImg from '../SvgImg';
 import hothLogo from '../../images/hoth7-logo.svg';
 import hothBanner from '../../images/hoth-banner.svg';
+import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
 
 // These dates are represented in the user's timezone
 const hothStart = new Date('2021-02-23T09:00:00-07:00');
@@ -170,10 +171,12 @@ function Banner() {
 						{renderInfo(classes)}
 					</Grid>
 					<Grid item sm={12} md={6}>
-						<Countdown
-							date={hothStart}
-							renderer={countdownRenderer}
-						/>
+						<NoSsr>
+							<Countdown
+								date={hothStart}
+								renderer={countdownRenderer}
+							/>
+						</NoSsr>
 					</Grid>
 				</Grid>
 			</Container>
