@@ -17,8 +17,9 @@ This website is developed with [Gatsby](https://www.gatsbyjs.org/) and
 developed by ACM Hack’s Dev Team: Timothy Gu
 [(@TimothyGu)](https://github.com/TimothyGu/), Jamie Liu
 [(@jamieliu386)](https://github.com/jamieliu386/), Timothy Rediehs
-[(@Timthetic)](https://github.com/Timthetic), and Miles Wu
-[(@milesswu)](https://github.com/milesswu).
+[(@Timthetic)](https://github.com/Timthetic), Jakob Reinwald, Chandra Suresh,
+Christina Tong, Miles Wu [(@milesswu)](https://github.com/milesswu), and Eric
+Yang.
 
 ACM Hack is a subcomittee of [ACM @ UCLA](http://www.uclaacm.com/), the largest
 Computer Science student organization in Southern California. Check out [our
