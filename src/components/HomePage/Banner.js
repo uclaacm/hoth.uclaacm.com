@@ -94,7 +94,7 @@ function renderInfo(classes) {
 			alignItems='center'
 		>
 			<Typography variant='h3' className={classes.text} component='h2' style={{ fontSize: '3em' }}>
-				Hack on the Hill 7
+				Hack off the Hill 7
 			</Typography>
 			<Typography variant='h5' className={classes.text} component='h3'>Explore. Build. Empower.</Typography>
 			<SvgImg src={hothLogo} className={classes.logo} width={258} height={250}
