@@ -18,8 +18,10 @@ developed by ACM Hack’s Dev Team: Timothy Gu
 [(@TimothyGu)](https://github.com/TimothyGu/), Jamie Liu
 [(@jamieliu386)](https://github.com/jamieliu386/), Timothy Rediehs
 [(@Timthetic)](https://github.com/Timthetic), Jakob Reinwald
-[(@jakobreinwald)](https://github.com/jakobreinwald), Chandra Suresh, Christina
-Tong, Miles Wu [(@milesswu)](https://github.com/milesswu), and Eric Yang
+[(@jakobreinwald)](https://github.com/jakobreinwald),
+Chandra Suresh,
+Christina Tong [(@christinatong01)](https://github.com/christinatong01),
+Miles Wu [(@milesswu)](https://github.com/milesswu), and Eric Yang
 [(@eric8yang)](https://github.com/eric8yang).
 
 ACM Hack is a subcomittee of [ACM @ UCLA](http://www.uclaacm.com/), the largest
