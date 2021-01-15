@@ -87,7 +87,7 @@ export default function HothDescription() {
 							Hack off the Hill (HOTH 8) is a {' '}
 							<strong>beginner-friendly</strong>
 							{' '}hackathon designed to be your first hackathon experience.
-							{' '}Due to the ongoing global pandemic,
+							Due to the ongoing global pandemic,
 							HOTH 8 will be virtual and span 2 days!
 						</Typography>
 					</Grid>
