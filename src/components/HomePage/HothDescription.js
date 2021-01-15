@@ -102,7 +102,7 @@ export default function HothDescription() {
 							{` `}<strong>workshops</strong>, receive technical help from
 							{` `}<strong>mentors</strong>, and meet new people while participating in
 							{` `}<strong>fun</strong> social activities.
-							{` `} There will be <strong>prizes</strong> for the best hacks!
+							There will be <strong>prizes</strong> for the best hacks!
 						</Typography>
 					</Grid>
 					<Grid item xs={12} sm={8} md={6}>
