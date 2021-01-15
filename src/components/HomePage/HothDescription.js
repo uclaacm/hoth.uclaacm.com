@@ -74,7 +74,7 @@ export default function HothDescription() {
 					<Typography variant='h2' className={classes.subtitle}>What’s</Typography>
 					<Typography variant='h2' className={classNames(classes.title, uppercase.root)} style={{
 						paddingBottom: isSmall ? theme.spacing(2) : theme.spacing(8)
-					}}>Hack on the Hill?</Typography>
+					}}>Hack off the Hill?</Typography>
 				</hgroup>
 				<Grid container spacing={isSmall ? 3 : 8} alignItems='center' justify='center'>
 					<Grid item xs={12} sm={8} md={6}>
@@ -84,10 +84,11 @@ export default function HothDescription() {
 					</Grid>
 					<Grid item sm={10} md={6}>
 						<Typography variant='body1' style={{ paddingBottom: isSmall ? theme.spacing(2) : 0 }}>
-							Hack on the Hill (HOTH) 7 is a 12-hour,{' '}
+							Hack off the Hill (HOTH 8) is a {' '}
 							<strong>beginner-friendly</strong>
-							{' '}hackathon designed to give beginners a glimpse into what a real
-							hackathon would be and feel like.
+							{' '}hackathon designed to be your first hackathon experience.
+							{' '}Due to the ongoing global pandemic,
+							HOTH 8 will be virtual and span 2 days!
 						</Typography>
 					</Grid>
 				</Grid>
@@ -97,12 +98,11 @@ export default function HothDescription() {
 							variant='body1'
 							component='p'
 							style={{ paddingBottom: isSmall ? theme.spacing(2) : 0 }}>
-							During HOTH, there will be
-							{` `}<strong>workshops</strong>,
-							{` `}<strong>mentors</strong>, and
-							{` `}<strong>amazing prizes</strong>{' '}
-							for the best hacks. We will also be providing a selection of
-							hardware for hackers to check out and hack with.
+							During HOTH, you{'\''}ll get to learn from
+							{` `}<strong>workshops</strong>, receive technical help from
+							{` `}<strong>mentors</strong>, and meet new people while participating in
+							{` `}<strong>fun</strong> social activities.
+							{` `} There will be <strong>prizes</strong> for the best hacks!
 						</Typography>
 					</Grid>
 					<Grid item xs={12} sm={8} md={6}>
