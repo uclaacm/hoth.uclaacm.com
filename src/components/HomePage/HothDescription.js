@@ -74,7 +74,7 @@ export default function HothDescription() {
 					<Typography variant='h2' className={classes.subtitle}>What’s</Typography>
 					<Typography variant='h2' className={classNames(classes.title, uppercase.root)} style={{
 						paddingBottom: isSmall ? theme.spacing(2) : theme.spacing(8)
-					}}>Hack <Box fontStyle='italic' display='inline'>off</Box> the Hill?</Typography>
+					}}>Hack <em>off</em> the Hill?</Typography>
 				</hgroup>
 				<Grid container spacing={isSmall ? 3 : 8} alignItems='center' justify='center'>
 					<Grid item xs={12} sm={8} md={6}>
