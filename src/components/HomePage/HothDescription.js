@@ -84,7 +84,7 @@ export default function HothDescription() {
 					</Grid>
 					<Grid item sm={10} md={6}>
 						<Typography variant='body1' style={{ paddingBottom: isSmall ? theme.spacing(2) : 0 }}>
-							Hack off the Hill (HOTH 8) is a {' '}
+							Hack off the Hill (HOTH 8) is a{' '}
 							<strong>beginner-friendly</strong>
 							{' '}hackathon designed to be your first hackathon experience.
 							Due to the ongoing global pandemic,
