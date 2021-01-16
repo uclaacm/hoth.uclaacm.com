@@ -63,7 +63,7 @@ function ButtonBar({ isMobile }) {
 				<PoppinLink to={link.to} key={`nav-${index}`}>
 					{link.name}
 				</PoppinLink>)}
-			<BorderLink disabled to='/'>
+			<BorderLink href={'https://forms.gle/7uokDycPQfU9B5oj8'} target='_blank'>
 				Apply
 			</BorderLink>
 		</>
