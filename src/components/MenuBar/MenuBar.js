@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => {
 		mobileMenuBar: {
 			boxShadow: theme.shadows[4],
 			position: 'fixed',
-			zIndex: '1',
+			zIndex: '10',
 			overflow: 'hidden',
 			backgroundColor: theme.palette.grey[100],
 			width: '100%'
