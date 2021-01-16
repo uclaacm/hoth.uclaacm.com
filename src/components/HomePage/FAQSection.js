@@ -130,19 +130,19 @@ function FAQSection() {
 			answer: `You can work by yourself or in teams of up to 4 people total.`
 		},
 		{
-			question: `What if I don't have a team?`,
-			answer: `Don't worry! We'll be leading team building activities before 
+			question: `What if I don’t have a team?`,
+			answer: `Don’t worry! We’ll be leading team building activities before 
 				and at the start of the event.`
 		},
 		{
 			question: `How do I sign up?`,
 			answer: `Hit the apply button above and fill out the application! A few days before
-				the event, you'll be emailed a confirmation form along with appropriate links
+				the event, you’ll be emailed a confirmation form along with appropriate links
 				and additional event information. Applications close on February 1st at 11:59pm PST.`
 		},
 		{
 			question: `What if I have never made a project before?`,
-			answer:	`No worries! Throughout HOTH 8, you'll have access to workshops on all sorts of
+			answer:	`No worries! Throughout HOTH 8, you’ll have access to workshops on all sorts of
 				topics to help you start bringing your ideas to life and mentors to support you through
 				any roadblocks.`
 		},
