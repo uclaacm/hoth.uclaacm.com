@@ -151,7 +151,7 @@ function FAQSection() {
 				How can I get involved?`,
 			answer:
 				<>
-					We{'\''}d love to have you as a mentor to answer participants{'\''} technical
+					We’d love to have you as a mentor to answer participants’ technical
 					questions and help them with their projects. You can sign up
 					to be a mentor <a href='https://docs.google.com/forms/d/e/1FAIpQLScPz4jqsMPdZwyXK10Le03SwOiAmiGmh0fBpLOkyrwJMdXmBQ/viewform'>here</a>!
 				</>
