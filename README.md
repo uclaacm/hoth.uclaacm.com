@@ -1,11 +1,11 @@
 <img align=left width=100 src=src/images/hack-logo.svg alt="Hack logo">
 
-# Hack on the Hill (HOTH) Website
+# Hack off the Hill (HOTH) Website
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code-of-conduct.md)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4825a1ca-c270-4bfb-980e-8c616ef8e123/deploy-status)](https://app.netlify.com/sites/acm-hoth/deploys)
 
-This repository contains the code for ACM Hack’s Hack on the Hill website! Hack
+This repository contains the code for ACM Hack’s Hack off the Hill website! Hack
 on the Hill (HOTH) is a 12-hour, beginner-friendly hackathon hosted by ACM Hack
 @ UCLA. This event is designed to give beginners a taste of what a hackathon
 looks and feels like. During HOTH, there are workshops and mentors available to

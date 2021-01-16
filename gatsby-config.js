@@ -1,8 +1,8 @@
 module.exports = {
 	siteMetadata: {
-		title: 'Hack on the Hill',
+		title: 'Hack off the Hill',
 		description: `
-			Hack on the Hill (HOTH) is a 12-hour, beginner-friendly hackathon
+			Hack off the Hill (HOTH) is a 12-hour, beginner-friendly hackathon
 			designed to give beginners a glimpse into what a real hackathon would be
 			and feel like.
 		`,
@@ -28,7 +28,7 @@ module.exports = {
 			resolve: 'gatsby-plugin-manifest',
 			/* eslint-disable camelcase */
 			options: {
-				name: 'Hack on the Hill',
+				name: 'Hack off the Hill',
 				short_name: 'HOTH',
 				start_url: '/',
 				background_color: '#fff',

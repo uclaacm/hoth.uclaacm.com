@@ -115,7 +115,7 @@ function FAQSection() {
 			question: `What’s a hackathon?`,
 			answer: `A hackathon is an event where individuals get together for a
 				short period of time to work on a project. These events usually last 24
-				or 36 hours and take place during the weekend. Hack on the Hill is
+				or 36 hours and take place during the weekend. Hack off the Hill is
 				designed to simulate a real hackathon over a 12-hour period.`
 		},
 		{
@@ -124,7 +124,7 @@ function FAQSection() {
 				a programmer – designers, entrepreneurs, and even those who are curious
 				as to what a hackathon is like can attend. Whether you’ve never been to
 				a hackathon before or you’ve been to several, everyone is welcome to
-				participate in Hack on the Hill.`
+				participate in Hack off the Hill.`
 		},
 		{
 			question: `What do I bring?`,
