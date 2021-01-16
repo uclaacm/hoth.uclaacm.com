@@ -113,44 +113,54 @@ function FAQSection() {
 	const faqs = [
 		{
 			question: `What’s a hackathon?`,
-			answer: `A hackathon is an event where individuals get together for a
-				short period of time to work on a project. These events usually last 24
-				or 36 hours and take place during the weekend. Hack off the Hill is
-				designed to simulate a real hackathon over a 12-hour period.`
+			answer:
+				<>
+					A hackathon is an event during which people from different backgrounds
+					come together to create a project from start to finish in a limited time frame.
+					Check out some examples <Link href='https://hoth7.devpost.com/project-gallery'>here</Link>!
+				</>
 		},
 		{
 			question: `Who can join?`,
-			answer: `Any UCLA student can join! And you don’t necessarily have to be
-				a programmer – designers, entrepreneurs, and even those who are curious
-				as to what a hackathon is like can attend. Whether you’ve never been to
-				a hackathon before or you’ve been to several, everyone is welcome to
-				participate in Hack off the Hill.`
-		},
-		{
-			question: `What do I bring?`,
-			answer: `All you need is your laptop, charger, and any other materials
-				you plan to bring for your project. We will not be providing laptops
-				for this hackathon.`
+			answer: `Applications for HOTH 8 are open to anyone! However, only current 
+				UCLA students will be eligible for our prize tracks.`
 		},
 		{
 			question: `How many people can I work with?`,
-			answer: `Submissions must be by groups with a maximum size of 4 people.`
+			answer: `You can work by yourself or in teams of up to 4 people total.`
+		},
+		{
+			question: `What if I don’t have a team?`,
+			answer: `Don’t worry! We’ll be leading team building activities before 
+				and at the start of the event.`
 		},
 		{
 			question: `How do I sign up?`,
-			answer: `Hit the sign-up button above and fill out the form. After the
-				deadline has passed, you will be emailed a confirmation that will ask
-				for additional information. Sign up as soon as possible as space is
-				limited!`
+			answer: `Hit the apply button above and fill out the application! A few days before
+				the event, you’ll be emailed a confirmation form along with appropriate links
+				and additional event information. Applications close on February 1st at 11:59pm PST.`
 		},
 		{
-			question: `What can I possibly build in 12 hours?!`,
+			question: `What if I have never made a project before?`,
+			answer:	`No worries! Throughout HOTH 8, you’ll have access to workshops on all sorts of
+				topics to help you start bringing your ideas to life and mentors to support you through
+				any roadblocks.`
+		},
+		{
+			question: `I have coding experience and want to make a difference at HOTH 8. 
+				How can I get involved?`,
 			answer:
 				<>
-					Don’t think it’s possible? Check out previous submissions from <Link
-						href='https://hoth6.devpost.com/submissions'>HOTH 6</Link>, <Link
-						href='https://hoth5.devpost.com/submissions'>HOTH 5</Link>, and <Link
-						href='https://hoth4.devpost.com/submissions'>HOTH 4</Link>.
+					We’d love to have you as a mentor to answer participants’ technical
+					questions and help them with their projects. You can sign up
+					to be a mentor <Link href='https://docs.google.com/forms/d/e/1FAIpQLScPz4jqsMPdZwyXK10Le03SwOiAmiGmh0fBpLOkyrwJMdXmBQ/viewform'>here</Link>!
+				</>
+		},
+		{
+			question: `I have some other questions.`,
+			answer:
+				<>
+					Send us an email at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com!</Link>
 				</>
 		}
 	];
