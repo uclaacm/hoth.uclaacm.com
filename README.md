@@ -19,7 +19,7 @@ developed by ACM Hack’s Dev Team: Timothy Gu
 [(@jamieliu386)](https://github.com/jamieliu386/), Timothy Rediehs
 [(@Timthetic)](https://github.com/Timthetic), Jakob Reinwald
 [(@jakobreinwald)](https://github.com/jakobreinwald), Chandra Suresh
-[@curesh](https://github.com/curesh),
+[(@curesh)](https://github.com/curesh),
 Christina Tong [(@christinatong01)](https://github.com/christinatong01),
 Miles Wu [(@milesswu)](https://github.com/milesswu), and Eric Yang
 [(@eric8yang)](https://github.com/eric8yang).
