@@ -14,7 +14,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useUppercase } from '../shared-style';
 import { ReactComponent as FacebookLogo } from '../../images/fb_logo.svg';
 
-const eventURL = 'https://facebook.com/';
+const eventURL = 'https://www.facebook.com/events/414403626538420';
 
 const useStyles = makeStyles(theme => ({
 	subtitle: {

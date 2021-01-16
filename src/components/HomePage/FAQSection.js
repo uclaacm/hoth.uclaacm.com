@@ -153,14 +153,14 @@ function FAQSection() {
 				<>
 					We’d love to have you as a mentor to answer participants’ technical
 					questions and help them with their projects. You can sign up
-					to be a mentor <a href='https://docs.google.com/forms/d/e/1FAIpQLScPz4jqsMPdZwyXK10Le03SwOiAmiGmh0fBpLOkyrwJMdXmBQ/viewform'>here</a>!
+					to be a mentor <Link href='https://docs.google.com/forms/d/e/1FAIpQLScPz4jqsMPdZwyXK10Le03SwOiAmiGmh0fBpLOkyrwJMdXmBQ/viewform'>here</Link>!
 				</>
 		},
 		{
 			question: `I have some other questions.`,
 			answer:
 				<>
-					Send us an email at <a href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com</a>!
+					Send us an email at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com!</Link>
 				</>
 		}
 	];
