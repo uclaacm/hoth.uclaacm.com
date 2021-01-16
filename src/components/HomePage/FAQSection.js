@@ -160,7 +160,7 @@ function FAQSection() {
 			question: `I have some other questions.`,
 			answer:
 				<>
-					Send us an email at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com</Link>!
+					Send us an email at <a href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com</a>!
 				</>
 		}
 	];
