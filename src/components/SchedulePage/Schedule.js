@@ -3,17 +3,17 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
+// import List from '@material-ui/core/List';
+// import Divider from '@material-ui/core/Divider';
 
-import StickyTimeSlot from '../SchedulePage/StickyTimeSlot';
-import workshopSchedule from '../../data/WorkshopSchedule';
+// import StickyTimeSlot from '../SchedulePage/StickyTimeSlot';
+// import workshopSchedule from '../../data/WorkshopSchedule';
 
 const useStyles = makeStyles(theme => ({
 	title: {
 		fontWeight: 'bold',
 		paddingTop: theme.spacing(11),
-		paddingBottom: theme.spacing(4)
+		paddingBottom: theme.spacing(11)
 	},
 	divider: {
 		height: '2px',
@@ -31,8 +31,10 @@ const useStyles = makeStyles(theme => ({
 const SchedulePage = () => {
 	const classes = useStyles();
 	return <Container maxWidth='md'>
-		<Typography align='left' component='h1' variant='h4' className={classes.title}>Schedule</Typography>
-		<List>
+		<Typography align='left' component='h1' variant='h4' className={classes.title}>
+			Schedule Coming Soon!
+		</Typography>
+		{/* <List>
 			{workshopSchedule.map((timeslot, index) => {
 				return (
 					<React.Fragment key={timeslot.startTime}>
@@ -44,7 +46,7 @@ const SchedulePage = () => {
 							<Divider component='li' className={classes.divider} />}
 					</React.Fragment>);
 			})}
-		</List>
+		</List> */}
 	</Container>;
 };
 
