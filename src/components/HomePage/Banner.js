@@ -11,13 +11,13 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Countdown from 'react-countdown';
 
 import SvgImg from '../SvgImg';
-import hothLogo from '../../images/hoth7-logo.svg';
+import hothLogo from '../../images/hoth8-logo.svg';
 import hothBanner from '../../images/hoth-banner.svg';
 import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
 
 // These dates are represented in the user's timezone
-const hothStart = new Date('2021-02-23T09:00:00-07:00');
-const hothEnd = new Date('2021-02-23T21:00:00-07:00');
+const hothStart = new Date('2021-02-05T08:00:00-08:00');
+const hothEnd = new Date('2021-02-07T21:00:00-08:00');
 const monthFormatter = new Intl.DateTimeFormat('en-US', { month: 'short' });
 
 const useStyles = makeStyles(theme => ({
@@ -94,14 +94,14 @@ function renderInfo(classes) {
 			alignItems='center'
 		>
 			<Typography variant='h3' className={classes.text} component='h2' style={{ fontSize: '3em' }}>
-				Hack off the Hill 7
+				Hack off the Hill 8
 			</Typography>
 			<Typography variant='h5' className={classes.text} component='h3'>Explore. Build. Empower.</Typography>
 			<SvgImg src={hothLogo} className={classes.logo} width={258} height={250}
 				style={{
 					width: 150,
 					margin: 20
-				}} />
+				}}/>
 			<Box display='flex' alignItems='center' color='white'>
 				<Tooltip title={eventCrossesDate ?
 					`It looks like HOTH crosses between dates in your timezone! (${tz})` :
@@ -115,7 +115,7 @@ function renderInfo(classes) {
 					</Typography>
 				</Tooltip>
 			</Box>
-			<Typography variant='h5' className={classes.text} component='h3'>De Neve Plaza Room</Typography>
+			<Typography variant='h5' className={classes.text} component='h3'>Online!</Typography>
 		</Grid>
 	);
 }
