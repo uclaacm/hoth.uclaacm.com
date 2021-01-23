@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'gatsby';
 
