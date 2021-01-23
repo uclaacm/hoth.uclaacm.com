@@ -38,12 +38,11 @@ function ButtonBar({ isMobile }) {
 		<Button
 			component={Link}
 			role='link'
-			fullWidth={isMobile}
-			className={classNames(classes.btn)}
-			style = {{ margin: 10 }}
+			className={classes.btn}
+			style={{ margin: 10 }}
 			variant='contained'
 			{...props}
-			color = "secondary"
+			color='secondary'
 		/>;
 
 	const links = [
@@ -71,7 +70,7 @@ function ButtonBar({ isMobile }) {
 				<PoppinLink to={link.to} key={`nav-${index}`}>
 					{link.name}
 				</PoppinLink>)}
-			<BorderLink href={'https://forms.gle/7uokDycPQfU9B5oj8'} target='_blank'>
+			<BorderLink href='https://forms.gle/7uokDycPQfU9B5oj8' target='_blank'>
 				Apply
 			</BorderLink>
 		</>
