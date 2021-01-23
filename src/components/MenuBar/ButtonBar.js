@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'gatsby';
 
@@ -35,8 +34,15 @@ function ButtonBar({ isMobile }) {
 		<Button component={Link} role='link' fullWidth={isMobile} className={classes.btn} {...props} />;
 
 	const BorderLink = ({ ...props }) =>
-		<Button component={Link} role='link' fullWidth={isMobile}
-			className={classNames(classes.btn, classes.borderBtn)} variant='outlined' {...props} />;
+		<Button
+			component={Link}
+			role='link'
+			className={classes.btn}
+			style={{ margin: 10 }}
+			variant='contained'
+			{...props}
+			color='secondary'
+		/>;
 
 	const links = [
 		{
@@ -63,7 +69,7 @@ function ButtonBar({ isMobile }) {
 				<PoppinLink to={link.to} key={`nav-${index}`}>
 					{link.name}
 				</PoppinLink>)}
-			<BorderLink disabled to='/'>
+			<BorderLink href='https://forms.gle/7uokDycPQfU9B5oj8' target='_blank'>
 				Apply
 			</BorderLink>
 		</>
