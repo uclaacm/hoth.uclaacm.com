@@ -77,7 +77,7 @@ function Footer({ classes }) {
 				</Grid>
 				<Grid container spacing={1} className={classes.content}>
 					<Grid item xs={12}>
-						<div className={classes.copyright}>© ACM Hack 2020</div>
+						<div className={classes.copyright}>© ACM Hack 2021</div>
 					</Grid>
 				</Grid>
 			</Container>
