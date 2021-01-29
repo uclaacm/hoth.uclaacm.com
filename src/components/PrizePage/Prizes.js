@@ -157,7 +157,7 @@ export default function Prizes() {
 											{prize.prize}
 										</Typography>
 									</Box>
-									<Img fixed={prizeImageMap.get(prize.img)} style={{ height: '128px' }} />
+									{/* <Img fixed={prizeImageMap.get(prize.img)} style={{ height: '128px' }} /> */}
 								</Box>
 							</Box>
 						</Grid>)}
