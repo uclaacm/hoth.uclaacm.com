@@ -9,6 +9,9 @@ import { Link } from 'gatsby';
 import workshopSchedule from '../../data/WorkshopSchedule';
 import Event from './Event';
 
+// When changing this, make sure to update src/components/SchedulePage/Schedule.js as well.
+const scheduleAvailable = false;
+
 const timeFormatter = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
 
 const useStyles = makeStyles(theme => ({
@@ -40,6 +43,10 @@ function UpcomingEvents() {
 	const currentTime = new Date();
 	let eventsDisplayed = 0;
 	const numEventsToDisplay = 2;
+
+	if (!scheduleAvailable) {
+		return null;
+	}
 
 	const events = [];
 	// Assumes workshopSchedule is ordered by time
