@@ -19,12 +19,12 @@ const overwrittenTheme = responsiveFontSizes(createMuiTheme({
 	palette: {
 		primary: {
 			main: '#C960FF',
-			light: '#d37fff',
-			dark: '#352A3A',
+			light: '#9C28C5',
+			dark: '#31213E',
 			contrastText: '#fff'
 		},
 		secondary: {
-			main: '#ED3266',
+			main: '#FF477E',
 			light: '#f05b84',
 			dark: '#a52347',
 			contrastText: '#fff'
@@ -36,8 +36,8 @@ const overwrittenTheme = responsiveFontSizes(createMuiTheme({
 	typography: {
 		fontSize: 16,
 		fontFamily: '"Poppins", sans-serif',
-		body1: { fontFamily: '"Chivo", sans-serif' },
-		button: { fontFamily: '"Chivo", sans-serif' }
+		body1: { fontFamily: '"Open Sans", sans-serif' },
+		button: { fontFamily: '"Open Sans", sans-serif' }
 	}
 }));
 
@@ -46,8 +46,8 @@ const Layout = ({ children }) => {
 		<MuiThemeProvider theme={overwrittenTheme}>
 			<CssBaseline />
 			<Helmet>
-				<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
-				<link href="https://fonts.googleapis.com/css?family=Chivo:300,400" rel="stylesheet"/>
+				<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet"/>
+				<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet"/>
 			</Helmet>
 			<MenuBar />
 			<main>{children}</main>

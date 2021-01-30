@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import { navigate } from 'gatsby';
 
 import ButtonBar from './ButtonBar';
-import { ReactComponent as HackLogo } from '../../images/hack-logo.svg';
+import { ReactComponent as HOTHLogo } from '../../images/hoth8-logo.svg';
 
 const useStyles = makeStyles(theme => {
 	return {
@@ -67,7 +67,7 @@ function MenuBar() {
 					className={classes.logohome}
 					onClick={() => navigate('/')}
 				>
-					<HackLogo className={classes.logo} />
+					<HOTHLogo className={classes.logo} />
 					<Typography variant='h6' className={classes.wordmark} component='h1'>
 						{wordmark}
 					</Typography>
@@ -86,7 +86,7 @@ function MenuBar() {
 						className={classes.logohome}
 						onClick={() => navigate('/')}
 					>
-						<HackLogo className={classes.logo} />
+						<HOTHLogo className={classes.logo} />
 						<Typography variant='h6' className={classes.wordmark} component='h1'>
 							{wordmark}
 						</Typography>
