@@ -1,15 +1,15 @@
 import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Workshop from '../components/WorkshopPage/Workshop';
+import WorkshopPage from '../components/WorkshopPage/WorkshopPage';
 
-function WorkshopPage() {
+function Workshops() {
 	return (
 		<Layout>
 			<SEO title='Workshops' />
-			<Workshop />
+			<WorkshopPage />
 		</Layout>
 	);
 }
 
-export default WorkshopPage;
+export default Workshops;
