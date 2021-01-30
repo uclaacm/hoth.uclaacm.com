@@ -25,7 +25,7 @@ const workshops = [
 				url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO'
 			},
 			{
-				title: 'Intro to HTML',
+				title: 'Intro to Something Else',
 				author: 'Rick Astley',
 				description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
 				url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO'
