@@ -15,6 +15,10 @@ prizes:
 - src/components/PrizePage/**/*
 - src/pages/prizes.js
 
+workshops:
+- src/components/WorkshopPage/**/*
+- src/pages/workshops.js
+
 page:
 - src/components/MenuBar/**/*
 - src/components/Footer/**/*

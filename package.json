@@ -26,6 +26,7 @@
     "react-countdown": "^2.2.1",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "react-player": "^2.7.2",
     "react-slick": "^0.27.11",
     "slick-carousel": "^1.8.1",
     "svgo": "^1.3.0",

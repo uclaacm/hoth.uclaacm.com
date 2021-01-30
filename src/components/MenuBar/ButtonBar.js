@@ -53,6 +53,11 @@ function ButtonBar({ isMobile }) {
 			name: 'Schedule',
 			to: '/schedule'
 		},
+		/* {
+			name: 'Workshops',
+			to: '/workshops'
+		},
+		*/
 		{
 			name: 'Prizes',
 			to: '/prizes'
