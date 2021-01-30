@@ -94,7 +94,7 @@ function Workshop() {
 					paddingTop: theme.spacing(isSmall ? 4 : 8),
 					paddingBottom: theme.spacing(isSmall ? 4 : 8)
 				}}>
-                Workshops
+				Workshops
 			</Typography>
 			{workshopCards}
 		</Container>
