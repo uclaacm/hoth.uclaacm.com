@@ -35,8 +35,8 @@ function ButtonBar({ isMobile }) {
 		<Button component={Link} role='link' fullWidth={isMobile} className={classes.btn} {...props} />;
 
 	const BorderLink = ({ ...props }) =>
-		<Button component={Link} role='link' fullWidth={isMobile} 
-			className={classNames(classes.btn)} style = {{margin: 10}} variant='contained' {...props} color = "secondary"/>
+		<Button component={Link} role='link' fullWidth={isMobile} className={classNames(classes.btn)}
+			style={{ margin: 10 }} variant='contained' {...props} color = "secondary"/>;
 
 	const links = [
 		{
