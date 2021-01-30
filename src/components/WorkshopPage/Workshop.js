@@ -86,6 +86,7 @@ function Workshop() {
 				})}
 			</Grid>
 		</Grid>);
+
 	return (
 		<Container maxWidth='lg' style={{ marginBottom: theme.spacing(8) }}>
 			<Typography variant='h2' component='h1'
