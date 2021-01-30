@@ -79,7 +79,7 @@ function Workshop() {
 							<Button variant='contained' disableElevation color="secondary" component='a'
 								href={element.url} target='_blank' rel='noreferrer noopener'
 								style={{ textTransform: 'none', padding: '4px 1.5em', maxWidth: 'fit-content' }}>
-                                See Video
+								See Video
 							</Button>
 						</Grid>
 					);
