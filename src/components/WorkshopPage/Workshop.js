@@ -73,7 +73,7 @@ function Workshop() {
 					return (
 						<Grid key={element.title} item xs={12} sm={8} md={6}
 							style={{
-								paddingRight: theme.spacing(isSmall ? 4 : 8), display: 'flex', flexDirection: 'column'
+								paddingRight: theme.spacing(isSmall ? 4 : 8)
 							}}>
 							<ReactPlayer controls={true} width='100%' url={element.url} />
 							<Typography variant='h4' component='h3' style={{ paddingTop: '0.5em' }}>
