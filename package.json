@@ -39,7 +39,7 @@
     "prettier": "^2.1.2"
   },
   "engines": {
-    "node": "14"
+    "node": "14 || 15"
   },
   "keywords": [
     "gatsby"
@@ -48,7 +48,6 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
