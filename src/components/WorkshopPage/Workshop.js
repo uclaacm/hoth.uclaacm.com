@@ -7,7 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import useTheme from '@material-ui/core/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-
 const workshops = [
 	{
 		type: 'Web Development',
