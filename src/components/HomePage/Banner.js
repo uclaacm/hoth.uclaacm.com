@@ -9,10 +9,10 @@ import Typography from '@material-ui/core/Typography';
 import { useTheme, makeStyles } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Countdown from 'react-countdown';
+import Button from '@material-ui/core/Button';
 
-import SvgImg from '../SvgImg';
-import hothLogo from '../../images/hoth8-logo.svg';
-import hothBanner from '../../images/hoth-banner.svg';
+import hothBanner from '../../images/web-banner.svg';
+import hothTitle from '../../images/hoth8-title.svg';
 import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
 
 // These dates are represented in the user's timezone
@@ -26,9 +26,9 @@ const useStyles = makeStyles(theme => ({
 		height: 'auto',
 		[theme.breakpoints.up('md')]: {
 			backgroundImage: `url(${hothBanner})`,
-			backgroundSize: '545px 329px',
+			backgroundSize: '1200px 500px',
 			backgroundRepeat: 'no-repeat',
-			backgroundPosition: 'right bottom'
+			backgroundPosition: '20% top'
 		},
 		padding: 25,
 		[theme.breakpoints.down('sm')]: {
@@ -37,17 +37,33 @@ const useStyles = makeStyles(theme => ({
 	},
 	text: {
 		color: 'white',
-		fontWeight: 600,
-		textAlign: 'center'
+		fontWeight: 400,
+		textAlign: 'left',
+		justifyItems: 'left'
+	},
+	apply: {
+		width: '30%',
+		color: '#C960FF',
+		textAlign: 'left',
+		justifyItems: 'left',
+		fontWeight: 400,
+		margin: 10,
+		border: '2px solid #C960FF',
+		'&:hover': {
+			color: '#FFFFFF',
+			background: '#DB99FD'
+		}
 	},
 	timer: {
+		paddingTop: 350,
+		paddingLeft: 430,
 		display: 'flex',
 		flexDirection: 'row',
 		justifyContent: 'center',
 		alignItems: 'baseline',
 
 		color: 'white',
-		fontWeight: 600,
+		fontWeight: 400,
 		fontSize: '3em',
 		[theme.breakpoints.down('xs')]: {
 			fontSize: '2.3rem'
@@ -81,41 +97,42 @@ const useStyles = makeStyles(theme => ({
 
 function renderInfo(classes) {
 	const tz = getTimeZoneWithFormat(hothStart, 'short');
-	const month = monthFormatter.format(hothStart);
+	//const month = monthFormatter.format(hothStart);
 	const startDay = hothStart.getDate();
 	const endDay = hothEnd.getDate();
 	const eventCrossesDate = startDay !== endDay;
-	const endDayString = eventCrossesDate ? `–${endDay}` : '';
+	//const endDayString = eventCrossesDate ? `–${endDay}` : '';
 	return (
 		<Grid
 			container
 			direction='column'
-			justify='center'
-			alignItems='center'
+			justify='left'
+			alignItems='left'
 		>
-			<Typography variant='h3' className={classes.text} component='h2' style={{ fontSize: '3em' }}>
-				Hack off the Hill 8
+			<img src = {hothTitle}
+			style={{ paddingLeft: 50, paddingBottom: 20, width: '80%' }}
+			/>
+
+			<Typography variant='h5' className={classes.text} component='h3'
+			style={{ paddingLeft: 57, fontWeight: 500 }}>Explore. Build. Empower.
 			</Typography>
-			<Typography variant='h5' className={classes.text} component='h3'>Explore. Build. Empower.</Typography>
-			<SvgImg src={hothLogo} className={classes.logo} width={258} height={250}
-				style={{
-					width: 150,
-					margin: 20
-				}}/>
-			<Box display='flex' alignItems='center' color='white'>
+
+			<Box display='flex' alignItems='left' color='white'>
 				<Tooltip title={eventCrossesDate ?
 					`It looks like HOTH crosses between dates in your timezone! (${tz})` :
 					''}
 				placement='top'
 				arrow={true}>
-					<Typography variant='h5' className={classes.text} component='h3'>
-						<time dateTime={hothStart.toISOString()}>
-							{month} {startDay}{endDayString}, 2021
-						</time>
+					<Typography variant='h5' className={classes.text} style={{ paddingLeft: 57, paddingTop: 40 }} component='h3'>
+							February 5 - 7, 2021 | Virtual
 					</Typography>
 				</Tooltip>
 			</Box>
-			<Typography variant='h5' className={classes.text} component='h3'>Online!</Typography>
+			<Box style={{ paddingLeft: 48, paddingTop: 5 }}>
+				<Button className={classes.apply} href={'https://forms.gle/7uokDycPQfU9B5oj8'} target='_blank'>
+					Apply Now
+				</Button>
+			</Box>
 		</Grid>
 	);
 }
