@@ -57,10 +57,17 @@ function Workshop() {
 
 	const workshopCards = workshops.map(item =>
 		<Grid key={item.type} style={{ paddingBottom: theme.spacing(isSmall ? 4 : 8) }}>
-			<Typography style={{ fontWeight: theme.typography.fontWeightMedium,
-				paddingBottom: theme.spacing(isSmall ? 4 : 8) }}
-			variant='h3' component='h2'>{item.type}
+			<Typography
+				style={{
+					fontWeight: theme.typography.fontWeightMedium,
+					paddingBottom: theme.spacing(isSmall ? 4 : 8)
+				}}
+				variant='h3'
+				component='h2'
+			>
+				{item.type}
 			</Typography>
+
 			<Grid container spacing={8} justify='left'>
 				{item.elements.map(element => {
 					return (
