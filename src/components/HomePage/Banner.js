@@ -15,11 +15,14 @@ import SvgImg from '../SvgImg';
 import hothBanner from '../../images/web-banner.svg';
 import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
 
+import {
+	hothStart,
+	hothEnd,
+	applyDeadline
+} from '../constants.js';
+
 // These dates are displayed in the user's timezone
-const hothStart = new Date('2021-02-05T08:00:00-08:00');
-const hothEnd = new Date('2021-02-07T21:00:00-08:00');
 const monthFormatter = new Intl.DateTimeFormat('en-US', { month: 'short' });
-const applyDeadline = new Date('2021-02-01T23:59:59-08:00');
 
 const useStyles = makeStyles(theme => ({
 	container: {
