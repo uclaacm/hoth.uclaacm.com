@@ -11,25 +11,20 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Countdown from 'react-countdown';
 import Button from '@material-ui/core/Button';
 
+import SvgImg from '../SvgImg';
 import hothBanner from '../../images/web-banner.svg';
-import hothTitle from '../../images/hoth8-title.svg';
 import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
 
-// These dates are represented in the user's timezone
+// These dates are displayed in the user's timezone
 const hothStart = new Date('2021-02-05T08:00:00-08:00');
 const hothEnd = new Date('2021-02-07T21:00:00-08:00');
 const monthFormatter = new Intl.DateTimeFormat('en-US', { month: 'short' });
+const applyDeadline = new Date('2021-02-01T23:59:59-08:00');
 
 const useStyles = makeStyles(theme => ({
 	container: {
 		backgroundColor: theme.palette.primary.dark,
 		height: 'auto',
-		[theme.breakpoints.up('md')]: {
-			backgroundImage: `url(${hothBanner})`,
-			backgroundSize: '1200px 500px',
-			backgroundRepeat: 'no-repeat',
-			backgroundPosition: '20% top'
-		},
 		padding: 25,
 		[theme.breakpoints.down('sm')]: {
 			padding: '12px 2px'
@@ -42,25 +37,37 @@ const useStyles = makeStyles(theme => ({
 		justifyItems: 'left'
 	},
 	apply: {
-		width: '30%',
+		width: 'auto',
 		color: '#C960FF',
 		textAlign: 'left',
 		justifyItems: 'left',
 		fontWeight: 400,
-		margin: 10,
+		margin: '10px 0px',
+		padding: '4px 1.5em',
+		maxWidth: 'fit-content',
 		border: '2px solid #C960FF',
 		'&:hover': {
 			color: '#FFFFFF',
 			background: '#DB99FD'
+		},
+		[theme.breakpoints.down('sm')]: {
+			maxWidth: '100%'
 		}
 	},
+	eight: {
+		background: 'linear-gradient(199.69deg, #FF5F96 21.64%, #BD01FF 72.25%)',
+		WebkitBackgroundClip: 'text',
+		WebkitTextFillColor: 'transparent'
+	},
 	timer: {
-		paddingTop: 350,
-		paddingLeft: 430,
 		display: 'flex',
 		flexDirection: 'row',
 		justifyContent: 'center',
 		alignItems: 'baseline',
+		alignSelf: 'flex-end',
+		[theme.breakpoints.down('sm')]: {
+			alignSelf: 'flex-start'
+		},
 
 		color: 'white',
 		fontWeight: 400,
@@ -97,43 +104,47 @@ const useStyles = makeStyles(theme => ({
 
 function renderInfo(classes) {
 	const tz = getTimeZoneWithFormat(hothStart, 'short');
-	//const month = monthFormatter.format(hothStart);
+	const month = monthFormatter.format(hothStart);
 	const startDay = hothStart.getDate();
 	const endDay = hothEnd.getDate();
 	const eventCrossesDate = startDay !== endDay;
-	//const endDayString = eventCrossesDate ? `–${endDay}` : '';
+	const endDayString = eventCrossesDate ? `–${endDay}` : '';
 	return (
-		<Grid
-			container
-			direction='column'
-			justify='left'
-			alignItems='left'
-		>
-			<img src = {hothTitle}
-			style={{ paddingLeft: 50, paddingBottom: 20, width: '80%' }}
-			/>
+		<>
+			<Typography component='h1' variant='h1' className={classes.text} style={{
+				fontWeight: 'bold'
+			}}>
+				HOTH <span className={classes.eight}>8</span>
+			</Typography>
 
 			<Typography variant='h5' className={classes.text} component='h3'
-			style={{ paddingLeft: 57, fontWeight: 500 }}>Explore. Build. Empower.
+				style={{ fontWeight: 500 }}>Explore. Build. Empower.
 			</Typography>
 
 			<Box display='flex' alignItems='left' color='white'>
-				<Tooltip title={eventCrossesDate ?
-					`It looks like HOTH crosses between dates in your timezone! (${tz})` :
-					''}
-				placement='top'
-				arrow={true}>
-					<Typography variant='h5' className={classes.text} style={{ paddingLeft: 57, paddingTop: 40 }} component='h3'>
-							February 5 - 7, 2021 | Virtual
+				<Tooltip
+					title={`This date range is displayed in your timezone! (${tz})`}
+					placement='top'
+					arrow={true}
+				>
+					<Typography
+						variant='h5'
+						className={classes.text}
+						style={{ marginTop: 40 }}
+						component='h3'
+					>
+						<time dateTime={hothStart.toISOString()}>
+							{month} {startDay}{endDayString}, 2021
+						</time> | Virtual
 					</Typography>
 				</Tooltip>
 			</Box>
-			<Box style={{ paddingLeft: 48, paddingTop: 5 }}>
+			{Date.now() < applyDeadline.getTime() &&
 				<Button className={classes.apply} href={'https://forms.gle/7uokDycPQfU9B5oj8'} target='_blank'>
 					Apply Now
 				</Button>
-			</Box>
-		</Grid>
+			}
+		</>
 	);
 }
 
@@ -178,23 +189,44 @@ function Banner() {
 
 	return (
 		<div className={classes.container}>
-			<Container maxWidth='lg'>
+			<Container maxWidth='md'>
 				<Grid
 					container
 					direction={smallScreen ? 'column' : 'row' }
-					alignItems={smallScreen ? 'center' : 'flex-start'}
+					alignItems='center'
 				>
 					<Grid item sm={12} md={6}>
-						{renderInfo(classes)}
+						<Grid
+							container
+							direction='column'
+							justify='left'
+							alignItems='left'
+						>
+							{renderInfo(classes)}
+							{smallScreen ?
+								<NoSsr>
+									<Countdown
+										date={hothStart}
+										renderer={countdownRenderer}
+									/>
+								</NoSsr> :
+								null}
+						</Grid>
 					</Grid>
-					<Grid item sm={12} md={6}>
-						<NoSsr>
-							<Countdown
-								date={hothStart}
-								renderer={countdownRenderer}
-							/>
-						</NoSsr>
-					</Grid>
+					{smallScreen ?
+						null :
+						<Grid item sm={12} md={6}>
+							<Box display='flex' flexDirection='column'>
+								<SvgImg src={hothBanner} className={classes.logo} width={936} height={581} />
+								<NoSsr>
+									<Countdown
+										date={hothStart}
+										renderer={countdownRenderer}
+									/>
+								</NoSsr>
+							</Box>
+						</Grid>
+					}
 				</Grid>
 			</Container>
 		</div>
