@@ -9,27 +9,25 @@ import Typography from '@material-ui/core/Typography';
 import { useTheme, makeStyles } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Countdown from 'react-countdown';
+import Button from '@material-ui/core/Button';
 
 import SvgImg from '../SvgImg';
-import hothLogo from '../../images/hoth8-logo.svg';
-import hothBanner from '../../images/hoth-banner.svg';
+import hothBanner from '../../images/web-banner.svg';
 import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
 
-// These dates are represented in the user's timezone
-const hothStart = new Date('2021-02-05T08:00:00-08:00');
-const hothEnd = new Date('2021-02-07T21:00:00-08:00');
+import {
+	hothStart,
+	hothEnd,
+	applyDeadline
+} from '../constants.js';
+
+// These dates are displayed in the user's timezone
 const monthFormatter = new Intl.DateTimeFormat('en-US', { month: 'short' });
 
 const useStyles = makeStyles(theme => ({
 	container: {
 		backgroundColor: theme.palette.primary.dark,
 		height: 'auto',
-		[theme.breakpoints.up('md')]: {
-			backgroundImage: `url(${hothBanner})`,
-			backgroundSize: '545px 329px',
-			backgroundRepeat: 'no-repeat',
-			backgroundPosition: 'right bottom'
-		},
 		padding: 25,
 		[theme.breakpoints.down('sm')]: {
 			padding: '12px 2px'
@@ -37,17 +35,45 @@ const useStyles = makeStyles(theme => ({
 	},
 	text: {
 		color: 'white',
-		fontWeight: 600,
-		textAlign: 'center'
+		fontWeight: 400,
+		textAlign: 'left',
+		justifyItems: 'left'
+	},
+	apply: {
+		width: 'auto',
+		color: '#C960FF',
+		textAlign: 'left',
+		justifyItems: 'left',
+		fontWeight: 400,
+		margin: '10px 0px',
+		padding: '4px 1.5em',
+		maxWidth: 'fit-content',
+		border: '2px solid #C960FF',
+		'&:hover': {
+			color: '#FFFFFF',
+			background: '#DB99FD'
+		},
+		[theme.breakpoints.down('sm')]: {
+			maxWidth: '100%'
+		}
+	},
+	eight: {
+		background: 'linear-gradient(199.69deg, #FF5F96 21.64%, #BD01FF 72.25%)',
+		WebkitBackgroundClip: 'text',
+		WebkitTextFillColor: 'transparent'
 	},
 	timer: {
 		display: 'flex',
 		flexDirection: 'row',
 		justifyContent: 'center',
 		alignItems: 'baseline',
+		alignSelf: 'flex-end',
+		[theme.breakpoints.down('sm')]: {
+			alignSelf: 'flex-start'
+		},
 
 		color: 'white',
-		fontWeight: 600,
+		fontWeight: 400,
 		fontSize: '3em',
 		[theme.breakpoints.down('xs')]: {
 			fontSize: '2.3rem'
@@ -87,36 +113,41 @@ function renderInfo(classes) {
 	const eventCrossesDate = startDay !== endDay;
 	const endDayString = eventCrossesDate ? `–${endDay}` : '';
 	return (
-		<Grid
-			container
-			direction='column'
-			justify='center'
-			alignItems='center'
-		>
-			<Typography variant='h3' className={classes.text} component='h2' style={{ fontSize: '3em' }}>
-				Hack off the Hill 8
+		<>
+			<Typography component='h1' variant='h1' className={classes.text} style={{
+				fontWeight: 'bold'
+			}}>
+				HOTH <span className={classes.eight}>8</span>
 			</Typography>
-			<Typography variant='h5' className={classes.text} component='h3'>Explore. Build. Empower.</Typography>
-			<SvgImg src={hothLogo} className={classes.logo} width={258} height={250}
-				style={{
-					width: 150,
-					margin: 20
-				}}/>
-			<Box display='flex' alignItems='center' color='white'>
-				<Tooltip title={eventCrossesDate ?
-					`It looks like HOTH crosses between dates in your timezone! (${tz})` :
-					''}
-				placement='top'
-				arrow={true}>
-					<Typography variant='h5' className={classes.text} component='h3'>
+
+			<Typography variant='h5' className={classes.text} component='h3'
+				style={{ fontWeight: 500 }}>Explore. Build. Empower.
+			</Typography>
+
+			<Box display='flex' alignItems='left' color='white'>
+				<Tooltip
+					title={`This date range is displayed in your timezone! (${tz})`}
+					placement='top'
+					arrow={true}
+				>
+					<Typography
+						variant='h5'
+						className={classes.text}
+						style={{ marginTop: 40 }}
+						component='h3'
+					>
 						<time dateTime={hothStart.toISOString()}>
 							{month} {startDay}{endDayString}, 2021
-						</time>
+						</time> | Virtual
 					</Typography>
 				</Tooltip>
 			</Box>
-			<Typography variant='h5' className={classes.text} component='h3'>Online!</Typography>
-		</Grid>
+			{Date.now() < applyDeadline.getTime() &&
+				<Button className={classes.apply} href={'https://forms.gle/7uokDycPQfU9B5oj8'} target='_blank'>
+					Apply Now
+				</Button>
+			}
+		</>
 	);
 }
 
@@ -161,23 +192,44 @@ function Banner() {
 
 	return (
 		<div className={classes.container}>
-			<Container maxWidth='lg'>
+			<Container maxWidth='md'>
 				<Grid
 					container
 					direction={smallScreen ? 'column' : 'row' }
-					alignItems={smallScreen ? 'center' : 'flex-start'}
+					alignItems='center'
 				>
 					<Grid item sm={12} md={6}>
-						{renderInfo(classes)}
+						<Grid
+							container
+							direction='column'
+							justify='left'
+							alignItems='left'
+						>
+							{renderInfo(classes)}
+							{smallScreen ?
+								<NoSsr>
+									<Countdown
+										date={hothStart}
+										renderer={countdownRenderer}
+									/>
+								</NoSsr> :
+								null}
+						</Grid>
 					</Grid>
-					<Grid item sm={12} md={6}>
-						<NoSsr>
-							<Countdown
-								date={hothStart}
-								renderer={countdownRenderer}
-							/>
-						</NoSsr>
-					</Grid>
+					{smallScreen ?
+						null :
+						<Grid item sm={12} md={6}>
+							<Box display='flex' flexDirection='column'>
+								<SvgImg src={hothBanner} className={classes.logo} width={936} height={581} />
+								<NoSsr>
+									<Countdown
+										date={hothStart}
+										renderer={countdownRenderer}
+									/>
+								</NoSsr>
+							</Box>
+						</Grid>
+					}
 				</Grid>
 			</Container>
 		</div>
