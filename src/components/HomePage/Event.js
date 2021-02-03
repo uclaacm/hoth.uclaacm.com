@@ -44,10 +44,15 @@ function Event({ name, subtitles, description }) {
 	for (let i = 0; i < subtitles.length; i += chunkSize) {
 		const subtitleChunk = subtitles.slice(i, i + chunkSize);
 		const renderChunk = subtitleChunk.map((subtitle, index) => {
+			if (subtitle !== '') {
+				return (
+					<Typography variant='body2' key={`${name}-subtitle-${index}`}>
+						{subtitle}
+					</Typography>
+				);
+			}
 			return (
-				<Typography variant='body2' key={`${name}-subtitle-${index}`}>
-					{subtitle}
-				</Typography>
+				<></>
 			);
 		});
 		renderSubtitle.push(

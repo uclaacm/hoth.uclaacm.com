@@ -10,9 +10,10 @@ import workshopSchedule from '../../data/WorkshopSchedule';
 import Event from './Event';
 
 // When changing this, make sure to update src/components/SchedulePage/Schedule.js as well.
-const scheduleAvailable = false;
+const scheduleAvailable = true;
 
-const timeFormatter = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+const timeFormatter = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric',
+	hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
 
 const useStyles = makeStyles(theme => ({
 	title: {

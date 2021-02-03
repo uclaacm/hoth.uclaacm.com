@@ -1,75 +1,186 @@
-import React from 'react';
-
-const hothDate = '2021-02-23'; // replace with real date later
+const hothDate = '2021-01-'; // replace with real date later
 const utcOffset = '-08:00'; // PST
 // time is a string of the form "HH:mm:ss"
 function getDateObj(time) {
-	return new Date(`${hothDate}T${time}${utcOffset}`);
+	return new Date(`${hothDate}${time}${utcOffset}`);
 }
 
 const workshopSchedule = [
 	{
-		startTime: getDateObj('09:30:00'),
+		startTime: getDateObj('05T19:00:00'),
 		events: [
 			{
-				name: 'ACM-W × ACM Hack | Hackathon 101 + Team Formation',
-				duration: '30 min',
-				location: 'Sycamore Room',
-				description: `First hackathon? We’ll show you all the tips and tricks you’ll
-				need to know to be successful and most importantly, have fun!`
+				name: 'Pre-Social',
+				duration: '90 min',
+				location: 'Discord',
+				description: `Chill and hangout with us to chat and make friends before the hackathon begins :)`
 			}
 		]
 	},
 	{
-		startTime: getDateObj('10:30:00'),
+		startTime: getDateObj('05T20:00:00'),
 		events: [
 			{
-				name: 'Git and GitHub',
+				name: 'Opening Ceremony',
 				duration: '30 min',
-				location: 'De Neve Auditorium',
-				description: `With multiple developers each working on
-				a different feature of a project, bringing things together
-				can get messy pretty easily. Come learn how to use Git to
-				manage code across multiple collaborators and versions!`
-			},
-			{
-				name: <>Intro to <i>i</i>OS</>,
-				duration: '60 min',
-				location: 'Sycamore Room',
-				description: `Learn all about the fundamentals of iOS development
-				by making a simple app in Swift and XCode!
-				You must have a Mac to be able to code along in this workshop.`
+				location: 'Zoom',
+				description: `Come watch the opening ceremony to hear a rundown of the rules
+				before you begin hacking.`
 			}
 		]
 	},
 	{
-		startTime: getDateObj('11:00:00'),
+		startTime: getDateObj('05T20:30:00'),
 		events: [
 			{
-				name: 'Facebook | Zero to Hero with React Native',
+				name: 'Team Formation',
 				duration: '60 min',
-				location: 'De Neve Auditorium ',
-				description: `In this workshop we will learn how to quickly create a mobile app
-				using React Native. We will be covering the React fundamentals (such as props
-				and state) and apply them to quickly build a simple cross-platform app using
-				React Native. This will be a hands-on workshop, so come in with the intent to hack!\
-				If possible, come in with Node.js, Git, and a text editor of your choice installed already!`
+				location: 'Zoom',
+				description: `Looking for a team? Find one to hack with during
+				our team building session`
 			},
 			{
-				name: 'Intro to Web Dev: HTML and CSS',
-				duration: '60 min',
-				location: 'Sycamore Room',
-				description: `Ever wanted to create and design your own website?
-				Come learn about HTML and CSS, the basic components behind every
-				website, and how you can use them to build unique and impressive web pages!`
+				name: 'Hacking Begins',
+				duration: '',
+				location: '',
+				description: `Happy hacking! We hope you build something amazing!`
+			}
+		]
+	},
+	{
+		startTime: getDateObj('06T10:00:00'),
+		events: [
+			{
+				name: 'Meme Competition (Round 1 Judging)',
+				duration: '',
+				location: 'Discord: #memes',
+				description: `Drop your best meme in #memes channel. Best meme
+				gets 5 extra entries in our raffle!`
+			}
+		]
+	},
+	{
+		startTime: getDateObj('06T14:00:00'),
+		events: [
+			{
+				name: 'Codenames Competition',
+				duration: '',
+				location: 'Discord',
+				description: `Take a break from hacking and join us for a round
+				of Codenames! Winning team gets 5 extra raffle entries.`
+			}
+		]
+	},
+	{
+		startTime: getDateObj('06T18:00:00'),
+		events: [
+			{
+				name: 'Question of the Hour (Round 2 Judging)',
+				duration: '',
+				location: 'Discord: #questions-of-the-hour',
+				description: `Give the best response to the posted question in the
+				#questions-of-the-hour channel. Best answer gets 3 extra entries in
+				our raffle. `
+			}
+		]
+	},
+	{
+		startTime: getDateObj('06T19:00:00'),
+		events: [
+			{
+				name: 'Among Us Competition',
+				duration: '',
+				location: 'Discord',
+				description: `Your project looking a little sus? Take a break and play
+				a round of Among Us! Winners get 3 extra entries in our raffle. `
+			}
+		]
+	},
+	{
+		startTime: getDateObj('06T22:00:00'),
+		events: [
+			{
+				name: 'Meme Competition (Round 2 Judging)',
+				duration: '',
+				location: 'Discord: #memes',
+				description: `Drop your best meme in #memes channel. Best meme gets 5
+				extra entries in our raffle!`
+			}
+		]
+	},
+	{
+		startTime: getDateObj('07T04:00:00'),
+		events: [
+			{
+				name: 'Question of the Hour (Round 3 Judging)',
+				duration: '',
+				location: 'Discord: #questions-of-the-hour',
+				description: `Give the best response to the posted question in the
+				#questions-of-the-hour channel. Best answer gets 3 extra entries in
+				our raffle. `
+			}
+		]
+	},
+	{
+		startTime: getDateObj('07T10:00:00'),
+		events: [
+			{
+				name: 'Meme Competition (Round 3 Judging)',
+				duration: '',
+				location: 'Discord: #memes',
+				description: `Drop your best meme in #memes channel. Best meme gets 5
+				extra entries in our raffle!`
+			}
+		]
+	},
+	{
+		startTime: getDateObj('07T14:00:00'),
+		events: [
+			{
+				name: 'Question of the Hour (Round 4 Judging)',
+				duration: '',
+				location: 'Discord: #questions-of-the-hour',
+				description: `Give the best response to the posted question in the
+				#questions-of-the-hour channel. Best answer gets 3 extra entries in
+				our raffle. `
 			},
 			{
-				name: 'Intro to Android',
+				name: 'Skribbl.io Competition',
+				duration: '',
+				location: 'Discord',
+				description: `Take a break from hacking and join us for a round of
+				Skribbl.io! Rewards will be 5 raffle entries for 1st place, 3 entries for 2nd. `
+			}
+		]
+	},
+	{
+		startTime: getDateObj('07T19:30:00'),
+		events: [
+			{
+				name: 'Hacking Ends',
+				duration: '',
+				location: '',
+				description: `Your amazing project should be done and posted to
+				dev post for judging!`
+			},
+			{
+				name: 'Judging',
+				duration: '90 min',
+				location: '',
+				description: `Our judges will look through your devpost submissions.
+				Take this time to relax and refresh before the closing ceremony. `
+			}
+		]
+	},
+	{
+		startTime: getDateObj('07T21:00:00'),
+		events: [
+			{
+				name: 'Closing Ceremony',
 				duration: '60 min',
-				location: 'De Neve Learning Center',
-				description: `Learn all about the fundamentals of iOS development
-				by making a simple app in Swift and XCode!
-				You must have a Mac to be able to code along in this workshop.`
+				location: 'Zoom',
+				description: `Find out the winners at our closing ceremony. We hope you
+				had a fun time!`
 			}
 		]
 	}
