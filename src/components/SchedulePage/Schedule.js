@@ -35,7 +35,7 @@ const SchedulePage = () => {
 	const classes = useStyles();
 	return <Container maxWidth='md'>
 		<Typography align='left' component='h1' variant='h4' className={classes.title}>
-			Events Schedule
+			Schedule
 		</Typography>
 		{scheduleAvailable && <List>
 			{workshopSchedule.map((timeslot, index) => {

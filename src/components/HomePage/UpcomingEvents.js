@@ -84,7 +84,7 @@ function UpcomingEvents() {
 	return <Box component="section" paddingY={{ xs: 8, md: 10 }} bgcolor='background.grey'>
 		<Container maxWidth='md' className={classes.eventsContainer}>
 			<Typography component='h2' variant='h4'
-				className={classes.title}>Upcoming Workshops</Typography>
+				className={classes.title}>Upcoming Events</Typography>
 			{renderEvents}
 			<Button component={Link} role='link' className={classes.moreWorkshopsButton}
 				variant='contained' disableElevation color="secondary" to='/schedule'>More Workshops</Button>

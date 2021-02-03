@@ -51,9 +51,7 @@ function Event({ name, subtitles, description }) {
 					</Typography>
 				);
 			}
-			return (
-				<></>
-			);
+			return null;
 		});
 		renderSubtitle.push(
 			<Box className={classes.subtitle}>
