@@ -34,7 +34,8 @@ const useStyles = makeStyles(theme => {
 	};
 });
 
-const timeFormatter = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit' });
+const timeFormatter = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric',
+	hour: 'numeric', minute: '2-digit' });
 
 function StickyTimeslot({ time, events }) {
 	const classes = useStyles();

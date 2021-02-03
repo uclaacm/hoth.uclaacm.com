@@ -10,7 +10,7 @@ import StickyTimeSlot from '../SchedulePage/StickyTimeSlot';
 import workshopSchedule from '../../data/WorkshopSchedule';
 
 // When changing this, make sure to update src/components/HomePage/UpcomingEvents.js as well.
-const scheduleAvailable = false;
+const scheduleAvailable = true;
 
 const useStyles = makeStyles(theme => ({
 	title: {
@@ -35,7 +35,7 @@ const SchedulePage = () => {
 	const classes = useStyles();
 	return <Container maxWidth='md'>
 		<Typography align='left' component='h1' variant='h4' className={classes.title}>
-			Schedule Coming Soon!
+			Schedule
 		</Typography>
 		{scheduleAvailable && <List>
 			{workshopSchedule.map((timeslot, index) => {
