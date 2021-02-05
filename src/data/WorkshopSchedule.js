@@ -48,6 +48,20 @@ const workshopSchedule = [
 		]
 	},
 	{
+		startTime: getDateObj('06', '08:00:00'),
+		events: [
+			{
+				name: 'Question of the Hour (Round 1 Judging)',
+				duration: '',
+				location: 'Discord: #questions-of-the-hour',
+				description: `Give the best response to the posted question in the
+				#questions-of-the-hour channel. Best answer gets 3 extra entries in
+				our raffle. `
+			}
+		]
+	},
+
+	{
 		startTime: getDateObj('06', '10:00:00'),
 		events: [
 			{
