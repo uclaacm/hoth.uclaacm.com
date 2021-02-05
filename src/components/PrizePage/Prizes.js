@@ -135,7 +135,7 @@ export default function Prizes() {
 			<Container maxWidth='md'>
 				<Grid container spacing={3} className={classes.prizeGrid}>
 					{allPrizes.map(prize =>
-						<Grid item xs={12} sm={4} key={prize.track}>
+						<Grid item xs={12} sm={6} md={4} key={prize.track}>
 							<Box display='flex' justifyContent='center' flexDirection='column'>
 								<Box className={classes.imageBox}>
 									<Img fluid={iconImageMap.get(prize.img)} style={{ height: '70%', width: '72%' }} />
@@ -153,11 +153,11 @@ export default function Prizes() {
 											textTransform: 'uppercase' }}>
 											prize
 										</Typography>
-										<Typography>
+										<Typography style={{ paddingLeft: '10px', paddingRight: '10px' }}>
 											{prize.prize}
 										</Typography>
 									</Box>
-									{<Img fixed={prizeImageMap.get(prize.img)} style={{ height: '128px' }} /> }
+									<Img fixed={prizeImageMap.get(prize.img)} style={{ height: '128px' }} />
 								</Box>
 							</Box>
 						</Grid>)}
