@@ -91,7 +91,7 @@ const workshops = [
 				title: 'Intro to React Native',
 				author: 'Einar Balan',
 				description: `So you want to make a mobile app,
-				but don’t want to go through the hassle of maintaining 2
+				but don’t want to go through the hassle of maintaining two
 				separate code bases? Then you’ve come to the right place!
 				React Native, a framework released by Facebook, allows you
 				to do exactly that using Javascript. Let’s get started!`,
@@ -106,7 +106,7 @@ const workshops = [
 				title: 'Getting Started with a Hackathon',
 				author: 'Eric Yang',
 				description: `Start here if you don’t know where to start with
-				hackathons. I’ll be going over 5 easy steps to succeeding at
+				hackathons. I’ll be going over five easy steps to succeeding at
 				HOTH.`,
 				url: 'https://youtu.be/ryXcoMyHfA8'
 			},
