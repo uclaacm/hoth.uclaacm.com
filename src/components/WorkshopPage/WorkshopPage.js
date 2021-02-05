@@ -55,16 +55,16 @@ const workshops = [
 			{
 				title: 'Intro to Servers Demo',
 				author: 'Jamie Liu',
-				description: `In this video, you will learn about what a server is and
-				how it can be useful in a hackathon. We will also discuss some terms in
-				computer communication such as “request,” “response,” and “JSON.”`,
+				description: `In this video, you’ll learn how to create your
+				own server using Node.js and Express. We’ll go over GET and
+				POST requests, static files, and route parameters.`,
 				url: 'https://youtu.be/fQiEpmkxPxM'
 			},
 			{
 				title: 'Intro to React.js Part 1',
 				author: 'Eric Yang and Nareh Agazaryan',
 				description: `React is a powerful JavaScript library that pushes your web development game
-				to the next level, and it's totally taking over the front-end development scene!
+				to the next level, and it’s totally taking over the front-end development scene!
 				This workshop aims to give you some basic concepts that are essential for development
 				in React, but stays at an introductory level. We’ll cover what React is,
 				components in React, as well as some specific applications of React and how we make
@@ -75,7 +75,7 @@ const workshops = [
 				title: 'Intro to React.js Part 2',
 				author: 'Nareh Agazaryan',
 				description: `React is a powerful JavaScript library that pushes your web development game
-				to the next level, and it's totally taking over the front-end development scene!
+				to the next level, and it’s totally taking over the front-end development scene!
 				This workshop aims to give you some basic concepts that are essential for development
 				in React, but stays at an introductory level. We’ll cover what React is,
 				components in React, as well as some specific applications of React and how we make
@@ -91,10 +91,10 @@ const workshops = [
 				title: 'Intro to React Native',
 				author: 'Einar Balan',
 				description: `So you want to make a mobile app,
-				but don't want to go through the hassle of maintaining 2
-				separate code bases? Then you've come to the right place!
+				but don’t want to go through the hassle of maintaining 2
+				separate code bases? Then you’ve come to the right place!
 				React Native, a framework released by Facebook, allows you
-				to do exactly that using Javascript. Let's get started!`,
+				to do exactly that using Javascript. Let’s get started!`,
 				url: 'https://youtu.be/c8dGnJuqLY0'
 			}
 		]
@@ -105,8 +105,9 @@ const workshops = [
 			{
 				title: 'Getting Started with a Hackathon',
 				author: 'Eric Yang',
-				description: `Start here if you don't know where to start
-				with hackathons. I'll be going 5 easy steps to succeeding at HOTH.`,
+				description: `Start here if you don’t know where to start with
+				hackathons. I’ll be going over 5 easy steps to succeeding at
+				HOTH.`,
 				url: 'https://youtu.be/ryXcoMyHfA8'
 			},
 			{
@@ -122,8 +123,8 @@ const workshops = [
 			{
 				title: 'Intro to Unity',
 				author: 'Jaret Ishii (ACM Studio)',
-				description: `In this workshop, you'll learn how to use Unity, a popular
-				software used to make games. We'll go over a quick tour of the Unity
+				description: `In this workshop, you’ll learn how to use Unity, a popular
+				software used to make games. We’ll go over a quick tour of the Unity
 				interface and then show you the steps needed to create a simple game
 				where a user can roll a ball around.`,
 				url: 'https://youtu.be/W3fUQM4Q0go'
@@ -140,7 +141,7 @@ const workshops = [
 				title: 'Intro to Deep Learning',
 				author: 'John Dang, Justin Yi (ACM AI)',
 				description: `An introduction to Machine Learning and Deep Learning
-				presented to you by ACM AI. We'll briefly introduce what Machine Learning
+				presented to you by ACM AI. We’ll briefly introduce what Machine Learning
 				and Deep Learning are and then dive into a demo to show you how you can
 				train a model to recognize handwritten numbers.`,
 				url: 'https://youtu.be/46NCgPTVK34'
