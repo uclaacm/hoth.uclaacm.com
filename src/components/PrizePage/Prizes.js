@@ -15,39 +15,39 @@ import { ReactComponent as Squiggle } from './images/squiggle.svg';
 const prizeImageRadius = '50px';
 const allPrizes = [
 	{
-		img: 'ml-hack',
-		track: 'Best ML',
-		prize: 'Echo Dot'
+		img: 'overall-hack',
+		track: 'Best Overall',
+		prize: '$50 Visa Gift Card'
 	},
 	{
-		img: 'design-hack',
-		track: 'Best Design',
-		prize: 'Drawing Tablet'
+		img: 'social-raffle',
+		track: 'Social Raffle',
+		prize: '$10 Starbucks Gift Card'
 	},
 	{
 		img: 'mobile-hack',
 		track: 'Best Mobile',
-		prize: 'Mini Phone Printer'
+		prize: '$25 Doordash Gift Card'
 	},
 	{
 		img: 'web-hack',
 		track: 'Best Web',
-		prize: 'Solar Phone Charger'
+		prize: '$25 Netflix Gift Card'
 	},
 	{
 		img: 'game-hack',
 		track: 'Best Game',
-		prize: 'Google Cardboard'
+		prize: '$25 Amazon Gift Card'
 	},
 	{
-		img: 'overall-hack',
-		track: 'Best Overall',
-		prize: 'Mini Projector'
+		img: 'you-do-you',
+		track: 'You Do You',
+		prize: '$30 Spotify Gift Card'
 	},
 	{
-		img: 'overall-hack',
-		track: '“You do You”',
-		prize: 'Seat Cushion'
+		img: 'design-hack',
+		track: 'Best Design',
+		prize: '2 Month Headspace Subscription'
 	}
 ];
 
@@ -135,7 +135,7 @@ export default function Prizes() {
 			<Container maxWidth='md'>
 				<Grid container spacing={3} className={classes.prizeGrid}>
 					{allPrizes.map(prize =>
-						<Grid item xs={12} sm={4} key={prize.track}>
+						<Grid item xs={12} sm={6} md={4} key={prize.track}>
 							<Box display='flex' justifyContent='center' flexDirection='column'>
 								<Box className={classes.imageBox}>
 									<Img fluid={iconImageMap.get(prize.img)} style={{ height: '70%', width: '72%' }} />
@@ -153,11 +153,11 @@ export default function Prizes() {
 											textTransform: 'uppercase' }}>
 											prize
 										</Typography>
-										<Typography>
+										<Typography style={{ paddingLeft: '10px', paddingRight: '10px' }}>
 											{prize.prize}
 										</Typography>
 									</Box>
-									{/* <Img fixed={prizeImageMap.get(prize.img)} style={{ height: '128px' }} /> */}
+									<Img fixed={prizeImageMap.get(prize.img)} style={{ height: '128px' }} />
 								</Box>
 							</Box>
 						</Grid>)}
