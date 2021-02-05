@@ -3,27 +3,23 @@ import ReactPlayer from 'react-player/youtube';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import useTheme from '@material-ui/core/styles/useTheme';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PropTypes from 'prop-types';
 
 function Workshop(props) {
-	const theme = useTheme();
-	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
-
 	return (
-		<Grid key={props.title} item xs={12} sm={8} md={6}
-			style={{
-				paddingRight: theme.spacing(isSmall ? 4 : 8)
-			}}>
+		<Grid item xs={12} sm={8} md={6}>
 			<ReactPlayer
 				style={{ borderRadius: '10px', overflow: 'hidden' }}
 				controls={true} width='100%' url={props.url} />
-			<hgroup>
-				<Typography variant='h5' component='h5' style={{ paddingTop: '0.5em' }}>
+			<hgroup style={{ marginTop: '1em' }}>
+				<Typography variant='h5' component='h3'>
 					{props.title}
 				</Typography>
-				<Typography variant='h6' component='h6' style={{ paddingTop: '0.5em' }}>
+				<Typography variant='subtitle1' component='h4' style={{
+					textTransform: 'uppercase',
+					fontSize: '1em',
+					letterSpacing: '.5px'
+				}}>
 					{'Taught by: ' + props.author}
 				</Typography>
 			</hgroup>
