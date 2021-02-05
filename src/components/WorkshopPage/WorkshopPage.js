@@ -65,16 +65,26 @@ function WorkshopPage() {
 				{item.type}
 			</Typography>
 
-			<Grid style={{ paddingBottom: theme.spacing(isSmall ? 4 : 8) }}>
-				<Grid container spacing={8} justify={isSmall ? 'center' : 'flex-start'}>
-					{item.elements.map(element => <Workshop key={element.title} {...element} />)}
-				</Grid>
+			<Grid
+				container
+				style={{
+					// This counteracts the negative margin Material-UI places on the Grid component, and
+					// hence acts as a small positive margin.
+					marginBottom: theme.spacing(isSmall ? 0 : 4),
+
+					// Material-UI's Grid seems to miscalculate the width, causing a spurious page overflow.
+					width: 'calc(100% + 56px)'
+				}}
+				spacing={8}
+				justify={isSmall ? 'center' : 'flex-start'}
+			>
+				{item.elements.map(element => <Workshop key={element.title} {...element} />)}
 			</Grid>
 		</React.Fragment>);
 
 	return (
-		<Container maxWidth='lg' style={{ marginBottom: theme.spacing(8) }}>
-			<Typography variant='h3' component='h3'
+		<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
+			<Typography variant='h3' component='h1'
 				style={{
 					fontWeight: theme.typography.fontWeightBold,
 					paddingTop: theme.spacing(isSmall ? 4 : 8),

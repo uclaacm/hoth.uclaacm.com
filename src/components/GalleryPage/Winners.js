@@ -83,10 +83,12 @@ function Winners() {
 				<hgroup>
 					<Typography variant='h5' component='h2'>{item.title}</Typography>
 					<Typography variant='subtitle1' component='h3'
-						style={{ fontWeight: theme.typography.fontWeightRegular,
+						style={{
 							textTransform: 'uppercase',
 							fontSize: '1em',
-							letterSpacing: '.5px' }}>
+							letterSpacing: '.5px'
+						}}
+					>
 						{item.category}
 					</Typography>
 				</hgroup>
