@@ -73,7 +73,7 @@ function WorkshopPage() {
 		</React.Fragment>);
 
 	return (
-		<Container maxWidth='lg' style={{ marginBottom: theme.spacing(8) }}>
+		<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
 			<Typography variant='h3' component='h3'
 				style={{
 					fontWeight: theme.typography.fontWeightBold,
