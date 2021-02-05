@@ -13,7 +13,7 @@ const workshops = [
 			{
 				title: 'Intro to HTML',
 				author: 'Jakob Reinwald',
-				description: `HTML(Hyper Text Markup Language) is a fancy way of saying text
+				description: `HTML (HyperText Markup Language) is a fancy way of saying text
 				with extra tags that describe the structure and the content of a web page.
 				Historically, HTML was much more limited, but is now able to do much more,
 				such as images. Let’s get started with some HTML!`,
