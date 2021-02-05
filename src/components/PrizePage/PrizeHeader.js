@@ -30,7 +30,7 @@ export default function PrizeHeader() {
 				Prize Announcements Coming Soon!
 			</Typography>
 			<Typography variant='h3' component='h2' className={classes.lastYear}>
-				Last Year’s Prizes:
+				This Year’s Prizes:
 			</Typography>
 		</>
 	);
