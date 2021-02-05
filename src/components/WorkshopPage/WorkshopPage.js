@@ -145,6 +145,14 @@ const workshops = [
 				and Deep Learning are and then dive into a demo to show you how you can
 				train a model to recognize handwritten numbers.`,
 				url: 'https://youtu.be/46NCgPTVK34'
+			},
+			{
+				title: 'Intro to Databases',
+				author: 'Sanya Srivastava (DevX)',
+				description: `In this workshop you will learn about about SQL and 
+				NoSQL databases, and integrating MongoDB Atlas, a fully-managed 
+				cloud-based database into a Node.js application.`,
+				url: 'https://youtu.be/e1CO2CxPO-w'
 			}
 		]
 	}
