@@ -155,6 +155,21 @@ const workshops = [
 				url: 'https://youtu.be/e1CO2CxPO-w'
 			}
 		]
+	},
+	{
+		type: 'Open/Closing Ceremonies',
+		elements: [
+			{
+				title: 'Opening Ceremony',
+				author: 'ACM Hack',
+				description: `Welcome HOTH 8! This year, our competition theme will be: ❤️Care
+				and Connections ❤️. During the hackathon, you’ll have the opportunity to learn
+				from workshops ✨, participate in fun social activities 😊, and collaborate on
+				a project to win amazing 🤩 prizes! We can't wait to see what you build this
+				weekend!`,
+				url: 'https://youtu.be/3oenf0_adR8'
+			}
+		]
 	}
 ];
 
