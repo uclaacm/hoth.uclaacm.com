@@ -8,6 +8,7 @@ import Divider from '@material-ui/core/Divider';
 import { Link } from 'gatsby';
 import workshopSchedule from '../../data/WorkshopSchedule';
 import Event from './Event';
+import NoSsr from '@material-ui/core/NoSsr';
 
 // When changing this, make sure to update src/components/SchedulePage/Schedule.js as well.
 const scheduleAvailable = true;
@@ -81,15 +82,17 @@ function UpcomingEvents() {
 		);
 	});
 
-	return <Box component="section" paddingY={{ xs: 8, md: 10 }} bgcolor='background.grey'>
-		<Container maxWidth='md' className={classes.eventsContainer}>
-			<Typography component='h2' variant='h4'
-				className={classes.title}>Upcoming Events</Typography>
-			{renderEvents}
-			<Button component={Link} role='link' className={classes.moreWorkshopsButton}
-				variant='contained' disableElevation color="secondary" to='/schedule'>See More</Button>
-		</Container>
-	</Box>;
+	return <NoSsr>
+		<Box component="section" paddingY={{ xs: 8, md: 10 }} bgcolor='background.grey'>
+			<Container maxWidth='md' className={classes.eventsContainer}>
+				<Typography component='h2' variant='h4'
+					className={classes.title}>Upcoming Events</Typography>
+				{renderEvents}
+				<Button component={Link} role='link' className={classes.moreWorkshopsButton}
+					variant='contained' disableElevation color="secondary" to='/schedule'>See More</Button>
+			</Container>
+		</Box>
+	</NoSsr>;
 }
 
 export default UpcomingEvents;
