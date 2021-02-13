@@ -149,8 +149,8 @@ const workshops = [
 			{
 				title: 'Intro to Databases',
 				author: 'Sanya Srivastava (DevX)',
-				description: `In this workshop you will learn about about SQL and 
-				NoSQL databases, and integrating MongoDB Atlas, a fully-managed 
+				description: `In this workshop you will learn about about SQL and
+				NoSQL databases, and integrating MongoDB Atlas, a fully-managed
 				cloud-based database into a Node.js application.`,
 				url: 'https://youtu.be/e1CO2CxPO-w'
 			}
@@ -168,6 +168,16 @@ const workshops = [
 				a project to win amazing 🤩 prizes! We can't wait to see what you build this
 				weekend!`,
 				url: 'https://youtu.be/3oenf0_adR8'
+			},
+			{
+				title: 'Closing Ceremony',
+				author: 'ACM Hack',
+				description: `Thank you for coming out to HOTH 8! We hope you guys had a fun
+				time and gained some good hacking experience. A big shoutout to all the
+				officers, mentors, and most importantly the hackers, who made this whole
+				hackathon possible. Without further ado, check out the closing ceremony video
+				to find out who our winners are!`,
+				url: 'https://youtu.be/wbT3v1rfhWI'
 			}
 		]
 	}
