@@ -22,22 +22,22 @@ const allPrizes = [
 	{
 		img: 'social-raffle',
 		track: 'Social Raffle',
-		prize: '$10 Starbucks Gift Card'
+		prize: '$15 Amazon Gift Card'
 	},
 	{
 		img: 'mobile-hack',
 		track: 'Best Mobile',
-		prize: '$25 Doordash Gift Card'
+		prize: '$30 Doordash Gift Card'
 	},
 	{
 		img: 'web-hack',
 		track: 'Best Web',
-		prize: '$25 Netflix Gift Card'
+		prize: '$30 Netflix Gift Card'
 	},
 	{
 		img: 'game-hack',
 		track: 'Best Game',
-		prize: '$25 Amazon Gift Card'
+		prize: '$30 Amazon Gift Card'
 	},
 	{
 		img: 'you-do-you',
@@ -47,7 +47,7 @@ const allPrizes = [
 	{
 		img: 'design-hack',
 		track: 'Best Design',
-		prize: '2 Month Headspace Subscription'
+		prize: '$30 Apple Gift Card'
 	}
 ];
 
