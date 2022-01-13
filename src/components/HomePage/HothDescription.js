@@ -111,28 +111,6 @@ export default function HothDescription() {
 						}}/>
 					</Grid>
 				</Grid>
-
-				{ eventURL === '' ?
-					null :
-					<Box
-						display='flex'
-						flexDirection='column'
-						alignItems='center'
-						width={{ xs: '80%', md: '40%' }}
-						margin='0 auto'
-						paddingTop={8}>
-						<Typography variant='body1' style={{
-							textAlign: 'center'
-						}}>
-							Check out our Facebook event to stay tuned for additional updates!
-						</Typography>
-						<Link href={eventURL} target='_blank' rel='noopener noreferrer'>
-							<FacebookLogo width='30px' style={{
-								paddingTop: 20
-							}} />
-						</Link>
-					</Box>
-				}
 			</Container>
 		</Box>
 	);
