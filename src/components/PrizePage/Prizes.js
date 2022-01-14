@@ -132,7 +132,8 @@ export default function Prizes() {
 	}
 	return (
 		<>
-			<Container maxWidth='md'>
+			<p style={{fontSize : '24px', paddingBottom : '50px', paddingLeft: '100px'}}>Coming soon...</p>
+			{/* <Container maxWidth='md'>
 				<Grid container spacing={3} className={classes.prizeGrid}>
 					{allPrizes.map(prize =>
 						<Grid item xs={12} sm={6} md={4} key={prize.track}>
@@ -162,7 +163,7 @@ export default function Prizes() {
 							</Box>
 						</Grid>)}
 				</Grid>
-			</Container>
+			</Container> */}
 		</>
 	);
 }

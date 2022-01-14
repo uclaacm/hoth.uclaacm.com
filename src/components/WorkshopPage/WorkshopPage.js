@@ -226,7 +226,7 @@ function WorkshopPage() {
 				}}>
 				Workshops
 			</Typography>
-			{workshopCards}
+			<p style={{fontSize : '24px', paddingBottom : '50px'}}>Coming soon...</p>
 		</Container>
 	);
 }
