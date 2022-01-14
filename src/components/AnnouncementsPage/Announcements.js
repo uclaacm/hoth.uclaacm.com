@@ -10,10 +10,10 @@ export default function AnnouncementsPage() {
 		<>
 			<Typography variant='h4' component='h1'
 				style={{ fontWeight: theme.typography.fontWeightBold,
-					// paddingTop: theme.spacing(isSmall ? 4 : 8),
-					paddingBottom: theme.spacing(4),
+					paddingTop: theme.spacing(37), // initial value 4
+					paddingBottom: theme.spacing(37), // initial value 4
 					textAlign: 'center' }}>
-				Coming Soon!
+				Check back here for announcements!
 			</Typography>
 		</>
 	);
