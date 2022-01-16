@@ -117,7 +117,7 @@ function renderInfo(classes) {
 			<Typography component='h1' variant='h1' className={classes.text} style={{
 				fontWeight: 'bold'
 			}}>
-				HOTH <span className={classes.eight}>8</span>
+				HOTH <span className={classes.eight}>9</span>
 			</Typography>
 
 			<Typography variant='h5' className={classes.text} component='h3'
@@ -137,8 +137,8 @@ function renderInfo(classes) {
 						component='h3'
 					>
 						<time dateTime={hothStart.toISOString()}>
-							{month} {startDay}{endDayString}, 2021
-						</time> | Virtual
+							{month} {startDay}{endDayString}, 2022
+						</time> | TBA
 					</Typography>
 				</Tooltip>
 			</Box>

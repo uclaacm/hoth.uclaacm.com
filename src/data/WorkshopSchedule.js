@@ -1,4 +1,4 @@
-const hothYrMnth = '2021-02-'; // replace with real date later
+const hothYrMnth = '2022-02-'; // replace with real date later
 const utcOffset = '-08:00'; // PST
 // time is a string of the form "HH:mm:ss"
 function getDateObj(day, time) {
@@ -7,7 +7,7 @@ function getDateObj(day, time) {
 
 const workshopSchedule = [
 	{
-		startTime: getDateObj('05', '19:00:00'),
+		startTime: getDateObj('26', '19:00:00'),
 		events: [
 			{
 				name: 'Pre-Social',
@@ -18,24 +18,24 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('05', '20:00:00'),
+		startTime: getDateObj('26', '20:00:00'),
 		events: [
 			{
 				name: 'Opening Ceremony',
 				duration: '30 min',
-				location: 'Zoom',
+				location: 'TBA',
 				description: `Come watch the opening ceremony to hear a rundown of the rules
 				before you begin hacking.`
 			}
 		]
 	},
 	{
-		startTime: getDateObj('05', '20:30:00'),
+		startTime: getDateObj('26', '20:30:00'),
 		events: [
 			{
 				name: 'Team Formation',
 				duration: '60 min',
-				location: 'Zoom',
+				location: 'TBA',
 				description: `Looking for a team? Find one to hack with during
 				our team building session`
 			},
@@ -48,7 +48,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('06', '08:00:00'),
+		startTime: getDateObj('27', '08:00:00'),
 		events: [
 			{
 				name: 'Question of the Hour (Round 1 Judging)',
@@ -62,7 +62,7 @@ const workshopSchedule = [
 	},
 
 	{
-		startTime: getDateObj('06', '10:00:00'),
+		startTime: getDateObj('27', '10:00:00'),
 		events: [
 			{
 				name: 'Meme Competition (Round 1 Judging)',
@@ -74,7 +74,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('06', '14:00:00'),
+		startTime: getDateObj('27', '14:00:00'),
 		events: [
 			{
 				name: 'Codenames Competition',
@@ -86,7 +86,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('06', '18:00:00'),
+		startTime: getDateObj('27', '18:00:00'),
 		events: [
 			{
 				name: 'Question of the Hour (Round 2 Judging)',
@@ -99,7 +99,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('06', '19:00:00'),
+		startTime: getDateObj('27', '19:00:00'),
 		events: [
 			{
 				name: 'Among Us Competition',
@@ -111,7 +111,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('06', '22:00:00'),
+		startTime: getDateObj('27', '22:00:00'),
 		events: [
 			{
 				name: 'Meme Competition (Round 2 Judging)',
@@ -123,7 +123,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('07', '04:00:00'),
+		startTime: getDateObj('28', '04:00:00'),
 		events: [
 			{
 				name: 'Question of the Hour (Round 3 Judging)',
@@ -136,7 +136,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('07', '10:00:00'),
+		startTime: getDateObj('28', '10:00:00'),
 		events: [
 			{
 				name: 'Meme Competition (Round 3 Judging)',
@@ -148,7 +148,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('07', '14:00:00'),
+		startTime: getDateObj('28', '14:00:00'),
 		events: [
 			{
 				name: 'Question of the Hour (Round 4 Judging)',
@@ -168,7 +168,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('07', '19:30:00'),
+		startTime: getDateObj('28', '19:30:00'),
 		events: [
 			{
 				name: 'Hacking Ends',
@@ -187,12 +187,12 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('07', '21:00:00'),
+		startTime: getDateObj('28', '21:00:00'),
 		events: [
 			{
 				name: 'Closing Ceremony',
 				duration: '60 min',
-				location: 'Zoom',
+				location: 'TBA',
 				description: `Find out the winners at our closing ceremony. We hope you
 				had a fun time!`
 			}
