@@ -117,12 +117,13 @@ function FAQSection() {
 				<>
 					A hackathon is an event during which people from different backgrounds
 					come together to create a project from start to finish in a limited time frame.
-					Check out some examples <Link href='https://hoth7.devpost.com/project-gallery'>here</Link>!
+					Check out some examples from last year's 
+					HOTH <Link href='https://hoth8.devpost.com/project-gallery'>here</Link>!
 				</>
 		},
 		{
 			question: `Who can join?`,
-			answer: `Applications for HOTH 8 are open to anyone! However, only current 
+			answer: `Applications for HOTH 9 are open to anyone! However, only current 
 				UCLA students will be eligible for our prize tracks.`
 		},
 		{
@@ -131,29 +132,56 @@ function FAQSection() {
 		},
 		{
 			question: `What if I don’t have a team?`,
-			answer: `Don’t worry! We’ll be leading team building activities before 
-				and at the start of the event.`
+			answer: `Don’t worry! You can create one the day of! We’ll be leading team building 
+				activities before and at the start of the event, so you can find the people you 
+				vibe best with.`
+		},
+		{
+			question: `When is HOTH 9 taking place? How long is it going to be?`,
+			answer: `The hackathon will take place on Saturday, February 9, 2022, 
+				and it will be 12 hours long.`
+		},
+		{
+			question: `Where is HOTH 9 taking place?`,
+			answer: 
+				<>
+					Currently, we are planning for HOTH 9 to be hybrid. A capped number 
+					of people can participate in-person, and all in-person attendees must provide 
+					a negative Covid test 72 hours before the event. Virtually, the event will be 
+					taking place on our ACM Hack discord <Link href='https://discord.gg/gwaaFS2fah'>server</Link>, 
+					and there is no limit on the number of people who can attend online.
+					We are, however, monitoring the Covid situation, and if circumstances change, 
+					we may transition to a completely virtual event.
+				</>
 		},
 		{
 			question: `How do I sign up?`,
 			answer: `Hit the apply button above and fill out the application! A few days before
 				the event, you’ll be emailed a confirmation form along with appropriate links
-				and additional event information. Applications close on February 1st at 11:59pm PST.`
+				and additional event information. Applications close on February 21st at 11:59pm PST.`
 		},
 		{
 			question: `What if I have never made a project before?`,
-			answer:	`No worries! Throughout HOTH 8, you’ll have access to workshops on all sorts of
+			answer:	`No worries! Throughout HOTH 9, you’ll have access to workshops on all sorts of
 				topics to help you start bringing your ideas to life and mentors to support you through
 				any roadblocks.`
 		},
 		{
-			question: `I have coding experience and want to make a difference at HOTH 8. 
+			question: `I have coding experience and want to make a difference at HOTH 9. 
 				How can I get involved?`,
 			answer:
 				<>
 					We’d love to have you as a mentor to answer participants’ technical
-					questions and help them with their projects. You can sign up
-					to be a mentor <Link href='https://docs.google.com/forms/d/e/1FAIpQLScPz4jqsMPdZwyXK10Le03SwOiAmiGmh0fBpLOkyrwJMdXmBQ/viewform'>here</Link>!
+					questions and help them with their projects. If you're interested, send us an email 
+					at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com!</Link>
+				</>
+		},
+		{
+			question: `Where can I get updates on HOTH 9 and learn more about what ACM Hack is doing?`,
+			answer:
+				<>
+					Join us on our discord <Link href='https://discord.gg/gwaaFS2fah'>server</Link>.
+					We'd love to have you!  
 				</>
 		},
 		{
