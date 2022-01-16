@@ -37,7 +37,7 @@ const SchedulePage = () => {
 		<Typography align='left' component='h1' variant='h4' className={classes.title}>
 			Schedule
 		</Typography>
-		<p style={{fontSize : '24px', paddingBottom : '50px'}}>Coming soon...</p>
+		<p style={{ fontSize: '24px', paddingBottom: '50px' }}>Coming soon...</p>
 		{scheduleAvailable && <List>
 			{workshopSchedule.map((timeslot, index) => {
 				return (

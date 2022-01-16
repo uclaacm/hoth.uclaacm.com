@@ -2,7 +2,7 @@ import React from 'react';
 
 import { basename } from 'path';
 import { graphql, useStaticQuery } from 'gatsby';
-import Box from '@material-ui/core/Box';
+/* import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import grey from '@material-ui/core/colors/grey';
@@ -91,10 +91,10 @@ const useStyles = makeStyles({
 		fontWeight: 600,
 		fontSize: '1em'
 	}
-});
+}); */
 
 export default function Prizes() {
-	const classes = useStyles();
+	// const classes = useStyles();
 	const data = useStaticQuery(graphql`
 	{
 		prizeIcons: allFile(filter: {relativePath: {glob:"prize-icons/*"}}) {
@@ -132,7 +132,7 @@ export default function Prizes() {
 	}
 	return (
 		<>
-			<p style={{fontSize : '24px', paddingBottom : '50px', paddingLeft: '100px'}}>Coming soon...</p>
+			<p style={{ fontSize: '24px', paddingBottom: '50px', paddingLeft: '100px' }}>Coming soon...</p>
 			{/* <Container maxWidth='md'>
 				<Grid container spacing={3} className={classes.prizeGrid}>
 					{allPrizes.map(prize =>

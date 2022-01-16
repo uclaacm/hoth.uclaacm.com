@@ -1,12 +1,12 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
+// import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import useTheme from '@material-ui/core/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import Workshop from './Workshop.js';
+// import Workshop from './Workshop.js';
 
-const workshops = [
+/* const workshops = [
 	{
 		type: 'Web Development',
 		elements: [
@@ -181,13 +181,13 @@ const workshops = [
 			}
 		]
 	}
-];
+]; */
 
 function WorkshopPage() {
 	const theme = useTheme();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
-	const workshopCards = workshops.map(item =>
+	/* const workshopCards = workshops.map(item =>
 		<React.Fragment key={item.type}>
 			<Typography
 				style={{
@@ -214,7 +214,7 @@ function WorkshopPage() {
 			>
 				{item.elements.map(element => <Workshop key={element.title} {...element} />)}
 			</Grid>
-		</React.Fragment>);
+		</React.Fragment>); */
 
 	return (
 		<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
@@ -226,7 +226,7 @@ function WorkshopPage() {
 				}}>
 				Workshops
 			</Typography>
-			<p style={{fontSize : '24px', paddingBottom : '50px'}}>Coming soon...</p>
+			<p style={{ fontSize: '24px', paddingBottom: '50px' }}>Coming soon...</p>
 		</Container>
 	);
 }
