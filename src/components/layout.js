@@ -8,7 +8,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
-import { MuiThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { MuiThemeProvider, createMuiTheme, responsiveFontSizes, makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import grey from '@material-ui/core/colors/grey';
 
@@ -41,7 +41,23 @@ const overwrittenTheme = responsiveFontSizes(createMuiTheme({
 	}
 }));
 
+const useStyles = makeStyles(() => ({
+	wrapper: {
+		minHeight: '100%',
+		display: 'flex',
+		flexDirection: 'column'
+	},
+	headFooter: {
+		flexShrink: 0
+	},
+	main: {
+		flexGrow: 1
+	}
+}));
+
 const Layout = ({ children }) => {
+	const classes = useStyles();
+
 	return (
 		<MuiThemeProvider theme={overwrittenTheme}>
 			<CssBaseline />
@@ -49,9 +65,17 @@ const Layout = ({ children }) => {
 				<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet"/>
 				<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet"/>
 			</Helmet>
-			<MenuBar />
-			<main>{children}</main>
-			<Footer />
+			<div className={classes.wrapper}>
+				<header className={classes.headFooter}>
+					<MenuBar />
+				</header>
+				<main className={classes.main}>
+					{children}
+				</main>
+				<footer className={classes.headFooter}>
+					<Footer />
+				</footer>
+			</div>
 		</MuiThemeProvider>
 	);
 };
