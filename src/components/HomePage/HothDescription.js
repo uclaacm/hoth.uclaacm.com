@@ -5,16 +5,12 @@ import classNames from 'classnames';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import { useUppercase } from '../shared-style';
-import { ReactComponent as FacebookLogo } from '../../images/fb_logo.svg';
-
-const eventURL = 'https://www.facebook.com/events/414403626538420';
 
 const useStyles = makeStyles(theme => ({
 	subtitle: {
@@ -111,28 +107,6 @@ export default function HothDescription() {
 						}}/>
 					</Grid>
 				</Grid>
-
-				{ eventURL === '' ?
-					null :
-					<Box
-						display='flex'
-						flexDirection='column'
-						alignItems='center'
-						width={{ xs: '80%', md: '40%' }}
-						margin='0 auto'
-						paddingTop={8}>
-						<Typography variant='body1' style={{
-							textAlign: 'center'
-						}}>
-							Check out our Facebook event to stay tuned for additional updates!
-						</Typography>
-						<Link href={eventURL} target='_blank' rel='noopener noreferrer'>
-							<FacebookLogo width='30px' style={{
-								paddingTop: 20
-							}} />
-						</Link>
-					</Box>
-				}
 			</Container>
 		</Box>
 	);
