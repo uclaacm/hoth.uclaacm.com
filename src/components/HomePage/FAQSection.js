@@ -117,7 +117,7 @@ function FAQSection() {
 				<>
 					A hackathon is an event during which people from different backgrounds
 					come together to create a project from start to finish in a limited time frame.
-					Check out some examples from last year's 
+					Check out some examples from last year&apos;s
 					HOTH <Link href='https://hoth8.devpost.com/project-gallery'>here</Link>!
 				</>
 		},
@@ -143,14 +143,14 @@ function FAQSection() {
 		},
 		{
 			question: `Where is HOTH 9 taking place?`,
-			answer: 
+			answer:
 				<>
-					Currently, we are planning for HOTH 9 to be hybrid. A capped number 
-					of people can participate in-person, and all in-person attendees must provide 
-					a negative Covid test 72 hours before the event. Virtually, the event will be 
-					taking place on our ACM Hack discord <Link href='https://discord.gg/gwaaFS2fah'>server</Link>, 
+					Currently, we are planning for HOTH 9 to be hybrid. A capped number
+					of people can participate in-person, and all in-person attendees must provide
+					a negative Covid test 72 hours before the event. Virtually, the event will be
+					taking place on our ACM Hack discord <Link href='https://discord.gg/gwaaFS2fah'>server</Link>,
 					and there is no limit on the number of people who can attend online.
-					We are, however, monitoring the Covid situation, and if circumstances change, 
+					We are, however, monitoring the Covid situation, and if circumstances change,
 					we may transition to a completely virtual event.
 				</>
 		},
@@ -171,8 +171,8 @@ function FAQSection() {
 				How can I get involved?`,
 			answer:
 				<>
-					We’d love to have you as a mentor to answer participants’ technical
-					questions and help them with their projects. If you're interested, send us an email 
+					We would love to have you as a mentor to answer participants&apos; technical
+					questions and help them with their projects. If you are interested, send us an email
 					at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com!</Link>
 				</>
 		},
@@ -180,8 +180,8 @@ function FAQSection() {
 			question: `Where can I get updates on HOTH 9 and learn more about what ACM Hack is doing?`,
 			answer:
 				<>
-					Join us on our discord <Link href='https://discord.gg/gwaaFS2fah'>server</Link>.
-					We'd love to have you!  
+					Come join us on our discord <Link href='https://discord.gg/gwaaFS2fah'>server</Link>.
+					We&apos;d love to have you!
 				</>
 		},
 		{
