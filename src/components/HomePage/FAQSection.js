@@ -123,8 +123,8 @@ function FAQSection() {
 		},
 		{
 			question: `Who can join?`,
-			answer: `Applications for HOTH 9 are open to anyone! However, only current 
-				UCLA students will be eligible for our prize tracks.`
+			answer: `Applications for HOTH 9 are open to anyone! However, we are prioritizing 
+				UCLA students for our prize tracks as well as in-person hacking.`
 		},
 		{
 			question: `How many people can I work with?`,
@@ -164,7 +164,7 @@ function FAQSection() {
 			question: `What if I have never made a project before?`,
 			answer:	`No worries! Throughout HOTH 9, you'll have access to workshops on all sorts of
 				topics to help you start bringing your ideas to life and mentors to support you through
-				any roadblocks.`
+				any road blocks.`
 		},
 		{
 			question: `I have coding experience and want to make a difference at HOTH 9. 
@@ -173,7 +173,8 @@ function FAQSection() {
 				<>
 					We would love to have you as a mentor to answer participants&apos; technical
 					questions and help them with their projects. If you are interested, send us an email
-					at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com!</Link>
+					at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com!</Link> or dm us on
+					our <Link href='https://discord.gg/MStu2cnBV9'>discord server</Link>!
 				</>
 		},
 		{
