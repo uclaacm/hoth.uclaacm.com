@@ -4,10 +4,9 @@ import useTheme from '@material-ui/core/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PropTypes from 'prop-types';
 
-function ComingSoon(props) {
+function ComingSoon({ alignment }) {
 	const theme = useTheme();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
-	const { alignment } = props;
 
 	return (
 		<Typography align={alignment} variant='h5' component='h2'
