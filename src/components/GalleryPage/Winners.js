@@ -19,28 +19,12 @@ const winners = [
 		id: 'nudge'
 	},
 	{
-		title: 'EmoSign',
-		category: 'Best Web Hack',
-		description: `To translate sign to language. To translate text to emotion. To connect us with people who need
-		 assistance in communication`,
-		link: 'https://devpost.com/software/emosign',
-		id: 'emosign'
-	},
-	{
-		title: 'EyeMotion',
-		category: 'Best Web Hack',
-		description: `EyeMotion is a meditation app that analyzes eye movement to provide personalized feedback about
-		 the quality of one's meditation, such as by detecting restlessness, anxiety, or negative emotion.`,
-		link: 'https://devpost.com/software/eyemotion',
-		id: 'eyemotion'
-	},
-	{
-		title: 'Reassure',
-		category: 'You Do You',
-		description: `Ever had a trouble and not been able to share it? Ever just needed to vent a bit? Then you just
-		 might love Reassure! With Reassure, you can anonymously disclose your troubles and receive support.`,
-		link: 'https://devpost.com/software/reassure',
-		id: 'reassure'
+		title: 'Dusk to Dawn',
+		category: 'Best Design',
+		description: `Being alone and socially-deprived during quarantine makes each day quite monotonous. Dusk to 
+		Dawn aims to help by allowing users to wake up and fall asleep to voice messages sent by friends.`,
+		link: 'https://devpost.com/software/dusk-to-dawn',
+		id: 'dusktodawn'
 	},
 	{
 		title: 'Clothes With Care',
@@ -51,6 +35,22 @@ const winners = [
 		id: 'clotheswithcare'
 	},
 	{
+		title: 'EyeMotion',
+		category: 'Best Web Hack',
+		description: `EyeMotion is a meditation app that analyzes eye movement to provide personalized feedback about
+		 the quality of one's meditation, such as by detecting restlessness, anxiety, or negative emotion.`,
+		link: 'https://devpost.com/software/eyemotion',
+		id: 'eyemotion'
+	},
+	{
+		title: 'EmoSign',
+		category: 'Best Web Hack',
+		description: `To translate sign to language. To translate text to emotion. To connect us with people who need
+		 assistance in communication`,
+		link: 'https://devpost.com/software/emosign',
+		id: 'emosign'
+	},
+	{
 		title: 'Mammal Mayhem',
 		category: 'Best Game',
 		description: `Mammal Mayhem is a cutesy game designed to provide casual relief to its players.`,
@@ -58,12 +58,12 @@ const winners = [
 		id: 'mammalmayhem'
 	},
 	{
-		title: 'Dusk to Dawn',
-		category: 'Best Design',
-		description: `Being alone and socially-deprived during quarantine makes each day quite monotonous. Dusk to 
-		Dawn aims to help by allowing users to wake up and fall asleep to voice messages sent by friends.`,
-		link: 'https://devpost.com/software/dusk-to-dawn',
-		id: 'dusktodawn'
+		title: 'Reassure',
+		category: 'You Do You',
+		description: `Ever had a trouble and not been able to share it? Ever just needed to vent a bit? Then you just
+		 might love Reassure! With Reassure, you can anonymously disclose your troubles and receive support.`,
+		link: 'https://devpost.com/software/reassure',
+		id: 'reassure'
 	}
 ];
 
