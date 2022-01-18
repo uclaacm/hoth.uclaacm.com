@@ -12,7 +12,7 @@ export default function AnnouncementsPage() {
 			<Typography variant='h4' component='h1'
 				style={{ fontWeight: theme.typography.fontWeightBold,
 					paddingTop: theme.spacing(4),
-					paddingBottom: theme.spacing(4), 
+					paddingBottom: theme.spacing(4),
 					textAlign: 'center' }}>
 				Check back here for announcements!
 			</Typography>
