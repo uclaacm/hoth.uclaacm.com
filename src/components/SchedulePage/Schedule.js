@@ -1,16 +1,15 @@
 import React from 'react';
-
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-
 import StickyTimeSlot from '../SchedulePage/StickyTimeSlot';
 import workshopSchedule from '../../data/WorkshopSchedule';
+import ComingSoon from '../ComingSoon/ComingSoon';
 
 // When changing this, make sure to update src/components/HomePage/UpcomingEvents.js as well.
-const scheduleAvailable = true;
+const scheduleAvailable = false;
 
 const useStyles = makeStyles(theme => ({
 	title: {
@@ -37,6 +36,7 @@ const SchedulePage = () => {
 		<Typography align='left' component='h1' variant='h4' className={classes.title}>
 			Schedule
 		</Typography>
+		<ComingSoon alignment='left'/>
 		{scheduleAvailable && <List>
 			{workshopSchedule.map((timeslot, index) => {
 				return (
