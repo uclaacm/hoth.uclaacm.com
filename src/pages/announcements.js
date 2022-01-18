@@ -7,7 +7,7 @@ import Announcements from '../components/AnnouncementsPage/Announcements';
 function AnnouncementsPage() {
 	return (
 		<Layout>
-			<SEO title='Announcments' />
+			<SEO title='Announcements' />
 			<Announcements />
 		</Layout>
 	);
