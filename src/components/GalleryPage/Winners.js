@@ -11,40 +11,59 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const winners = [
 	{
-		title: 'Meteor Metronome',
+		title: 'Nudge',
+		category: 'Best Overall Hack',
+		description: `Nudge is the social self-care habit tracker you never knew you needed. Show friends you care by 
+		sending them personalized nudges to keep up with healthy habits. Grow nudges into deeper conversations.`,
+		link: 'https://devpost.com/software/nudge-wprc72',
+		id: 'nudge'
+	},
+	{
+		title: 'EmoSign',
+		category: 'Best Web Hack',
+		description: `To translate sign to language. To translate text to emotion. To connect us with people who need
+		 assistance in communication`,
+		link: 'https://devpost.com/software/emosign',
+		id: 'emosign'
+	},
+	{
+		title: 'EyeMotion',
+		category: 'Best Web Hack',
+		description: `EyeMotion is a meditation app that analyzes eye movement to provide personalized feedback about
+		 the quality of one's meditation, such as by detecting restlessness, anxiety, or negative emotion.`,
+		link: 'https://devpost.com/software/eyemotion',
+		id: 'eyemotion'
+	},
+	{
+		title: 'Reassure',
+		category: 'You Do You',
+		description: `Ever had a trouble and not been able to share it? Ever just needed to vent a bit? Then you just
+		 might love Reassure! With Reassure, you can anonymously disclose your troubles and receive support.`,
+		link: 'https://devpost.com/software/reassure',
+		id: 'reassure'
+	},
+	{
+		title: 'Clothes With Care',
+		category: 'Best Mobile Hack',
+		description: `Our app provides the platform for a neighborhood clothes exchange program, enabling users to 
+		skip the hassle, financial obstacles, and environmental impact of buying new clothes.`,
+		link: 'https://devpost.com/software/clothes-with-care',
+		id: 'clotheswithcare'
+	},
+	{
+		title: 'Mammal Mayhem',
 		category: 'Best Game',
-		description: `Asteroids – with rhythm. Combining the latest innovations in
-			rhythm-based gaming with the classic asteroids arcade game. Meteor
-			Metronome is a game in which players shoot asteroids and avoid
-			collisions, but must do so to a regular beat.`,
-		link: 'https://devpost.com/software/meteor-metronome',
-		id: 'meteor'
+		description: `Mammal Mayhem is a cutesy game designed to provide casual relief to its players.`,
+		link: 'https://devpost.com/software/mammal-mayhem',
+		id: 'mammalmayhem'
 	},
 	{
-		title: 'Wave',
-		category: 'Best Machine Learning',
-		description: `Wave allows for people to use hand gestures to control their
-			computers. Wave sits in the background as you use your device. It
-			recognizes gestures to perform relevant tasks based on your activity.`,
-		link: 'https://devpost.com/software/wave-m1pz20',
-		id: 'wave'
-	},
-	{
-		title: 'Bruin Dining',
-		category: 'Best Design, Best React Native',
-		description: `A more beautiful and insightful way to dine on the Hill. It's
-			no fun going to a dining hall and being surprised or disappointed by the
-			food.`,
-		link: 'https://devpost.com/software/bruin-dining-table-16',
-		id: 'bruindining'
-	},
-	{
-		title: 'SYFGames',
-		category: 'Best Hack',
-		description: `A multi-platform game that you can play with friends to
-			compete and see who can recognize music the most quickly and accurately!`,
-		link: 'https://devpost.com/software/spuckfotify',
-		id: 'syfgames'
+		title: 'Dusk to Dawn',
+		category: 'Best Design',
+		description: `Being alone and socially-deprived during quarantine makes each day quite monotonous. Dusk to 
+		Dawn aims to help by allowing users to wake up and fall asleep to voice messages sent by friends.`,
+		link: 'https://devpost.com/software/dusk-to-dawn',
+		id: 'dusktodawn'
 	}
 ];
 
