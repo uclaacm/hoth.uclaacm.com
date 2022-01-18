@@ -112,7 +112,7 @@ AccordionQA.propTypes = {
 function FAQSection() {
 	const faqs = [
 		{
-			question: `What’s a hackathon?`,
+			question: `What's a hackathon?`,
 			answer:
 				<>
 					A hackathon is an event during which people from different backgrounds
@@ -131,8 +131,8 @@ function FAQSection() {
 			answer: `You can work by yourself or in teams of up to 4 people total.`
 		},
 		{
-			question: `What if I don’t have a team?`,
-			answer: `Don’t worry! You can create one the day of! We’ll be leading team building 
+			question: `What if I don't have a team?`,
+			answer: `Don't worry! You can create one the day of! We'll be leading team building 
 				activities before and at the start of the event, so you can find the people you 
 				vibe best with.`
 		},
@@ -148,7 +148,7 @@ function FAQSection() {
 					Currently, we are planning for HOTH 9 to be hybrid. A capped number
 					of people can participate in-person, and all in-person attendees must provide
 					a negative Covid test 72 hours before the event. Virtually, the event will be
-					taking place on our ACM Hack discord <Link href='https://discord.gg/gwaaFS2fah'>server</Link>,
+					taking place on our ACM Hack <Link href='https://discord.gg/MStu2cnBV9'>discord server</Link>,
 					and there is no limit on the number of people who can attend online.
 					We are, however, monitoring the Covid situation, and if circumstances change,
 					we may transition to a completely virtual event.
@@ -157,12 +157,12 @@ function FAQSection() {
 		{
 			question: `How do I sign up?`,
 			answer: `Hit the apply button above and fill out the application! A few days before
-				the event, you’ll be emailed a confirmation form along with appropriate links
+				the event, you'll be emailed a confirmation form along with appropriate links
 				and additional event information. Applications close on February 21st at 11:59pm PST.`
 		},
 		{
 			question: `What if I have never made a project before?`,
-			answer:	`No worries! Throughout HOTH 9, you’ll have access to workshops on all sorts of
+			answer:	`No worries! Throughout HOTH 9, you'll have access to workshops on all sorts of
 				topics to help you start bringing your ideas to life and mentors to support you through
 				any roadblocks.`
 		},
@@ -180,7 +180,7 @@ function FAQSection() {
 			question: `Where can I get updates on HOTH 9 and learn more about what ACM Hack is doing?`,
 			answer:
 				<>
-					Come join us on our discord <Link href='https://discord.gg/gwaaFS2fah'>server</Link>.
+					Come join us on our <Link href='https://discord.gg/MStu2cnBV9'>discord server</Link>.
 					We&apos;d love to have you!
 				</>
 		},
