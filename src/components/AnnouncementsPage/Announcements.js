@@ -8,7 +8,7 @@ export default function AnnouncementsPage() {
 	const theme = useTheme();
 
 	return (
-		<Container>
+		<Container maxWidth='md'>
 			<Typography variant='h4' component='h1'
 				style={{ fontWeight: theme.typography.fontWeightBold,
 					paddingTop: theme.spacing(4),
