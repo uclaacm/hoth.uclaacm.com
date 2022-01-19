@@ -7,35 +7,24 @@ function getDateObj(day, time) {
 
 const workshopSchedule = [
 	{
-		startTime: getDateObj('26', '19:00:00'),
-		events: [
-			{
-				name: 'Pre-Social',
-				duration: '90 min',
-				location: 'Discord',
-				description: `Chill and hangout with us to chat and make friends before the hackathon begins :)`
-			}
-		]
-	},
-	{
-		startTime: getDateObj('26', '20:00:00'),
+		startTime: getDateObj('26', '09:00:00'),
 		events: [
 			{
 				name: 'Opening Ceremony',
 				duration: '30 min',
-				location: 'TBA',
+				location: 'Location TBA',
 				description: `Come watch the opening ceremony to hear a rundown of the rules
 				before you begin hacking.`
 			}
 		]
 	},
 	{
-		startTime: getDateObj('26', '20:30:00'),
+		startTime: getDateObj('26', '09:30:00'),
 		events: [
 			{
 				name: 'Team Formation',
 				duration: '60 min',
-				location: 'TBA',
+				location: 'Location TBA',
 				description: `Looking for a team? Find one to hack with during
 				our team building session`
 			},
@@ -47,128 +36,9 @@ const workshopSchedule = [
 			}
 		]
 	},
-	{
-		startTime: getDateObj('27', '08:00:00'),
-		events: [
-			{
-				name: 'Question of the Hour (Round 1 Judging)',
-				duration: '',
-				location: 'Discord: #questions-of-the-hour',
-				description: `Give the best response to the posted question in the
-				#questions-of-the-hour channel. Best answer gets 3 extra entries in
-				our raffle. `
-			}
-		]
-	},
 
 	{
-		startTime: getDateObj('27', '10:00:00'),
-		events: [
-			{
-				name: 'Meme Competition (Round 1 Judging)',
-				duration: '',
-				location: 'Discord: #memes',
-				description: `Drop your best meme in #memes channel. Best meme
-				gets 5 extra entries in our raffle!`
-			}
-		]
-	},
-	{
-		startTime: getDateObj('27', '14:00:00'),
-		events: [
-			{
-				name: 'Codenames Competition',
-				duration: '',
-				location: 'Discord',
-				description: `Take a break from hacking and join us for a round
-				of Codenames! Winning team gets 5 extra raffle entries.`
-			}
-		]
-	},
-	{
-		startTime: getDateObj('27', '18:00:00'),
-		events: [
-			{
-				name: 'Question of the Hour (Round 2 Judging)',
-				duration: '',
-				location: 'Discord: #questions-of-the-hour',
-				description: `Give the best response to the posted question in the
-				#questions-of-the-hour channel. Best answer gets 3 extra entries in
-				our raffle. `
-			}
-		]
-	},
-	{
-		startTime: getDateObj('27', '19:00:00'),
-		events: [
-			{
-				name: 'Among Us Competition',
-				duration: '',
-				location: 'Discord',
-				description: `Your project looking a little sus? Take a break and play
-				a round of Among Us! Winners get 3 extra entries in our raffle. `
-			}
-		]
-	},
-	{
-		startTime: getDateObj('27', '22:00:00'),
-		events: [
-			{
-				name: 'Meme Competition (Round 2 Judging)',
-				duration: '',
-				location: 'Discord: #memes',
-				description: `Drop your best meme in #memes channel. Best meme gets 5
-				extra entries in our raffle!`
-			}
-		]
-	},
-	{
-		startTime: getDateObj('28', '04:00:00'),
-		events: [
-			{
-				name: 'Question of the Hour (Round 3 Judging)',
-				duration: '',
-				location: 'Discord: #questions-of-the-hour',
-				description: `Give the best response to the posted question in the
-				#questions-of-the-hour channel. Best answer gets 3 extra entries in
-				our raffle. `
-			}
-		]
-	},
-	{
-		startTime: getDateObj('28', '10:00:00'),
-		events: [
-			{
-				name: 'Meme Competition (Round 3 Judging)',
-				duration: '',
-				location: 'Discord: #memes',
-				description: `Drop your best meme in #memes channel. Best meme gets 5
-				extra entries in our raffle!`
-			}
-		]
-	},
-	{
-		startTime: getDateObj('28', '14:00:00'),
-		events: [
-			{
-				name: 'Question of the Hour (Round 4 Judging)',
-				duration: '',
-				location: 'Discord: #questions-of-the-hour',
-				description: `Give the best response to the posted question in the
-				#questions-of-the-hour channel. Best answer gets 3 extra entries in
-				our raffle. `
-			},
-			{
-				name: 'Skribbl.io Competition',
-				duration: '',
-				location: 'Discord',
-				description: `Take a break from hacking and join us for a round of
-				Skribbl.io! Rewards will be 5 raffle entries for 1st place, 3 entries for 2nd. `
-			}
-		]
-	},
-	{
-		startTime: getDateObj('28', '19:30:00'),
+		startTime: getDateObj('26', '21:30:00'),
 		events: [
 			{
 				name: 'Hacking Ends',
@@ -187,12 +57,12 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('28', '21:00:00'),
+		startTime: getDateObj('26', '23:00:00'),
 		events: [
 			{
 				name: 'Closing Ceremony',
-				duration: '60 min',
-				location: 'TBA',
+				duration: '30 min',
+				location: 'Location TBA',
 				description: `Find out the winners at our closing ceremony. We hope you
 				had a fun time!`
 			}

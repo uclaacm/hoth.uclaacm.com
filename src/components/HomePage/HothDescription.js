@@ -88,7 +88,7 @@ export default function HothDescription() {
 							<strong>beginner-friendly</strong>
 							{' '}hackathon designed to be your first hackathon experience.
 							Due to recent spread of the Omicron variant,
-							the location of HOTH 9 is still to be announced. HOTH 9 will span 2 days!
+							the location of HOTH 9 is still to be announced.
 						</Typography>
 					</Grid>
 				</Grid>

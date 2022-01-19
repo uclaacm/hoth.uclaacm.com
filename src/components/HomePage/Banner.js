@@ -138,7 +138,7 @@ function renderInfo(classes) {
 					>
 						<time dateTime={hothStart.toISOString()}>
 							{month} {startDay}{endDayString}, 2022
-						</time> | TBA
+						</time> | Location TBA
 					</Typography>
 				</Tooltip>
 			</Box>
