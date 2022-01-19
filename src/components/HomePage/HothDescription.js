@@ -85,9 +85,9 @@ export default function HothDescription() {
 					<Grid item sm={10} md={6}>
 						<Typography variant='body1' style={{ paddingBottom: isSmall ? theme.spacing(2) : 0 }}>
 							Hack on the Hill (HOTH 9) is a{' '}
-							<strong>beginner-friendly</strong>
+							<strong>12-hour beginner-friendly</strong>
 							{' '}hackathon designed to be your first hackathon experience.
-							Due to recent spread of the Omicron variant,
+							Due to recent spread of Covid variants,
 							the location of HOTH 9 is still to be announced.
 						</Typography>
 					</Grid>
