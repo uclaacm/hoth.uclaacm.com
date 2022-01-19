@@ -3,7 +3,6 @@ import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'gatsby';
-import { applyDeadline } from '../constants';
 
 const useStyles = makeStyles(theme => {
 	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm * 1.3;
@@ -76,7 +75,6 @@ function ButtonBar({ isMobile }) {
 				</PoppinLink>)}
 			<BorderLink
 				disabled
-				//disabled={Date.now() > applyDeadline.getTime()}
 				href={'https://forms.gle/7uokDycPQfU9B5oj8'}
 				target='_blank'
 			>
