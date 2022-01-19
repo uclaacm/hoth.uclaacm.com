@@ -57,7 +57,7 @@ const useStyles = makeStyles(theme => ({
 			maxWidth: '100%'
 		}
 	},
-	eight: {
+	hothNumber: {
 		background: 'linear-gradient(199.69deg, #FF5F96 21.64%, #BD01FF 72.25%)',
 		WebkitBackgroundClip: 'text',
 		WebkitTextFillColor: 'transparent'
@@ -117,7 +117,7 @@ function renderInfo(classes) {
 			<Typography component='h1' variant='h1' className={classes.text} style={{
 				fontWeight: 'bold'
 			}}>
-				HOTH <span className={classes.eight}>9</span>
+				HOTH <span className={classes.hothNumber}>9</span>
 			</Typography>
 
 			<Typography variant='h5' className={classes.text} component='h3'
@@ -143,7 +143,7 @@ function renderInfo(classes) {
 				</Tooltip>
 			</Box>
 			{Date.now() < applyDeadline.getTime() &&
-				<Button className={classes.apply} href={'https://forms.gle/7uokDycPQfU9B5oj8'} target='_blank'>
+				<Button disabled className={classes.apply} href={'https://forms.gle/7uokDycPQfU9B5oj8'} target='_blank'>
 					Apply Now
 				</Button>
 			}

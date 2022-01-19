@@ -75,7 +75,8 @@ function ButtonBar({ isMobile }) {
 					{link.name}
 				</PoppinLink>)}
 			<BorderLink
-				disabled={Date.now() > applyDeadline.getTime()}
+				disabled
+				//disabled={Date.now() > applyDeadline.getTime()}
 				href={'https://forms.gle/7uokDycPQfU9B5oj8'}
 				target='_blank'
 			>
