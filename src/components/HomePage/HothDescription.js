@@ -70,7 +70,7 @@ export default function HothDescription() {
 					<Typography variant='h2' className={classes.subtitle}>What’s</Typography>
 					<Typography variant='h2' className={classNames(classes.title, uppercase.root)} style={{
 						paddingBottom: isSmall ? theme.spacing(2) : theme.spacing(8)
-					}}>Hack <em>off</em> the Hill?</Typography>
+					}}>Hack on the Hill?</Typography>
 				</hgroup>
 				<Grid container spacing={isSmall ? 3 : 8} alignItems='center' justify='center'>
 					<Grid item xs={12} sm={8} md={6}>
@@ -80,11 +80,11 @@ export default function HothDescription() {
 					</Grid>
 					<Grid item sm={10} md={6}>
 						<Typography variant='body1' style={{ paddingBottom: isSmall ? theme.spacing(2) : 0 }}>
-							Hack off the Hill (HOTH 8) is a{' '}
-							<strong>beginner-friendly</strong>
+							Hack on the Hill (HOTH 9) is a{' '}
+							<strong>12-hour beginner-friendly</strong>
 							{' '}hackathon designed to be your first hackathon experience.
-							Due to the ongoing global pandemic,
-							HOTH 8 will be virtual and span 2 days!
+							Due to recent spread of Covid variants,
+							the location of HOTH 9 is still to be announced.
 						</Typography>
 					</Grid>
 				</Grid>
