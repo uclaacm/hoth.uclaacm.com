@@ -143,7 +143,7 @@ function renderInfo(classes) {
 				</Tooltip>
 			</Box>
 			{Date.now() < applyDeadline.getTime() &&
-				<Button disabled className={classes.apply} href={'https://forms.gle/7uokDycPQfU9B5oj8'} target='_blank'>
+				<Button disabled className={classes.apply} href={'https://forms.gle/YVuiEyQZo5VT82E68'} target='_blank'>
 					Apply Now
 				</Button>
 			}
