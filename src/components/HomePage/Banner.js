@@ -11,8 +11,8 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Countdown from 'react-countdown';
 import Button from '@material-ui/core/Button';
 
-import SvgImg from '../SvgImg';
-import powellLady from '../../images/powell_lady.svg';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
 
 import {
@@ -68,9 +68,10 @@ const useStyles = makeStyles(theme => ({
 		justifyContent: 'center',
 		alignItems: 'baseline',
 		alignSelf: 'flex-end',
-		padding: '15px 0px',
+		padding: '25px 0px 0px 0px',
 		[theme.breakpoints.down('sm')]: {
-			alignSelf: 'flex-start'
+			alignSelf: 'flex-start',
+			padding: '15px'
 		},
 
 		color: 'white',
@@ -152,6 +153,23 @@ function renderInfo(classes) {
 	);
 }
 
+const Image = () => {
+	const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "powellBackground.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
+	return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
+}
+
+
 function Banner() {
 	const classes = useStyles();
 	const theme = useTheme();
@@ -227,7 +245,7 @@ function Banner() {
 										renderer={countdownRenderer}
 									/>
 								</NoSsr>
-								<SvgImg src={powellLady} className={classes.logo} width={1086} height={600}/>
+								<Box>{Image}</Box>
 							</Box>
 						</Grid>
 					}
