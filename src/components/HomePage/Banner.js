@@ -12,7 +12,7 @@ import Countdown from 'react-countdown';
 import Button from '@material-ui/core/Button';
 
 import SvgImg from '../SvgImg';
-import hothBanner from '../../images/web-banner.svg';
+import powellLady from '../../images/powell_lady.svg';
 import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
 
 import {
@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
 	container: {
 		backgroundColor: theme.palette.primary.dark,
 		height: 'auto',
-		padding: 25,
+		padding: 0,
 		[theme.breakpoints.down('sm')]: {
 			padding: '12px 2px'
 		}
@@ -68,6 +68,7 @@ const useStyles = makeStyles(theme => ({
 		justifyContent: 'center',
 		alignItems: 'baseline',
 		alignSelf: 'flex-end',
+		padding: '15px 0px',
 		[theme.breakpoints.down('sm')]: {
 			alignSelf: 'flex-start'
 		},
@@ -220,13 +221,13 @@ function Banner() {
 						null :
 						<Grid item sm={12} md={6}>
 							<Box display='flex' flexDirection='column'>
-								<SvgImg src={hothBanner} className={classes.logo} width={936} height={581} />
 								<NoSsr>
 									<Countdown
 										date={hothStart}
 										renderer={countdownRenderer}
 									/>
 								</NoSsr>
+								<SvgImg src={powellLady} className={classes.logo} width={1086} height={600}/>
 							</Box>
 						</Grid>
 					}
