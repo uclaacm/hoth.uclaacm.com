@@ -18,7 +18,8 @@ import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
 import {
 	hothStart,
 	hothEnd,
-	applyDeadline
+	applyDeadline,
+	applicationOpen
 } from '../constants.js';
 
 // These dates are displayed in the user's timezone
@@ -142,8 +143,10 @@ function renderInfo(classes) {
 					</Typography>
 				</Tooltip>
 			</Box>
-			{Date.now() < applyDeadline.getTime() &&
-				<Button disabled className={classes.apply} href={'https://forms.gle/7uokDycPQfU9B5oj8'} target='_blank'>
+			{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
+				<Button
+					className={classes.apply} href={'https://forms.gle/YVuiEyQZo5VT82E68'}
+					target='_blank'>
 					Apply Now
 				</Button>
 			}

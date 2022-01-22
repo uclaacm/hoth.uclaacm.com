@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'gatsby';
 
+import { applicationOpen, applyDeadline } from '../constants.js';
+
 const useStyles = makeStyles(theme => {
 	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm * 1.3;
 	return {
@@ -77,13 +79,15 @@ function ButtonBar({ isMobile }) {
 				<PoppinLink to={link.to} key={`nav-${index}`}>
 					{link.name}
 				</PoppinLink>)}
-			<BorderLink
-				disabled
-				href={'https://forms.gle/7uokDycPQfU9B5oj8'}
-				target='_blank'
-			>
-				Apply
-			</BorderLink>
+			{
+				<BorderLink
+					disabled={Date.now() < applicationOpen.getTime() || Date.now() > applyDeadline.getTime()}
+					href={'https://forms.gle/YVuiEyQZo5VT82E68'}
+					target='_blank'
+				>
+					Apply
+				</BorderLink>
+			}
 		</>
 	);
 }
