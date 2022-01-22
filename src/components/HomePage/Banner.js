@@ -28,7 +28,6 @@ const useStyles = makeStyles(theme => ({
 	container: {
 		backgroundColor: theme.palette.primary.dark,
 		height: 'auto',
-		padding: 0,
 		[theme.breakpoints.down('sm')]: {
 			padding: '12px 2px'
 		}
@@ -68,10 +67,10 @@ const useStyles = makeStyles(theme => ({
 		justifyContent: 'center',
 		alignItems: 'baseline',
 		alignSelf: 'flex-end',
-		padding: '25px 0px 0px 0px',
+		padding: theme.spacing(3, 0, 0, 0),
 		[theme.breakpoints.down('sm')]: {
 			alignSelf: 'flex-start',
-			padding: '15px'
+			padding: theme.spacing(2)
 		},
 
 		color: 'white',
@@ -153,27 +152,22 @@ function renderInfo(classes) {
 	);
 }
 
-const Image = () => {
+
+function Banner() {
+	const classes = useStyles();
+	const theme = useTheme();
+	const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 	const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "powellBackground.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `);
-
-	return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
-};
-
-
-function Banner() {
-	const classes = useStyles();
-	const theme = useTheme();
-	const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
 	const countdownRenderer = ({ days, hours, minutes, seconds, completed }) => {
 		if (completed) {
@@ -245,7 +239,7 @@ function Banner() {
 										renderer={countdownRenderer}
 									/>
 								</NoSsr>
-								<Box>{Image}</Box>
+								<Box><Img fluid={data.placeholderImage.childImageSharp.fluid} /></Box>
 							</Box>
 						</Grid>
 					}
