@@ -28,7 +28,6 @@ const useStyles = makeStyles(theme => ({
 	container: {
 		backgroundColor: theme.palette.primary.dark,
 		height: 'auto',
-		padding: 0,
 		[theme.breakpoints.down('sm')]: {
 			padding: '12px 2px'
 		}
