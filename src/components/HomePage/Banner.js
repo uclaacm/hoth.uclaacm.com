@@ -143,9 +143,8 @@ function renderInfo(classes) {
 					</Typography>
 				</Tooltip>
 			</Box>
-			{
+			{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
 				<Button
-					disabled={Date.now() < applicationOpen.getTime() || Date.now() > applyDeadline.getTime()}
 					className={classes.apply} href={'https://forms.gle/YVuiEyQZo5VT82E68'}
 					target='_blank'>
 					Apply Now
