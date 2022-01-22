@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
 		justifyContent: 'center',
 		alignItems: 'baseline',
 		alignSelf: 'flex-end',
-		padding: '25px 0px 0px 0px',
+		padding: theme.spacing(3, 0, 0, 0),
 		[theme.breakpoints.down('sm')]: {
 			alignSelf: 'flex-start',
 			padding: '15px'
