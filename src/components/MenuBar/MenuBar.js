@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import { navigate } from 'gatsby';
 
 import ButtonBar from './ButtonBar';
-import { ReactComponent as HOTHLogo } from '../../images/hoth8-logo.svg';
+import { ReactComponent as HOTHLogo } from '../../images/hoth9-logo.svg';
 
 const useStyles = makeStyles(theme => {
 	return {
@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => {
 			padding: '0% 6%'
 		},
 		logo: {
-			height: '1.8rem',
+			height: '2.8rem',
 			marginRight: theme.spacing(1.5)
 		},
 		wordmark: {
