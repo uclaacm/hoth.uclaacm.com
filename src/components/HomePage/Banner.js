@@ -11,8 +11,8 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Countdown from 'react-countdown';
 import Button from '@material-ui/core/Button';
 
-import SvgImg from '../SvgImg';
-import hothBanner from '../../images/web-banner.svg';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
 
 import {
@@ -29,7 +29,6 @@ const useStyles = makeStyles(theme => ({
 	container: {
 		backgroundColor: theme.palette.primary.dark,
 		height: 'auto',
-		padding: 25,
 		[theme.breakpoints.down('sm')]: {
 			padding: '12px 2px'
 		}
@@ -69,8 +68,10 @@ const useStyles = makeStyles(theme => ({
 		justifyContent: 'center',
 		alignItems: 'baseline',
 		alignSelf: 'flex-end',
+		padding: theme.spacing(3, 0, 0, 0),
 		[theme.breakpoints.down('sm')]: {
-			alignSelf: 'flex-start'
+			alignSelf: 'flex-start',
+			padding: theme.spacing(2)
 		},
 
 		color: 'white',
@@ -154,10 +155,22 @@ function renderInfo(classes) {
 	);
 }
 
+
 function Banner() {
 	const classes = useStyles();
 	const theme = useTheme();
 	const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+	const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "powellBackground.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
 
 	const countdownRenderer = ({ days, hours, minutes, seconds, completed }) => {
 		if (completed) {
@@ -223,13 +236,13 @@ function Banner() {
 						null :
 						<Grid item sm={12} md={6}>
 							<Box display='flex' flexDirection='column'>
-								<SvgImg src={hothBanner} className={classes.logo} width={936} height={581} />
 								<NoSsr>
 									<Countdown
 										date={hothStart}
 										renderer={countdownRenderer}
 									/>
 								</NoSsr>
+								<Box><Img fluid={data.placeholderImage.childImageSharp.fluid} /></Box>
 							</Box>
 						</Grid>
 					}
