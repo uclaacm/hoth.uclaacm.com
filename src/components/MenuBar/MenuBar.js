@@ -58,7 +58,7 @@ function MenuBar() {
 	const toggleMenu = () => setMenuOpen(open => !open);
 	const isMobile = useMediaQuery(theme.breakpoints.down(theme.breakpoints.values.sm * 1.3));
 
-	const wordmark = useMediaQuery(theme.breakpoints.down('xs')) ? 'HOTH' : 'Hack off the Hill';
+	const wordmark = useMediaQuery(theme.breakpoints.down('xs')) ? 'HOTH' : 'Hack on the Hill';
 
 	const desktopMenuBar =
 		<AppBar position="sticky">
