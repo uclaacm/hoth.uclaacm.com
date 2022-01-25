@@ -1,0 +1,40 @@
+name: Fetch announcements from issue
+on: issue_comment
+jobs:
+  issue_commented:
+    # This job only runs for issue comments
+    name: Update Announcements
+    if: ${{ (!github.event.issue.pull_request) && github.event.issue.number == 181 }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+      - run: yarn install --frozen-lockfile
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - uses: actions/cache@v2
+        name: configure pip caching
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/python_requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      - name: Install Python dependencies
+        run: |
+          python -m pip install -r .github/python_requirements.txt
+      - name: Run updateAnnouncements script
+      - run: |
+        python .github/actions/python_requirements
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        name: Commit and push
+        with:
+          commit_message: "Updated Announcements"
+          file_pattern: src/*.js src/*.json
+          commit_user_name: "Hack Bot"
+          commit_user_email: "uclaacmhack+ghbot@gmail.com"
+          push_options: "--force"
