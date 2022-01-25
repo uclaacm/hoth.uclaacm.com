@@ -8,11 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: '16.x'
-      - run: yarn install --frozen-lockfile
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -28,7 +23,7 @@ jobs:
         run: |
           python -m pip install -r .github/python_requirements.txt
       - name: Run update_announcements script
-      - run: |
+        run: |
           python ./.github/actions/update_announcements.py
       - uses: stefanzweifel/git-auto-commit-action@v4
         name: Commit and push
