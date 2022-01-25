@@ -27,9 +27,9 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install -r .github/python_requirements.txt
-      - name: Run updateAnnouncements script
+      - name: Run update_announcements script
       - run: |
-        python .github/actions/python_requirements
+          python ./.github/actions/update_announcements.py
       - uses: stefanzweifel/git-auto-commit-action@v4
         name: Commit and push
         with:
