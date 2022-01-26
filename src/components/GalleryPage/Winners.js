@@ -134,6 +134,15 @@ function Winners() {
 			<Grid container spacing={8} justify='center'>
 				{winnerCards}
 			</Grid>
+			<Grid container justify="center">
+				<Button variant='contained' disableElevation color="secondary" component='a'
+					href="https://hoth8.devpost.com/project-gallery" target='_blank'
+					rel='noreferrer noopener'
+					style={{ textTransform: 'none', padding: '4px 1.5em',
+						maxWidth: 'fit-content', marginTop: '2em' }}>
+					See All Past Projects
+				</Button>
+			</Grid>
 		</Container>
 	);
 }
