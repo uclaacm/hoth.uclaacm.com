@@ -3,6 +3,7 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import useTheme from '@material-ui/core/styles/useTheme';
 import Container from '@material-ui/core/Container';
+import Announcement from './Announcement';
 
 export default function AnnouncementsPage() {
 	const theme = useTheme();
@@ -16,6 +17,9 @@ export default function AnnouncementsPage() {
 					textAlign: 'center' }}>
 				Check back here for announcements!
 			</Typography>
+			<Announcement/>
+			<Announcement/>
+			<Announcement/>
 		</Container>
 	);
 }
