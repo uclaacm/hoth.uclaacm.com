@@ -135,15 +135,19 @@ function renderInfo(classes) {
 					<Typography
 						variant='h5'
 						className={classes.text}
-						style={{ marginTop: 40 }}
+						style={{ marginTop: 40, fontWeight: 500 }}
 						component='h3'
 					>
 						<time dateTime={hothStart.toISOString()}>
 							{month} {startDay}{endDayString}, 2022
-						</time> | Location TBA
+						</time>
 					</Typography>
 				</Tooltip>
 			</Box>
+
+			<Typography variant='h5' className={classes.text} component='h3'
+				style={{ fontWeight: 500, marginBottom: 10 }}>Covel Grand Horizon
+			</Typography>
 			{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
 				<Button
 					className={classes.apply} href={'https://forms.gle/YVuiEyQZo5VT82E68'}
