@@ -5,42 +5,73 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import SlideshowIcon from '@material-ui/icons/Slideshow';
+
+const useStyles = makeStyles(theme => ({
+	button: {
+		textTransform: 'none',
+		padding: '4px 1.5em',
+		maxWidth: 'fit-content'
+	},
+	video: {
+		borderRadius: '10px',
+		overflow: 'hidden'
+	},
+	title: {
+		marginTop: '1em'
+	},
+	author: {
+		textTransform: 'uppercase',
+		fontSize: '1em',
+		letterSpacing: '.5px'
+	},
+	description: {
+		paddingTop: '0.5em',
+		paddingBottom: '0.5em'
+	},
+	icon: {
+		marginRight: theme.spacing(0.5)
+	}
+}));
 
 function Workshop({ title, youtube, author, description, readme, slides }) {
+	const classes = useStyles();
 	return (
 		<Grid item xs={12} sm={8} md={6}>
 			<ReactPlayer
-				style={{ borderRadius: '10px', overflow: 'hidden' }}
+				className={classes.video}
 				controls={true} width='100%' url={youtube} />
-			<hgroup style={{ marginTop: '1em' }}>
+			<hgroup className={classes.title}>
 				<Typography variant='h5' component='h3'>
 					{title}
 				</Typography>
-				<Typography variant='subtitle1' component='h4' style={{
-					textTransform: 'uppercase',
-					fontSize: '1em',
-					letterSpacing: '.5px'
-				}}>
+				<Typography variant='subtitle1' component='h4' className={classes.author}>
 					{'Taught by: ' + author}
 				</Typography>
 			</hgroup>
-			<Typography variant='body1' style={{ paddingTop: '0.5em', paddingBottom: '0.5em' }}>
+			<Typography variant='body1' className={classes.description}>
 				{description}
 			</Typography>
-			<Box component="span" display="flex" justifyContent="space-between">
-				<Button variant='contained' disableElevation color="secondary" component='a'
+			<Box component="span" display="flex" justifyContent="space-around">
+				<Button variant='text' disableElevation color="secondary" component='a'
 					href={youtube} target='_blank' rel='noreferrer noopener'
-					style={{ textTransform: 'none', padding: '4px 1.5em', maxWidth: 'fit-content' }}>
+					className={classes.button}>
+					<YouTubeIcon color="secondary" className={classes.icon} />
 					Video
 				</Button>
-				<Button variant='contained' disableElevation color="secondary" component='a'
+				<Button variant='text' disableElevation color="secondary" component='a'
 					href={readme} target='_blank' rel='noreferrer noopener'
-					style={{ textTransform: 'none', padding: '4px 1.5em', maxWidth: 'fit-content' }}>
+					className={classes.button}>
+					<GitHubIcon color="secondary" className={classes.icon} />
 					README
 				</Button>
-				<Button variant='contained' disableElevation color="secondary" component='a'
+				<Button variant='text' disableElevation color="secondary" component='a'
 					href={slides} target='_blank' rel='noreferrer noopener'
-					style={{ textTransform: 'none', padding: '4px 1.5em', maxWidth: 'fit-content' }}>
+					className={classes.button}>
+					<SlideshowIcon color="secondary" className={classes.icon} />
 					Slides
 				</Button>
 			</Box>

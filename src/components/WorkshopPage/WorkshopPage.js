@@ -5,7 +5,6 @@ import useTheme from '@material-ui/core/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import ComingSoon from '../ComingSoon/ComingSoon';
 
-
 function WorkshopPage() {
 	const theme = useTheme();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
