@@ -5,6 +5,7 @@ import { basename } from 'path';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import useTheme from '@material-ui/core/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -96,9 +97,11 @@ function Winners() {
 		const image = winnerImageMap.get(item.id);
 		return (
 			<Grid item key={item.id} xs={12} sm={8} md={6}
-				style={{ paddingBottom: theme.spacing(isSmall ? 4 : 8),
-					display: 'flex', flexDirection: 'column' }}>
-				<Img fluid={{ ...image, aspectRatio: 1.5 }} style={{ borderRadius: '14px', marginBottom: '1em' }}/>
+				style={{
+					paddingBottom: theme.spacing(isSmall ? 4 : 8),
+					display: 'flex', flexDirection: 'column'
+				}}>
+				<Img fluid={{ ...image, aspectRatio: 1.5 }} style={{ borderRadius: '14px', marginBottom: '1em' }} />
 				<hgroup>
 					<Typography variant='h5' component='h2'>{item.title}</Typography>
 					<Typography variant='subtitle1' component='h3'
@@ -126,23 +129,27 @@ function Winners() {
 	return (
 		<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
 			<Typography variant='h4' component='h1'
-				style={{ fontWeight: theme.typography.fontWeightBold,
+				style={{
+					fontWeight: theme.typography.fontWeightBold,
 					paddingTop: theme.spacing(isSmall ? 4 : 8),
-					paddingBottom: theme.spacing(isSmall ? 4 : 8) }}>
+					paddingBottom: theme.spacing(isSmall ? 4 : 8)
+				}}>
 				Past Winners 🎉
 			</Typography>
 			<Grid container spacing={8} justify='center'>
 				{winnerCards}
 			</Grid>
-			<Grid container justify="center">
-				<Button variant='contained' disableElevation color="secondary" component='a'
+			<Box textAlign='center'>
+				<Button variant='outlined' disableElevation color="secondary" component='a'
 					href="https://hoth8.devpost.com/project-gallery" target='_blank'
 					rel='noreferrer noopener'
-					style={{ textTransform: 'none', padding: '4px 1.5em',
-						maxWidth: 'fit-content', marginTop: '2em' }}>
-					See All Past Projects
+					style={{
+						textTransform: 'none', padding: '4px 1.5em',
+						maxWidth: 'fit-content', marginTop: '2em'
+					}}>
+					See All Projects
 				</Button>
-			</Grid>
+			</Box>
 		</Container>
 	);
 }
