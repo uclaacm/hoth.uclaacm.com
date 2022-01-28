@@ -4,7 +4,12 @@ jobs:
   issue_commented:
     # This job only runs for issue comments
     name: Update Announcements
-    if: ${{ !github.event.issue.pull_request }}
+    if: |
+      !github.event.issue.pull_request &&
+      github.event.issue.number == 181 &&
+      (github.event.issue.comment.author_association == "OWNER" ||
+      github.event.issue.comment.author_association == "MEMBER" ||
+      github.event.issue.comment.author_association == "CONTRIBUTOR")
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -26,7 +31,7 @@ jobs:
           python -m pip install -r .github/python_requirements.txt
       - name: Run update_announcements script
         run: |
-          python ./.github/actions/update_announcements.py
+          python update_announcements.py
       - uses: stefanzweifel/git-auto-commit-action@v4
         name: Commit and push
         with:
