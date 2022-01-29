@@ -1,41 +1,40 @@
-# Inputs: Github API credentials
+# Initial function:
+# Inputs: Github API credentials (not using for now)
 # call the github API to get all the comments for a certain issue on the hoth github
 # format the data into a json containing the data that we want
 # inject the json into a json file
 
-# Extra functionality:
-# Check if the current json file is exactly the same json that we want insert
-# If it is the same, then return some variable (false) to the github action, (saves build minutes)
-# Else, if it's different, then inject and then return another variable (true) to the github action
-
 import requests
 import json
+import sys
+import os
 
-user_whitelist = ['jodymlin', 'khxia', 'jakobreinwald', 'christinatong01', 'jamieliu386', 'milesswu', 'TimothyGu', 'Timthetic']
-issue_num = '168'
-
+# User whitelist and issue number we are looking for
+user_whitelist = ['jodymlin', 'khxia', 'jakobreinwald', 'christinatong01', 'milesswu']
+# HOTH repository issues accessed via Github API
 repo_issues = "https://api.github.com/repos/uclaacm/hoth.uclaacm.com/issues"
+
+issue_num = '181'
 
 url = repo_issues + '/' + issue_num + '/' + 'comments'
 
-issue = requests.get(url)
-
-print("Request completed with status code: ", issue.status_code)
-
-issue_json = issue.json()
+# Get given issue
+announcements = requests.get(url)
+print("Request completed with status code: ", announcements.status_code)
+announcements_json = announcements.json()
 
 valid_comments = []
 
-for element in issue_json:
+# Keep track of every comment from valid usernames
+for index, element in enumerate(announcements_json):
     if(element['user']['login'] in user_whitelist):
-        comment = {'username': element['user']['login'], 'body': element['body'], 'created_at': element['created_at']}
+        comment = {'id': index, 'subject': 'INSERT SUBJECT', 'body': element['body'], 'timestamp': element['created_at']}
         valid_comments.append(comment)
 
-filename = 'src/data/json/issue' + issue_num + '_comments.json'
-
-json_string = json.dumps(valid_comments)
+# Insert all valid comment json objects into a file
+filename = 'src/data/json/announcements.json'
+json_string = json.dumps(valid_comments, indent=4)
 with open(filename, 'w') as f:
     f.write(json_string)
 
 print("Finished.")
-
