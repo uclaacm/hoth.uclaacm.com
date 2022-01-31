@@ -13,7 +13,7 @@ import SlideshowIcon from '@material-ui/icons/Slideshow';
 const useStyles = makeStyles(theme => ({
 	button: {
 		textTransform: 'none',
-		padding: '4px 1.5em',
+		padding: theme.spacing(1, 3),
 		maxWidth: 'fit-content'
 	},
 	video: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
 		overflow: 'hidden'
 	},
 	title: {
-		marginTop: '1em'
+		marginTop: theme.spacing(2)
 	},
 	author: {
 		textTransform: 'uppercase',
@@ -29,8 +29,7 @@ const useStyles = makeStyles(theme => ({
 		letterSpacing: '.5px'
 	},
 	description: {
-		paddingTop: '0.5em',
-		paddingBottom: '0.5em'
+		padding: theme.spacing(1, 0)
 	},
 	icon: {
 		marginRight: theme.spacing(0.5)
