@@ -1,7 +1,7 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
@@ -21,13 +21,17 @@ const useStyles = makeStyles(theme => ({
 function Announcement({ subject, timestamp, body }) {
 	const classes = useStyles();
 
+	const d = new Date(timestamp);
+	const date = d.toLocaleDateString('en-US');
+	const time = d.toLocaleTimeString('en-US');
+
 	return (
 		<Container>
 			<Typography variant='h4' component='h2' className={classes.subject}>
 				{subject}
 			</Typography>
 			<Typography variant='h6' component='h3' className={classes.timestamp}>
-                Posted on: {timestamp}
+                Posted on {date} at {time} PST
 			</Typography>
 			<Typography variant='h6' component='h4' className={classes.body}>
 				{body}
