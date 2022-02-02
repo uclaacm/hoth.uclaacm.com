@@ -99,7 +99,8 @@ function Winners() {
 			<Grid item key={item.id} xs={12} sm={8} md={6}
 				style={{
 					paddingBottom: theme.spacing(isSmall ? 4 : 8),
-					display: 'flex', flexDirection: 'column'
+					display: 'flex',
+					flexDirection: 'column'
 				}}>
 				<Img fluid={{ ...image, aspectRatio: 1.5 }} style={{ borderRadius: '14px', marginBottom: '1em' }} />
 				<hgroup>
