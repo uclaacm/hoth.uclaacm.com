@@ -144,8 +144,10 @@ function Winners() {
 					href="https://hoth8.devpost.com/project-gallery"
 					target='_blank' rel='noreferrer noopener'
 					style={{
-						textTransform: 'none', padding: '4px 1.5em',
-						maxWidth: 'fit-content', marginTop: '2em'
+						textTransform: 'none',
+						padding: '4px 1.5em',
+						maxWidth: 'fit-content',
+						marginTop: '2em'
 					}}>
 					See All Projects
 				</Button>
