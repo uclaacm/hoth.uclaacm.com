@@ -37,7 +37,7 @@ export default function AnnouncementsPage() {
 						null :
 						<Divider
 						/>}
-				</>)};
+				</>)}
 		</Container>
 	);
 }
