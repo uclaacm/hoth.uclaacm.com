@@ -25,8 +25,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - name: Install Python dependencies
-        env:
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
           python -m pip install -r .github/python_requirements.txt
       - name: Run update_announcements script
