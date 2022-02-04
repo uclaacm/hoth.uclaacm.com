@@ -83,8 +83,9 @@ export default function HothDescription() {
 							Hack on the Hill (HOTH 9) is a{' '}
 							<strong>12-hour beginner-friendly</strong>
 							{' '}hackathon designed to be your first hackathon experience.
-							Due to recent spread of Covid variants,
-							the location of HOTH 9 is still to be announced.
+							HOTH 9 will be hybrid this year with the in-person
+							portion in Covel Grand Horizon and the virtual portion on the
+							{' '}<a href='https://discord.com/invite/MStu2cnBV9'>Hack Discord</a>.
 						</Typography>
 					</Grid>
 				</Grid>
