@@ -13,8 +13,8 @@ function IndexPage() {
 	return (
 		<Layout>
 			<SEO title='Home' />
-			<Banner />
 			<HomeAnnouncements />
+			<Banner />
 			<UpcomingEvents />
 			<HothDescription />
 			<Gallery />
