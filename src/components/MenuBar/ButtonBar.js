@@ -82,7 +82,7 @@ function ButtonBar({ isMobile }) {
 			{
 				<BorderLink
 					disabled={Date.now() < applicationOpen.getTime() || Date.now() > applyDeadline.getTime()}
-					href={'https://forms.gle/YVuiEyQZo5VT82E68'}
+					href={'http://links.uclaacm.com/hoth9-application-form'}
 					target='_blank'
 				>
 					Apply
