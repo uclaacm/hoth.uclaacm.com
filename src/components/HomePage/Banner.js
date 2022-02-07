@@ -150,7 +150,7 @@ function renderInfo(classes) {
 			</Typography>
 			{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
 				<Button
-					className={classes.apply} href={'https://forms.gle/YVuiEyQZo5VT82E68'}
+					className={classes.apply} href={'http://links.uclaacm.com/hoth9-application-form'}
 					target='_blank'>
 					Apply Now
 				</Button>
