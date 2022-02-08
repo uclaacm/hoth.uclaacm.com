@@ -138,7 +138,7 @@ function FAQSection() {
 		},
 		{
 			question: `When is HOTH 9 taking place? How long is it going to be?`,
-			answer: `The hackathon will take place on Saturday, February 29, 2022, 
+			answer: `The hackathon will take place on Saturday, February 26, 2022, 
 				and it will be 12 hours long.`
 		},
 		{
