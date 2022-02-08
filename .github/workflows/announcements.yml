@@ -7,9 +7,9 @@ jobs:
     if: |
       !github.event.issue.pull_request &&
       github.event.issue.number == 181 &&
-      (github.event.issue.comment.author_association == 'OWNER' ||
-      github.event.issue.comment.author_association == 'MEMBER' ||
-      github.event.issue.comment.author_association == 'CONTRIBUTOR')
+      (github.event.comment.author_association == 'OWNER' ||
+      github.event.comment.author_association == 'MEMBER' ||
+      github.event.comment.author_association == 'CONTRIBUTOR')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
