@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-//import Box from '@material-ui/core/Box';
+// import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import data from '../../data/announcements.json';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Collapse from '@material-ui/core/Collapse';
-//import { borders } from '@material-ui/system';
+// import { borders } from '@material-ui/system';
 
 import ClearIcon from '@material-ui/icons/Clear';
 import IconButton from '@material-ui/core/IconButton';
@@ -140,7 +140,7 @@ export default function HomeAnnouncements() {
 	const [dismissed, changeVisibility] = useState(0);
 
 	return (
-		<Container maxWidth='lg' className={classes.container}>
+		<Container maxWidth='lg'>
 			{data.length === 0 ?
 				null :
 				<>
