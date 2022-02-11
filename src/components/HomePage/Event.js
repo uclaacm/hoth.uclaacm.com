@@ -16,7 +16,8 @@ const useStyles = makeStyles(theme => ({
 		fontWeight: theme.typography.fontWeightMedium,
 		color: '#858585',
 		display: 'flex',
-		alignItems: 'center',
+		flexDirection: 'column',
+		alignItems: 'flex-start',
 		marginTop: '1ex',
 		'& > :nth-child(1)': {
 			marginRight: '1em',

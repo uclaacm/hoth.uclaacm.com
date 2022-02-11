@@ -11,7 +11,7 @@ import Event from './Event';
 import NoSsr from '@material-ui/core/NoSsr';
 
 // When changing this, make sure to update src/components/SchedulePage/Schedule.js as well.
-const scheduleAvailable = false;
+const scheduleAvailable = true;
 
 const timeFormatter = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric',
 	hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });

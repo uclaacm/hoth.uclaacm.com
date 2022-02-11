@@ -6,15 +6,19 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import StickyTimeSlot from '../SchedulePage/StickyTimeSlot';
 import workshopSchedule from '../../data/WorkshopSchedule';
-import ComingSoon from '../ComingSoon/ComingSoon';
+// import ComingSoon from '../ComingSoon/ComingSoon';
 
 // When changing this, make sure to update src/components/HomePage/UpcomingEvents.js as well.
-const scheduleAvailable = false;
+const scheduleAvailable = true;
 
 const useStyles = makeStyles(theme => ({
 	title: {
 		fontWeight: 'bold',
 		paddingTop: theme.spacing(11),
+		paddingBottom: theme.spacing(scheduleAvailable ? 4 : 11)
+	},
+	note: {
+		color: '#858585',
 		paddingBottom: theme.spacing(scheduleAvailable ? 4 : 11)
 	},
 	divider: {
@@ -36,7 +40,11 @@ const SchedulePage = () => {
 		<Typography align='left' component='h1' variant='h4' className={classes.title}>
 			Schedule
 		</Typography>
-		<ComingSoon alignment='left'/>
+		<Typography align='left' component='h4' className={classes.note}>
+			Note: if there are two locations listed for an event, the first location is the in-person location
+			and the second is the online location.
+		</Typography>
+		{/* <ComingSoon alignment='left'/> */}
 		{scheduleAvailable && <List>
 			{workshopSchedule.map((timeslot, index) => {
 				return (
