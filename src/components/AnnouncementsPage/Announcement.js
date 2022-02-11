@@ -14,7 +14,8 @@ const useStyles = makeStyles(theme => ({
 		color: theme.palette.secondary.light
 	},
 	body: {
-		paddingBottom: theme.spacing(4)
+		paddingBottom: theme.spacing(4),
+		whiteSpace: 'pre-line'
 	}
 }));
 

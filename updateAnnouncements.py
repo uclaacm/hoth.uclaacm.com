@@ -43,9 +43,9 @@ try:
 except:
     print("Error parsing issue comments. ")
 
-# Insert all valid comment json objects into a file
-filename = 'src/data/json/announcements.json'
-json_string = json.dumps(valid_comments, indent=4)
+# Insert all valid comment json objects into a file in reverse order
+filename = 'src/data/announcements.json'
+json_string = json.dumps(valid_comments[::-1], indent=4)
 with open(filename, 'w') as f:
     f.write(json_string)
 
