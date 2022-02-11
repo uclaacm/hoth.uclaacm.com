@@ -1,0 +1,40 @@
+name: Fetch announcements from issue
+on: issue_comment
+jobs:
+  issue_commented:
+    # This job only runs for issue comments
+    name: Update Announcements
+    if: |
+      !github.event.issue.pull_request &&
+      github.event.issue.number == 181 &&
+      (github.event.issue.comment.author_association == "OWNER" ||
+      github.event.issue.comment.author_association == "MEMBER" ||
+      github.event.issue.comment.author_association == "CONTRIBUTOR")
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - uses: actions/cache@v2
+        name: configure pip caching
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/python_requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      - name: Install Python dependencies
+        run: |
+          python -m pip install -r .github/python_requirements.txt
+      - name: Run update_announcements script
+        run: |
+          python update_announcements.py
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        name: Commit and push
+        with:
+          commit_message: "Updated Announcements"
+          file_pattern: src/data/*.json
+          commit_user_name: "Hack Bot"
+          commit_user_email: "uclaacmhack+ghbot@gmail.com"
+          push_options: "--force"

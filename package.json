@@ -1,7 +1,7 @@
 {
   "name": "hoth.uclaacm.com",
   "private": true,
-  "description": "Website for Hack off the Hill (HOTH)",
+  "description": "Website for Hack on the Hill (HOTH)",
   "version": "0.1.0",
   "author": "Timothy Rediehs <trediehs@g.ucla.edu>",
   "dependencies": {

@@ -3,42 +3,87 @@ import ReactPlayer from 'react-player/youtube';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import SlideshowIcon from '@material-ui/icons/Slideshow';
 
-function Workshop(props) {
+const useStyles = makeStyles(theme => ({
+	button: {
+		textTransform: 'none',
+		padding: theme.spacing(1, 3),
+		maxWidth: 'fit-content'
+	},
+	video: {
+		borderRadius: '10px',
+		overflow: 'hidden'
+	},
+	title: {
+		marginTop: theme.spacing(2)
+	},
+	author: {
+		textTransform: 'uppercase',
+		fontSize: '1em',
+		letterSpacing: '.5px'
+	},
+	description: {
+		padding: theme.spacing(1, 0)
+	},
+	icon: {
+		marginRight: theme.spacing(0.5)
+	}
+}));
+
+function Workshop({ title, youtube, author, description, readme, slides }) {
+	const classes = useStyles();
 	return (
 		<Grid item xs={12} sm={8} md={6}>
 			<ReactPlayer
-				style={{ borderRadius: '10px', overflow: 'hidden' }}
-				controls={true} width='100%' url={props.url} />
-			<hgroup style={{ marginTop: '1em' }}>
+				className={classes.video}
+				controls={true} width='100%' url={youtube} />
+			<hgroup className={classes.title}>
 				<Typography variant='h5' component='h3'>
-					{props.title}
+					{title}
 				</Typography>
-				<Typography variant='subtitle1' component='h4' style={{
-					textTransform: 'uppercase',
-					fontSize: '1em',
-					letterSpacing: '.5px'
-				}}>
-					{'Taught by: ' + props.author}
+				<Typography variant='subtitle1' component='h4' className={classes.author}>
+					{'Taught by: ' + author}
 				</Typography>
 			</hgroup>
-			<Typography variant='body1' style={{ paddingTop: '0.5em', paddingBottom: '0.5em' }}>
-				{props.description}
+			<Typography variant='body1' className={classes.description}>
+				{description}
 			</Typography>
-			<Button variant='contained' disableElevation color="secondary" component='a'
-				href={props.url} target='_blank' rel='noreferrer noopener'
-				style={{ textTransform: 'none', padding: '4px 1.5em', maxWidth: 'fit-content' }}>
-				See Video
-			</Button>
+			<Box component="span" display="flex" justifyContent="space-around">
+				<Button variant='text' disableElevation color="secondary" component='a'
+					href={youtube} target='_blank' rel='noreferrer noopener'
+					className={classes.button}>
+					<YouTubeIcon color="secondary" className={classes.icon} />
+					Video
+				</Button>
+				<Button variant='text' disableElevation color="secondary" component='a'
+					href={readme} target='_blank' rel='noreferrer noopener'
+					className={classes.button}>
+					<GitHubIcon color="secondary" className={classes.icon} />
+					README
+				</Button>
+				<Button variant='text' disableElevation color="secondary" component='a'
+					href={slides} target='_blank' rel='noreferrer noopener'
+					className={classes.button}>
+					<SlideshowIcon color="secondary" className={classes.icon} />
+					Slides
+				</Button>
+			</Box>
 		</Grid>);
 }
 
-export default Workshop;
-
 Workshop.propTypes = {
 	title: PropTypes.string.isRequired,
-	url: PropTypes.string.isRequired,
+	youtube: PropTypes.string.isRequired,
 	author: PropTypes.string.isRequired,
-	description: PropTypes.string.isRequired
+	description: PropTypes.string.isRequired,
+	readme: PropTypes.string.isRequired,
+	slides: PropTypes.string.isRequired
 };
+
+export default Workshop;

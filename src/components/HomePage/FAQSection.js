@@ -138,14 +138,15 @@ function FAQSection() {
 		},
 		{
 			question: `When is HOTH 9 taking place? How long is it going to be?`,
-			answer: `The hackathon will take place on Saturday, February 9, 2022, 
+			answer: `The hackathon will take place on Saturday, February 26, 2022, 
 				and it will be 12 hours long.`
 		},
 		{
 			question: `Where is HOTH 9 taking place?`,
 			answer:
 				<>
-					Currently, we are planning for HOTH 9 to be hybrid. A capped number
+					Currently, we are planning for HOTH 9 to be hybrid
+					with the in-person portion of the event taking place at Covel Grand Horizons. A capped number
 					of people can participate in-person, and all in-person attendees must provide
 					a negative Covid test 72 hours before the event. Virtually, the event will be
 					taking place on our ACM Hack <Link href='https://discord.gg/MStu2cnBV9'>discord server</Link>,
@@ -173,7 +174,7 @@ function FAQSection() {
 				<>
 					We would love to have you as a mentor to answer participants&apos; technical
 					questions and help them with their projects. If you are interested, send us an email
-					at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com!</Link> or dm us on
+					at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com</Link>! or dm us on
 					our <Link href='https://discord.gg/MStu2cnBV9'>discord server</Link>!
 				</>
 		},
@@ -189,7 +190,7 @@ function FAQSection() {
 			question: `I have some other questions.`,
 			answer:
 				<>
-					Send us an email at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com!</Link>
+					Send us an email at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com</Link>!
 				</>
 		}
 	];

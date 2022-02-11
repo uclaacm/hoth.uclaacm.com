@@ -11,14 +11,15 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Countdown from 'react-countdown';
 import Button from '@material-ui/core/Button';
 
-import SvgImg from '../SvgImg';
-import hothBanner from '../../images/web-banner.svg';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
 
 import {
 	hothStart,
 	hothEnd,
-	applyDeadline
+	applyDeadline,
+	applicationOpen
 } from '../constants.js';
 
 // These dates are displayed in the user's timezone
@@ -28,7 +29,6 @@ const useStyles = makeStyles(theme => ({
 	container: {
 		backgroundColor: theme.palette.primary.dark,
 		height: 'auto',
-		padding: 25,
 		[theme.breakpoints.down('sm')]: {
 			padding: '12px 2px'
 		}
@@ -68,8 +68,10 @@ const useStyles = makeStyles(theme => ({
 		justifyContent: 'center',
 		alignItems: 'baseline',
 		alignSelf: 'flex-end',
+		padding: theme.spacing(3, 0, 0, 0),
 		[theme.breakpoints.down('sm')]: {
-			alignSelf: 'flex-start'
+			alignSelf: 'flex-start',
+			padding: theme.spacing(2)
 		},
 
 		color: 'white',
@@ -133,17 +135,23 @@ function renderInfo(classes) {
 					<Typography
 						variant='h5'
 						className={classes.text}
-						style={{ marginTop: 40 }}
+						style={{ marginTop: 40, fontWeight: 500 }}
 						component='h3'
 					>
 						<time dateTime={hothStart.toISOString()}>
 							{month} {startDay}{endDayString}, 2022
-						</time> | Location TBA
+						</time>
 					</Typography>
 				</Tooltip>
 			</Box>
-			{Date.now() < applyDeadline.getTime() &&
-				<Button disabled className={classes.apply} href={'https://forms.gle/7uokDycPQfU9B5oj8'} target='_blank'>
+
+			<Typography variant='h5' className={classes.text} component='h3'
+				style={{ fontWeight: 500, marginBottom: 10 }}>Covel Grand Horizon
+			</Typography>
+			{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
+				<Button
+					className={classes.apply} href={'http://links.uclaacm.com/hoth9-application-form'}
+					target='_blank'>
 					Apply Now
 				</Button>
 			}
@@ -151,10 +159,22 @@ function renderInfo(classes) {
 	);
 }
 
+
 function Banner() {
 	const classes = useStyles();
 	const theme = useTheme();
 	const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+	const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "powellBackground.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
 
 	const countdownRenderer = ({ days, hours, minutes, seconds, completed }) => {
 		if (completed) {
@@ -220,13 +240,13 @@ function Banner() {
 						null :
 						<Grid item sm={12} md={6}>
 							<Box display='flex' flexDirection='column'>
-								<SvgImg src={hothBanner} className={classes.logo} width={936} height={581} />
 								<NoSsr>
 									<Countdown
 										date={hothStart}
 										renderer={countdownRenderer}
 									/>
 								</NoSsr>
+								<Box><Img fluid={data.placeholderImage.childImageSharp.fluid} /></Box>
 							</Box>
 						</Grid>
 					}

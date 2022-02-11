@@ -20,7 +20,7 @@ const overwrittenTheme = responsiveFontSizes(createMuiTheme({
 		primary: {
 			main: '#C960FF',
 			light: '#9C28C5',
-			dark: '#31213E',
+			dark: '#231737',
 			contrastText: '#fff'
 		},
 		secondary: {

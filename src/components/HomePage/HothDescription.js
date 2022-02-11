@@ -6,6 +6,7 @@ import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -83,8 +84,9 @@ export default function HothDescription() {
 							Hack on the Hill (HOTH 9) is a{' '}
 							<strong>12-hour beginner-friendly</strong>
 							{' '}hackathon designed to be your first hackathon experience.
-							Due to recent spread of Covid variants,
-							the location of HOTH 9 is still to be announced.
+							HOTH 9 will be hybrid this year with the in-person
+							portion in Covel Grand Horizon and the virtual portion on the
+							{' '}<Link href='https://discord.com/invite/MStu2cnBV9'>Hack Discord</Link>.
 						</Typography>
 					</Grid>
 				</Grid>
