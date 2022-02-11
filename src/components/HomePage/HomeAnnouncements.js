@@ -95,7 +95,7 @@ function HomeAnnouncement({ subject, timestamp, body }) {
 				variant='outlined'
 				className={classes.button}
 				endIcon={<ArrowForwardIosIcon />}
-				onClick={() => { navigate('/announcements') }}
+				onClick={() => navigate('/announcements')}
 			>
 				See All
 			</Button>
