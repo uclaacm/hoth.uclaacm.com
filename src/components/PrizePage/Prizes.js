@@ -132,7 +132,10 @@ export default function Prizes() {
 						<Grid item xs={12} sm={6} md={4} key={prize.track}>
 							<Box display='flex' justifyContent='center' flexDirection='column'>
 								<Box className={classes.imageBox}>
-									<Img fluid={iconImageMap.get(prize.img)} style={{ height: '70%', width: '70%' }} objectFit = "contain"/>
+									<Img fluid={iconImageMap.get(prize.img)}
+										style={{ height: '70%', width: '70%' }}
+										objectFit = "contain"
+									/>
 								</Box>
 								<Box className={classes.prizeCard}>
 									<Typography variant='h6' component='h3'>
