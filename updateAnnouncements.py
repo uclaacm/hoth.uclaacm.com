@@ -27,7 +27,7 @@ valid_comments = []
 
 # Keep track of every comment from valid usernames
 for index, element in enumerate(announcements_json):
-    if(element['user']['login'] in user_whitelist):
+    if element['user']['login'] in user_whitelist:
         body = element['body']
         subject, partition, comment = body.partition('(Subject) ')
         comment = {'id': index, 'subject': subject, 'body': comment, 'timestamp': element['created_at']}
