@@ -19,19 +19,29 @@ issue_num = '181'
 url = repo_issues + '/' + issue_num + '/' + 'comments'
 
 # Get given issue
-announcements = requests.get(url)
+try:
+    announcements = requests.get(url)
+except requests.exceptions.RequestException as e:
+    raise SystemExit(e)
 print("Request completed with status code: ", announcements.status_code)
-announcements_json = announcements.json()
 
+# Convert announcements from Github API to json for parsing
+try:
+    announcements_json = announcements.json()
+except:
+    print("Error obtaining json from Github API return. ")
 valid_comments = []
 
 # Keep track of every comment from valid usernames
-for index, element in enumerate(announcements_json):
-    if element['user']['login'] in user_whitelist:
-        body = element['body']
-        subject, partition, comment = body.partition('(Subject) ')
-        comment = {'id': index, 'subject': subject, 'body': comment, 'timestamp': element['created_at']}
-        valid_comments.append(comment)
+try:
+    for index, element in enumerate(announcements_json):
+        if element['user']['login'] in user_whitelist:
+            body = element['body']
+            subject, partition, comment = body.partition('(Subject) ')
+            comment = {'id': index, 'subject': subject, 'body': comment, 'timestamp': element['created_at']}
+            valid_comments.append(comment)
+except:
+    print("Error parsing issue comments. ")
 
 # Insert all valid comment json objects into a file
 filename = 'src/data/json/announcements.json'
