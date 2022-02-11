@@ -61,6 +61,13 @@ export default function HothDescription() {
 					}
 				}
 			}
+			image3: file(relativePath: {eq: "hoth-description/hack_motif_applied.jpg"}) {
+				childImageSharp {
+					fluid {
+						...GatsbyImageSharpFluid_withWebp
+					}
+				}
+			}
 		}
 	`);
 
@@ -107,6 +114,23 @@ export default function HothDescription() {
 						<Img fluid={data.image2.childImageSharp.fluid} width='100%' style={{
 							borderRadius: '14px'
 						}}/>
+					</Grid>
+				</Grid>
+				<Grid container spacing={isSmall ? 3 : 8} alignItems='center' justify='center'>
+					<Grid item xs={12} sm={8} md={6}>
+						<Img fluid={data.image3.childImageSharp.fluid} width='100%' style={{
+							borderRadius: '14px'
+						}}/>
+					</Grid>
+					<Grid item sm={10} md={6}>
+						<Typography variant='body1' style={{ paddingBottom: isSmall ? theme.spacing(2) : 0 }}>
+							Hack on the Hill is an event hosted by ACM Hack.
+							A student run organization, Hack&apos;s mission is to help the community
+							to apply their creativity and build amazing things with code.
+							Check out our
+							{' '}<Link href='https://hack.uclaacm.com/'>website</Link>
+							{' '}to find out more about our quarterly workshops and other events!
+						</Typography>
 					</Grid>
 				</Grid>
 			</Container>
