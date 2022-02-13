@@ -7,19 +7,20 @@ function getDateObj(day, time) {
 
 const workshopSchedule = [
 	{
-		startTime: getDateObj('26', '16:00:00'),
+		startTime: getDateObj('26', '08:00:00'),
 		events: [
 			{
 				name: 'Check in',
 				duration: '30 min',
 				location: 'Covel Grand Horizon',
 				description: `Bring your bruin card and daily symptoms monitoring
-				survey to check in with one of the Hack officers at the front.`
+				survey to check in with one of the Hack officers at the front.
+				Remember to bring some snacks, water, your laptop, and your laptop charger!`
 			}
 		]
 	},
 	{
-		startTime: getDateObj('26', '16:30:00'),
+		startTime: getDateObj('26', '08:30:00'),
 		events: [
 			{
 				name: 'Opening Ceremony',
@@ -31,7 +32,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('26', '17:00:00'),
+		startTime: getDateObj('26', '09:00:00'),
 		events: [
 			{
 				name: 'Breakfast',
@@ -43,7 +44,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('26', '17:30:00'),
+		startTime: getDateObj('26', '09:30:00'),
 		events: [
 			{
 				name: 'Team Formation',
@@ -63,7 +64,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('26', '19:30:00'),
+		startTime: getDateObj('26', '11:30:00'),
 		events: [
 			{
 				name: 'Lunch',
@@ -85,7 +86,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('26', '20:00:00'),
+		startTime: getDateObj('26', '12:00:00'),
 		events: [
 			{
 				name: 'Meme Competition',
@@ -97,7 +98,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('26', '02:00:00'),
+		startTime: getDateObj('26', '18:00:00'),
 		events: [
 			{
 				name: 'Dinner',
@@ -110,7 +111,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('26', '05:00:00'),
+		startTime: getDateObj('26', '21:00:00'),
 		events: [
 			{
 				name: 'Hacking Ends',
@@ -122,7 +123,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('26', '05:15:00'),
+		startTime: getDateObj('26', '21:15:00'),
 		events: [
 			{
 				name: 'Judging',
@@ -134,7 +135,7 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('26', '06:30:00'),
+		startTime: getDateObj('26', '22:30:00'),
 		events: [
 			{
 				name: 'Closing Ceremony',

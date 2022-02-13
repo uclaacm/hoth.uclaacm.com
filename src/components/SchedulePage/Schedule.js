@@ -40,7 +40,7 @@ const SchedulePage = () => {
 		<Typography align='left' component='h1' variant='h4' className={classes.title}>
 			Schedule
 		</Typography>
-		<Typography align='left' className={classes.note}>
+		<Typography align='left' variant='subtitle1' className={classes.note}>
 			Note: if there are two locations listed for an event, the first location is the in-person location
 			and the second is the online location.
 		</Typography>
