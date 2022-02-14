@@ -105,8 +105,8 @@ const workshopSchedule = [
 				duration: '60 min',
 				location: 'Covel Grand Horizon Terrace',
 				description: `You've had quite the day so far, and you're
-                not done yet! It's time to eat and recoup for your last
-                sprint to the finish line!`
+        not done yet! It's time to eat and recoup for your last
+        sprint to the finish line!`
 			}
 		]
 	},
