@@ -40,6 +40,14 @@ const workshopSchedule = [
 				location: 'Covel Grand Horizon Terrace',
 				description: `What's the best way to start off a hackathon?
 				Food! And good company! All of which we've got right here.`
+			},
+			{
+				name: 'Hacking Begins',
+				duration: '',
+				location: 'Covel Grand Horizon/Discord',
+				description: `Do you feel the smarticle particles suffusing
+				your brain? Of course you do! Happy hacking, peeps; we can't wait
+				to see what you create!`
 			}
 		]
 	},
@@ -52,14 +60,6 @@ const workshopSchedule = [
 				location: 'Covel Grand Horizon/Discord',
 				description: `Looking for a team? Find one to hack with during
 				our team building session!`
-			},
-			{
-				name: 'Hacking Begins',
-				duration: '',
-				location: 'Covel Grand Horizon/Discord',
-				description: `Do you feel the smarticle particles suffusing
-				your brain? Of course you do! Happy hacking, peeps; we can't wait
-				to see what you create!`
 			}
 		]
 	},
@@ -78,10 +78,11 @@ const workshopSchedule = [
 				duration: '30 min',
 				location: 'Covel Grand Horizon',
 				description: `We'll be having a guided discussion about topics
-				related to the social dilemma of technology from the ethics
-				of data collection to the environmental impact of tech
-				to algorithmic bias in AI. Get an extra raffle entry just for
-				attending and a second one for participating. Sounds like a bargain, no?`
+				related to the the Netflix documentary 'The Social Dilemma' 
+				and the ethics of technology from the morality of data collection 
+				to the environmental impact of tech to algorithmic bias in AI. 
+				Get a raffle entry just for attending and a second one for participating. 
+				Sounds like a bargain, no?`
 			}
 		]
 	},
@@ -92,8 +93,8 @@ const workshopSchedule = [
 				name: 'Meme Competition',
 				duration: '30 min',
 				location: 'Discord: #memes',
-				description: `Drop your best meme in the #memes channel and get an
-				extra entry in the raffle for participating!`
+				description: `Drop your best meme in the #memes channel and get a raffle entry
+				for participating!`
 			}
 		]
 	},
@@ -105,8 +106,8 @@ const workshopSchedule = [
 				duration: '60 min',
 				location: 'Covel Grand Horizon Terrace',
 				description: `You've had quite the day so far, and you're
-        not done yet! It's time to eat and recoup for your last
-        sprint to the finish line!`
+				not done yet! It's time to eat and recoup for your last
+				sprint to the finish line!`
 			}
 		]
 	},
@@ -143,6 +144,19 @@ const workshopSchedule = [
 				location: 'Covel Grand Horizon/Zoom',
 				description: `Find out the winners at our closing ceremony. We hope you
 				had a fun time!`
+			}
+		]
+	},
+	{
+		startTime: getDateObj('26', '23:00:00'),
+		events: [
+			{
+				name: 'Hackathon Ends',
+				duration: '',
+				location: '',
+				description: `So long, farewell, au revoir, auf Wiedersehen. The day is done,
+				and with it HOTH 9. We hope you had as much fun as we did, and we hope to see
+				you again soon!!`
 			}
 		]
 	}
