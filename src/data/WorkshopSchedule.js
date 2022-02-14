@@ -78,7 +78,7 @@ const workshopSchedule = [
 				duration: '30 min',
 				location: 'Covel Grand Horizon',
 				description: `We'll be having a guided discussion about topics
-				related to the the Netflix documentary 'The Social Dilemma' 
+				related to the Netflix documentary 'The Social Dilemma' 
 				and the ethics of technology from the morality of data collection 
 				to the environmental impact of tech to algorithmic bias in AI. 
 				Get a raffle entry just for attending and a second one for participating. 
