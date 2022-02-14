@@ -35,7 +35,7 @@ function Announcement({ subject, timestamp, body }) {
                 Posted on {date} at {time} PST
 			</Typography>
 			<Typography variant='h6' component='h4' className={classes.body}>
-				{body}
+				{body.trim()}
 			</Typography>
 		</Container>
 	);

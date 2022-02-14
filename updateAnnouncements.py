@@ -25,28 +25,28 @@ except requests.exceptions.RequestException as e:
     raise SystemExit(e)
 print("Request completed with status code: ", announcements.status_code)
 
-# Convert announcements from Github API to json for parsing
+# Decode json to Python dictionary for parsing
 try:
     announcements_json = announcements.json()
-except:
-    print("Error obtaining json from Github API return. ")
+except requests.exceptions.JSONDecodeError as e:
+    raise SystemExit(e)
 valid_comments = []
 
 # Keep track of every comment from valid usernames
-try:
-    for index, element in enumerate(announcements_json):
-        if element['user']['login'] in user_whitelist:
-            body = element['body']
-            subject, partition, comment = body.partition('(Subject) ')
-            comment = {'id': index, 'subject': subject, 'body': comment, 'timestamp': element['created_at']}
-            valid_comments.append(comment)
-except:
-    print("Error parsing issue comments. ")
+for index, element in enumerate(announcements_json):
+    if element['user']['login'] in user_whitelist:
+        body = element['body']
+        subject, partition, comment = body.partition('(Subject) ')
+        comment = {'id': index, 'subject': subject, 'body': comment, 'timestamp': element['created_at']}
+        valid_comments.append(comment)
 
 # Insert all valid comment json objects into a file in reverse order
 filename = 'src/data/announcements.json'
 json_string = json.dumps(valid_comments[::-1], indent=4)
-with open(filename, 'w') as f:
-    f.write(json_string)
+try:
+    with open(filename, 'w') as f:
+        f.write(json_string)
+except EnvironmentError:
+    print("Error opening/writing to file. ")
 
 print("Finished.")
