@@ -7,7 +7,7 @@ import UpcomingEvents from '../components/HomePage/UpcomingEvents';
 import HothDescription from '../components/HomePage/HothDescription';
 import Gallery from '../components/HomePage/Gallery';
 import FAQSection from '../components/HomePage/FAQSection';
-import HomeAnnouncementBanner from '../components/HomePage/HomeAnnouncements';
+import HomeAnnouncementBanner from '../components/HomePage/HomeAnnouncementBanner';
 
 function IndexPage() {
 	return (
