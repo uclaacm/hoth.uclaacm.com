@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import data from '../../data/announcements.json';
 import PropTypes from 'prop-types';
 import Collapse from '@material-ui/core/Collapse';
-import { navigate } from 'gatsby';
+import { Link } from 'gatsby';
 
 import ClearIcon from '@material-ui/icons/Clear';
 import IconButton from '@material-ui/core/IconButton';
@@ -35,25 +35,20 @@ const useStyles = makeStyles(theme => ({
 	},
 	border: {
 		border: '3px solid',
-		paddingLeft: theme.spacing(3),
-		paddingRight: theme.spacing(2),
-		paddingTop: theme.spacing(1),
-		paddingBottom: theme.spacing(2),
+		padding: theme.spacing(1, 2, 2, 3),
 		borderColor: theme.palette.primary.light,
 		borderRadius: 16,
-		marginTop: theme.spacing(2),
-		marginBottom: theme.spacing(2),
+		margin: theme.spacing(2, 0),
 		backgroundColor: '#fbf2ff'
 	},
 	button: {
-		width: 'auto',
 		textAlign: 'center',
 		textDecoration: 'none',
 		fontSize: '14px',
 		justifyItems: 'center',
 		fontWeight: 400,
-		margin: '5px 0px',
-		padding: '2px 1em',
+		margin: theme.spacing(1, 0),
+		padding: theme.spacing(0.4, 1),
 		maxWidth: 'fit-content',
 		border: '2px solid',
 		color: theme.palette.primary.main,
@@ -87,7 +82,7 @@ function HomeAnnouncement({ subject, timestamp, body }) {
 				</Grid>
 				<Grid item>
 					<Typography variant='body2' className={classes.body}>
-						{body}
+						{body.trim()}
 					</Typography>
 				</Grid>
 			</Grid>
@@ -95,7 +90,8 @@ function HomeAnnouncement({ subject, timestamp, body }) {
 				variant='outlined'
 				className={classes.button}
 				endIcon={<ArrowForwardIosIcon />}
-				onClick={() => navigate('/announcements')}
+				component={Link}
+				to={'/announcements'}
 			>
 				See All
 			</Button>
@@ -109,17 +105,17 @@ HomeAnnouncement.propTypes = {
 	body: PropTypes.string
 };
 
-export default function HomeAnnouncements() {
+export default function HomeAnnouncementBanner() {
 	const classes = useStyles();
 	const announcement = data[0];
-	const [dismissed, changeVisibility] = useState(0);
+	const [dismissed, changeVisibility] = useState(false);
 
 	return (
 		<Container maxWidth='lg'>
 			{data.length === 0 ?
 				null :
 				<>
-					<Collapse in={!dismissed} timeout={400}>
+					<Collapse in={!dismissed} timeout='auto'>
 						<Grid container direction='column' justify='space-between' className={classes.border}>
 							<Grid container direction='row' justify='space-between' alignItems='center'>
 								<Grid item>
