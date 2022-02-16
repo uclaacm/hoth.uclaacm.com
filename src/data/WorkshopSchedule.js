@@ -48,6 +48,15 @@ const workshopSchedule = [
 				description: `Do you feel the smarticle particles suffusing
 				your brain? Of course you do! Happy hacking, peeps; we can't wait
 				to see what you create!`
+			},
+			{
+				name: 'Meme Competition Opens',
+				duration: '',
+				location: 'Discord: #memes',
+				description: `Whether you're attending the hackathon in-person or online,
+				drop your best meme in the #memes channel and get a raffle entry
+				for participating! This is an all-day event, so take your time in coming up
+				with that singular meme-tastic work of art.`
 			}
 		]
 	},
@@ -70,12 +79,14 @@ const workshopSchedule = [
 				name: 'Lunch',
 				duration: '60 min',
 				location: 'Covel Grand Horizon Terrace',
-				description: `Coding is done best on a full stomach ;). 
-				Come one, come all—we feast!`
+				description: `Coding is done best on a full stomach. 
+				Come one, come all—we feast ;)! Do feel free to keep working through lunch,
+				though. The only thing better than getting free food is having coding
+				epiphanies while eating the free food.`
 			},
 			{
 				name: 'JEDI Allyship Space',
-				duration: '30 min',
+				duration: '45 min',
 				location: 'Covel Grand Horizon',
 				description: `We'll be having a guided discussion about topics
 				related to the Netflix documentary 'The Social Dilemma' 
@@ -87,27 +98,16 @@ const workshopSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('26', '12:00:00'),
-		events: [
-			{
-				name: 'Meme Competition',
-				duration: '30 min',
-				location: 'Discord: #memes',
-				description: `Drop your best meme in the #memes channel and get a raffle entry
-				for participating!`
-			}
-		]
-	},
-	{
 		startTime: getDateObj('26', '18:00:00'),
 		events: [
 			{
 				name: 'Dinner',
 				duration: '60 min',
 				location: 'Covel Grand Horizon Terrace',
-				description: `You've had quite the day so far, and you're
-				not done yet! It's time to eat and recoup for your last
-				sprint to the finish line!`
+				description: `Do you know what's better than one free meal? Two
+				free meals! And you've earned it! It's time to eat and recoup for your
+				last sprint to the finish line! Just like lunch, you can also work during
+				this time.`
 			}
 		]
 	},
@@ -119,7 +119,8 @@ const workshopSchedule = [
 				duration: '',
 				location: '',
 				description: `Your amazing project should be done and submitted to
-				dev post for judging!`
+				Devpost for judging. Also remember to submit the 'Team Confirmation'
+				google form.`
 			}
 		]
 	},
