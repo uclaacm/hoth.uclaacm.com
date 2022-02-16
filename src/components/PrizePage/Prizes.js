@@ -16,32 +16,32 @@ const allPrizes = [
 	{
 		img: 'best-overall',
 		track: 'Best Overall',
-		prize: '$ Amazon Gift Card'
+		prize: '$240 Amazon Gift Card'
 	},
 	{
 		img: 'health-wellness',
 		track: 'Health and Wellness',
-		prize: ''
+		prize: '$120 Amazon Gift Card'
 	},
 	{
 		img: 'sustainability',
 		track: 'Sustainability',
-		prize: ''
+		prize: '$120 Amazon Gift Card'
 	},
 	{
 		img: 'education',
 		track: 'Education',
-		prize: ''
+		prize: '$120 Amazon Gift Card'
 	},
 	{
 		img: 'equity',
 		track: 'Equity',
-		prize: ''
+		prize: '$120 Amazon Gift Card'
 	},
 	{
 		img: 'you-do-you',
 		track: 'You Do You',
-		prize: ''
+		prize: '$120 Amazon Gift Card'
 	}
 ];
 
