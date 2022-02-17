@@ -3,6 +3,7 @@ const GalleryPageTemplate = path.resolve('./src/components/GalleryPage/GalleryPa
 
 function getHothWinners(allHothWinners) {
 	const hothWinners = new Map();
+	const devposts = new Map();
 	for (const hoth of allHothWinners) {
 		const winnersArray = [];
 		for (const winner of hoth.parent.childYaml.winners) {
@@ -11,8 +12,9 @@ function getHothWinners(allHothWinners) {
 			winnersArray.push(winnerMap);
 		}
 		hothWinners.set(hoth.parent.name, winnersArray);
+		devposts.set(hoth.parent.name, hoth.parent.childYaml.devpost);
 	}
-	return hothWinners;
+	return { hothWinners, devposts };
 }
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
@@ -42,14 +44,16 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
           }
 	  }
     `);
-	const winnersInfo = getHothWinners(hothData.data.allYaml.nodes);
+	const { hothWinners, devposts } = getHothWinners(hothData.data.allYaml.nodes);
 	for (let i = 1; i <= numPages; i++) {
-		const winnerInfo = winnersInfo.get(`hoth-${i}`);
+		const winnerInfo = hothWinners.get(`hoth-${i}`);
+		const devpostInfo = devposts.get(`hoth-${i}`);
 		createPage({
 			path: `/gallery/hoth-${i}`,
 			component: GalleryPageTemplate,
 			context: {
-				winnerInfo
+				winnerInfo,
+				devpostInfo
 			}
 		});
 	}

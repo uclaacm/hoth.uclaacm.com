@@ -7,18 +7,21 @@ import Gallery from '../../components/GalleryPage/Gallery';
 import Winners from '../../components/GalleryPage/Winners';
 
 function GalleryPageTemplate({ pageContext }) {
-	const { winnerInfo } = pageContext;
+	const { winnerInfo, devpostInfo } = pageContext;
 	return (
 		<Layout>
 			<SEO title='Gallery' />
 			<Gallery />
-			<Winners winners={winnerInfo} />
+			<Winners winners={ winnerInfo } devpost={ devpostInfo } />
 		</Layout>
 	);
 }
 
 GalleryPageTemplate.propTypes = {
-	pageContext: PropTypes.objectOf(PropTypes.array.isRequired).isRequired
+	pageContext: PropTypes.shape({
+		winnerInfo: PropTypes.array.isRequired,
+		devpostInfo: PropTypes.string
+	}).isRequired
 };
 
 export default GalleryPageTemplate;

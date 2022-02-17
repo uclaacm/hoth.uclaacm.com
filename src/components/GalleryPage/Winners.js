@@ -11,7 +11,7 @@ import useTheme from '@material-ui/core/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PropTypes from 'prop-types';
 
-function Winners({ winners }) {
+function Winners({ winners, devpost }) {
 	const theme = useTheme();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -85,7 +85,7 @@ function Winners({ winners }) {
 			</Grid>
 			<Box textAlign='center'>
 				<Button variant='outlined' disableElevation color="secondary" component='a'
-					href="https://hoth8.devpost.com/project-gallery"
+					href={devpost}
 					target='_blank' rel='noreferrer noopener'
 					style={{
 						textTransform: 'none',
@@ -101,7 +101,8 @@ function Winners({ winners }) {
 }
 
 Winners.propTypes = {
-	winners: PropTypes.array.isRequired
+	winners: PropTypes.array.isRequired,
+	devpost: PropTypes.string
 };
 
 export default Winners;
