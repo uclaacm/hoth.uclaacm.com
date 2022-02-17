@@ -1,0 +1,44 @@
+- name: "HOTH 6"
+  devpost: https://hoth6.devpost.com/project-gallery
+  
+  winners:
+    - title: "REACTions"
+      category: Best Hack
+      description: "Don't just press like or dislike buttons on videos. React to them."
+      link: "https://devpost.com/software/reactions-dthb4c"
+      id: eyemotion
+    - title: "Home Sweet Home"
+      category: Best React Project
+      description: "A mobile app that allows roommates in an apartment to handle expenses and chores"
+      link: "https://devpost.com/software/table-39-home-sweet-home"
+      id: nudge
+    - title: "myCloset"
+      category: Best Mobile Hack
+      description: "Bruin to Bruin Clothes Renting"
+      link: "https://devpost.com/software/mycloset-ltfok9"
+      id: dusktodawn
+    - title: "Graduate Admissions Success Predictor (GASP)"
+      category: Best Machine Learning Project
+      description: "Machine Learning algorithm to determine the probability of getting into graduate school"
+      link: "https://devpost.com/software/graduate-school-predictions"
+      id: clotheswithcare
+    - title: Distance
+      category: Best Mobile Hack
+      description: "A convenient to remember what you need to do!"
+      link: "https://devpost.com/software/distance"
+      id: emosign
+    - title: "hapi"
+      category: Best Design
+      description: Share the happiest//most enjoyable thing in ur day
+      link: "https://devpost.com/software/hapi-2ejm71"
+      id: mammalmayhem
+    - title: "Phase Shift"
+      category: Best Game
+      description: "2D Platformer where two players control the same character and must cooperate to solve puzzles and fight enemies"
+      link: "https://devpost.com/software/table-47-redshift"
+      id: reassure
+    - title: "SuperPong"
+      category: "You do You"
+      description: "Pong, but better!"
+      link: "https://devpost.com/software/superpong"
+      id: reassure

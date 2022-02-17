@@ -1,0 +1,30 @@
+- name: "HOTH 3"
+  devpost: https://hoth3.devpost.com/project-gallery
+  
+  winners:
+    - title: Bruin Class Planner
+      category: 1st Place Overall
+      description: "A smart class selector for future class plan based on optimal professor and class ratings"
+      link: "https://devpost.com/software/bruin-class-planner"
+      id: eyemotion
+    - title: Food Nutrition
+      category: 2nd Place Overall
+      description: "Detects food using AI and tells you the nutritional values"
+      link: "https://devpost.com/software/food-nutrition"
+      id: nudge
+    - title: "ClassTime"
+      category: 3rd Place Overall
+      description: "A website designed to help you plan how long it takes to get between classes or places"
+      link: "https://devpost.com/software/classtime"
+      id: dusktodawn
+    - title: Classy
+      category: Best Mobile Hack
+      description: "classy is Tinder for your classes."
+      link: "https://devpost.com/software/classy-table-13"
+      id: emosign
+    - title: Breaking The Law
+      category: Best Design
+      description: "A Scientist gets caught trapped back in time and has to platform to get his papers back "
+      link: "https://devpost.com/software/breaking-the-law"
+      id: mammalmayhem
+

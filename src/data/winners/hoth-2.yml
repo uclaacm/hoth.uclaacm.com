@@ -1,0 +1,34 @@
+- name: "HOTH 2"
+  devpost: https://hoth2.devpost.com/project-gallery
+  
+  winners:
+    - title: Eve
+      category: First Place
+      description: "The only App you need for UCLA events, either posted on Facebook or from the web"
+      link: "https://devpost.com/software/eve-bmcaiq"
+      id: eyemotion
+    - title: What the Happening
+      category: Second Place
+      description: "Missed the latest basketball game? Forgot where Hack on the Hill is? What the Happening is here to help!"
+      link: "https://devpost.com/software/what-the-happening"
+      id: nudge
+    - title: Delp
+      category: Third Place
+      description: "A Chrome Extension enabling people to rate each dish on the UCLA dining menu website"
+      link: "https://devpost.com/software/delp"
+      id: dusktodawn
+    - title: Raise
+      category: Best Mobile Hack
+      description: "Why poll when you can raise"
+      link: "https://devpost.com/software/raise-bxi4zy"
+      id: clotheswithcare
+    - title: Mood for Thought
+      category: Best Design Hack
+      description: "user sends mood/personalized note around the world; another user \"grabs\" note and sends back personalized song rec"
+      link: "https://devpost.com/software/mood-for-thought"
+      id: emosign
+    - title: Cook Up a Recipe
+      category: Best Web Hack
+      description: Easy Link to Recipes
+      link: "https://devpost.com/software/cook-up-a-recipe"
+      id: dusktodawn

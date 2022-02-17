@@ -43,11 +43,16 @@ module.exports = {
 		// 'gatsby-plugin-offline',
 		'gatsby-plugin-material-ui',
 		'gatsby-plugin-acmhack-svgr',
-		`gatsby-transformer-yaml`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				path: `./src/data/`
+			}
+		},
+		{
+			resolve: `gatsby-transformer-yaml`,
+			options: {
+				typeName: `Yaml` // a fixed string
 			}
 		}
 	]

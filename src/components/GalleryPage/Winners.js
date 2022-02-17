@@ -9,66 +9,9 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import useTheme from '@material-ui/core/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import PropTypes from 'prop-types';
 
-const winners = [
-	{
-		title: 'Nudge',
-		category: 'Best Overall Hack',
-		description: `Nudge is the social self-care habit tracker you never knew you needed. Show friends you care by 
-		sending them personalized nudges to keep up with healthy habits. Grow nudges into deeper conversations.`,
-		link: 'https://devpost.com/software/nudge-wprc72',
-		id: 'nudge'
-	},
-	{
-		title: 'Dusk to Dawn',
-		category: 'Best Design',
-		description: `Being alone and socially-deprived during quarantine makes each day quite monotonous. Dusk to 
-		Dawn aims to help by allowing users to wake up and fall asleep to voice messages sent by friends.`,
-		link: 'https://devpost.com/software/dusk-to-dawn',
-		id: 'dusktodawn'
-	},
-	{
-		title: 'Clothes With Care',
-		category: 'Best Mobile Hack',
-		description: `Our app provides the platform for a neighborhood clothes exchange program, enabling users to 
-		skip the hassle, financial obstacles, and environmental impact of buying new clothes.`,
-		link: 'https://devpost.com/software/clothes-with-care',
-		id: 'clotheswithcare'
-	},
-	{
-		title: 'EyeMotion',
-		category: 'Best Web Hack',
-		description: `EyeMotion is a meditation app that analyzes eye movement to provide personalized feedback about
-		 the quality of one's meditation, such as by detecting restlessness, anxiety, or negative emotion.`,
-		link: 'https://devpost.com/software/eyemotion',
-		id: 'eyemotion'
-	},
-	{
-		title: 'EmoSign',
-		category: 'Best Web Hack',
-		description: `To translate sign to language. To translate text to emotion. To connect us with people who need
-		 assistance in communication`,
-		link: 'https://devpost.com/software/emosign',
-		id: 'emosign'
-	},
-	{
-		title: 'Mammal Mayhem',
-		category: 'Best Game',
-		description: `Mammal Mayhem is a cutesy game designed to provide casual relief to its players.`,
-		link: 'https://devpost.com/software/mammal-mayhem',
-		id: 'mammalmayhem'
-	},
-	{
-		title: 'Reassure',
-		category: 'You Do You',
-		description: `Ever had a trouble and not been able to share it? Ever just needed to vent a bit? Then you just
-		 might love Reassure! With Reassure, you can anonymously disclose your troubles and receive support.`,
-		link: 'https://devpost.com/software/reassure',
-		id: 'reassure'
-	}
-];
-
-function Winners() {
+function Winners({ winners }) {
 	const theme = useTheme();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -156,5 +99,9 @@ function Winners() {
 		</Container>
 	);
 }
+
+Winners.propTypes = {
+	winners: PropTypes.array.isRequired
+};
 
 export default Winners;
