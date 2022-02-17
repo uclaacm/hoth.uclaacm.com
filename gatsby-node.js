@@ -6,8 +6,8 @@ function getHothWinners(allHothWinners) {
 	for (const hoth of allHothWinners) {
 		const winnersArray = [];
 		for (const winner of hoth.parent.childYaml.winners) {
-			const { category, description, id, link, title } = winner;
-			const winnerMap = { category, description, id, link, title };
+			const { category, description, image, link, title } = winner;
+			const winnerMap = { category, description, image, link, title };
 			winnersArray.push(winnerMap);
 		}
 		hothWinners.set(hoth.parent.name, winnersArray);
@@ -31,7 +31,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
                     winners {
                       category
                       description
-                      id
+                      image
                       link
                       title
                     }

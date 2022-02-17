@@ -37,7 +37,7 @@ function Winners({ winners }) {
 	}
 
 	const winnerCards = winners.map(item => {
-		const image = winnerImageMap.get(item.id);
+		const image = winnerImageMap.get(item.image);
 		return (
 			<Grid item key={item.id} xs={12} sm={8} md={6}
 				style={{
