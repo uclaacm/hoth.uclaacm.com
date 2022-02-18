@@ -3,6 +3,12 @@ documentation:
 - LICENSE*
 - .github/FUNDING.yml
 
+announcements:
+- src/components/AnnouncementsPage/**/*
+- src/components/HomePage/HomeAnnouncementBanner.js
+- src/data/announcements.json
+- src/pages/announcements.js
+
 schedule:
 - src/components/SchedulePage/**/*
 - src/pages/schedule.js
@@ -17,6 +23,7 @@ prizes:
 
 workshops:
 - src/components/WorkshopPage/**/*
+- src/data/WorkshopSchedule.js
 - src/pages/workshops.js
 
 page:
@@ -27,6 +34,7 @@ page:
 
 gallery:
 - src/components/GalleryPage/**/*
+- src/components/HomePage/Gallery.js
 - src/pages/gallery.js
 
 infra:
