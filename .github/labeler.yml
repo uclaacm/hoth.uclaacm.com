@@ -36,7 +36,7 @@ page:
 gallery:
 - src/components/GalleryPage/**/*
 - src/components/HomePage/Gallery.js
-- src/pages/gallery.js
+- src/data/winners/*
 
 infra:
 - any: ['.github/**/*', '!.github/FUNDING.yml']
