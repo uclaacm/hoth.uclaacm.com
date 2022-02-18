@@ -36,9 +36,9 @@ valid_comments = []
 for index, element in enumerate(announcements_json):
     if element['user']['login'] in user_whitelist:
         body = element['body']
-				# If there is no partition, subject will contain the entire string
-        subject, partition, comment = body.partition('(Subject) ')
-        comment = {'id': index, 'subject': subject, 'body': comment, 'timestamp': element['created_at']}
+        # If there is no partition, subject will contain the entire string
+        subject, partition, comment = body.partition('(Subject)')
+        comment = {'id': index, 'subject': subject.strip(), 'body': comment.strip(), 'timestamp': element['created_at']}
         valid_comments.append(comment)
 
 # Insert all valid comment json objects into a file in reverse order
