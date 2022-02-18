@@ -1,34 +1,34 @@
-- name: "HOTH 6"
-  devpost: https://hoth6.devpost.com/project-gallery
+- name: "HOTH 5"
+  devpost: https://hoth5.devpost.com/project-gallery
 
   winners:
     - title: BelpDining
       category: Best Overall Hack
       description: "Yelp for UCLA Bruins!!!"
       link: "https://devpost.com/software/belpdining"
-      image: eyemotion
+      image: belpdining
     - title: Stressful Sorting Simulator
       category: Best Hardware Hack
       description: "A VR experience featuring bombs, balls, and exponentially increasing levels of stress."
       link: "https://devpost.com/software/stressful-sorting-simulator-table-4"
-      image: nudge
+      image: anon
     - title: LectureKiller
       category: Best Web Hack
       description: "speech recognization, lecture recording, study platform"
       link: "https://devpost.com/software/26-lecturekiller"
-      image: dusktodawn
+      image: lecturekiller
     - title: "ParkMe"
       category: Best Mobile Hack
       description: "Helps you find parking."
       link: "https://devpost.com/software/1-parkme"
-      image: clotheswithcare
+      image: anon
     - title: Gatling Bun
       category: Best Design
       description: "Side-scrolling shoot-em-up/boss rush"
       link: "https://devpost.com/software/gatling-bun-table-3"
-      image: emosign
+      image: gatlingbun
     - title: Gravity Fall
       category: Best Game
       description: Two players play with gravity and collaborate to deliver a key to a treasure chest.
       link: "https://devpost.com/software/gravity-fall"
-      image: mammalmayhem
+      image: gravityfall
