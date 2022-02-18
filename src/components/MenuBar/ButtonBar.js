@@ -69,7 +69,7 @@ function ButtonBar({ isMobile }) {
 		},
 		{
 			name: 'Gallery',
-			to: '/gallery/hoth-8'
+			to: '/gallery/hoth-8' // need to update this link to be latest HOTH
 		}
 	];
 
