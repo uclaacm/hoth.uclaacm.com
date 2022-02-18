@@ -69,7 +69,7 @@ function ButtonBar({ isMobile }) {
 		},
 		{
 			name: 'Gallery',
-			to: '/gallery'
+			to: '/gallery/hoth-8'
 		}
 	];
 
