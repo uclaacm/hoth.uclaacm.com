@@ -45,22 +45,22 @@ const allPrizes = [
 	}
 ];
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
 	prizeGrid: {
 		textAlign: 'center',
-		paddingBottom: '20px'
+		paddingBottom: theme.spacing(15)
 	},
 	prizeCard: {
 		backgroundColor: grey[200],
 		borderRadius: '10px',
 		height: '100%',
 		paddingTop: `${prizeImageRadius}`,
-		paddingBottom: '20px',
+		paddingBottom: theme.spacing(3),
 		position: 'relative',
 		zIndex: '-1'
 	},
 	prizeDescription: {
-		paddingBottom: '20px'
+		paddingBottom: theme.spacing(3)
 	},
 	header: {
 		fontWeight: 700,
@@ -85,7 +85,7 @@ const useStyles = makeStyles({
 		fontWeight: 600,
 		fontSize: '1em'
 	}
-});
+}));
 
 export default function Prizes() {
 	const classes = useStyles();
