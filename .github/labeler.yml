@@ -8,6 +8,7 @@ announcements:
 - src/components/HomePage/HomeAnnouncementBanner.js
 - src/data/announcements.json
 - src/pages/announcements.js
+- update_announcements.py
 
 schedule:
 - src/components/SchedulePage/**/*
