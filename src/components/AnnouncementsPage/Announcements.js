@@ -13,7 +13,6 @@ const useStyles = makeStyles(theme => ({
 		paddingBottom: theme.spacing(4)
 	},
 	heading: {
-		// fontWeight: theme.typography.fontWeightBold,
 		paddingTop: theme.spacing(4),
 		paddingBottom: theme.spacing(4),
 		textAlign: 'center'
