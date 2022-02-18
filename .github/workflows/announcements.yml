@@ -9,7 +9,8 @@ jobs:
       github.event.issue.number == 181 &&
       (github.event.comment.author_association == 'OWNER' ||
       github.event.comment.author_association == 'MEMBER' ||
-      github.event.comment.author_association == 'CONTRIBUTOR')
+      github.event.comment.author_association == 'CONTRIBUTOR' ||
+      github.event.comment.author_association == 'COLLABORATOR')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
