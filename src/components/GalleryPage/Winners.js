@@ -10,8 +10,9 @@ import Typography from '@material-ui/core/Typography';
 import useTheme from '@material-ui/core/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PropTypes from 'prop-types';
+import GalleryMenu from '../../components/GalleryPage/GalleryMenu';
 
-function Winners({ winners, devpost }) {
+function Winners({ winners, devpost, hothNum }) {
 	const theme = useTheme();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -72,14 +73,25 @@ function Winners({ winners, devpost }) {
 
 	return (
 		<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
-			<Typography variant='h4' component='h1'
+			<Grid
+				container
+				direction="row"
+				justify="space-between"
+				alignItems="center"
 				style={{
-					fontWeight: theme.typography.fontWeightBold,
-					paddingTop: theme.spacing(isSmall ? 4 : 8),
-					paddingBottom: theme.spacing(isSmall ? 4 : 8)
-				}}>
-				Past Winners 🎉
-			</Typography>
+					marginBottom: theme.spacing(2)
+				}}
+			>
+				<Typography variant='h4' component='h1'
+					style={{
+						fontWeight: theme.typography.fontWeightBold,
+						paddingTop: theme.spacing(isSmall ? 4 : 8),
+						paddingBottom: theme.spacing(isSmall ? 4 : 8)
+					}}>
+					HOTH {hothNum} Winners 🎉
+				</Typography>
+				<GalleryMenu />
+			</Grid>
 			<Grid container spacing={8} justify='center'>
 				{winnerCards}
 			</Grid>
@@ -93,7 +105,7 @@ function Winners({ winners, devpost }) {
 						maxWidth: 'fit-content',
 						marginTop: '2em'
 					}}>
-					See All Projects
+					See All HOTH {hothNum} Projects
 				</Button>
 			</Box>
 		</Container>
@@ -102,7 +114,8 @@ function Winners({ winners, devpost }) {
 
 Winners.propTypes = {
 	winners: PropTypes.array.isRequired,
-	devpost: PropTypes.string
+	devpost: PropTypes.string.isRequired,
+	hothNum: PropTypes.number.isRequired
 };
 
 export default Winners;

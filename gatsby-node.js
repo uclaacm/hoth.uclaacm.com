@@ -18,9 +18,8 @@ function getHothWinners(allHothWinners) {
 }
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
-	const numPages = 8;
 	const hothData = await graphql(`
-	{
+	query HothDataQuery {
         allYaml(sort: {fields: name, order: ASC}) {
             nodes {
               parent {
@@ -45,15 +44,18 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 	  }
     `);
 	const { hothWinners, devposts } = getHothWinners(hothData.data.allYaml.nodes);
-	for (let i = 1; i <= numPages; i++) {
-		const winnerInfo = hothWinners.get(`hoth-${i}`);
-		const devpostInfo = devposts.get(`hoth-${i}`);
+	for (let i = 1; i <= hothWinners.size; i++) {
+		const hothName = `hoth-${i}`;
+		const winnerInfo = hothWinners.get(hothName);
+		const devpostLink = devposts.get(hothName);
+		const hothNum = i;
 		createPage({
-			path: `/gallery/hoth-${i}`,
+			path: `/gallery/${hothName}`,
 			component: GalleryPageTemplate,
 			context: {
 				winnerInfo,
-				devpostInfo
+				devpostLink,
+				hothNum
 			}
 		});
 	}

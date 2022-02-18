@@ -7,12 +7,12 @@ import Gallery from '../../components/GalleryPage/Gallery';
 import Winners from '../../components/GalleryPage/Winners';
 
 function GalleryPageTemplate({ pageContext }) {
-	const { winnerInfo, devpostInfo } = pageContext;
+	const { winnerInfo, devpostLink, hothNum } = pageContext;
 	return (
 		<Layout>
 			<SEO title='Gallery' />
 			<Gallery />
-			<Winners winners={ winnerInfo } devpost={ devpostInfo } />
+			<Winners winners={ winnerInfo } devpost={ devpostLink } hothNum={ hothNum }/>
 		</Layout>
 	);
 }
@@ -20,7 +20,8 @@ function GalleryPageTemplate({ pageContext }) {
 GalleryPageTemplate.propTypes = {
 	pageContext: PropTypes.shape({
 		winnerInfo: PropTypes.array.isRequired,
-		devpostInfo: PropTypes.string
+		devpostLink: PropTypes.string.isRequired,
+		hothNum: PropTypes.number.isRequired
 	}).isRequired
 };
 
