@@ -7,7 +7,7 @@ import Schedule from '../components/SchedulePage/Schedule';
 
 const SchedulePage = () => {
 	return <Layout>
-		<SEO title='Workshop schedule' />
+		<SEO title='Schedule' />
 		<Schedule/>
 	</Layout>;
 };

@@ -7,8 +7,12 @@ import Announcement from './Announcement';
 import data from '../../data/announcements.json';
 
 const useStyles = makeStyles(theme => ({
+	title: {
+		fontWeight: 'bold',
+		paddingTop: theme.spacing(11),
+		paddingBottom: theme.spacing(4)
+	},
 	heading: {
-		fontWeight: theme.typography.fontWeightBold,
 		paddingTop: theme.spacing(4),
 		paddingBottom: theme.spacing(4),
 		textAlign: 'center'
@@ -20,9 +24,12 @@ export default function AnnouncementsPage() {
 
 	return (
 		<Container maxWidth='md'>
+			<Typography align='left' component='h1' variant='h4' className={classes.title}>
+			Announcements
+			</Typography>
 			{data.length !== 0 ?
 				null :
-				<Typography variant='h4' component='h1' className={classes.heading}>
+				<Typography variant='h5' className={classes.heading}>
 							Check back here for announcements!
 				</Typography>}
 			{data.map(announcement =>
