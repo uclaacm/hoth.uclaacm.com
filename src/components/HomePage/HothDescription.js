@@ -115,19 +115,19 @@ export default function HothDescription() {
 							There will be <strong>prizes</strong> for the best hacks!
 						</Typography>
 					</LeftGridItem>
-					<Grid item xs={12} sm={8} md={6}>
+					<RightGridItem>
 						<SideImage fluidImage={data.image2.childImageSharp.fluid} width='100%' style={{
 							borderRadius: '14px'
 						}}/>
-					</Grid>
+					</RightGridItem>
 				</Grid>
 				<Grid container spacing={isSmall ? 3 : 8} alignItems='center' justify='center'>
-					<Grid item xs={12} sm={8} md={6}>
+					<LeftGridItem>
 						<SideImage fluidImage={data.image3.childImageSharp.fluid} width='100%' style={{
 							borderRadius: '14px'
 						}}/>
-					</Grid>
-					<Grid item sm={10} md={6}>
+					</LeftGridItem>
+					<RightGridItem>
 						<Typography variant='body1' style={{ paddingBottom: isSmall ? theme.spacing(2) : 0 }}>
 							Hack on the Hill is an event hosted by ACM Hack.
 							A student run organization, Hack&apos;s mission is to help the community
@@ -136,7 +136,7 @@ export default function HothDescription() {
 							{' '}<Link href='https://hack.uclaacm.com/'>website</Link>
 							{' '}to find out more about our quarterly workshops and other events!
 						</Typography>
-					</Grid>
+					</RightGridItem>
 				</Grid>
 			</Container>
 		</Box>
