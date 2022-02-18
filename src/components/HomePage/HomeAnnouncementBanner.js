@@ -111,35 +111,33 @@ export default function HomeAnnouncementBanner() {
 	const [dismissed, changeVisibility] = useState(false);
 
 	return (
-		<Container maxWidth='lg'>
-			{data.length === 0 ?
-				null :
-				<>
-					<Collapse in={!dismissed} timeout='auto'>
-						<Grid container direction='column' justify='space-between' className={classes.border}>
-							<Grid container direction='row' justify='space-between' alignItems='center'>
-								<Grid item>
-									<Typography variant='h6' component='h2'>
-										Latest Announcement
-									</Typography>
-								</Grid>
-								<Grid item>
-									<IconButton className={classes.icon} onClick={() => changeVisibility(a => !a)}>
-										<ClearIcon />
-									</IconButton>
-								</Grid>
+		data.length === 0 ?
+			null :
+			<Container maxWidth='lg'>
+				<Collapse in={!dismissed} timeout='auto'>
+					<Grid container direction='column' justify='space-between' className={classes.border}>
+						<Grid container direction='row' justify='space-between' alignItems='center'>
+							<Grid item>
+								<Typography variant='h6' component='h2'>
+									Latest Announcement
+								</Typography>
 							</Grid>
 							<Grid item>
-								<HomeAnnouncement
-									key={announcement.id}
-									subject={announcement.subject}
-									timestamp={announcement.timestamp}
-									body={announcement.body}
-								/>
+								<IconButton className={classes.icon} onClick={() => changeVisibility(a => !a)}>
+									<ClearIcon />
+								</IconButton>
 							</Grid>
 						</Grid>
-					</Collapse>
-				</>}
-		</Container>
+						<Grid item>
+							<HomeAnnouncement
+								key={announcement.id}
+								subject={announcement.subject}
+								timestamp={announcement.timestamp}
+								body={announcement.body}
+							/>
+						</Grid>
+					</Grid>
+				</Collapse>
+			</Container>
 	);
 }
