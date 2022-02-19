@@ -13,51 +13,52 @@ import PropTypes from 'prop-types';
 import GalleryMenu from '../../components/GalleryPage/GalleryMenu';
 import { makeStyles } from '@material-ui/core/styles';
 
+const useStyles = makeStyles((theme, isSmall) => ({
+	titlegrid: {
+		paddingBottom: theme.spacing(isSmall ? 4 : 8),
+		display: 'flex',
+		flexDirection: 'column'
+	},
+	winnerimage: {
+		borderRadius: '14px',
+		marginBottom: '1em'
+	},
+	winnercategory: {
+		textTransform: 'uppercase',
+		fontSize: '1em',
+		letterSpacing: '.5px'
+	},
+	winnerdesc: {
+		padding: '0.5em 0 1em'
+	},
+	winnerbutton: {
+		textTransform: 'none',
+		padding: '4px 1.5em',
+		maxWidth: 'fit-content'
+	},
+	gallerybody: {
+		marginBottom: theme.spacing(8)
+	},
+	gallerygrid: {
+		marginBottom: theme.spacing(2)
+	},
+	gallerytitle: {
+		fontWeight: theme.typography.fontWeightBold,
+		paddingTop: theme.spacing(isSmall ? 4 : 8),
+		paddingBottom: theme.spacing(isSmall ? 4 : 8)
+	},
+	devpostbutton: {
+		textTransform: 'none',
+		padding: '4px 1.5em',
+		maxWidth: 'fit-content',
+		marginTop: '2em'
+	}
+}));
+
 function Winners({ winners, devpost, hothNum, hothCount }) {
 	const theme = useTheme();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
-	const useStyles = makeStyles(() => ({
-		titlegrid: {
-			paddingBottom: theme.spacing(isSmall ? 4 : 8),
-			display: 'flex',
-			flexDirection: 'column'
-		},
-		winnerimage: {
-			borderRadius: '14px',
-			marginBottom: '1em'
-		},
-		winnercategory: {
-			textTransform: 'uppercase',
-			fontSize: '1em',
-			letterSpacing: '.5px'
-		},
-		winnerdesc: {
-			padding: '0.5em 0 1em'
-		},
-		winnerbutton: {
-			textTransform: 'none',
-			padding: '4px 1.5em',
-			maxWidth: 'fit-content'
-		},
-		gallerybody: {
-			marginBottom: theme.spacing(8)
-		},
-		gallerygrid: {
-			marginBottom: theme.spacing(2)
-		},
-		gallerytitle: {
-			fontWeight: theme.typography.fontWeightBold,
-			paddingTop: theme.spacing(isSmall ? 4 : 8),
-			paddingBottom: theme.spacing(isSmall ? 4 : 8)
-		},
-		devpostbutton: {
-			textTransform: 'none',
-			padding: '4px 1.5em',
-			maxWidth: 'fit-content',
-			marginTop: '2em'
-		}
-	}));
-	const classes = useStyles();
+	const classes = useStyles(theme, isSmall);
 
 	const data = useStaticQuery(graphql`
 		{
