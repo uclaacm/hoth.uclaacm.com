@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { Link } from 'gatsby';
 
 export default function GalleryMenu() {
@@ -23,12 +24,12 @@ export default function GalleryMenu() {
 				aria-haspopup='true'
 				aria-expanded={open ? 'true' : undefined}
 				onClick={handleClick}
-				variant='outlined'
+				variant='text'
 				disableElevation
 				color='secondary'
 				component='a'
 			>
-				See All HOTHs
+				See All HOTHs <ArrowDropDownIcon />
 			</Button>
 			<Menu
 				id='fade-menu'
