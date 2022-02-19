@@ -21,10 +21,8 @@ const useStyles = makeStyles(theme => {
 		timeSlotHeader: {
 			backgroundColor: '#fafafa',
 			color: 'black',
-			top: '56px',
-			[theme.breakpoints.up('sm')]: {
-				top: '64px'
-			}
+			paddingTop: theme.spacing(2),
+			paddingBottom: theme.spacing(0.5)
 		},
 		eventItem: {
 			marginTop: theme.spacing(2),
