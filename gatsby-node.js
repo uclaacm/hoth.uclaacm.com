@@ -44,7 +44,8 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 	  }
     `);
 	const { hothWinners, devposts } = getHothWinners(hothData.data.allYaml.nodes);
-	for (let i = 1; i <= hothWinners.size; i++) {
+	const hothCount = hothWinners.size;
+	for (let i = 1; i <= hothCount; i++) {
 		const hothName = `hoth-${i}`;
 		const winnerInfo = hothWinners.get(hothName);
 		const devpostLink = devposts.get(hothName);
@@ -55,7 +56,8 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 			context: {
 				winnerInfo,
 				devpostLink,
-				hothNum
+				hothNum,
+				hothCount
 			}
 		});
 	}

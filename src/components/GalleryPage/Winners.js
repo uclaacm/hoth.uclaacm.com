@@ -12,7 +12,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PropTypes from 'prop-types';
 import GalleryMenu from '../../components/GalleryPage/GalleryMenu';
 
-function Winners({ winners, devpost, hothNum }) {
+function Winners({ winners, devpost, hothNum, hothCount }) {
 	const theme = useTheme();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -90,7 +90,7 @@ function Winners({ winners, devpost, hothNum }) {
 					}}>
 					HOTH {hothNum} Winners 🎉
 				</Typography>
-				<GalleryMenu />
+				<GalleryMenu hothCount={hothCount} />
 			</Grid>
 			<Grid container spacing={8} justify='center'>
 				{winnerCards}
@@ -115,7 +115,8 @@ function Winners({ winners, devpost, hothNum }) {
 Winners.propTypes = {
 	winners: PropTypes.array.isRequired,
 	devpost: PropTypes.string.isRequired,
-	hothNum: PropTypes.number.isRequired
+	hothNum: PropTypes.number.isRequired,
+	hothCount: PropTypes.number.isRequired
 };
 
 export default Winners;

@@ -5,8 +5,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 
-export default function GalleryMenu() {
+function GalleryMenu({ hothCount }) {
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const open = Boolean(anchorEl);
 	const handleClick = event => {
@@ -15,6 +16,10 @@ export default function GalleryMenu() {
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
+	const menuLinks = [];
+	for (let i = hothCount; i >= 1; i--) {
+		menuLinks.push(<MenuItem onClick={handleClose}><Link to={`/gallery/hoth-${i}`}>HOTH {i}</Link></MenuItem>);
+	}
 
 	return (
 		<>
@@ -44,15 +49,14 @@ export default function GalleryMenu() {
 				onClose={handleClose}
 				TransitionComponent={Fade}
 			>
-				<MenuItem onClick={handleClose}><Link to='/gallery/hoth-8'>HOTH 8</Link></MenuItem>
-				<MenuItem onClick={handleClose}><Link to='/gallery/hoth-7'>HOTH 7</Link></MenuItem>
-				<MenuItem onClick={handleClose}><Link to='/gallery/hoth-6'>HOTH 6</Link></MenuItem>
-				<MenuItem onClick={handleClose}><Link to='/gallery/hoth-5'>HOTH 5</Link></MenuItem>
-				<MenuItem onClick={handleClose}><Link to='/gallery/hoth-4'>HOTH 4</Link></MenuItem>
-				<MenuItem onClick={handleClose}><Link to='/gallery/hoth-3'>HOTH 3</Link></MenuItem>
-				<MenuItem onClick={handleClose}><Link to='/gallery/hoth-2'>HOTH 2</Link></MenuItem>
-				<MenuItem onClick={handleClose}><Link to='/gallery/hoth-1'>HOTH 1</Link></MenuItem>
+				{menuLinks}
 			</Menu>
 		</>
 	);
 }
+
+GalleryMenu.propTypes = {
+	hothCount: PropTypes.number.isRequired
+};
+
+export default GalleryMenu;
