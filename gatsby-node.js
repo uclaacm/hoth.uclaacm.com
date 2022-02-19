@@ -8,8 +8,8 @@ function getHothWinners(allHothWinners) {
 		const winnersArray = [];
 		for (const winner of hoth.parent.childYaml.winners) {
 			const { category, description, image, link, title } = winner;
-			const winnerMap = { category, description, image, link, title };
-			winnersArray.push(winnerMap);
+			const winnerCopy = { category, description, image, link, title };
+			winnersArray.push(winnerCopy);
 		}
 		hothWinners.set(hoth.parent.name, winnersArray);
 		devposts.set(hoth.parent.name, hoth.parent.childYaml.devpost);

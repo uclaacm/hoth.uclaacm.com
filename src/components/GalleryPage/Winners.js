@@ -11,10 +11,53 @@ import useTheme from '@material-ui/core/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PropTypes from 'prop-types';
 import GalleryMenu from '../../components/GalleryPage/GalleryMenu';
+import { makeStyles } from '@material-ui/core/styles';
 
 function Winners({ winners, devpost, hothNum, hothCount }) {
 	const theme = useTheme();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+	const useStyles = makeStyles(() => ({
+		titlegrid: {
+			paddingBottom: theme.spacing(isSmall ? 4 : 8),
+			display: 'flex',
+			flexDirection: 'column'
+		},
+		winnerimage: {
+			borderRadius: '14px',
+			marginBottom: '1em'
+		},
+		winnercategory: {
+			textTransform: 'uppercase',
+			fontSize: '1em',
+			letterSpacing: '.5px'
+		},
+		winnerdesc: {
+			padding: '0.5em 0 1em'
+		},
+		winnerbutton: {
+			textTransform: 'none',
+			padding: '4px 1.5em',
+			maxWidth: 'fit-content'
+		},
+		gallerybody: {
+			marginBottom: theme.spacing(8)
+		},
+		gallerygrid: {
+			marginBottom: theme.spacing(2)
+		},
+		gallerytitle: {
+			fontWeight: theme.typography.fontWeightBold,
+			paddingTop: theme.spacing(isSmall ? 4 : 8),
+			paddingBottom: theme.spacing(isSmall ? 4 : 8)
+		},
+		devpostbutton: {
+			textTransform: 'none',
+			padding: '4px 1.5em',
+			maxWidth: 'fit-content',
+			marginTop: '2em'
+		}
+	}));
+	const classes = useStyles();
 
 	const data = useStaticQuery(graphql`
 		{
@@ -40,54 +83,35 @@ function Winners({ winners, devpost, hothNum, hothCount }) {
 	const winnerCards = winners.map(item => {
 		const image = winnerImageMap.get(item.image);
 		return (
-			<Grid item key={item.id} xs={12} sm={8} md={6}
-				style={{
-					paddingBottom: theme.spacing(isSmall ? 4 : 8),
-					display: 'flex',
-					flexDirection: 'column'
-				}}>
-				<Img fluid={{ ...image, aspectRatio: 1.5 }} style={{ borderRadius: '14px', marginBottom: '1em' }} />
+			<Grid item key={item.id} xs={12} sm={8} md={6} className={classes.titlegrid} >
+				<Img fluid={{ ...image, aspectRatio: 1.5 }} className={classes.winnerimage} />
 				<hgroup>
 					<Typography variant='h5' component='h2'>{item.title}</Typography>
-					<Typography variant='subtitle1' component='h3'
-						style={{
-							textTransform: 'uppercase',
-							fontSize: '1em',
-							letterSpacing: '.5px'
-						}}
-					>
+					<Typography variant='subtitle1' component='h3' className={classes.winnercategory}>
 						{item.category}
 					</Typography>
 				</hgroup>
-				<Typography variant='body1' style={{ padding: '0.5em 0 1em' }}>
+				<Typography variant='body1' className={classes.winnerdesc}>
 					{item.description}
 				</Typography>
 				<Button variant='contained' disableElevation color="secondary" component='a'
-					href={item.link} target='_blank' rel='noreferrer noopener'
-					style={{ textTransform: 'none', padding: '4px 1.5em', maxWidth: 'fit-content' }}>
+					href={item.link} target='_blank' rel='noreferrer noopener' className={classes.winnerbutton}>
 					See Project
 				</Button>
-			</Grid>
+			</Grid >
 		);
 	});
 
 	return (
-		<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
+		<Container maxWidth='md' className={classes.gallerybody}>
 			<Grid
 				container
 				direction="row"
 				justify="space-between"
 				alignItems="center"
-				style={{
-					marginBottom: theme.spacing(2)
-				}}
+				className={classes.gallerygrid}
 			>
-				<Typography variant='h4' component='h1'
-					style={{
-						fontWeight: theme.typography.fontWeightBold,
-						paddingTop: theme.spacing(isSmall ? 4 : 8),
-						paddingBottom: theme.spacing(isSmall ? 4 : 8)
-					}}>
+				<Typography variant='h4' component='h1' className={classes.gallerytitle}>
 					HOTH {hothNum} Winners 🎉
 				</Typography>
 				<GalleryMenu hothCount={hothCount} />
@@ -99,12 +123,7 @@ function Winners({ winners, devpost, hothNum, hothCount }) {
 				<Button variant='outlined' disableElevation color="secondary" component='a'
 					href={devpost}
 					target='_blank' rel='noreferrer noopener'
-					style={{
-						textTransform: 'none',
-						padding: '4px 1.5em',
-						maxWidth: 'fit-content',
-						marginTop: '2em'
-					}}>
+					className={classes.devpostbutton} >
 					See All HOTH {hothNum} Projects
 				</Button>
 			</Box>
