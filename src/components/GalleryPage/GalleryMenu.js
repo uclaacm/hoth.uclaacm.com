@@ -18,7 +18,9 @@ function GalleryMenu({ hothCount }) {
 	};
 	const menuLinks = [];
 	for (let i = hothCount; i >= 1; i--) {
-		menuLinks.push(<MenuItem onClick={handleClose}><Link to={`/gallery/hoth-${i}`}>HOTH {i}</Link></MenuItem>);
+		menuLinks.push(
+			<MenuItem key={i} onClick={handleClose}><Link to={`/gallery/hoth-${i}`}>HOTH {i}</Link></MenuItem>
+		);
 	}
 
 	return (
