@@ -7,7 +7,7 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
-function GalleryMenu({ hothCount }) {
+function GalleryMenu({ hothNames, galleryLinks }) {
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const open = Boolean(anchorEl);
 	const handleClick = event => {
@@ -17,12 +17,12 @@ function GalleryMenu({ hothCount }) {
 		setAnchorEl(null);
 	};
 	const menuLinks = [];
-	for (let i = hothCount; i >= 1; i--) {
+	hothNames.forEach((hothName, index) => {
+		const galleryLink = galleryLinks[index];
 		menuLinks.push(
-			<MenuItem key={i} onClick={handleClose}><Link to={`/gallery/hoth-${i}`}>HOTH {i}</Link></MenuItem>
+			<MenuItem key={index} onClick={handleClose}><Link to={galleryLink}>{hothName}</Link></MenuItem>
 		);
-	}
-
+	});
 	return (
 		<>
 			<Button
@@ -58,7 +58,8 @@ function GalleryMenu({ hothCount }) {
 }
 
 GalleryMenu.propTypes = {
-	hothCount: PropTypes.number.isRequired
+	hothNames: PropTypes.array.isRequired,
+	galleryLinks: PropTypes.array.isRequired
 };
 
 export default GalleryMenu;

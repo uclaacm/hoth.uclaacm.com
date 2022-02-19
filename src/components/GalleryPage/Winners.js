@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme, isSmall) => ({
 	}
 }));
 
-function Winners({ winners, devpost, hothNum, hothCount }) {
+function Winners({ winners, devpost, hothNames, galleryLinks, hothName }) {
 	const theme = useTheme();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
 	const classes = useStyles(theme, isSmall);
@@ -113,9 +113,9 @@ function Winners({ winners, devpost, hothNum, hothCount }) {
 				className={classes.gallerygrid}
 			>
 				<Typography variant='h4' component='h1' className={classes.gallerytitle}>
-					HOTH {hothNum} Winners 🎉
+					{hothName} Winners 🎉
 				</Typography>
-				<GalleryMenu hothCount={hothCount} />
+				<GalleryMenu hothNames={hothNames} galleryLinks={galleryLinks} />
 			</Grid>
 			<Grid container spacing={8} justify='center'>
 				{winnerCards}
@@ -125,7 +125,7 @@ function Winners({ winners, devpost, hothNum, hothCount }) {
 					href={devpost}
 					target='_blank' rel='noreferrer noopener'
 					className={classes.devpostbutton} >
-					See All HOTH {hothNum} Projects
+					See All {hothName} Projects
 				</Button>
 			</Box>
 		</Container>
@@ -135,8 +135,9 @@ function Winners({ winners, devpost, hothNum, hothCount }) {
 Winners.propTypes = {
 	winners: PropTypes.array.isRequired,
 	devpost: PropTypes.string.isRequired,
-	hothNum: PropTypes.number.isRequired,
-	hothCount: PropTypes.number.isRequired
+	hothNames: PropTypes.array.isRequired,
+	galleryLinks: PropTypes.array.isRequired,
+	hothName: PropTypes.string.isRequired
 };
 
 export default Winners;
