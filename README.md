@@ -14,15 +14,25 @@ There is also hardware available for hackers to check out and hack with.
 
 This website is developed with [Gatsby](https://www.gatsbyjs.org/) and
 [Material UI](https://material-ui.com/), and is a work-in-progress being
-developed by ACM Hack’s Dev Team: Timothy Gu
-[(@TimothyGu)](https://github.com/TimothyGu/), Jamie Liu
-[(@jamieliu386)](https://github.com/jamieliu386/), Timothy Rediehs
-[(@Timthetic)](https://github.com/Timthetic), Jakob Reinwald
-[(@jakobreinwald)](https://github.com/jakobreinwald), Chandra Suresh
-[(@curesh)](https://github.com/curesh),
-Christina Tong [(@christinatong01)](https://github.com/christinatong01),
-Miles Wu [(@milesswu)](https://github.com/milesswu), and Eric Yang
-[(@eric8yang)](https://github.com/eric8yang).
+developed by ACM Hack’s Dev Team: 
+- Jody Lin [(@jodymlin)](https://github.com/jodymlin)
+- Christina Tong [(@christinatong01)](https://github.com/christinatong01)
+- Alex Xia [(@khxia)](https://github.com/khxia)
+- Jakob Reinwald [(@jakobreinwald)](https://github.com/jakobreinwald)
+- Maggie Li [(@maggieelli)](https://github.com/maggieelli)
+- Thomas McGall [(@tmag1)](https://github.com/tmag1)
+- Katelyn Syu [(@katelynsyu)](https://github.com/katelynsyu)
+- Anakin Trotter [(@AnakinTrotter)](https://github.com/AnakinTrotter)
+- Nathan Zhang [(@nathanzzhang)](https://github.com/nathanzzhang)
+
+Past contributors: 
+- Timothy Gu [(@TimothyGu)](https://github.com/TimothyGu/)
+- Jamie Liu [(@jamieliu386)](https://github.com/jamieliu386/)
+- Timothy Rediehs [(@Timthetic)](https://github.com/Timthetic)
+- Galen Wong [(@GalenWong)](https://github.com/GalenWong)
+- Miles Wu [(@milesswu)](https://github.com/milesswu)
+- Chandra Suresh [(@curesh)](https://github.com/curesh)
+- Eric Yang [(@eric8yang)](https://github.com/eric8yang)
 
 ACM Hack is a subcomittee of [ACM @ UCLA](http://www.uclaacm.com/), the largest
 Computer Science student organization in Southern California. Check out [our

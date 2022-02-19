@@ -9,6 +9,8 @@ import IconLink from './IconLink';
 import { ReactComponent as FacebookIcon } from './facebook.svg';
 import { ReactComponent as GitHubIcon } from './github.svg';
 import { ReactComponent as MediumIcon } from './medium.svg';
+import { ReactComponent as InstagramIcon } from './instagram.svg';
+import { ReactComponent as DiscordIcon } from './discord.svg';
 
 const styles = theme => ({
 	container: {
@@ -56,6 +58,8 @@ function Footer({ classes }) {
 					<Grid item xs={12} sm={12} md={4}>
 						<div className={classes.footerText}>Find us on social media</div>
 						<div className={classes.icons}>
+							<IconLink title="Instagram" icon={InstagramIcon} href="https://www.instagram.com/uclahack/" />
+							<IconLink title="Discord" icon={DiscordIcon} href="https://discord.com/invite/MStu2cnBV9" />
 							<IconLink title="Facebook" icon={FacebookIcon} href="https://www.facebook.com/groups/acmhack/" />
 							<IconLink title="GitHub" icon={GitHubIcon} href="https://github.com/uclaacm" />
 							<IconLink title="Medium" icon={MediumIcon} href="https://medium.com/techatucla" />

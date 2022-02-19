@@ -222,8 +222,8 @@ function Banner() {
 						<Grid
 							container
 							direction='column'
-							justify='left'
-							alignItems='left'
+							justify='flex-start'
+							alignItems='flex-start'
 						>
 							{renderInfo(classes)}
 							{smallScreen ?

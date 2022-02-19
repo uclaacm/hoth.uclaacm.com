@@ -2,7 +2,8 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import { Link } from 'gatsby';
+import { Link as GatsbyLink } from 'gatsby';
+import { Link as MUILink } from '@material-ui/core';
 
 import { applicationOpen, applyDeadline } from '../constants.js';
 
@@ -33,11 +34,11 @@ function ButtonBar({ isMobile }) {
 	const classes = useStyles();
 
 	const PoppinLink = ({ ...props }) =>
-		<Button component={Link} role='link' fullWidth={isMobile} className={classes.btn} {...props} />;
+		<Button component={GatsbyLink} role='link' fullWidth={isMobile} className={classes.btn} {...props} />;
 
 	const BorderLink = ({ ...props }) =>
 		<Button
-			component={Link}
+			component={MUILink}
 			role='link'
 			className={classes.btn}
 			style={{ margin: 10 }}

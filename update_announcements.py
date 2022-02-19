@@ -10,7 +10,7 @@ import sys
 import os
 
 # User whitelist and issue number we are looking for
-user_whitelist = ['jodymlin', 'khxia', 'jakobreinwald', 'christinatong01', 'milesswu']
+user_whitelist = ['jodymlin', 'khxia', 'jakobreinwald', 'christinatong01', 'milesswu', 'EinarBalan']
 # HOTH repository issues accessed via Github API
 repo_issues = "https://api.github.com/repos/uclaacm/hoth.uclaacm.com/issues"
 
@@ -36,6 +36,7 @@ valid_comments = []
 for index, element in enumerate(announcements_json):
     if element['user']['login'] in user_whitelist:
         body = element['body']
+				# If there is no partition, subject will contain the entire string
         subject, partition, comment = body.partition('(Subject) ')
         comment = {'id': index, 'subject': subject, 'body': comment, 'timestamp': element['created_at']}
         valid_comments.append(comment)
