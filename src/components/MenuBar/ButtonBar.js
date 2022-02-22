@@ -15,11 +15,11 @@ const useStyles = makeStyles(theme => {
 		},
 		borderBtn: {
 			margin: 10,
+			color: '#FFFFFF',
 			transition: theme.transitions.create(['color', 'background'], {
 				duration: theme.transitions.duration.complex
 			}),
 			'&:hover': {
-				color: '#FFFFFF',
 				background: '#DB99FD'
 			},
 			[theme.breakpoints.down(menuBarAdaptiveThreshold)]: {
@@ -40,8 +40,8 @@ function ButtonBar({ isMobile }) {
 		<Button
 			component={MUILink}
 			role='link'
-			className={classes.btn}
-			style={{ margin: 10 }}
+			className={classes.borderBtn}
+			style={{ margin: 10, textDecoration: 'none' }}
 			variant='contained'
 			{...props}
 			color='secondary'
