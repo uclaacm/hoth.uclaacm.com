@@ -39,7 +39,8 @@ const workshopSchedule = [
 				duration: '30 min',
 				location: 'Covel Grand Horizon Terrace',
 				description: `What's the best way to start off a hackathon?
-				Food! And good company! All of which we've got right here.`
+				Food! And good company! All of which we've got right here. Enjoy a 
+				breakfast of champions from Noah's Bagels as we begin the hackathon.`
 			},
 			{
 				name: 'Hacking Begins',
@@ -80,9 +81,10 @@ const workshopSchedule = [
 				duration: '60 min',
 				location: 'Covel Grand Horizon Terrace',
 				description: `Coding is done best on a full stomach. 
-				Come one, come all—we feast ;)! Do feel free to keep working through lunch,
-				though. The only thing better than getting free food is having coding
-				epiphanies while eating the free food.`
+				Come one, come all—we feast ;)! For lunch, we'll be serving In-n-Out with
+				alternate options if you have dietary restrictions. Do feel free to 
+				continue working through lunch, though. The only thing better than 
+				getting free food is having coding epiphanies while eating the free food.`
 			},
 			{
 				name: 'JEDI Allyship Space',
@@ -105,9 +107,10 @@ const workshopSchedule = [
 				duration: '60 min',
 				location: 'Covel Grand Horizon Terrace',
 				description: `Do you know what's better than one free meal? Two
-				free meals! And you've earned it! It's time to eat and recoup for your
-				last sprint to the finish line! Just like lunch, you can also work during
-				this time.`
+				free meals! And you've earned it! It's time to gorge yourself on pizza from
+				Papa John's while you recoup for your last sprint to the finish line! 
+				Just like lunch, there will be alternate food options if you have dietary
+				restrictions, and you can also work during this time.`
 			}
 		]
 	},
