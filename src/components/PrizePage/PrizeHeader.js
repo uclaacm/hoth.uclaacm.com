@@ -1,21 +1,26 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import useTheme from '@material-ui/core/styles/useTheme';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Container from '@material-ui/core/Container';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+	title: {
+		fontWeight: theme.typography.fontWeightBold,
+		paddingTop: theme.spacing(11),
+		[theme.breakpoints.down('sm')]: {
+			paddingTop: theme.spacing(4)
+		},
+		paddingBottom: theme.spacing(4)
+	}
+}));
 
 export default function PrizeHeader() {
-	const theme = useTheme();
-	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
-
+	const classes = useStyles();
 	return (
-		<>
-			<Typography variant='h4' component='h1'
-				style={{ fontWeight: theme.typography.fontWeightBold,
-					paddingTop: theme.spacing(isSmall ? 4 : 8),
-					paddingBottom: theme.spacing(4),
-					textAlign: 'center' }}>
+		<Container maxWidth='md'>
+			<Typography variant='h4' component='h1' className={classes.title}>
 				Prize Tracks
 			</Typography>
-		</>
+		</Container>
 	);
 }
