@@ -54,21 +54,21 @@ export default function HothDescription() {
 
 	const data = useStaticQuery(graphql`
 		query {
-			image1: file(relativePath: {eq: "hoth-description/IMG_1914.jpg"}) {
+			actionShot1: file(relativePath: {eq: "hoth-description/IMG_1914.jpg"}) {
 				childImageSharp {
 					fluid {
 						...GatsbyImageSharpFluid_withWebp
 					}
 				}
 			}
-			image2: file(relativePath: {eq: "hoth-description/IMG_2030.jpg"}) {
+			actionShot2: file(relativePath: {eq: "hoth-description/IMG_2030.jpg"}) {
 				childImageSharp {
 					fluid {
 						...GatsbyImageSharpFluid_withWebp
 					}
 				}
 			}
-			image3: file(relativePath: {eq: "hoth-description/hack_motif_applied.jpg"}) {
+			hackBanner: file(relativePath: {eq: "hoth-description/hack_motif_applied.jpg"}) {
 				childImageSharp {
 					fluid {
 						...GatsbyImageSharpFluid_withWebp
@@ -89,7 +89,7 @@ export default function HothDescription() {
 				</hgroup>
 				<Grid container spacing={isSmall ? 3 : 8} alignItems='center' justify='center'>
 					<LeftGridItem>
-						<SideImage fluidImage={data.image2.childImageSharp.fluid}/>
+						<SideImage fluidImage={data.actionShot1.childImageSharp.fluid}/>
 					</LeftGridItem>
 					<RightGridItem>
 						<Typography variant='body1' style={{ paddingBottom: isSmall ? theme.spacing(2) : 0 }}>
@@ -116,14 +116,14 @@ export default function HothDescription() {
 						</Typography>
 					</LeftGridItem>
 					<RightGridItem>
-						<SideImage fluidImage={data.image2.childImageSharp.fluid} width='100%' style={{
+						<SideImage fluidImage={data.actionShot2.childImageSharp.fluid} width='100%' style={{
 							borderRadius: '14px'
 						}}/>
 					</RightGridItem>
 				</Grid>
 				<Grid container spacing={isSmall ? 3 : 8} alignItems='center' justify='center'>
 					<LeftGridItem>
-						<SideImage fluidImage={data.image3.childImageSharp.fluid} width='100%' style={{
+						<SideImage fluidImage={data.hackBanner.childImageSharp.fluid} width='100%' style={{
 							borderRadius: '14px'
 						}}/>
 					</LeftGridItem>
