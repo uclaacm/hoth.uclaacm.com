@@ -16,13 +16,10 @@ function GalleryMenu({ hothNames, galleryLinks }) {
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
-	const menuLinks = [];
-	hothNames.forEach((hothName, index) => {
-		const galleryLink = galleryLinks[index];
-		menuLinks.push(
-			<MenuItem key={index} onClick={handleClose}><Link to={galleryLink}>{hothName}</Link></MenuItem>
-		);
-	});
+	const menuLinks = hothNames.map((hothName, index) =>
+		<MenuItem key={index} onClick={handleClose}>
+			<Link to={galleryLinks[index]}>{hothName}</Link>
+		</MenuItem>);
 	return (
 		<>
 			<Button

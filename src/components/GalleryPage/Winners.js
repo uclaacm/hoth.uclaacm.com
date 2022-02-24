@@ -62,7 +62,7 @@ function Winners({ winners, devpost, hothNames, galleryLinks, hothName }) {
 
 	const data = useStaticQuery(graphql`
 		{
-			winnerImages: allFile(filter: {relativePath: {glob:"gallery-winners/*"}}) {
+			winnerImages: allFile(filter: {relativePath:  {regex: "/gallery-winners\/([0-9A-Za-z]+\/?)+/"}}) {
 				nodes {
 					relativePath
 					childImageSharp {

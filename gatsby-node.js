@@ -47,14 +47,16 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
           }
 	  }
     `);
+
 	const { hothWinners, devposts, allHothNames, allGalleryLinks } = getHothWinners(hothData.data.allYaml.nodes);
+	const hothNames = Array.from(allHothNames.values());
+	const galleryLinks = Array.from(allGalleryLinks.values());
+
 	for (const key of hothWinners.keys()) {
 		const hothName = allHothNames.get(key);
 		const winnerInfo = hothWinners.get(key);
 		const devpostLink = devposts.get(key);
 		const galleryLink = allGalleryLinks.get(key);
-		const hothNames = Array.from(allHothNames.values());
-		const galleryLinks = Array.from(allGalleryLinks.values());
 		// This is an absurd number of props and there is probably a much
 		// better way to do this that somebody can figure out at a later time
 		// On the bright side it is now easier to change names and links
