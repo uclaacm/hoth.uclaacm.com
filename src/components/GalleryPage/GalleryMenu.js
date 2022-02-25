@@ -17,7 +17,7 @@ function GalleryMenu({ hothNames, galleryLinks }) {
 		setAnchorEl(null);
 	};
 	const menuLinks = hothNames.map((hothName, index) =>
-		<MenuItem key={index} onClick={handleClose}>
+		<MenuItem key={`menu-link-${index}`} onClick={handleClose}>
 			<Link to={galleryLinks[index]}>{hothName}</Link>
 		</MenuItem>);
 	return (
