@@ -61,12 +61,15 @@ function Workshop({ title, youtube, author, description, readme, slides }) {
 					<YouTubeIcon color="secondary" className={classes.icon} />
 					Video
 				</Button>
-				<Button variant='text' disableElevation color="secondary" component='a'
-					href={readme} target='_blank' rel='noreferrer noopener'
-					className={classes.button}>
-					<GitHubIcon color="secondary" className={classes.icon} />
-					README
-				</Button>
+				{
+					readme !== null &&
+					<Button variant='text' disableElevation color="secondary" component='a'
+						href={readme} target='_blank' rel='noreferrer noopener'
+						className={classes.button}>
+						<GitHubIcon color="secondary" className={classes.icon} />
+						README
+					</Button>
+				}
 				<Button variant='text' disableElevation color="secondary" component='a'
 					href={slides} target='_blank' rel='noreferrer noopener'
 					className={classes.button}>
@@ -82,7 +85,7 @@ Workshop.propTypes = {
 	youtube: PropTypes.string.isRequired,
 	author: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired,
-	readme: PropTypes.string.isRequired,
+	readme: PropTypes.string,
 	slides: PropTypes.string.isRequired
 };
 
