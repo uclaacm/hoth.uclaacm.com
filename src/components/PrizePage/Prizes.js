@@ -4,9 +4,9 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 import grey from '@material-ui/core/colors/grey';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import { Typography } from '@material-ui/core';
 import Img from 'gatsby-image/withIEPolyfill';
 
 import { ReactComponent as Squiggle } from './images/squiggle.svg';
@@ -16,38 +16,48 @@ const allPrizes = [
 	{
 		img: 'best-overall',
 		track: 'Best Overall',
-		prize: '$240 Amazon Gift Card'
+		prize: '$240 Amazon Gift Card',
+		caption: '1 Echo Studio'
 	},
 	{
 		img: 'health-wellness',
 		track: 'Health and Wellness',
-		prize: '$120 Amazon Gift Card'
+		prize: '$120 Amazon Gift Card',
+		caption: '1 Massage Gun'
 	},
 	{
 		img: 'sustainability',
 		track: 'Sustainability',
-		prize: '$120 Amazon Gift Card'
+		prize: '$120 Amazon Gift Card',
+		caption: '4 Yeti Mugs'
 	},
 	{
 		img: 'education',
 		track: 'Education',
-		prize: '$120 Amazon Gift Card'
+		prize: '$120 Amazon Gift Card',
+		caption: '4 Laptop Stands'
 	},
 	{
 		img: 'equity',
 		track: 'Equity',
-		prize: '$120 Amazon Gift Card'
+		prize: '$120 Amazon Gift Card',
+		caption: '4 Mini Phone Printers'
 	},
 	{
 		img: 'you-do-you',
 		track: 'You Do You',
-		prize: '$120 Amazon Gift Card'
+		prize: '$120 Amazon Gift Card',
+		caption: '4 Butt Cushions'
 	}
 ];
 
 const useStyles = makeStyles(theme => ({
+	description: {
+		padding: theme.spacing(1, 0)
+	},
 	prizeGrid: {
 		textAlign: 'center',
+		paddingTop: theme.spacing(4),
 		paddingBottom: theme.spacing(15)
 	},
 	prizeCard: {
@@ -127,6 +137,14 @@ export default function Prizes() {
 	return (
 		<>
 			<Container maxWidth='md'>
+				<Typography align='center' gutterBottom>
+					Below are the total prize amounts for each category :)
+				</Typography>
+				<Typography align='center' gutterBottom>
+					Due to current restrictions with the CS Department we are unable
+					to give the actual prizes, so we have left some recommendations
+					that your team can buy when you win 😎
+				</Typography>
 				<Grid container spacing={3} className={classes.prizeGrid}>
 					{allPrizes.map(prize =>
 						<Grid item xs={12} sm={6} md={4} key={prize.track}>
@@ -154,7 +172,22 @@ export default function Prizes() {
 											{prize.prize}
 										</Typography>
 									</Box>
-									<Img fixed={prizeImageMap.get(prize.img)} style={{ height: '128px' }} />
+									<Img
+										fixed={prizeImageMap.get(prize.img)}
+										style={{
+											height: '128px',
+											borderRadius: '8px',
+											marginBottom: '16px'
+										}}/>
+									<Typography style={{ color: '#a1a1a1',
+										fontSize: '14px',
+										textTransform: 'uppercase' }}
+									>
+										which can buy
+									</Typography>
+									<Typography>
+										{prize.caption}
+									</Typography>
 								</Box>
 							</Box>
 						</Grid>)}
