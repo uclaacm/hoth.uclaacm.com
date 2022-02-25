@@ -10,6 +10,7 @@ import Link from '@material-ui/core/Link';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import PropTypes from 'prop-types';
 
 import { useUppercase } from '../shared-style';
 
@@ -39,6 +40,12 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
+
+const LeftGridItem = ({ children }) => <Grid item xs={12} sm={8} md={6}>{children}</Grid>;
+const RightGridItem = ({ children }) => <Grid item sm={10} md={6}>{children}</Grid>;
+
+const SideImage = ({ fluidImage }) => <Img fluid={fluidImage} width='100%' style={{ borderRadius: '14px' }}/>;
+
 export default function HothDescription() {
 	const theme = useTheme();
 	const classes = useStyles();
@@ -47,14 +54,21 @@ export default function HothDescription() {
 
 	const data = useStaticQuery(graphql`
 		query {
-			image1: file(relativePath: {eq: "hoth-description/IMG_1914.jpg"}) {
+			actionShot1: file(relativePath: {eq: "hoth-description/IMG_1914.jpg"}) {
 				childImageSharp {
 					fluid {
 						...GatsbyImageSharpFluid_withWebp
 					}
 				}
 			}
-			image2: file(relativePath: {eq: "hoth-description/IMG_2030.jpg"}) {
+			actionShot2: file(relativePath: {eq: "hoth-description/IMG_2030.jpg"}) {
+				childImageSharp {
+					fluid {
+						...GatsbyImageSharpFluid_withWebp
+					}
+				}
+			}
+			hackBanner: file(relativePath: {eq: "hoth-description/hack_motif_applied.jpg"}) {
 				childImageSharp {
 					fluid {
 						...GatsbyImageSharpFluid_withWebp
@@ -74,12 +88,10 @@ export default function HothDescription() {
 					}}>Hack on the Hill?</Typography>
 				</hgroup>
 				<Grid container spacing={isSmall ? 3 : 8} alignItems='center' justify='center'>
-					<Grid item xs={12} sm={8} md={6}>
-						<Img fluid={data.image1.childImageSharp.fluid} width='100%' style={{
-							borderRadius: '14px'
-						}}/>
-					</Grid>
-					<Grid item sm={10} md={6}>
+					<LeftGridItem>
+						<SideImage fluidImage={data.actionShot1.childImageSharp.fluid}/>
+					</LeftGridItem>
+					<RightGridItem>
 						<Typography variant='body1' style={{ paddingBottom: isSmall ? theme.spacing(2) : 0 }}>
 							Hack on the Hill (HOTH 9) is a{' '}
 							<strong>12-hour beginner-friendly</strong>
@@ -88,10 +100,10 @@ export default function HothDescription() {
 							portion in Covel Grand Horizon and the virtual portion on the
 							{' '}<Link href='https://discord.com/invite/MStu2cnBV9'>Hack Discord</Link>.
 						</Typography>
-					</Grid>
+					</RightGridItem>
 				</Grid>
 				<Grid container spacing={ isSmall ? 3 : 8 } wrap='wrap-reverse' justify='center' alignItems='center'>
-					<Grid item sm={10} md={6}>
+					<LeftGridItem>
 						<Typography
 							variant='body1'
 							component='p'
@@ -102,14 +114,43 @@ export default function HothDescription() {
 							{` `}<strong>fun</strong> social activities.
 							There will be <strong>prizes</strong> for the best hacks!
 						</Typography>
-					</Grid>
-					<Grid item xs={12} sm={8} md={6}>
-						<Img fluid={data.image2.childImageSharp.fluid} width='100%' style={{
+					</LeftGridItem>
+					<RightGridItem>
+						<SideImage fluidImage={data.actionShot2.childImageSharp.fluid} width='100%' style={{
 							borderRadius: '14px'
 						}}/>
-					</Grid>
+					</RightGridItem>
+				</Grid>
+				<Grid container spacing={isSmall ? 3 : 8} alignItems='center' justify='center'>
+					<LeftGridItem>
+						<SideImage fluidImage={data.hackBanner.childImageSharp.fluid} width='100%' style={{
+							borderRadius: '14px'
+						}}/>
+					</LeftGridItem>
+					<RightGridItem>
+						<Typography variant='body1' style={{ paddingBottom: isSmall ? theme.spacing(2) : 0 }}>
+							Hack on the Hill is an event hosted by ACM Hack.
+							A student run organization, Hack&apos;s mission is to help the community
+							to apply their creativity and build amazing things with code.
+							Check out our
+							{' '}<Link href='https://hack.uclaacm.com/'>website</Link>
+							{' '}to find out more about our quarterly workshops and other events!
+						</Typography>
+					</RightGridItem>
 				</Grid>
 			</Container>
 		</Box>
 	);
 }
+
+SideImage.propTypes = {
+	fluidImage: PropTypes.object
+};
+
+LeftGridItem.propTypes = {
+	children: PropTypes.object
+};
+
+RightGridItem.propTypes = {
+	children: PropTypes.object
+};
