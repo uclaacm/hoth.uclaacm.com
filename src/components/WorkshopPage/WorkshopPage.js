@@ -137,7 +137,7 @@ const workshops = [
 				first hybrid hackathon. We'll also give you some tips on how to survive and thrive during
 				this year's HOTH! Have fun, good luck, and we believe in you!`,
 				youtube: 'https://youtu.be/GskV5qMOpkE',
-				readme: '',
+				readme: null,
 				slides: 'https://docs.google.com/presentation/d/1LNYFecHI-U5BGY9_OdqCTfPSFtq6wmDw9gwLld3tIVY/edit?usp=sharing'
 			},
 			{
@@ -161,7 +161,7 @@ const workshops = [
 				this summary use the word 'databases' so much? Find out the answers to all of these
 				questions in this workshop! We'll even run through adding, retrieving, and displaying
 				data values using Firebase, a NoSQL cloud database provided by Google!`,
-				youtube: 'https://youtu.be/s1rk4_C38cg',
+				youtube: 'https://youtu.be/1qTyhlzLT-4',
 				readme: 'https://github.com/uclaacm/hoth9-workshops/tree/main/intro-to-databases',
 				slides: 'https://docs.google.com/presentation/d/1hDHHENCtzvLnjwS8mYuapRBkFIEbIU_g7SKLQwU6Vnc/edit?usp=sharing'
 			},
@@ -174,7 +174,7 @@ const workshops = [
 				and finding assets. At the end, we'll introduce you to some resources for
 				you to look at as you start diving deeper into developing your game.`,
 				youtube: 'https://youtu.be/D_mbel-Q5_0',
-				readme: '',
+				readme: null,
 				slides: 'https://docs.google.com/presentation/d/1fjDNeCgPOvp4xe2yMorYeOHJZrXBI7NZ8eqSt9Fm-0Q/edit#slide=id.p'
 			},
 			{
@@ -185,7 +185,7 @@ const workshops = [
 				tricks to make your design absolutely bomb and give you guys some extra resources
 				to reference.`,
 				youtube: 'https://youtu.be/TxWxpsna2Us',
-				readme: '',
+				readme: null,
 				slides: 'https://www.figma.com/file/9wDd7hY9OvRRETh8Gt91fF/HOTH-Workshop?node-id=29%3A32'
 			},
 			{
@@ -195,7 +195,7 @@ const workshops = [
 				presented to you by ACM AI. We’ll briefly introduce what Machine Learning is,
 				the theory behind it, and how you can apply it to your own hackathon project.`,
 				youtube: 'https://youtu.be/byTbOGoAbRI',
-				readme: '',
+				readme: null,
 				slides: 'https://docs.google.com/presentation/d/15iGiw78UcoYgqZZR7BHfVzRGgzhXFz8Imok-OwMTWXQ/edit?usp=sharing'
 			}
 		]
