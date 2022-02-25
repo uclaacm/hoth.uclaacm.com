@@ -28,13 +28,13 @@ function Announcement({ subject, timestamp, body }) {
 
 	return (
 		<Container>
-			<Typography variant='h5' component='h2' className={classes.subject}>
+			<Typography variant='h5' className={classes.subject}>
 				{subject}
 			</Typography>
-			<Typography variant='subtitle1' component='subtitle' className={classes.timestamp}>
+			<Typography variant='subtitle1' className={classes.timestamp}>
                 Posted on {date} at {time} PST
 			</Typography>
-			<Typography variant='body2' component='body' className={classes.body}>
+			<Typography variant='body2' className={classes.body}>
 				{body.trim()}
 			</Typography>
 		</Container>
