@@ -28,7 +28,7 @@ function Announcement({ subject, timestamp, body }) {
 
 	return (
 		<Container>
-			<Typography variant='h5' className={classes.subject}>
+			<Typography variant='h5' component='h2' className={classes.subject}>
 				{subject}
 			</Typography>
 			<Typography variant='subtitle1' className={classes.timestamp}>
