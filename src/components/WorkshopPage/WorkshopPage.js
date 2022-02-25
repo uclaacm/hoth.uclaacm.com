@@ -190,7 +190,7 @@ const workshops = [
 			},
 			{
 				title: 'Intro to Machine Learning',
-				author: 'Caden Davis, Jason Jewik, andbu Nisha McNealis (ACM AI)',
+				author: 'Caden Davis, Jason Jewik, and Nisha McNealis (ACM AI)',
 				description: `This workshop is an introduction to Machine Learning
 				presented to you by ACM AI. We’ll briefly introduce what Machine Learning is,
 				the theory behind it, and how you can apply it to your own hackathon project.`,
