@@ -55,7 +55,7 @@ function Event({ name, subtitles, description }) {
 			return null;
 		});
 		renderSubtitle.push(
-			<Box className={classes.subtitle} key={`$subtitle-${i}`}>
+			<Box className={classes.subtitle} key={`subtitle-${i}`}>
 				{renderChunk}
 			</Box>
 		);
