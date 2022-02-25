@@ -9,8 +9,7 @@ import data from '../../data/announcements.json';
 const useStyles = makeStyles(theme => ({
 	title: {
 		fontWeight: 'bold',
-		paddingTop: theme.spacing(11),
-		paddingBottom: theme.spacing(4)
+		paddingTop: theme.spacing(11)
 	},
 	heading: {
 		paddingTop: theme.spacing(4),
