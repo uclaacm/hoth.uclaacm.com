@@ -132,7 +132,7 @@ const workshops = [
 		elements: [
 			{
 				title: 'Hackathon 101',
-				author: 'Rejeshwari Jadhav',
+				author: 'Rajeshwari Jadhav',
 				description: `Start here for an idea of what Hack on the Hill 9 will offer as ACM Hack's
 				first hybrid hackathon. We'll also give you some tips on how to survive and thrive during
 				this year's HOTH! Have fun, good luck, and we believe in you!`,
