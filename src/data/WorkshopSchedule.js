@@ -39,7 +39,7 @@ const workshopSchedule = [
 				duration: '30 min',
 				location: 'Covel Grand Horizon Terrace',
 				description: `What's the best way to start off a hackathon?
-				Food! And good company! All of which we've got right here. Enjoy a 
+				Food! And good company! All of which we've got right here. Enjoy a
 				breakfast of champions from Noah's Bagels as we begin the hackathon.`
 			},
 			{
@@ -58,12 +58,7 @@ const workshopSchedule = [
 				drop your best meme in the #memes channel and get a raffle entry
 				for participating! This is an all-day event, so take your time in coming up
 				with that singular meme-tastic work of art.`
-			}
-		]
-	},
-	{
-		startTime: getDateObj('26', '09:30:00'),
-		events: [
+			},
 			{
 				name: 'Team Formation',
 				duration: '30 min',
@@ -80,10 +75,10 @@ const workshopSchedule = [
 				name: 'Lunch',
 				duration: '60 min',
 				location: 'Covel Grand Horizon Terrace',
-				description: `Coding is done best on a full stomach. 
+				description: `Coding is done best on a full stomach.
 				Come one, come all—we feast ;)! For lunch, we'll be serving In-n-Out with
-				alternate options if you have dietary restrictions. Do feel free to 
-				continue working through lunch, though. The only thing better than 
+				alternate options if you have dietary restrictions. Do feel free to
+				continue working through lunch, though. The only thing better than
 				getting free food is having coding epiphanies while eating the free food.`
 			},
 			{
@@ -91,10 +86,10 @@ const workshopSchedule = [
 				duration: '45 min',
 				location: 'Covel Grand Horizon',
 				description: `We'll be having a guided discussion about topics
-				related to the Netflix documentary 'The Social Dilemma' 
-				and the ethics of technology from the morality of data collection 
-				to the environmental impact of tech to algorithmic bias in AI. 
-				Get a raffle entry just for attending and a second one for participating. 
+				related to the Netflix documentary 'The Social Dilemma'
+				and the ethics of technology from the morality of data collection
+				to the environmental impact of tech to algorithmic bias in AI.
+				Get a raffle entry just for attending and a second one for participating.
 				Sounds like a bargain, no?`
 			}
 		]
@@ -108,7 +103,7 @@ const workshopSchedule = [
 				location: 'Covel Grand Horizon Terrace',
 				description: `Do you know what's better than one free meal? Two
 				free meals! And you've earned it! It's time to gorge yourself on pizza from
-				Papa John's while you recoup for your last sprint to the finish line! 
+				Papa John's while you recoup for your last sprint to the finish line!
 				Just like lunch, there will be alternate food options if you have dietary
 				restrictions, and you can also work during this time.`
 			}

@@ -44,15 +44,15 @@ const workshops = [
 		type: 'Web Development',
 		elements: [
 			{
-				title: 'Intro to HTML',
-				author: 'Jakob Reinwald',
+				title: 'Intro to Frontend',
+				author: 'Rajeswhari Jadhav',
 				description: `HTML (HyperText Markup Language) is a fancy way of saying text
 				with extra tags that describe the structure and the content of a web page.
 				Historically, HTML was much more limited, but is now able to do much more,
-				such as images. Let’s get started with some HTML!`,
-				youtube: 'https://youtu.be/qQy8lwOHkBY',
-				readme: 'https://github.com/uclaacm/hoth8-intro-to-html-css-js/blob/main/README.md',
-				slides: 'https://docs.google.com/presentation/d/1Y9rvAXjyeZOADBceqlAr9eeakO7URGWwu4QRulgvhSs/edit?usp=sharing'
+				such as images. Let's get started with some Frontend in HTML!`,
+				youtube: 'https://youtu.be/-rg6fJKJ77c',
+				readme: 'https://github.com/uclaacm/hoth9-workshops/tree/main/intro-to-frontend',
+				slides: 'https://docs.google.com/presentation/d/12HhnDSDsRA8VA3x9axXg5uHfjZveNdRJ7tGE3kMNBts/edit?usp=sharing'
 			},
 			{
 				title: 'Intro to CSS',
@@ -117,9 +117,9 @@ const workshops = [
 			{
 				title: 'Intro to React Native',
 				author: 'James Wu',
-				description: `Ever wanted to make your own mobile app? Let’s explore React Native—a cross
-				platform development tool that’s behind Instagram, Facebook, Discord, and many other
-				iconic names. In this workshop, we’ll learn how to create our own app from scratch,
+				description: `Ever wanted to make your own mobile app? Let's explore React Native—a cross
+				platform development tool that's behind Instagram, Facebook, Discord, and many other
+				iconic names. In this workshop, we'll learn how to create our own app from scratch,
 				going over views, components, functionality, and more so that you can be a native of React! `,
 				youtube: 'https://youtu.be/TYvmyMJc3PQ',
 				readme: 'https://github.com/uclaacm/hoth9-workshops/tree/main/intro-to-react-native',
@@ -169,7 +169,7 @@ const workshops = [
 				title: 'Intro to Game Development',
 				author: 'Peter Sutarjo (ACM Studio)',
 				description: `In this workshop, we'll go over how to start thinking about your
-				prospective video game, such as whether you plan to create a visual novel or a 
+				prospective video game, such as whether you plan to create a visual novel or a
 				platformer. We'll give you some tips to succeed such as determining scope
 				and finding assets. At the end, we'll introduce you to some resources for
 				you to look at as you start diving deeper into developing your game.`,
@@ -192,7 +192,7 @@ const workshops = [
 				title: 'Intro to Machine Learning',
 				author: 'Caden Davis, Jason Jewik, and Nisha McNealis (ACM AI)',
 				description: `This workshop is an introduction to Machine Learning
-				presented to you by ACM AI. We’ll briefly introduce what Machine Learning is,
+				presented to you by ACM AI. We'll briefly introduce what Machine Learning is,
 				the theory behind it, and how you can apply it to your own hackathon project.`,
 				youtube: 'https://youtu.be/byTbOGoAbRI',
 				readme: null,
