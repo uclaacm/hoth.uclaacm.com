@@ -1,5 +1,11 @@
 [
     {
+        "id": 2,
+        "subject": "Breakfast Updates",
+        "body": "Hello Hackers! For those of you who haven't gotten your breakfast item yet, we are expecting to be able to serve you around 10am! Until then feel free fuel up on coffee on the Terrace \u2615",
+        "timestamp": "2022-02-26T17:16:44Z"
+    },
+    {
         "id": 1,
         "subject": "Opening ceremony starts soon!",
         "body": "If you are at home, here is the zoom link: https://ucla.zoom.us/j/91728029021?pwd=N2EwT3FNVHR4YjljRW9JaVZCc3NXQT09",
