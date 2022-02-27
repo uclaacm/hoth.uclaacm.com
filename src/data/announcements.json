@@ -1,5 +1,11 @@
 [
     {
+        "id": 5,
+        "subject": "Submissions are due soon!",
+        "body": "We will have a 15 minute buffer window for technical difficulties by 9:15 PM, but after this submissions will no longer be accepted. In the meantime, you can relax and stay until the closing ceremony!",
+        "timestamp": "2022-02-27T04:44:40Z"
+    },
+    {
         "id": 4,
         "subject": "Project submissions are due at 9:00 P.M. on Devpost (hoth9.devpost.com)",
         "body": "Start wrapping up and preparing to submit!",
