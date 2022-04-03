@@ -13,9 +13,12 @@ const scheduleAvailable = true;
 
 const useStyles = makeStyles(theme => ({
 	title: {
-		fontWeight: 'bold',
+		fontWeight: theme.typography.fontWeightBold,
 		paddingTop: theme.spacing(11),
-		paddingBottom: theme.spacing(scheduleAvailable ? 4 : 11)
+		[theme.breakpoints.down('sm')]: {
+			paddingTop: theme.spacing(4)
+		},
+		paddingBottom: theme.spacing(4)
 	},
 	note: {
 		color: '#858585',
@@ -32,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 const SchedulePage = () => {
 	const classes = useStyles();
 	return <Container maxWidth='md'>
-		<Typography align='left' component='h1' variant='h4' className={classes.title}>
+		<Typography align='left' variant='h4' component='h1' className={classes.title}>
 			Schedule
 		</Typography>
 		<Typography align='left' variant='subtitle1' className={classes.note}>
