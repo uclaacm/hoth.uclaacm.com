@@ -42,6 +42,18 @@ module.exports = {
 		// To learn more, visit: https://gatsby.dev/offline
 		// 'gatsby-plugin-offline',
 		'gatsby-plugin-material-ui',
-		'gatsby-plugin-acmhack-svgr'
+		'gatsby-plugin-acmhack-svgr',
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `./src/data/`
+			}
+		},
+		{
+			resolve: `gatsby-transformer-yaml`,
+			options: {
+				typeName: `Yaml` // a fixed string
+			}
+		}
 	]
 };

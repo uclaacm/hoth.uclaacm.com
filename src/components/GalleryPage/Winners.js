@@ -9,72 +9,60 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import useTheme from '@material-ui/core/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import PropTypes from 'prop-types';
+import GalleryMenu from '../../components/GalleryPage/GalleryMenu';
+import { makeStyles } from '@material-ui/core/styles';
 
-const winners = [
-	{
-		title: 'Nudge',
-		category: 'Best Overall Hack',
-		description: `Nudge is the social self-care habit tracker you never knew you needed. Show friends you care by 
-		sending them personalized nudges to keep up with healthy habits. Grow nudges into deeper conversations.`,
-		link: 'https://devpost.com/software/nudge-wprc72',
-		id: 'nudge'
+const useStyles = makeStyles((theme, isSmall) => ({
+	titlegrid: {
+		paddingBottom: theme.spacing(isSmall ? 4 : 8),
+		display: 'flex',
+		flexDirection: 'column'
 	},
-	{
-		title: 'Dusk to Dawn',
-		category: 'Best Design',
-		description: `Being alone and socially-deprived during quarantine makes each day quite monotonous. Dusk to 
-		Dawn aims to help by allowing users to wake up and fall asleep to voice messages sent by friends.`,
-		link: 'https://devpost.com/software/dusk-to-dawn',
-		id: 'dusktodawn'
+	winnerimage: {
+		borderRadius: '14px',
+		marginBottom: '1em'
 	},
-	{
-		title: 'Clothes With Care',
-		category: 'Best Mobile Hack',
-		description: `Our app provides the platform for a neighborhood clothes exchange program, enabling users to 
-		skip the hassle, financial obstacles, and environmental impact of buying new clothes.`,
-		link: 'https://devpost.com/software/clothes-with-care',
-		id: 'clotheswithcare'
+	winnercategory: {
+		textTransform: 'uppercase',
+		fontSize: '1em',
+		letterSpacing: '.5px'
 	},
-	{
-		title: 'EyeMotion',
-		category: 'Best Web Hack',
-		description: `EyeMotion is a meditation app that analyzes eye movement to provide personalized feedback about
-		 the quality of one's meditation, such as by detecting restlessness, anxiety, or negative emotion.`,
-		link: 'https://devpost.com/software/eyemotion',
-		id: 'eyemotion'
+	winnerdesc: {
+		padding: '0.5em 0 1em'
 	},
-	{
-		title: 'EmoSign',
-		category: 'Best Web Hack',
-		description: `To translate sign to language. To translate text to emotion. To connect us with people who need
-		 assistance in communication`,
-		link: 'https://devpost.com/software/emosign',
-		id: 'emosign'
+	winnerbutton: {
+		textTransform: 'none',
+		padding: '4px 1.5em',
+		maxWidth: 'fit-content'
 	},
-	{
-		title: 'Mammal Mayhem',
-		category: 'Best Game',
-		description: `Mammal Mayhem is a cutesy game designed to provide casual relief to its players.`,
-		link: 'https://devpost.com/software/mammal-mayhem',
-		id: 'mammalmayhem'
+	gallerybody: {
+		marginBottom: theme.spacing(8)
 	},
-	{
-		title: 'Reassure',
-		category: 'You Do You',
-		description: `Ever had a trouble and not been able to share it? Ever just needed to vent a bit? Then you just
-		 might love Reassure! With Reassure, you can anonymously disclose your troubles and receive support.`,
-		link: 'https://devpost.com/software/reassure',
-		id: 'reassure'
+	gallerygrid: {
+		marginBottom: theme.spacing(2)
+	},
+	gallerytitle: {
+		fontWeight: theme.typography.fontWeightBold,
+		paddingTop: theme.spacing(isSmall ? 4 : 8),
+		paddingBottom: theme.spacing(isSmall ? 4 : 8)
+	},
+	devpostbutton: {
+		textTransform: 'none',
+		padding: '4px 1.5em',
+		maxWidth: 'fit-content',
+		marginTop: '2em'
 	}
-];
+}));
 
-function Winners() {
+function Winners({ winners, devpost, hothNames, galleryLinks, hothName }) {
 	const theme = useTheme();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+	const classes = useStyles(theme, isSmall);
 
 	const data = useStaticQuery(graphql`
 		{
-			winnerImages: allFile(filter: {relativePath: {glob:"gallery-winners/*"}}) {
+			winnerImages: allFile(filter: {relativePath:  {regex: "/gallery-winners\/([0-9A-Za-z]+\/?)+/"}}) {
 				nodes {
 					relativePath
 					childImageSharp {
@@ -94,67 +82,62 @@ function Winners() {
 	}
 
 	const winnerCards = winners.map(item => {
-		const image = winnerImageMap.get(item.id);
+		const image = winnerImageMap.get(item.image);
 		return (
-			<Grid item key={item.id} xs={12} sm={8} md={6}
-				style={{
-					paddingBottom: theme.spacing(isSmall ? 4 : 8),
-					display: 'flex',
-					flexDirection: 'column'
-				}}>
-				<Img fluid={{ ...image, aspectRatio: 1.5 }} style={{ borderRadius: '14px', marginBottom: '1em' }} />
+			<Grid item key={item.id} xs={12} sm={8} md={6} className={classes.titlegrid} >
+				<Img fluid={{ ...image, aspectRatio: 1.5 }} className={classes.winnerimage} />
 				<hgroup>
 					<Typography variant='h5' component='h2'>{item.title}</Typography>
-					<Typography variant='subtitle1' component='h3'
-						style={{
-							textTransform: 'uppercase',
-							fontSize: '1em',
-							letterSpacing: '.5px'
-						}}
-					>
+					<Typography variant='subtitle1' component='h3' className={classes.winnercategory}>
 						{item.category}
 					</Typography>
 				</hgroup>
-				<Typography variant='body1' style={{ padding: '0.5em 0 1em' }}>
+				<Typography variant='body1' className={classes.winnerdesc}>
 					{item.description}
 				</Typography>
 				<Button variant='contained' disableElevation color="secondary" component='a'
-					href={item.link} target='_blank' rel='noreferrer noopener'
-					style={{ textTransform: 'none', padding: '4px 1.5em', maxWidth: 'fit-content' }}>
+					href={item.link} target='_blank' rel='noreferrer noopener' className={classes.winnerbutton}>
 					See Project
 				</Button>
-			</Grid>
+			</Grid >
 		);
 	});
 
 	return (
-		<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
-			<Typography variant='h4' component='h1'
-				style={{
-					fontWeight: theme.typography.fontWeightBold,
-					paddingTop: theme.spacing(isSmall ? 4 : 8),
-					paddingBottom: theme.spacing(isSmall ? 4 : 8)
-				}}>
-				Past Winners 🎉
-			</Typography>
+		<Container maxWidth='md' className={classes.gallerybody}>
+			<Grid
+				container
+				direction="row"
+				justify="space-between"
+				alignItems="center"
+				className={classes.gallerygrid}
+			>
+				<Typography variant='h4' component='h1' className={classes.gallerytitle}>
+					{hothName} Winners 🎉
+				</Typography>
+				<GalleryMenu hothNames={hothNames} galleryLinks={galleryLinks} />
+			</Grid>
 			<Grid container spacing={8} justify='center'>
 				{winnerCards}
 			</Grid>
 			<Box textAlign='center'>
 				<Button variant='outlined' disableElevation color="secondary" component='a'
-					href="https://hoth8.devpost.com/project-gallery"
+					href={devpost}
 					target='_blank' rel='noreferrer noopener'
-					style={{
-						textTransform: 'none',
-						padding: '4px 1.5em',
-						maxWidth: 'fit-content',
-						marginTop: '2em'
-					}}>
-					See All Projects
+					className={classes.devpostbutton} >
+					See All {hothName} Projects
 				</Button>
 			</Box>
 		</Container>
 	);
 }
+
+Winners.propTypes = {
+	winners: PropTypes.array.isRequired,
+	devpost: PropTypes.string.isRequired,
+	hothNames: PropTypes.array.isRequired,
+	galleryLinks: PropTypes.array.isRequired,
+	hothName: PropTypes.string.isRequired
+};
 
 export default Winners;

@@ -1,0 +1,41 @@
+- name: "HOTH 8"
+  devpost: https://hoth8.devpost.com/project-gallery
+  
+  winners:
+    - title: Nudge
+      category: Best Overall Hack
+      description: "Nudge is the social self-care habit tracker you never knew you needed. Show friends you care by \n\t\tsending them personalized nudges to keep up with healthy habits. Grow nudges into deeper conversations."
+      link: "https://devpost.com/software/nudge-wprc72"
+      image: nudge
+    - title: Dusk to Dawn
+      category: Best Design
+      description: "Being alone and socially-deprived during quarantine makes each day quite monotonous. Dusk to \n\t\tDawn aims to help by allowing users to wake up and fall asleep to voice messages sent by friends."
+      link: "https://devpost.com/software/dusk-to-dawn"
+      image: dusktodawn
+    - title: Clothes With Care
+      category: Best Mobile Hack
+      description: "Our app provides the platform for a neighborhood clothes exchange program, enabling users to \n\t\tskip the hassle, financial obstacles, and environmental impact of buying new clothes."
+      link: "https://devpost.com/software/clothes-with-care"
+      image: clotheswithcare
+    - title: EyeMotion
+      category: Best Web Hack
+      description: "EyeMotion is a meditation app that analyzes eye movement to provide personalized feedback about\n\t\t the quality of one's meditation, such as by detecting restlessness, anxiety, or negative emotion."
+      link: "https://devpost.com/software/eyemotion"
+      image: eyemotion
+    - title: EmoSign
+      category: Best Web Hack
+      description: "To translate sign to language. To translate text to emotion. To connect us with people who need\n\t\t assistance in communication"
+      link: "https://devpost.com/software/emosign"
+      image: emosign
+    - title: Mammal Mayhem
+      category: Best Game
+      description: >-
+        Mammal Mayhem is a cutesy game designed to provide casual relief to its
+        players.
+      link: "https://devpost.com/software/mammal-mayhem"
+      image: mammalmayhem
+    - title: Reassure
+      category: You Do You
+      description: "Ever had a trouble and not been able to share it? Ever just needed to vent a bit? Then you just\n\t\t might love Reassure! With Reassure, you can anonymously disclose your troubles and receive support."
+      link: "https://devpost.com/software/reassure"
+      image: reassure
