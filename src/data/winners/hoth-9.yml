@@ -1,0 +1,34 @@
+- name: "HOTH 9"
+  devpost: https://hoth9.devpost.com/project-gallery
+  
+  winners:
+    - title: Filter The Fake
+      category: Best Overall Hack
+      description: "Counterfeit medicine detection web app"
+      link: "https://devpost.com/software/filter-the-fake"
+      image: filterthefake
+    - title: Planned Bruin
+      category: Best in Education
+      description: "PlannedBruin is a class schedule optimizer for UCLA students. By inputting a major, the website will offer a potential 4-year degree map by quarter, helping to avoid stress regarding pre-requisites."
+      link: "https://devpost.com/software/plannedbruin"
+      image: plannedbruin
+    - title: Green Ride
+      category: Best in Sustainability
+      description: "Google Maps, but with a CO2 emissions calculator that takes the route, car, and number of passengers to show how much CO2 each person is emitting to inspire more environmentally conscious traveling."
+      link: "https://devpost.com/software/greenride"
+      image: greenride
+    - title: Habituate
+      category: Best in Health and Wellness
+      description: "Aristotle said: “We are what we repeatedly do. Excellence, then, is not an act, but a habit.” Habituate is a social app that allows you to track your habits and form the perfect morning routine."
+      link: "https://devpost.com/software/habituate"
+      image: habituate
+    - title: Morse Bridge
+      category: Best in Equity
+      description: "A mobile application using React Native to raise equity by facilitating communication among deafblind communities."
+      link: "https://devpost.com/software/morse-bridge"
+      image: morsebridge
+    - title: Loom
+      category: Best in You Do You
+      description: "Ever wanted a platform to write out your creative thoughts? Love collaborating with friends? Fret no more. With Loom, you spin your yarns a chapter at a time, liking them and inspiring others as well."
+      link: "https://devpost.com/software/loom"
+      image: loom
