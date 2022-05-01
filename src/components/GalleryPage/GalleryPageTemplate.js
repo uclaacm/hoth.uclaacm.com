@@ -11,7 +11,7 @@ function GalleryPageTemplate({ pageContext }) {
 	return (
 		<Layout>
 			<SEO title='Gallery' />
-			<Gallery />
+			<Gallery hothName={ hothName }/>
 			<Winners winners={ winnerInfo } devpost={ devpostLink } galleryLinks={ galleryLinks }
 				hothNames={ hothNames } hothName={ hothName } />
 		</Layout>
