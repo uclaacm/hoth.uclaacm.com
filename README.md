@@ -79,3 +79,46 @@ If something breaks in a weird way, try the following in order:
 - delete the `public`, `.cache`, and `node_modules/.cache` directories
 - delete the `node_modules` directory entirely and reinstall dependencies
   by running `yarn`
+
+# Maintenance
+
+### Gallery
+Maintenance information for this section coming soon!
+
+### Homepage Carousel
+Photos for the homepage carousel are stored in the following directory: `src/images/homepage-carousel`. In order to include a photo in this carousel, just add the photo to this directory.
+
+### Announcements
+Announcements are implemented the Announcements page and via a Github Actions script that pulls data from the `HOTH Announcements Data` issue on the HOTH website's Github page. Each comment serving as its own separate announcement. Every time a new comment is added on this issue, the Github Actions script re-scrapes the data from the issue and publishes it onto the Announcements Page with the new comment included. 
+
+Therefore, announcements can be added to the announcements page by adding a comment to this issue in the following format: `${Subject}(Subject)${Body}`. 
+
+To enumerate, comments/announcements should have the subject/title of the announcement, followed by `(Subject)`, followed by the body/description of the announcement.
+
+### Prizes
+Maintenance information for this section coming soon!
+
+### FAQ
+The FAQ section's implementation is in the directory `src/components/HomePage/FAQSection.js`. Within the file, at the beginning of the function component `function FAQSection()`, there is a `const faqs` variable that holds all of the FAQs that are displayed on the page. Each FAQ has the following format: 
+```
+		{
+			question: `What's a hackathon?`,
+			answer:
+				<>
+					A hackathon is an event during which people from different backgrounds
+					come together to create a project from start to finish in a limited time frame.
+					Check out some examples from last year&apos;s
+					HOTH <Link href='https://hoth8.devpost.com/project-gallery'>here</Link>!
+				</>
+		},
+```
+FAQs can be added to the FAQ section by adding the new question and answer to this variable in the given format. Make sure to put a comma after the closing bracket!
+
+### Schedule
+Maintenance information for this section coming soon!
+
+### Workshop Page
+Maintenance information for this section coming soon!
+
+### Start Date and End Date
+Maintenance information for this section coming soon!
