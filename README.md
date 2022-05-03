@@ -21,7 +21,7 @@ developed by ACM Hack’s Dev Team:
 - Jakob Reinwald [(@jakobreinwald)](https://github.com/jakobreinwald)
 - Maggie Li [(@maggieelli)](https://github.com/maggieelli)
 - Thomas McGall [(@tmag1)](https://github.com/tmag1)
-- Katelyn Syu [(@katelynsyu)](https://github.com/katelynsyu)
+- Katelyn Yu [(@katelynsyu)](https://github.com/katelynsyu)
 - Anakin Trotter [(@AnakinTrotter)](https://github.com/AnakinTrotter)
 - Nathan Zhang [(@nathanzzhang)](https://github.com/nathanzzhang)
 
@@ -101,16 +101,16 @@ Maintenance information for this section coming soon!
 ### FAQ
 The FAQ section's implementation is in the directory `src/components/HomePage/FAQSection.js`. Within the file, at the beginning of the function component `function FAQSection()`, there is a `const faqs` variable that holds all of the FAQs that are displayed on the page. Each FAQ has the following format: 
 ```
-		{
-			question: `What's a hackathon?`,
-			answer:
-				<>
-					A hackathon is an event during which people from different backgrounds
-					come together to create a project from start to finish in a limited time frame.
-					Check out some examples from last year&apos;s
-					HOTH <Link href='https://hoth8.devpost.com/project-gallery'>here</Link>!
-				</>
-		},
+{
+	question: `What's a hackathon?`,
+	answer:
+		<>
+			A hackathon is an event during which people frodifferent backgrounds
+			come together to create a project from start to finisin a limited time frame.
+			Check out some examples from last year&apos;s
+			HOTH <Link href='https://hoth8.devpost.coproject-gallery'>here</Link>!
+		</>
+},
 ```
 FAQs can be added to the FAQ section by adding the new question and answer to this variable in the given format. Make sure to put a comma after the closing bracket!
 
