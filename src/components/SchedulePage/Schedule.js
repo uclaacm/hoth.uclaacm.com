@@ -5,7 +5,7 @@ import Container from '@material-ui/core/Container';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import StickyTimeSlot from '../SchedulePage/StickyTimeSlot';
-import workshopSchedule from '../../data/WorkshopSchedule';
+import eventSchedule from '../../data/eventSchedule';
 import ComingSoon from '../ComingSoon/ComingSoon';
 
 // When changing this, make sure to update src/components/HomePage/UpcomingEvents.js as well.
@@ -43,15 +43,15 @@ const SchedulePage = () => {
 			and the second is the online location.
 		</Typography>
 		{!scheduleAvailable ?
-			<ComingSoon alignment='left'/> :
+			<ComingSoon alignment='left' /> :
 			<List>
-				{workshopSchedule.map((timeslot, index) => {
+				{eventSchedule.map((timeslot, index) => {
 					return (
 						<React.Fragment key={timeslot.startTime}>
 							<li>
 								<StickyTimeSlot events={timeslot.events} time={timeslot.startTime} />
 							</li>
-							{index === workshopSchedule.length - 1 ?
+							{index === eventSchedule.length - 1 ?
 								null :
 								<Divider component='li' className={classes.divider} />}
 						</React.Fragment>);

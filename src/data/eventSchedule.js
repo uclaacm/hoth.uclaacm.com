@@ -5,7 +5,7 @@ function getDateObj(day, time) {
 	return new Date(`${hothYrMnth}${day}T${time}${utcOffset}`);
 }
 
-const workshopSchedule = [
+const eventSchedule = [
 	{
 		startTime: getDateObj('26', '08:00:00'),
 		events: [
@@ -161,4 +161,4 @@ const workshopSchedule = [
 	}
 ];
 
-export default workshopSchedule;
+export default eventSchedule;
