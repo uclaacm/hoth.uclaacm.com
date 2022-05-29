@@ -83,7 +83,24 @@ If something breaks in a weird way, try the following in order:
 # Maintenance
 
 ### Gallery
-Maintenance information for this section coming soon!
+The Gallery Page is implemented in `src/components/GalleryPage`. Images can be added to the gallery carousel by adding images to `src/images/gallery-carousel`. The page opens up to the winners of the most recent HOTH, with the option of seeing the winners of the other HOTHS as well. The actual implementation of each HOTH's gallery is in `src/data/winners`, with each HOTH having a yaml file with its gallery. In order to add a new HOTH, just create a new yaml file with the name `hoth-$(hoth number).yml`, and use the following format (this is HOTH 1's, as an example): 
+```
+- name: "HOTH 1"
+  devpost: https://hoth.devpost.com/project-gallery
+  
+  winners:
+    - title: Nector
+      category: Best Hack
+      description: "Breaking the ice, one word at a time."
+      link: "https://devpost.com/software/nector"
+      image: nector
+    - title: Granny Simulator
+      category: Best Design
+      description: "A fun look into the daily life of a seemingly normal granny (feat. missing dentures & hungry children)."
+      link: "https://devpost.com/software/supergranny"
+      image: grannysim
+```
+The images referenced by the `image` prop of each winner can be inserted into `src/images/gallery-winners` in its respective HOTH number folder. Finally, make sure to change the `to` prop of the Gallery Page in `const links` in `src/components/MenuBar/ButtonBar.js` to the most recent HOTH (`/gallery/hoth-$(#)`).
 
 ### Homepage Carousel
 Photos for the homepage carousel are stored in the following directory: `src/images/homepage-carousel`. In order to include a photo in this carousel, just add the photo to this directory.
@@ -96,7 +113,17 @@ Therefore, announcements can be added to the announcements page by adding a comm
 To enumerate, comments/announcements should have the subject/title of the announcement, followed by `(Subject)`, followed by the body/description of the announcement.
 
 ### Prizes
-Maintenance information for this section coming soon!
+The Prize Page is implemented in the files `src/components/PrizePage/Prizes.js` and `src/components/PrizePage/PrizeHeader.js`. In the `Prizes.js` file, we can see a constant that defines how prizes are implemented: 
+```
+const allPrizes = [
+	{
+		img: 'best-overall',
+		track: 'Best Overall',
+		prize: '$240 Amazon Gift Card',
+		caption: '1 Echo Studio'
+	},
+  ```
+  Prizes can be added to the Prize Page by adding the new prize with the following format. As for the `img` section of `allPrizes`, this defines the name of both the prize icon and prize image, which are held in the `src/images/prize-icons` and `src/images/prize-images` folders, respectively. When adding the prize, make sure to add the icon and image to these folders, each image with the same filename you used for the `img` section of `allPrizes`.
 
 ### FAQ
 The FAQ section's implementation is in the directory `src/components/HomePage/FAQSection.js`. Within the file, at the beginning of the function component `function FAQSection()`, there is a `const faqs` variable that holds all of the FAQs that are displayed on the page. Each FAQ has the following format: 
@@ -105,9 +132,9 @@ The FAQ section's implementation is in the directory `src/components/HomePage/FA
 	question: `What's a hackathon?`,
 	answer:
 		<>
-			A hackathon is an event during which people frodifferent backgrounds
-			come together to create a project from start to finisin a limited time frame.
-			Check out some examples from last year&apos;s
+			A hackathon is an event during which people from different backgrounds
+			come together to create a project from start to finish in a limited time frame.
+			Check out some examples from last year!
 			HOTH <Link href='https://hoth8.devpost.coproject-gallery'>here</Link>!
 		</>
 },
@@ -115,10 +142,42 @@ The FAQ section's implementation is in the directory `src/components/HomePage/FA
 FAQs can be added to the FAQ section by adding the new question and answer to this variable in the given format. Make sure to put a comma after the closing bracket!
 
 ### Schedule
-Maintenance information for this section coming soon!
+The implementation of the Schedule Page is within `src/components/SchedulePage`. All of the information for the actual schedule is displayed in `src/data/eventSchedule.js`, in the constant `eventSchedule`. In this constant, events are defined as follows:
+```
+	{
+		startTime: getDateObj('26', '08:00:00'),
+		events: [
+			{
+				name: 'Check in',
+				duration: '30 min',
+				location: 'Covel Grand Horizon',
+				description: `Bring your bruin card and daily symptoms monitoring
+				survey to check in with one of the Hack officers at the front.
+				Remember to bring some snacks, water, your laptop, and your laptop charger!`
+			}
+		]
+	},
+  ```
+  Portions of the schedule are denoted via their start time (a date object with the day number of the month and time specified), with each json element having its own start time. Add events to the schedule using this format, making sure to order them by time. Notice that the `events` prop of each json element is an array, meaning that multiple events can be part of the same start time. Just add a comma to that element's last event and another set of brackets corresponding with the next event. Make sure to add each event's `name`, `duration`, `location`, and `description`.
 
 ### Workshop Page
-Maintenance information for this section coming soon!
-
-### Start Date and End Date
-Maintenance information for this section coming soon!
+The workshop page is implemented in `src/components/WorkshopPage`, and the workshops are defined in the `workshops` constant of `src/components/WorkshopPage/WorkshopPage.js`. Workshops are split up by type, such as Web Development, Mobile Development, and Miscellaneous. 
+```
+	{
+		type: 'Mobile Development',
+		elements: [
+			{
+				title: 'Intro to React Native',
+				author: 'James Wu',
+				description: `Ever wanted to make your own mobile app? Let's explore React Native—a cross
+				platform development tool that's behind Instagram, Facebook, Discord, and many other
+				iconic names. In this workshop, we'll learn how to create our own app from scratch,
+				going over views, components, functionality, and more so that you can be a native of React! `,
+				youtube: 'https://youtu.be/TYvmyMJc3PQ',
+				readme: 'https://github.com/uclaacm/hoth9-workshops/tree/main/intro-to-react-native',
+				slides: 'https://docs.google.com/presentation/d/1hPfBtJzcgahXPLuJlQ6y0HcmpqrflBbZPpmL5e1vTQE/edit?usp=sharing'
+			}
+		]
+	},
+  ```
+  Each workshop type has an `elements` array with all of its workshops. In order to add workshops to the page, just add the workshops to an existing type's elements array under the given format or add a new workshop type and add the workshop to that type's new elements array.

@@ -24,7 +24,7 @@ prizes:
 
 workshops:
 - src/components/WorkshopPage/**/*
-- src/data/WorkshopSchedule.js
+- src/data/eventSchedule.js
 - src/pages/workshops.js
 
 page:

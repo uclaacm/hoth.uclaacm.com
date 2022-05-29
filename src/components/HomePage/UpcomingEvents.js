@@ -6,7 +6,7 @@ import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import { Link } from 'gatsby';
-import workshopSchedule from '../../data/WorkshopSchedule';
+import eventSchedule from '../../data/eventSchedule';
 import Event from './Event';
 import NoSsr from '@material-ui/core/NoSsr';
 
@@ -14,8 +14,10 @@ import NoSsr from '@material-ui/core/NoSsr';
 const scheduleAvailableTime = new Date('2022-02-25T00:00:00-08:00');
 const scheduleAvailable = Date.now() > scheduleAvailableTime.getTime();
 
-const timeFormatter = new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric',
-	hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+const timeFormatter = new Intl.DateTimeFormat('en-US', {
+	month: 'long', day: 'numeric',
+	hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
+});
 
 const useStyles = makeStyles(theme => ({
 	title: {
@@ -52,9 +54,9 @@ function UpcomingEvents() {
 	}
 
 	const events = [];
-	// Assumes workshopSchedule is ordered by time
-	for (let i = 0; i < workshopSchedule.length && eventsDisplayed < numEventsToDisplay; i++) {
-		const timeSlot = workshopSchedule[i];
+	// Assumes eventSchedule is ordered by time
+	for (let i = 0; i < eventSchedule.length && eventsDisplayed < numEventsToDisplay; i++) {
+		const timeSlot = eventSchedule[i];
 		if (currentTime < timeSlot.startTime) {
 			for (const event of timeSlot.events) {
 				events.push({
