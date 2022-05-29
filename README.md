@@ -132,9 +132,9 @@ The FAQ section's implementation is in the directory `src/components/HomePage/FA
 	question: `What's a hackathon?`,
 	answer:
 		<>
-			A hackathon is an event during which people frodifferent backgrounds
-			come together to create a project from start to finisin a limited time frame.
-			Check out some examples from last year&apos;s
+			A hackathon is an event during which people from different backgrounds
+			come together to create a project from start to finish in a limited time frame.
+			Check out some examples from last year!
 			HOTH <Link href='https://hoth8.devpost.coproject-gallery'>here</Link>!
 		</>
 },
@@ -158,7 +158,7 @@ The implementation of the Schedule Page is within `src/components/SchedulePage`.
 		]
 	},
   ```
-  Portions of the schedule are denoted via their start time (a date object with the day number of the month and time specified), with each json element having its own start time. Add events to the schedule/schedule page using this format, making sure to order them by time. Notice that the `events` prop of each json element is an array, meaning that multiple events can be part of the same start time. Just add a comma to that element's last event and another set of brackets corresponding with the next event. Make sure to add each event's `name`, `duration`, `location`, and `description`.
+  Portions of the schedule are denoted via their start time (a date object with the day number of the month and time specified), with each json element having its own start time. Add events to the schedule using this format, making sure to order them by time. Notice that the `events` prop of each json element is an array, meaning that multiple events can be part of the same start time. Just add a comma to that element's last event and another set of brackets corresponding with the next event. Make sure to add each event's `name`, `duration`, `location`, and `description`.
 
 ### Workshop Page
 The workshop page is implemented in `src/components/WorkshopPage`, and the workshops are defined in the `workshops` constant of `src/components/WorkshopPage/WorkshopPage.js`. Workshops are split up by type, such as Web Development, Mobile Development, and Miscellaneous. 
