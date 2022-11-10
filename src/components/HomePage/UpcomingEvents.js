@@ -9,9 +9,9 @@ import { Link } from 'gatsby';
 import eventSchedule from '../../data/eventSchedule';
 import Event from './Event';
 import NoSsr from '@material-ui/core/NoSsr';
+import { scheduleAvailableTime } from '../constants';
 
 // Schedule will be available on the homepage the day before HOTH
-const scheduleAvailableTime = new Date('2022-02-25T00:00:00-08:00');
 const scheduleAvailable = Date.now() > scheduleAvailableTime.getTime();
 
 const timeFormatter = new Intl.DateTimeFormat('en-US', {
