@@ -37,7 +37,7 @@ Past contributors:
 ACM Hack is a subcomittee of [ACM @ UCLA](http://www.uclaacm.com/), the largest
 Computer Science student organization in Southern California. Check out [our
 website](https://hack.uclaacm.com/) to learn more about who we are and what we
-do!
+do!!
 
 ## Getting Started
 You’ll need:
