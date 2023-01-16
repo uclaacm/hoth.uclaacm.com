@@ -145,7 +145,7 @@ function FAQSection() {
 			question: `Where is HOTH X taking place?`,
 			answer:
 				<>
-					Currently, we are planning for HOTH X to be in-person 
+					Currently, we are planning for HOTH X to be in-person
 					with the event taking place at TBD. A capped number
 					of people can participate in-person, and all in-person attendees must provide
 					a negative Covid test 72 hours before the event. Virtually, the event will be
