@@ -146,13 +146,7 @@ function FAQSection() {
 			answer:
 				<>
 					Currently, we are planning for HOTH X to be in-person
-					with the event taking place at TBD. A capped number
-					of people can participate in-person, and all in-person attendees must provide
-					a negative Covid test 72 hours before the event. Virtually, the event will be
-					taking place on our ACM Hack <Link href='https://discord.gg/MStu2cnBV9'>discord server</Link>,
-					and there is no limit on the number of people who can attend online.
-					We are, however, monitoring the Covid situation, and if circumstances change,
-					we may transition to a completely virtual event.
+					with the event taking place at TBD.
 				</>
 		},
 		{
