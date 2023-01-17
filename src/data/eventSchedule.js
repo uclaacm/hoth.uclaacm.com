@@ -154,7 +154,7 @@ const eventSchedule = [
 				duration: '',
 				location: '',
 				description: `So long, farewell, au revoir, auf Wiedersehen. The day is done,
-				and with it HOTH 9. We hope you had as much fun as we did, and we hope to see
+				and with it HOTH X. We hope you had as much fun as we did, and we hope to see
 				you again soon!!`
 			}
 		]

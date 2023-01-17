@@ -119,7 +119,7 @@ function renderInfo(classes) {
 			<Typography component='h1' variant='h1' className={classes.text} style={{
 				fontWeight: 'bold'
 			}}>
-				HOTH <span className={classes.hothNumber}>9</span>
+				HOTH <span className={classes.hothNumber}>X</span>
 			</Typography>
 
 			<Typography variant='h5' className={classes.text} component='h3'
@@ -138,15 +138,16 @@ function renderInfo(classes) {
 						style={{ marginTop: 40, fontWeight: 500 }}
 						component='h3'
 					>
-						<time dateTime={hothStart.toISOString()}>
+						<time dateTime={hothStart.toISOString()} hidden>
 							{month} {startDay}{endDayString}, 2022
 						</time>
+						Date: TBD
 					</Typography>
 				</Tooltip>
 			</Box>
 
 			<Typography variant='h5' className={classes.text} component='h3'
-				style={{ fontWeight: 500, marginBottom: 10 }}>Covel Grand Horizon
+				style={{ fontWeight: 500, marginBottom: 10 }}>Location: TBD
 			</Typography>
 			{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
 				<Button

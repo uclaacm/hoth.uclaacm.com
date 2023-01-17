@@ -93,12 +93,10 @@ export default function HothDescription() {
 					</LeftGridItem>
 					<RightGridItem>
 						<Typography variant='body1' style={{ paddingBottom: isSmall ? theme.spacing(2) : 0 }}>
-							Hack on the Hill (HOTH 9) is a{' '}
+							Hack on the Hill (HOTH X) is a{' '}
 							<strong>12-hour beginner-friendly</strong>
 							{' '}hackathon designed to be your first hackathon experience.
-							HOTH 9 will be hybrid this year with the in-person
-							portion in Covel Grand Horizon and the virtual portion on the
-							{' '}<Link href='https://discord.com/invite/MStu2cnBV9'>Hack Discord</Link>.
+							HOTH X is planned to be in-person with the venue TBD.
 						</Typography>
 					</RightGridItem>
 				</Grid>
