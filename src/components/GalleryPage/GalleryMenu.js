@@ -16,9 +16,17 @@ function GalleryMenu({ hothNames, galleryLinks }) {
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
+	const linkStyles = {
+		color: '#202020',
+		textDecoration: 'none'
+	};
+	const activeStyles = {
+		color: '#ff487e',
+		textDecoration: 'none'
+	};
 	const menuLinks = hothNames.map((hothName, index) =>
 		<MenuItem key={`menu-link-${index}`} onClick={handleClose}>
-			<Link to={galleryLinks[index]}>{hothName}</Link>
+			<Link to={galleryLinks[index]} style={linkStyles} activeStyle={activeStyles}>{hothName}</Link>
 		</MenuItem>);
 	return (
 		<>
@@ -33,7 +41,7 @@ function GalleryMenu({ hothNames, galleryLinks }) {
 				color='secondary'
 				component='a'
 			>
-				See All HOTHs <ArrowDropDownIcon />
+				Past WINNERS <ArrowDropDownIcon />
 			</Button>
 			<Menu
 				id='fade-menu'
