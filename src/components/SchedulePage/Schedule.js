@@ -9,7 +9,7 @@ import eventSchedule from '../../data/eventSchedule';
 import ComingSoon from '../ComingSoon/ComingSoon';
 
 // When changing this, make sure to update src/components/HomePage/UpcomingEvents.js as well.
-const scheduleAvailable = true;
+const scheduleAvailable = false;
 
 const useStyles = makeStyles(theme => ({
 	title: {
