@@ -38,10 +38,6 @@ const SchedulePage = () => {
 		<Typography align='left' variant='h4' component='h1' className={classes.title}>
 			Schedule
 		</Typography>
-		<Typography align='left' variant='subtitle1' className={classes.note}>
-			Note: if there are two locations listed for an event, the first location is the in-person location
-			and the second is the online location.
-		</Typography>
 		{!scheduleAvailable ?
 			<ComingSoon alignment='left' /> :
 			<List>
