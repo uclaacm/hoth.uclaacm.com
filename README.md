@@ -15,15 +15,18 @@ There is also hardware available for hackers to check out and hack with.
 This website is developed with [Gatsby](https://www.gatsbyjs.org/) and
 [Material UI](https://material-ui.com/), and is a work-in-progress being
 developed by ACM Hack’s Dev Team: 
-- Jody Lin [(@jodymlin)](https://github.com/jodymlin)
-- Christina Tong [(@christinatong01)](https://github.com/christinatong01)
 - Alex Xia [(@khxia)](https://github.com/khxia)
 - Jakob Reinwald [(@jakobreinwald)](https://github.com/jakobreinwald)
 - Maggie Li [(@maggieelli)](https://github.com/maggieelli)
-- Thomas McGall [(@tmag1)](https://github.com/tmag1)
 - Katelyn Yu [(@katelynsyu)](https://github.com/katelynsyu)
 - Anakin Trotter [(@AnakinTrotter)](https://github.com/AnakinTrotter)
 - Nathan Zhang [(@nathanzzhang)](https://github.com/nathanzzhang)
+- Jenna Wang [(@ariyin)] (https://github.com/ariyin)
+- Shiyu Ye [(@Monicaaawa)] (https://github.com/Monicaaawa)
+- Brooke Jiang [(@jiangxuann)] (https://github.com/jiangxuann)
+- Jonathan Si [(@jsi19)] (https://github.com/jsi19)
+- Andy Lewis [(@datowq)] (https://github.com/datowq)
+- Satyen Subramaniam [(@SubramaniamSatyen)] (https://github.com/SubramaniamSatyen)
 
 Past contributors: 
 - Timothy Gu [(@TimothyGu)](https://github.com/TimothyGu/)
@@ -33,6 +36,9 @@ Past contributors:
 - Miles Wu [(@milesswu)](https://github.com/milesswu)
 - Chandra Suresh [(@curesh)](https://github.com/curesh)
 - Eric Yang [(@eric8yang)](https://github.com/eric8yang)
+- Jody Lin [(@jodymlin)](https://github.com/jodymlin)
+- Christina Tong [(@christinatong01)](https://github.com/christinatong01)
+- Thomas McGall [(@tmag1)](https://github.com/tmag1)
 
 ACM Hack is a subcomittee of [ACM @ UCLA](http://www.uclaacm.com/), the largest
 Computer Science student organization in Southern California. Check out [our
