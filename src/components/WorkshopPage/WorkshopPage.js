@@ -34,9 +34,6 @@ const useStyles = makeStyles(theme => ({
 			paddingTop: theme.spacing(4)
 		},
 		paddingBottom: theme.spacing(4)
-	},
-	message: {
-		marginBottom: theme.spacing(1)
 	}
 }));
 
