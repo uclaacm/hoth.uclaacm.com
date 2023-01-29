@@ -14,7 +14,9 @@ import { ReactComponent as DiscordIcon } from './discord.svg';
 
 const styles = theme => ({
 	container: {
-		backgroundColor: theme.palette.primary.dark
+		backgroundColor: theme.palette.primary.dark,
+		zIndex: 1,
+		position: 'sticky'
 	},
 	content: {
 		padding: theme.spacing(1, 3),

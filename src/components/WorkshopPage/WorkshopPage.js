@@ -1,13 +1,15 @@
-import React from 'react';
+import * as React from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import useTheme from '@material-ui/core/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Workshop from './Workshop.js';
+import Drawer from '@mui/material/Drawer';
 import { makeStyles } from '@material-ui/core/styles';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { Button } from '@material-ui/core';
+import useWindowSize from '../window.js';
 
 const useStyles = makeStyles(theme => ({
 	itemType: {
@@ -217,6 +219,7 @@ function WorkshopPage() {
 	const theme = useTheme();
 	const classes = useStyles();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+	const drawerSize = useWindowSize().width < 1400 ? 0 : 240;
 
 	const workshopCards = workshops.map(item =>
 		<React.Fragment key={item.type}>
@@ -241,8 +244,9 @@ function WorkshopPage() {
 	const sectionLinks = workshops.map(item =>
 		<React.Fragment key={item.type}>
 			<AnchorLink to={'/workshops#id_' + item.type.replace(/ /g, '_')} className={classes.anchor}>
-				<Button className={classes.btn} style={{ textDecoration: 'none', textAlign: 'left' }}>
-					<Typography variant='h6' component='h1'>
+				<Button className={classes.btn} style={{ textDecoration: 'none', width: '100%',
+					display: 'flex', justifyContent: 'flex-start' }}>
+					<Typography variant='h6' component='h1' align='left'>
 						{item.type}
 					</Typography>
 				</Button>
@@ -251,10 +255,22 @@ function WorkshopPage() {
 
 	return (
 		<React.Fragment>
-			<div className={classes.sideBar}>
+			<Drawer sx={{ width: drawerSize,
+				flexShrink: 0,
+				'& .MuiDrawer-paper': {
+					paddingTop: 10,
+					width: drawerSize,
+					boxSizing: 'border-box',
+					zIndex: 0
+				} }}
+			variant='permanent'
+			anchor='left'>
+				<Typography variant='h4' component='h1' align='left'>
+					Topics
+				</Typography>
 				{sectionLinks}
-			</div>
-			<Container maxWidth='md' style={{ marginBottom: theme.spacing(8), marginLeft: '25vw' }}>
+			</Drawer>
+			<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
 				<Typography variant='h4' component='h1' className={classes.title}>
 					Workshops
 				</Typography>
