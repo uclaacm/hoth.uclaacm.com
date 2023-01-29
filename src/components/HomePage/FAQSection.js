@@ -113,7 +113,7 @@ function FAQSection() {
 	const hothNum = 'X';
 	const appDeadline = 'Friday, February 24, 2023';
 	const hothDate = 'Sunday, March 5, 2023';
-	const location = 'Carnesale Commons Palisades Room';
+	const hothLocation = 'Carnesale Commons Palisades Room';
 	const faqs = [
 		{
 			question: `What's a hackathon?`,
@@ -150,7 +150,7 @@ function FAQSection() {
 			answer:
 				<>
 					Currently, we are planning for HOTH X to be in-person
-					with the event taking place at the {location}.
+					with the event taking place at the {hothLocation}.
 				</>
 		},
 		{
