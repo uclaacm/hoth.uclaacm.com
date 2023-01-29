@@ -149,7 +149,7 @@ function FAQSection() {
 			question: `Where is HOTH ${hothNum} taking place?`,
 			answer:
 				<>
-					Currently, we are planning for HOTH X to be in-person
+					Currently, we are planning for {hothNum} to be in-person
 					with the event taking place at the {hothLocation}.
 				</>
 		},
