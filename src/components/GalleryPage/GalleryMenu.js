@@ -6,8 +6,25 @@ import Fade from '@material-ui/core/Fade';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
+import useTheme from '@material-ui/core/styles/useTheme';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+	linkStyle: {
+		color: theme.palette.primary.dark,
+		textDecoration: 'none',
+		'&:hover': {
+			color: theme.palette.primary.main
+		}
+	},
+	active: {
+		color: theme.palette.secondary.main
+	}
+}));
 
 function GalleryMenu({ hothNames, galleryLinks }) {
+	const theme = useTheme();
+	const classes = useStyles(theme);
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const open = Boolean(anchorEl);
 	const handleClick = event => {
@@ -16,18 +33,17 @@ function GalleryMenu({ hothNames, galleryLinks }) {
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
-	const linkStyles = {
-		color: '#202020',
-		textDecoration: 'none'
-	};
-	const activeStyles = {
-		color: '#ff487e',
-		textDecoration: 'none'
-	};
-	const menuLinks = hothNames.map((hothName, index) =>
-		<MenuItem key={`menu-link-${index}`} onClick={handleClose}>
-			<Link to={galleryLinks[index]} style={linkStyles} activeStyle={activeStyles}>{hothName}</Link>
-		</MenuItem>);
+	const menuLinks = hothNames.map((hothName, index) => {
+		const link = galleryLinks[index];
+		const isActive = window.location.pathname === link;
+		return (
+			<MenuItem key={`menu-link-${index}`} onClick={handleClose}>
+				<Link to={galleryLinks[index]} className={`${classes.linkStyle} ${isActive ? classes.active : ''}`}>
+					{hothName}
+				</Link>
+			</MenuItem>
+		);
+	});
 	return (
 		<>
 			<Button
