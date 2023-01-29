@@ -6,6 +6,8 @@ import useTheme from '@material-ui/core/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Workshop from './Workshop.js';
 import { makeStyles } from '@material-ui/core/styles';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
 	itemType: {
@@ -33,6 +35,18 @@ const useStyles = makeStyles(theme => ({
 			paddingTop: theme.spacing(4)
 		},
 		paddingBottom: theme.spacing(4)
+	},
+	btn: {
+		fontWeight: 500
+	},
+	anchor: {
+		textDecoration: 'none'
+	},
+	sideBar: {
+		position: 'fixed',
+		paddingTop: '10vh',
+		paddingLeft: '4vw',
+		width: '20%'
 	}
 }));
 
@@ -209,7 +223,8 @@ function WorkshopPage() {
 			<Typography
 				variant='h4'
 				component='h2'
-				className={classes.itemType}>
+				className={classes.itemType}
+				id={'id_' + item.type.replace(/ /g, '_')}>
 				{item.type}
 			</Typography>
 
@@ -223,13 +238,29 @@ function WorkshopPage() {
 			</Grid>
 		</React.Fragment>);
 
+	const sectionLinks = workshops.map(item =>
+		<React.Fragment key={item.type}>
+			<AnchorLink to={'/workshops#id_' + item.type.replace(/ /g, '_')} className={classes.anchor}>
+				<Button className={classes.btn} style={{ textDecoration: 'none', textAlign: 'left' }}>
+					<Typography variant='h6' component='h1'>
+						{item.type}
+					</Typography>
+				</Button>
+			</AnchorLink>
+		</React.Fragment>);
+
 	return (
-		<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
-			<Typography variant='h4' component='h1' className={classes.title}>
-				Workshops
-			</Typography>
-			{workshopCards}
-		</Container>
+		<React.Fragment>
+			<div className={classes.sideBar}>
+				{sectionLinks}
+			</div>
+			<Container maxWidth='md' style={{ marginBottom: theme.spacing(8), marginLeft: '25vw' }}>
+				<Typography variant='h4' component='h1' className={classes.title}>
+					Workshops
+				</Typography>
+				{workshopCards}
+			</Container>
+		</React.Fragment>
 	);
 }
 

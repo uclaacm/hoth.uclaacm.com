@@ -41,7 +41,7 @@ function Workshop({ title, youtube, author, description, readme, slides }) {
 	return (
 		<Grid item xs={12} sm={8} md={6}>
 			<ReactPlayer
-				className={classes.video}
+				className={classes.video} id={'id_' + title.replace(/ /g, '_')}
 				controls={true} width='100%' url={youtube} />
 			<hgroup className={classes.title}>
 				<Typography variant='h5' component='h3'>
