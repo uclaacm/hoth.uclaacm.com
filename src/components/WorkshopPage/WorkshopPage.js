@@ -231,8 +231,8 @@ function WorkshopPage() {
 					Workshops
 				</Typography>
 
-				<Typography variant='body1' component='body1'>
-					HOTH X workshops will be coming soon, check out previous ones if you are interested!
+				<Typography variant='body1' component='body'>
+					HOTH X workshops will be coming soon. Check out our previous workshops on our <a href="https://www.youtube.com/watch?v=GskV5qMOpkE&list=PLPO7_kXilXFbjHembKB9UdcMyFkc_1Q06">YouTube channel</a> if you are interested!
 				</Typography>
 			</Box>
 			{workshopCards}
