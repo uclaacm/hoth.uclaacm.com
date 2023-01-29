@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import useTheme from '@material-ui/core/styles/useTheme';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
 	linkStyle: {
 		color: theme.palette.primary.dark,
 		textDecoration: 'none',
