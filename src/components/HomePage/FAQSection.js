@@ -110,6 +110,10 @@ AccordionQA.propTypes = {
 };
 
 function FAQSection() {
+	const hothNum = 'X';
+	const appDeadline = 'Friday, February 24, 2023';
+	const hothDate = 'Sunday, March 5, 2023';
+	const location = 'Carnesale Commons Palisades Room';
 	const faqs = [
 		{
 			question: `What's a hackathon?`,
@@ -123,7 +127,7 @@ function FAQSection() {
 		},
 		{
 			question: `Who can join?`,
-			answer: `Applications for HOTH X are open to anyone! However, we are prioritizing 
+			answer: `Applications for HOTH ${hothNum} are open to anyone! However, we are prioritizing 
 				UCLA students for our prize tracks as well as in-person hacking.`
 		},
 		{
@@ -137,32 +141,32 @@ function FAQSection() {
 				vibe best with.`
 		},
 		{
-			question: `When is HOTH X taking place? How long is it going to be?`,
-			answer: `The hackathon will take place on TBD 
+			question: `When is HOTH ${hothNum} taking place? How long is it going to be?`,
+			answer: `The hackathon will take place on ${hothDate} 
 				and it will be 12 hours long.`
 		},
 		{
-			question: `Where is HOTH X taking place?`,
+			question: `Where is HOTH ${hothNum} taking place?`,
 			answer:
 				<>
 					Currently, we are planning for HOTH X to be in-person
-					with the event taking place at TBD.
+					with the event taking place at the {location}.
 				</>
 		},
 		{
 			question: `How do I sign up?`,
 			answer: `Hit the apply button above and fill out the application! A few days before
 				the event, you'll be emailed a confirmation form along with appropriate links
-				and additional event information. Applications close on TBD at 11:59pm PST.`
+				and additional event information. Applications close on ${appDeadline} at 11:59pm PST.`
 		},
 		{
 			question: `What if I have never made a project before?`,
-			answer:	`No worries! Throughout HOTH X, you'll have access to workshops on all sorts of
+			answer:	`No worries! Throughout HOTH ${hothNum}, you'll have access to workshops on all sorts of
 				topics to help you start bringing your ideas to life and mentors to support you through
 				any road blocks.`
 		},
 		{
-			question: `I have coding experience and want to make a difference at HOTH X. 
+			question: `I have coding experience and want to make a difference at HOTH ${hothNum}. 
 				How can I get involved?`,
 			answer:
 				<>
@@ -173,7 +177,7 @@ function FAQSection() {
 				</>
 		},
 		{
-			question: `Where can I get updates on HOTH X and learn more about what ACM Hack is doing?`,
+			question: `Where can I get updates on HOTH ${hothNum} and learn more about what ACM Hack is doing?`,
 			answer:
 				<>
 					Come join us on our <Link href='https://discord.gg/MStu2cnBV9'>discord server</Link>.
