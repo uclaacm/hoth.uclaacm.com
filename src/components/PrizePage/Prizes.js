@@ -138,7 +138,7 @@ export default function Prizes() {
 		<>
 			<Container maxWidth='md'>
 				<Typography align='center' gutterBottom>
-					For reference, here are the tracks and prizes for our HOTH 9 winners :)
+					For reference, these were the tracks and prizes for our HOTH 9 winners :)
 				</Typography>
 				<Grid container spacing={3} className={classes.prizeGrid}>
 					{allPrizes.map(prize =>
