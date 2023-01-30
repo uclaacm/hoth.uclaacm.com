@@ -259,15 +259,15 @@ function Banner() {
 				</Box>
 				{smallScreen ?
 					null :
-						<Box display='flex' flexDirection='column' className={classes.img}>
-							<NoSsr>
-								<Countdown
-									date={hothStart}
-									renderer={countdownRenderer}
-								/>
-							</NoSsr>
-							<Box><Img fluid={data.placeholderImage.childImageSharp.fluid} /></Box>
-						</Box>
+					<Box display='flex' flexDirection='column' className={classes.img}>
+						<NoSsr>
+							<Countdown
+								date={hothStart}
+								renderer={countdownRenderer}
+							/>
+						</NoSsr>
+						<Box><Img fluid={data.placeholderImage.childImageSharp.fluid} /></Box>
+					</Box>
 				}
 			</Container>
 		</div>
