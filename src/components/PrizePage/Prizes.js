@@ -138,12 +138,7 @@ export default function Prizes() {
 		<>
 			<Container maxWidth='md'>
 				<Typography align='center' gutterBottom>
-					Below are the total prize amounts for each category :)
-				</Typography>
-				<Typography align='center' gutterBottom>
-					Due to current restrictions with the CS Department we are unable
-					to give the actual prizes, so we have left some recommendations
-					that your team can buy when you win 😎
+					For reference, these were the tracks and prizes for our HOTH 9 winners :)
 				</Typography>
 				<Grid container spacing={3} className={classes.prizeGrid}>
 					{allPrizes.map(prize =>
