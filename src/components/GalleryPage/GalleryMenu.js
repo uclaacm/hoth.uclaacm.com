@@ -16,9 +16,6 @@ const useStyles = makeStyles(theme => ({
 		'&:hover': {
 			color: theme.palette.primary.main
 		}
-	},
-	active: {
-		color: theme.palette.secondary.main
 	}
 }));
 
@@ -33,17 +30,13 @@ function GalleryMenu({ hothNames, galleryLinks }) {
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
-	const menuLinks = hothNames.map((hothName, index) => {
-		const link = galleryLinks[index];
-		const isActive = window.location.pathname === link;
-		return (
-			<MenuItem key={`menu-link-${index}`} onClick={handleClose}>
-				<Link to={galleryLinks[index]} className={`${classes.linkStyle} ${isActive ? classes.active : ''}`}>
-					{hothName}
-				</Link>
-			</MenuItem>
-		);
-	});
+	const activeStyle = {
+		color: theme.palette.secondary.main
+	};
+	const menuLinks = hothNames.map((hothName, index) =>
+		<MenuItem key={`menu-link-${index}`} onClick={handleClose}>
+			<Link to={galleryLinks[index]} className={classes.linkStyle} activeStyle={activeStyle}>{hothName}</Link>
+		</MenuItem>);
 	return (
 		<>
 			<Button
