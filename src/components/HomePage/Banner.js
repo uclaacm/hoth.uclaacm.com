@@ -167,7 +167,7 @@ function Banner() {
 	const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 	const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "powellBackgroung.png" }) {
+      placeholderImage: file(relativePath: { eq: "powellBackground.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
