@@ -26,18 +26,33 @@ import {
 const monthFormatter = new Intl.DateTimeFormat('en-US', { month: 'short' });
 
 const useStyles = makeStyles(theme => ({
-	container: {
-		backgroundColor: theme.palette.primary.dark,
+	background: {
+		backgroundColor: '#11002E',
 		height: 'auto',
 		[theme.breakpoints.down('sm')]: {
 			padding: '12px 2px'
+		}
+	},
+	container: {
+		position: 'relative',
+		padding: '0px'
+	},
+	info: {
+		position: 'absolute',
+		left: '0px',
+		zIndex: 1,
+		[theme.breakpoints.down('sm')]: {
+			position: 'relative'
 		}
 	},
 	text: {
 		color: 'white',
 		fontWeight: 400,
 		textAlign: 'left',
-		justifyItems: 'left'
+		justifyItems: 'left',
+		[theme.breakpoints.down('sm')]: {
+			textAlign: 'center'
+		}
 	},
 	apply: {
 		width: 'auto',
@@ -104,6 +119,17 @@ const useStyles = makeStyles(theme => ({
 		'&>:nth-child(even)': {
 			padding: '0 6px'
 		}
+	},
+	img: {
+		position: 'relative'
+	},
+	grid: {
+		justifyContent: 'flex-start',
+		alignItems: 'flex-start',
+		[theme.breakpoints.down('sm')]: {
+			justifyContent: 'center',
+			alignItems: 'center'
+		}
 	}
 }));
 
@@ -167,7 +193,7 @@ function Banner() {
 	const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 	const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "powellBackground.png" }) {
+      placeholderImage: file(relativePath: { eq: "hothXwebsite_banner.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -212,46 +238,37 @@ function Banner() {
 	};
 
 	return (
-		<div className={classes.container}>
-			<Container maxWidth='md'>
-				<Grid
-					container
-					direction={smallScreen ? 'column' : 'row' }
-					alignItems='center'
-				>
-					<Grid item sm={12} md={6}>
-						<Grid
-							container
-							direction='column'
-							justify='flex-start'
-							alignItems='flex-start'
-						>
-							{renderInfo(classes)}
-							{smallScreen ?
-								<NoSsr>
-									<Countdown
-										date={hothStart}
-										renderer={countdownRenderer}
-									/>
-								</NoSsr> :
-								null}
-						</Grid>
+		<div className={classes.background}>
+			<Container maxWidth='md' className={classes.container}>
+				<Box item sm={12} md={6} className={classes.info}>
+					<Grid
+						container
+						direction='column'
+						className={classes.grid}
+					>
+						{renderInfo(classes)}
+						{smallScreen ?
+							<NoSsr>
+								<Countdown
+									date={hothStart}
+									renderer={countdownRenderer}
+								/>
+							</NoSsr> :
+							null}
 					</Grid>
-					{smallScreen ?
-						null :
-						<Grid item sm={12} md={6}>
-							<Box display='flex' flexDirection='column'>
-								<NoSsr>
-									<Countdown
-										date={hothStart}
-										renderer={countdownRenderer}
-									/>
-								</NoSsr>
-								<Box><Img fluid={data.placeholderImage.childImageSharp.fluid} /></Box>
-							</Box>
-						</Grid>
-					}
-				</Grid>
+				</Box>
+				{smallScreen ?
+					null :
+						<Box display='flex' flexDirection='column' className={classes.img}>
+							<NoSsr>
+								<Countdown
+									date={hothStart}
+									renderer={countdownRenderer}
+								/>
+							</NoSsr>
+							<Box><Img fluid={data.placeholderImage.childImageSharp.fluid} /></Box>
+						</Box>
+				}
 			</Container>
 		</div>
 	);
