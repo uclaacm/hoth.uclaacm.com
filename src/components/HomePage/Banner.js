@@ -141,13 +141,13 @@ function renderInfo(classes) {
 						<time dateTime={hothStart.toISOString()} hidden>
 							{month} {startDay}{endDayString}, 2022
 						</time>
-						Date: TBD
+						Date: Sunday, March 5, 2023
 					</Typography>
 				</Tooltip>
 			</Box>
 
 			<Typography variant='h5' className={classes.text} component='h3'
-				style={{ fontWeight: 500, marginBottom: 10 }}>Location: TBD
+				style={{ fontWeight: 500, marginBottom: 10 }}>Location: Carnesale Commons Palisades
 			</Typography>
 			{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
 				<Button
