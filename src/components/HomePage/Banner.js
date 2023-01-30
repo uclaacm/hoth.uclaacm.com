@@ -147,7 +147,7 @@ function renderInfo(classes) {
 			</Box>
 
 			<Typography variant='h5' className={classes.text} component='h3'
-				style={{ fontWeight: 500, marginBottom: 10 }}>Location: Carnesale Commons Palisades
+				style={{ fontWeight: 500, marginBottom: 10 }}>Location: Carnesale Commons Palisades Room
 			</Typography>
 			{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
 				<Button
