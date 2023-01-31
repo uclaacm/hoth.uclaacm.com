@@ -38,12 +38,12 @@ const useStyles = makeStyles(theme => ({
 			fontSize: '2.5em'
 		}
 	},
-    catchphrase: {
+	catchphrase: {
 		textAlign: 'center',
 		fontSize: '2.5em',
 		fontWeight: theme.typography.fontWeightBold,
 		color: theme.palette.primary.dark,
-        padding: theme.spacing(2),
+		padding: theme.spacing(2),
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '2em'
 		},
@@ -96,8 +96,13 @@ export default function HothDescription() {
 			<Container maxWidth='md'>
 				<hgroup>
 					<Typography variant='h2' className={classes.subtitle}>What’s</Typography>
-					<Typography variant='h2' className={classNames(classes.title, uppercase.root)}>Hack on the Hill?</Typography>
-                    <Typography variant='h2' className={classes.catchphrase} style={{ fontWeight: 500, paddingBottom: isSmall ? theme.spacing(2) : theme.spacing(8) }}>Explore. Build. Empower. </Typography>
+					<Typography variant='h2' className={classNames(classes.title, uppercase.root)}>
+						Hack on the Hill?
+					</Typography>
+					<Typography variant='h2' className={classes.catchphrase}
+						style={{ fontWeight: 500, paddingBottom: isSmall ? theme.spacing(2) : theme.spacing(8) }}>
+						Explore. Build. Empower.
+					</Typography>
 				</hgroup>
 				<Grid container spacing={isSmall ? 3 : 8} alignItems='center' justify='center'>
 					<LeftGridItem>

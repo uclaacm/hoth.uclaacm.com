@@ -41,10 +41,10 @@ const useStyles = makeStyles(theme => ({
 		position: 'absolute',
 		left: '0px',
 		zIndex: 1,
-        maxWidth: "50%",
+		maxWidth: '50%',
 		[theme.breakpoints.down('sm')]: {
 			position: 'relative',
-            maxWidth: "100%"
+			maxWidth: '100%'
 		}
 	},
 	text: {
@@ -85,9 +85,9 @@ const useStyles = makeStyles(theme => ({
 		justifyContent: 'center',
 		alignItems: 'baseline',
 		alignSelf: 'flex-start',
-        paddingBottom: theme.spacing(2),
+		paddingBottom: theme.spacing(2),
 		[theme.breakpoints.down('sm')]: {
-			alignSelf: 'center',
+			alignSelf: 'center'
 		},
 
 		color: 'white',
@@ -123,7 +123,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	img: {
 		position: 'relative',
-        width: '110%'
+		width: '110%'
 	},
 	grid: {
 		justifyContent: 'flex-start',
@@ -185,63 +185,61 @@ function Banner() {
 		completed: PropTypes.bool.isRequired
 	};
 
-    function renderInfo(classes) {
-        const tz = getTimeZoneWithFormat(hothStart, 'short');
-        const month = monthFormatter.format(hothStart);
-        const startDay = hothStart.getDate();
-        const endDay = hothEnd.getDate();
-        const eventCrossesDate = startDay !== endDay;
-        const endDayString = eventCrossesDate ? `–${endDay}` : '';
+	function renderInfo() {
+		const tz = getTimeZoneWithFormat(hothStart, 'short');
+		const month = monthFormatter.format(hothStart);
+		const startDay = hothStart.getDate();
+		const endDay = hothEnd.getDate();
+		const eventCrossesDate = startDay !== endDay;
+		const endDayString = eventCrossesDate ? `–${endDay}` : '';
 
-        return (
-            <>
-                <Typography component='h1' variant='h1' className={classes.text} style={{
-                    fontWeight: 'bold'
-                }}>
+		return (
+			<>
+				<Typography component='h1' variant='h1' className={classes.text} style={{
+					fontWeight: 'bold'
+				}}>
                     HOTH <span className={classes.hothNumber}>X</span>
-                </Typography>
+				</Typography>
 
-                <NoSsr>
+				<NoSsr>
 					<Countdown
 						date={hothStart}
 						renderer={countdownRenderer}
 					/>
 				</NoSsr>
 
-                <Typography variant='h5' className={classes.text} component='h3'
-                    style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> Carnesale Commons Palisades Room
-                </Typography>
-    
-                <Box display='flex' alignItems='left' color='white'>
-                    <Tooltip
-                        title={`This date range is displayed in your timezone! (${tz})`}
-                        placement='top'
-                        arrow={true}
-                    >
-                        <Typography
-                            variant='h5'
-                            className={classes.text}
-                            style={{ marginBottom: 10, fontWeight: 500 }}
-                            component='h3'
-                        >
-                            <time dateTime={hothStart.toISOString()} hidden>
-                                {month} {startDay}{endDayString}, 2022
-                            </time>
-                            <b>Date:</b> Sunday, March 5, 2023
-                        </Typography>
-                    </Tooltip>
-                </Box>
+				<Typography variant='h5' className={classes.text} component='h3'
+					style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> Carnesale Commons Palisades Room
+				</Typography>
 
-                {Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
-                    <Button
-                        className={classes.apply} href={'https://forms.gle/4zSBeQh3cjRtqcg79'}
-                        target='_blank'>
+				<Box display='flex' alignItems='left' color='white'>
+					<Tooltip
+						title={`This date range is displayed in your timezone! (${tz})`}
+						placement='top'
+						arrow={true}
+					>
+						<Typography
+							variant='h5'
+							className={classes.text}
+							style={{ marginBottom: 10, fontWeight: 500 }}
+							component='h3'
+						>
+							<time dateTime={hothStart.toISOString()} hidden>
+								{month} {startDay}{endDayString}, 2022
+							</time>
+							<b>Date:</b> Sunday, March 5, 2023
+						</Typography>
+					</Tooltip>
+				</Box>
+
+				{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
+                    <Button className={classes.apply} href={'https://forms.gle/4zSBeQh3cjRtqcg79'} target='_blank'>
                         Apply Now
                     </Button>
-                }
-            </>
-        );
-    }
+				}
+			</>
+		);
+	}
 
 	return (
 		<div className={classes.background}>
@@ -252,7 +250,7 @@ function Banner() {
 						direction='column'
 						className={classes.grid}
 					>
-						{renderInfo(classes)}
+						{renderInfo()}
 					</Grid>
 				</Box>
 				{smallScreen ?
