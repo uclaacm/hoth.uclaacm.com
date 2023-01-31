@@ -256,7 +256,7 @@ function Banner() {
 				{smallScreen ?
 					null :
 					<Box display='flex' flexDirection='column' className={classes.img}>
-						<Box><Img fluid={data.placeholderImage.childImageSharp.fluid} /></Box>
+						<Img fluid={data.placeholderImage.childImageSharp.fluid} />
 					</Box>
 				}
 			</Container>
