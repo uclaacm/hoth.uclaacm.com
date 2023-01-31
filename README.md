@@ -21,12 +21,12 @@ developed by ACM Hack’s Dev Team:
 - Katelyn Yu [(@katelynsyu)](https://github.com/katelynsyu)
 - Anakin Trotter [(@AnakinTrotter)](https://github.com/AnakinTrotter)
 - Nathan Zhang [(@nathanzzhang)](https://github.com/nathanzzhang)
-- Jenna Wang [(@ariyin)] (https://github.com/ariyin)
-- Shiyu Ye [(@Monicaaawa)] (https://github.com/Monicaaawa)
-- Brooke Jiang [(@jiangxuann)] (https://github.com/jiangxuann)
-- Jonathan Si [(@jsi19)] (https://github.com/jsi19)
-- Andy Lewis [(@datowq)] (https://github.com/datowq)
-- Satyen Subramaniam [(@SubramaniamSatyen)] (https://github.com/SubramaniamSatyen)
+- Jenna Wang [(@ariyin)](https://github.com/ariyin)
+- Shiyu Ye [(@Monicaaawa)](https://github.com/Monicaaawa)
+- Brooke Jiang [(@jiangxuann)](https://github.com/jiangxuann)
+- Jonathan Si [(@jsi19)](https://github.com/jsi19)
+- Andy Lewis [(@datowq)](https://github.com/datowq)
+- Satyen Subramaniam [(@SubramaniamSatyen)](https://github.com/SubramaniamSatyen)
 
 Past contributors: 
 - Timothy Gu [(@TimothyGu)](https://github.com/TimothyGu/)

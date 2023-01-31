@@ -142,14 +142,15 @@ function FAQSection() {
 		},
 		{
 			question: `When is HOTH ${hothNum} taking place? How long is it going to be?`,
-			answer: `The hackathon will take place on ${hothDate} 
-				and it will be 12 hours long.`
+			answer: `The hackathon will take place on ${hothDate} and it will be 12 hours long. While 
+            check-in will begin at 8am and the closing ceremony will end around 11pm, the actual 
+            hacking portion will be from 9am to 9pm.`
 		},
 		{
 			question: `Where is HOTH ${hothNum} taking place?`,
 			answer:
 				<>
-					Currently, we are planning for {hothNum} to be in-person
+					Currently, we are planning for HOTH {hothNum} to be in-person
 					with the event taking place at the {hothLocation}.
 				</>
 		},

@@ -96,7 +96,7 @@ export default function HothDescription() {
 							Hack on the Hill (HOTH X) is a{' '}
 							<strong>12-hour beginner-friendly</strong>
 							{' '}hackathon designed to be your first hackathon experience.
-							HOTH X will be in-person in Carnesale Commons Palisades. We hope to see you there!
+							HOTH X will be in-person in Carnesale Commons Palisades Room. We hope to see you there!
 						</Typography>
 					</RightGridItem>
 				</Grid>
