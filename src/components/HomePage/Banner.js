@@ -41,8 +41,10 @@ const useStyles = makeStyles(theme => ({
 		position: 'absolute',
 		left: '0px',
 		zIndex: 1,
+        maxWidth: "50%",
 		[theme.breakpoints.down('sm')]: {
-			position: 'relative'
+			position: 'relative',
+            maxWidth: "100%"
 		}
 	},
 	text: {
@@ -82,16 +84,15 @@ const useStyles = makeStyles(theme => ({
 		flexDirection: 'row',
 		justifyContent: 'center',
 		alignItems: 'baseline',
-		alignSelf: 'flex-end',
-		padding: theme.spacing(3, 0, 0, 0),
+		alignSelf: 'flex-start',
+        paddingBottom: theme.spacing(2),
 		[theme.breakpoints.down('sm')]: {
-			alignSelf: 'flex-start',
-			padding: theme.spacing(2)
+			alignSelf: 'center',
 		},
 
 		color: 'white',
 		fontWeight: 400,
-		fontSize: '3em',
+		fontSize: '2.5em',
 		[theme.breakpoints.down('xs')]: {
 			fontSize: '2.3rem'
 		},
@@ -121,7 +122,8 @@ const useStyles = makeStyles(theme => ({
 		}
 	},
 	img: {
-		position: 'relative'
+		position: 'relative',
+        width: '110%'
 	},
 	grid: {
 		justifyContent: 'flex-start',
@@ -133,67 +135,13 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-function renderInfo(classes) {
-	const tz = getTimeZoneWithFormat(hothStart, 'short');
-	const month = monthFormatter.format(hothStart);
-	const startDay = hothStart.getDate();
-	const endDay = hothEnd.getDate();
-	const eventCrossesDate = startDay !== endDay;
-	const endDayString = eventCrossesDate ? `–${endDay}` : '';
-	return (
-		<>
-			<Typography component='h1' variant='h1' className={classes.text} style={{
-				fontWeight: 'bold'
-			}}>
-				HOTH <span className={classes.hothNumber}>X</span>
-			</Typography>
-
-			<Typography variant='h5' className={classes.text} component='h3'
-				style={{ fontWeight: 500 }}>Explore. Build. Empower.
-			</Typography>
-
-			<Box display='flex' alignItems='left' color='white'>
-				<Tooltip
-					title={`This date range is displayed in your timezone! (${tz})`}
-					placement='top'
-					arrow={true}
-				>
-					<Typography
-						variant='h5'
-						className={classes.text}
-						style={{ marginTop: 40, fontWeight: 500 }}
-						component='h3'
-					>
-						<time dateTime={hothStart.toISOString()} hidden>
-							{month} {startDay}{endDayString}, 2022
-						</time>
-						Date: TBD
-					</Typography>
-				</Tooltip>
-			</Box>
-
-			<Typography variant='h5' className={classes.text} component='h3'
-				style={{ fontWeight: 500, marginBottom: 10 }}>Location: TBD
-			</Typography>
-			{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
-				<Button
-					className={classes.apply} href={'https://forms.gle/4zSBeQh3cjRtqcg79'}
-					target='_blank'>
-					Apply Now
-				</Button>
-			}
-		</>
-	);
-}
-
-
 function Banner() {
 	const classes = useStyles();
 	const theme = useTheme();
 	const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 	const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "hothXwebsite_banner.png" }) {
+      placeholderImage: file(relativePath: { eq: "hothX-banner.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -237,6 +185,64 @@ function Banner() {
 		completed: PropTypes.bool.isRequired
 	};
 
+    function renderInfo(classes) {
+        const tz = getTimeZoneWithFormat(hothStart, 'short');
+        const month = monthFormatter.format(hothStart);
+        const startDay = hothStart.getDate();
+        const endDay = hothEnd.getDate();
+        const eventCrossesDate = startDay !== endDay;
+        const endDayString = eventCrossesDate ? `–${endDay}` : '';
+
+        return (
+            <>
+                <Typography component='h1' variant='h1' className={classes.text} style={{
+                    fontWeight: 'bold'
+                }}>
+                    HOTH <span className={classes.hothNumber}>X</span>
+                </Typography>
+
+                <NoSsr>
+					<Countdown
+						date={hothStart}
+						renderer={countdownRenderer}
+					/>
+				</NoSsr>
+
+                <Typography variant='h5' className={classes.text} component='h3'
+                    style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> Carnesale Commons Palisades Room
+                </Typography>
+    
+                <Box display='flex' alignItems='left' color='white'>
+                    <Tooltip
+                        title={`This date range is displayed in your timezone! (${tz})`}
+                        placement='top'
+                        arrow={true}
+                    >
+                        <Typography
+                            variant='h5'
+                            className={classes.text}
+                            style={{ marginBottom: 10, fontWeight: 500 }}
+                            component='h3'
+                        >
+                            <time dateTime={hothStart.toISOString()} hidden>
+                                {month} {startDay}{endDayString}, 2022
+                            </time>
+                            <b>Date:</b> Sunday, March 5, 2023
+                        </Typography>
+                    </Tooltip>
+                </Box>
+
+                {Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
+                    <Button
+                        className={classes.apply} href={'https://forms.gle/4zSBeQh3cjRtqcg79'}
+                        target='_blank'>
+                        Apply Now
+                    </Button>
+                }
+            </>
+        );
+    }
+
 	return (
 		<div className={classes.background}>
 			<Container maxWidth='md' className={classes.container}>
@@ -247,26 +253,11 @@ function Banner() {
 						className={classes.grid}
 					>
 						{renderInfo(classes)}
-						{smallScreen ?
-							<NoSsr>
-								<Countdown
-									date={hothStart}
-									renderer={countdownRenderer}
-								/>
-							</NoSsr> :
-							null}
-
 					</Grid>
 				</Box>
 				{smallScreen ?
 					null :
 					<Box display='flex' flexDirection='column' className={classes.img}>
-						<NoSsr>
-							<Countdown
-								date={hothStart}
-								renderer={countdownRenderer}
-							/>
-						</NoSsr>
 						<Box><Img fluid={data.placeholderImage.childImageSharp.fluid} /></Box>
 					</Box>
 				}
