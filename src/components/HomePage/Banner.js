@@ -255,6 +255,7 @@ function Banner() {
 								/>
 							</NoSsr> :
 							null}
+
 					</Grid>
 				</Box>
 				{smallScreen ?
