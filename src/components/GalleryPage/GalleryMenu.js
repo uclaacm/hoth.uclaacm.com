@@ -12,10 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
 	linkStyle: {
 		color: theme.palette.primary.dark,
-		textDecoration: 'none',
-		'&:hover': {
-			color: theme.palette.primary.main
-		}
+		textDecoration: 'none'
 	}
 }));
 
