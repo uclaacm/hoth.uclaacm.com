@@ -253,7 +253,8 @@ function WorkshopPage() {
 
 	const sectionLinks = workshops.map(item =>
 		<React.Fragment key={item.type}>
-			<AnchorLink to={'/workshops#id_' + item.type.replace(/ /g, '_')}>
+			<AnchorLink to={'/workshops#id_' + item.type.replace(/ /g, '_')}
+				className={classes.anchor}>
 				<Button className={classes.btn} style={{ textDecoration: 'none',
 					display: 'flex', justifyContent: 'flex-start' }}>
 					<Typography variant='h6' component='h1' align='left'>
