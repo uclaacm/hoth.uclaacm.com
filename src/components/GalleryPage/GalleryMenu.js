@@ -6,8 +6,19 @@ import Fade from '@material-ui/core/Fade';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
+import useTheme from '@material-ui/core/styles/useTheme';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+	linkStyle: {
+		color: theme.palette.primary.dark,
+		textDecoration: 'none'
+	}
+}));
 
 function GalleryMenu({ hothNames, galleryLinks }) {
+	const theme = useTheme();
+	const classes = useStyles(theme);
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const open = Boolean(anchorEl);
 	const handleClick = event => {
@@ -16,9 +27,12 @@ function GalleryMenu({ hothNames, galleryLinks }) {
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
+	const activeStyle = {
+		color: theme.palette.secondary.main
+	};
 	const menuLinks = hothNames.map((hothName, index) =>
 		<MenuItem key={`menu-link-${index}`} onClick={handleClose}>
-			<Link to={galleryLinks[index]}>{hothName}</Link>
+			<Link to={galleryLinks[index]} className={classes.linkStyle} activeStyle={activeStyle}>{hothName}</Link>
 		</MenuItem>);
 	return (
 		<>
@@ -33,7 +47,7 @@ function GalleryMenu({ hothNames, galleryLinks }) {
 				color='secondary'
 				component='a'
 			>
-				See All HOTHs <ArrowDropDownIcon />
+				Past WINNERS <ArrowDropDownIcon />
 			</Button>
 			<Menu
 				id='fade-menu'
