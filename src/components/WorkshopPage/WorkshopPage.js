@@ -6,6 +6,7 @@ import useTheme from '@material-ui/core/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Workshop from './Workshop.js';
 import { makeStyles } from '@material-ui/core/styles';
+import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
 	itemType: {
@@ -225,9 +226,16 @@ function WorkshopPage() {
 
 	return (
 		<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
-			<Typography variant='h4' component='h1' className={classes.title}>
-				Workshops
-			</Typography>
+			<Box style={{ marginBottom: theme.spacing(4) }}>
+				<Typography variant='h4' component='h1' className={classes.title}>
+					Workshops
+				</Typography>
+
+				<Typography variant='body1' component='body'>
+					HOTH X workshops will be coming soon.
+					Check out our previous workshops below from last year if you are interested!
+				</Typography>
+			</Box>
 			{workshopCards}
 		</Container>
 	);

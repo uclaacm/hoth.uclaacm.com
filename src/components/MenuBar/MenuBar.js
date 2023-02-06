@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import { navigate } from 'gatsby';
 
 import ButtonBar from './ButtonBar';
-import { ReactComponent as HOTHLogo } from '../../images/hoth9-logo.svg';
+import { ReactComponent as HOTHLogo } from '../../images/hothX-logo.svg';
 
 const useStyles = makeStyles(theme => {
 	return {

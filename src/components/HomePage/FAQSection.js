@@ -110,6 +110,10 @@ AccordionQA.propTypes = {
 };
 
 function FAQSection() {
+	const hothNum = 'X';
+	const appDeadline = 'Friday, February 24, 2023';
+	const hothDate = 'Sunday, March 5, 2023';
+	const hothLocation = 'Carnesale Commons Palisades Room';
 	const faqs = [
 		{
 			question: `What's a hackathon?`,
@@ -118,12 +122,12 @@ function FAQSection() {
 					A hackathon is an event during which people from different backgrounds
 					come together to create a project from start to finish in a limited time frame.
 					Check out some examples from last year&apos;s
-					HOTH <Link href='https://hoth8.devpost.com/project-gallery'>here</Link>!
+					HOTH <Link href='https://hoth9.devpost.com/project-gallery'>here</Link>!
 				</>
 		},
 		{
 			question: `Who can join?`,
-			answer: `Applications for HOTH 9 are open to anyone! However, we are prioritizing 
+			answer: `Applications for HOTH ${hothNum} are open to anyone! However, we are prioritizing 
 				UCLA students for our prize tracks as well as in-person hacking.`
 		},
 		{
@@ -137,49 +141,44 @@ function FAQSection() {
 				vibe best with.`
 		},
 		{
-			question: `When is HOTH 9 taking place? How long is it going to be?`,
-			answer: `The hackathon will take place on Saturday, February 26, 2022, 
-				and it will be 12 hours long.`
+			question: `When is HOTH ${hothNum} taking place? How long is it going to be?`,
+			answer: `The hackathon will take place on ${hothDate} and it will be 12 hours long. While 
+            check-in will begin at 8am and the closing ceremony will end around 11pm, the actual 
+            hacking portion will be from 9am to 9pm.`
 		},
 		{
-			question: `Where is HOTH 9 taking place?`,
+			question: `Where is HOTH ${hothNum} taking place?`,
 			answer:
 				<>
-					Currently, we are planning for HOTH 9 to be hybrid
-					with the in-person portion of the event taking place at Covel Grand Horizons. A capped number
-					of people can participate in-person, and all in-person attendees must provide
-					a negative Covid test 72 hours before the event. Virtually, the event will be
-					taking place on our ACM Hack <Link href='https://discord.gg/MStu2cnBV9'>discord server</Link>,
-					and there is no limit on the number of people who can attend online.
-					We are, however, monitoring the Covid situation, and if circumstances change,
-					we may transition to a completely virtual event.
+					Currently, we are planning for HOTH {hothNum} to be in-person
+					with the event taking place at the {hothLocation}.
 				</>
 		},
 		{
 			question: `How do I sign up?`,
 			answer: `Hit the apply button above and fill out the application! A few days before
 				the event, you'll be emailed a confirmation form along with appropriate links
-				and additional event information. Applications close on February 21st at 11:59pm PST.`
+				and additional event information. Applications close on ${appDeadline} at 11:59pm PST.`
 		},
 		{
 			question: `What if I have never made a project before?`,
-			answer:	`No worries! Throughout HOTH 9, you'll have access to workshops on all sorts of
+			answer:	`No worries! Throughout HOTH ${hothNum}, you'll have access to workshops on all sorts of
 				topics to help you start bringing your ideas to life and mentors to support you through
 				any road blocks.`
 		},
 		{
-			question: `I have coding experience and want to make a difference at HOTH 9. 
+			question: `I have coding experience and want to make a difference at HOTH ${hothNum}. 
 				How can I get involved?`,
 			answer:
 				<>
 					We would love to have you as a mentor to answer participants&apos; technical
 					questions and help them with their projects. If you are interested, send us an email
-					at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com</Link>! or dm us on
+					at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com</Link> or dm us on
 					our <Link href='https://discord.gg/MStu2cnBV9'>discord server</Link>!
 				</>
 		},
 		{
-			question: `Where can I get updates on HOTH 9 and learn more about what ACM Hack is doing?`,
+			question: `Where can I get updates on HOTH ${hothNum} and learn more about what ACM Hack is doing?`,
 			answer:
 				<>
 					Come join us on our <Link href='https://discord.gg/MStu2cnBV9'>discord server</Link>.

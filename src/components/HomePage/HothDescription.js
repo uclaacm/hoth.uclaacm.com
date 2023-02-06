@@ -37,6 +37,19 @@ const useStyles = makeStyles(theme => ({
 		[theme.breakpoints.down('xs')]: {
 			fontSize: '2.5em'
 		}
+	},
+	catchphrase: {
+		textAlign: 'center',
+		fontSize: '2.5em',
+		fontWeight: theme.typography.fontWeightBold,
+		color: theme.palette.primary.dark,
+		padding: theme.spacing(2),
+		[theme.breakpoints.down('sm')]: {
+			fontSize: '2em'
+		},
+		[theme.breakpoints.down('xs')]: {
+			fontSize: '1.5em'
+		}
 	}
 }));
 
@@ -83,9 +96,13 @@ export default function HothDescription() {
 			<Container maxWidth='md'>
 				<hgroup>
 					<Typography variant='h2' className={classes.subtitle}>What’s</Typography>
-					<Typography variant='h2' className={classNames(classes.title, uppercase.root)} style={{
-						paddingBottom: isSmall ? theme.spacing(2) : theme.spacing(8)
-					}}>Hack on the Hill?</Typography>
+					<Typography variant='h2' className={classNames(classes.title, uppercase.root)}>
+						Hack on the Hill?
+					</Typography>
+					<Typography variant='h2' className={classes.catchphrase}
+						style={{ fontWeight: 500, paddingBottom: isSmall ? theme.spacing(2) : theme.spacing(8) }}>
+						Explore. Build. Empower.
+					</Typography>
 				</hgroup>
 				<Grid container spacing={isSmall ? 3 : 8} alignItems='center' justify='center'>
 					<LeftGridItem>
@@ -93,12 +110,10 @@ export default function HothDescription() {
 					</LeftGridItem>
 					<RightGridItem>
 						<Typography variant='body1' style={{ paddingBottom: isSmall ? theme.spacing(2) : 0 }}>
-							Hack on the Hill (HOTH 9) is a{' '}
+							Hack on the Hill (HOTH X) is a{' '}
 							<strong>12-hour beginner-friendly</strong>
 							{' '}hackathon designed to be your first hackathon experience.
-							HOTH 9 will be hybrid this year with the in-person
-							portion in Covel Grand Horizon and the virtual portion on the
-							{' '}<Link href='https://discord.com/invite/MStu2cnBV9'>Hack Discord</Link>.
+							HOTH X will be in-person in Carnesale Commons Palisades Room. We hope to see you there!
 						</Typography>
 					</RightGridItem>
 				</Grid>

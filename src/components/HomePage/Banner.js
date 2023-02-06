@@ -26,18 +26,35 @@ import {
 const monthFormatter = new Intl.DateTimeFormat('en-US', { month: 'short' });
 
 const useStyles = makeStyles(theme => ({
-	container: {
-		backgroundColor: theme.palette.primary.dark,
+	background: {
+		backgroundColor: '#11002E',
 		height: 'auto',
 		[theme.breakpoints.down('sm')]: {
 			padding: '12px 2px'
+		}
+	},
+	container: {
+		position: 'relative',
+		padding: '0px'
+	},
+	info: {
+		position: 'absolute',
+		left: '0px',
+		zIndex: 1,
+		maxWidth: '50%',
+		[theme.breakpoints.down('sm')]: {
+			position: 'relative',
+			maxWidth: '100%'
 		}
 	},
 	text: {
 		color: 'white',
 		fontWeight: 400,
 		textAlign: 'left',
-		justifyItems: 'left'
+		justifyItems: 'left',
+		[theme.breakpoints.down('sm')]: {
+			textAlign: 'center'
+		}
 	},
 	apply: {
 		width: 'auto',
@@ -67,16 +84,15 @@ const useStyles = makeStyles(theme => ({
 		flexDirection: 'row',
 		justifyContent: 'center',
 		alignItems: 'baseline',
-		alignSelf: 'flex-end',
-		padding: theme.spacing(3, 0, 0, 0),
+		alignSelf: 'flex-start',
+		paddingBottom: theme.spacing(2),
 		[theme.breakpoints.down('sm')]: {
-			alignSelf: 'flex-start',
-			padding: theme.spacing(2)
+			alignSelf: 'center'
 		},
 
 		color: 'white',
 		fontWeight: 400,
-		fontSize: '3em',
+		fontSize: '2.5em',
 		[theme.breakpoints.down('xs')]: {
 			fontSize: '2.3rem'
 		},
@@ -104,61 +120,20 @@ const useStyles = makeStyles(theme => ({
 		'&>:nth-child(even)': {
 			padding: '0 6px'
 		}
+	},
+	img: {
+		position: 'relative',
+		width: '110%'
+	},
+	grid: {
+		justifyContent: 'flex-start',
+		alignItems: 'flex-start',
+		[theme.breakpoints.down('sm')]: {
+			justifyContent: 'center',
+			alignItems: 'center'
+		}
 	}
 }));
-
-function renderInfo(classes) {
-	const tz = getTimeZoneWithFormat(hothStart, 'short');
-	const month = monthFormatter.format(hothStart);
-	const startDay = hothStart.getDate();
-	const endDay = hothEnd.getDate();
-	const eventCrossesDate = startDay !== endDay;
-	const endDayString = eventCrossesDate ? `–${endDay}` : '';
-	return (
-		<>
-			<Typography component='h1' variant='h1' className={classes.text} style={{
-				fontWeight: 'bold'
-			}}>
-				HOTH <span className={classes.hothNumber}>9</span>
-			</Typography>
-
-			<Typography variant='h5' className={classes.text} component='h3'
-				style={{ fontWeight: 500 }}>Explore. Build. Empower.
-			</Typography>
-
-			<Box display='flex' alignItems='left' color='white'>
-				<Tooltip
-					title={`This date range is displayed in your timezone! (${tz})`}
-					placement='top'
-					arrow={true}
-				>
-					<Typography
-						variant='h5'
-						className={classes.text}
-						style={{ marginTop: 40, fontWeight: 500 }}
-						component='h3'
-					>
-						<time dateTime={hothStart.toISOString()}>
-							{month} {startDay}{endDayString}, 2022
-						</time>
-					</Typography>
-				</Tooltip>
-			</Box>
-
-			<Typography variant='h5' className={classes.text} component='h3'
-				style={{ fontWeight: 500, marginBottom: 10 }}>Covel Grand Horizon
-			</Typography>
-			{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
-				<Button
-					className={classes.apply} href={'http://links.uclaacm.com/hoth9-application-form'}
-					target='_blank'>
-					Apply Now
-				</Button>
-			}
-		</>
-	);
-}
-
 
 function Banner() {
 	const classes = useStyles();
@@ -166,7 +141,7 @@ function Banner() {
 	const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 	const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "powellBackground.png" }) {
+      placeholderImage: file(relativePath: { eq: "hothX-banner.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -210,47 +185,80 @@ function Banner() {
 		completed: PropTypes.bool.isRequired
 	};
 
-	return (
-		<div className={classes.container}>
-			<Container maxWidth='md'>
-				<Grid
-					container
-					direction={smallScreen ? 'column' : 'row' }
-					alignItems='center'
-				>
-					<Grid item sm={12} md={6}>
-						<Grid
-							container
-							direction='column'
-							justify='flex-start'
-							alignItems='flex-start'
+	function renderInfo() {
+		const tz = getTimeZoneWithFormat(hothStart, 'short');
+		const month = monthFormatter.format(hothStart);
+		const startDay = hothStart.getDate();
+		const endDay = hothEnd.getDate();
+		const eventCrossesDate = startDay !== endDay;
+		const endDayString = eventCrossesDate ? `–${endDay}` : '';
+
+		return (
+			<>
+				<Typography component='h1' variant='h1' className={classes.text} style={{
+					fontWeight: 'bold'
+				}}>
+                    HOTH <span className={classes.hothNumber}>X</span>
+				</Typography>
+
+				<NoSsr>
+					<Countdown
+						date={hothStart}
+						renderer={countdownRenderer}
+					/>
+				</NoSsr>
+
+				<Typography variant='h5' className={classes.text} component='h3'
+					style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> Carnesale Commons Palisades Room
+				</Typography>
+
+				<Box display='flex' alignItems='left' color='white'>
+					<Tooltip
+						title={`This date range is displayed in your timezone! (${tz})`}
+						placement='top'
+						arrow={true}
+					>
+						<Typography
+							variant='h5'
+							className={classes.text}
+							style={{ marginBottom: 10, fontWeight: 500 }}
+							component='h3'
 						>
-							{renderInfo(classes)}
-							{smallScreen ?
-								<NoSsr>
-									<Countdown
-										date={hothStart}
-										renderer={countdownRenderer}
-									/>
-								</NoSsr> :
-								null}
-						</Grid>
+							<time dateTime={hothStart.toISOString()} hidden>
+								{month} {startDay}{endDayString}, 2022
+							</time>
+							<b>Date:</b> Sunday, March 5, 2023
+						</Typography>
+					</Tooltip>
+				</Box>
+
+				{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
+                    <Button className={classes.apply} href={'https://forms.gle/4zSBeQh3cjRtqcg79'} target='_blank'>
+                        Apply Now
+                    </Button>
+				}
+			</>
+		);
+	}
+
+	return (
+		<div className={classes.background}>
+			<Container maxWidth='md' className={classes.container}>
+				<Box item sm={12} md={6} className={classes.info}>
+					<Grid
+						container
+						direction='column'
+						className={classes.grid}
+					>
+						{renderInfo()}
 					</Grid>
-					{smallScreen ?
-						null :
-						<Grid item sm={12} md={6}>
-							<Box display='flex' flexDirection='column'>
-								<NoSsr>
-									<Countdown
-										date={hothStart}
-										renderer={countdownRenderer}
-									/>
-								</NoSsr>
-								<Box><Img fluid={data.placeholderImage.childImageSharp.fluid} /></Box>
-							</Box>
-						</Grid>
-					}
-				</Grid>
+				</Box>
+				{smallScreen ?
+					null :
+					<Box display='flex' flexDirection='column' className={classes.img}>
+						<Img fluid={data.placeholderImage.childImageSharp.fluid} />
+					</Box>
+				}
 			</Container>
 		</div>
 	);

@@ -9,7 +9,7 @@ import eventSchedule from '../../data/eventSchedule';
 import ComingSoon from '../ComingSoon/ComingSoon';
 
 // When changing this, make sure to update src/components/HomePage/UpcomingEvents.js as well.
-const scheduleAvailable = true;
+const scheduleAvailable = false;
 
 const useStyles = makeStyles(theme => ({
 	title: {
@@ -37,10 +37,6 @@ const SchedulePage = () => {
 	return <Container maxWidth='md'>
 		<Typography align='left' variant='h4' component='h1' className={classes.title}>
 			Schedule
-		</Typography>
-		<Typography align='left' variant='subtitle1' className={classes.note}>
-			Note: if there are two locations listed for an event, the first location is the in-person location
-			and the second is the online location.
 		</Typography>
 		{!scheduleAvailable ?
 			<ComingSoon alignment='left' /> :
