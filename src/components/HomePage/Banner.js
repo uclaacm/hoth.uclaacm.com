@@ -224,10 +224,10 @@ function Banner() {
 							style={{ marginBottom: 10, fontWeight: 500 }}
 							component='h3'
 						>
-							<time dateTime={hothStart.toISOString()} hidden>
-								{month} {startDay}{endDayString}, 2022
+							<b>Date: </b><time dateTime={hothStart.toISOString()} >
+								{month} {startDay}{endDayString}, 2023
 							</time>
-							<b>Date:</b> Sunday, March 5, 2023
+							{/* <b>Date:</b> Sunday, March 5, 2023 */}
 						</Typography>
 					</Tooltip>
 				</Box>

@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
+import { getDateTime } from '../../utils/datetime_utils';
 
 const useStyles = makeStyles(theme => ({
 	subject: {
@@ -22,17 +23,13 @@ const useStyles = makeStyles(theme => ({
 function Announcement({ subject, timestamp, body }) {
 	const classes = useStyles();
 
-	const d = new Date(timestamp);
-	const date = d.toLocaleDateString('en-US');
-	const time = d.toLocaleTimeString('en-US');
-
 	return (
 		<Container>
 			<Typography variant='h5' component='h2' className={classes.subject}>
 				{subject}
 			</Typography>
 			<Typography variant='subtitle1' className={classes.timestamp}>
-                Posted on {date} at {time} PST
+                Posted on {getDateTime(timestamp)} PST
 			</Typography>
 			<Typography variant='body2' className={classes.body}>
 				{body.trim()}
