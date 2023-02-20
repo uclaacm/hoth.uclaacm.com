@@ -7,7 +7,7 @@ import ScheduleRoundedIcon from '@material-ui/icons/ScheduleRounded';
 import Box from '@material-ui/core/Box';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import ListItem from '@material-ui/core/ListItem';
-import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
+import { getTimeZoneWithFormat } from '../../utils/datetime_utils';
 
 const useStyles = makeStyles(theme => {
 	return {

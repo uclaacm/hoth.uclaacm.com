@@ -62,6 +62,7 @@ const useStyles = makeStyles(theme => ({
 
 function HomeAnnouncement({ subject, timestamp, body }) {
 	const classes = useStyles();
+	const datetime = getDateTime(timestamp);
 
 	return (
 		<Grid container direction='column' justify='space-between'>
@@ -74,7 +75,7 @@ function HomeAnnouncement({ subject, timestamp, body }) {
 					</Grid>
 					<Grid item>
 						<Typography variant='subtitle2' className={classes.date}>
-							{getDateTime(timestamp)}
+							{datetime.date}, {datetime.time}
 						</Typography>
 					</Grid>
 				</Grid>

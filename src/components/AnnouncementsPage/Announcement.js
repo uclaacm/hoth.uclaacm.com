@@ -22,6 +22,7 @@ const useStyles = makeStyles(theme => ({
 
 function Announcement({ subject, timestamp, body }) {
 	const classes = useStyles();
+	const datetime = getDateTime(timestamp);
 
 	return (
 		<Container>
@@ -29,7 +30,7 @@ function Announcement({ subject, timestamp, body }) {
 				{subject}
 			</Typography>
 			<Typography variant='subtitle1' className={classes.timestamp}>
-                Posted on {getDateTime(timestamp)} PST
+                Posted on {datetime.date} at {datetime.time} PST
 			</Typography>
 			<Typography variant='body2' className={classes.body}>
 				{body.trim()}
