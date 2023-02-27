@@ -42,70 +42,47 @@ const workshops = [
 		type: 'Web Development',
 		elements: [
 			{
-				title: 'Intro to Frontend',
-				author: 'Rajeswhari Jadhav',
-				description: `HTML (HyperText Markup Language) is a fancy way of saying text
-				with extra tags that describe the structure and the content of a web page.
-				Historically, HTML was much more limited, but is now able to do much more,
-				such as images. Let's get started with some Frontend in HTML!`,
-				youtube: 'https://youtu.be/-rg6fJKJ77c',
-				readme: 'https://github.com/uclaacm/hoth9-workshops/tree/main/intro-to-frontend',
-				slides: 'https://docs.google.com/presentation/d/12HhnDSDsRA8VA3x9axXg5uHfjZveNdRJ7tGE3kMNBts/edit?usp=sharing'
-			},
-			{
-				title: 'Intro to CSS',
-				author: 'Jakob Reinwald',
-				description: `The code we have in our HTML file should only represent
-				the content of our webpage. A different language called CSS
-				(Cascading Style Sheet) is used to create the rules about the styling of our content.`,
-				youtube: 'https://youtu.be/DdY_VfwJZ1w',
-				readme: 'https://github.com/uclaacm/hoth8-intro-to-html-css-js/blob/main/README.md',
-				slides: 'https://docs.google.com/presentation/d/1Y9rvAXjyeZOADBceqlAr9eeakO7URGWwu4QRulgvhSs/edit?usp=sharing'
-			},
-			{
-				title: 'Intro to JavaScript',
-				author: 'Jakob Reinwald',
-				description: `If we want to make our website more interactive, we need to be
-				able to change the web page through programming and set rules about what
-				will happen given that certain events occur. This brings us to JavaScript!`,
-				youtube: 'https://youtu.be/Q23CBrln3SA',
-				readme: 'https://github.com/uclaacm/hoth8-intro-to-html-css-js/blob/main/README.md',
-				slides: 'https://docs.google.com/presentation/d/1Y9rvAXjyeZOADBceqlAr9eeakO7URGWwu4QRulgvhSs/edit?usp=sharing'
+				title: 'Intro to HTML, CSS, and JavaScript',
+				author: 'Shiyu Ye',
+				description: `This workshop will take you on a fun and interactive
+				journey through the three amigos of web development: HTML, CSS, and
+				JavaScript. We will go over how to use HTML to structure your web
+				pages, CSS to style them up with colors, fonts, and layouts, and
+				JavaScript to add some fun little tricks. As a practice, we will
+				be creating a personal website for Anya from Spy x Family! Hope to
+				spy you there, fam ;)`,
+				youtube: '',
+				readme: 'https://github.com/uclaacm/hothX-workshops/tree/main/intro-to-html-css-js',
+				slides: 'https://docs.google.com/presentation/d/1mpto8de9naxHfKPpK9p8updtKn-Z2wSzQV-Ravq6I58/edit?usp=sharing'
 			},
 			{
 				title: 'Intro to Web APIs',
-				author: 'Thomas McGall',
-				description: `Learn about the wonderful world of HTTP requests and web APIs where someone else
-				can do the hard work for you. With PokéAPI and Google Maps API, we'll learn all
-				about what APIs are, why we use them, and how we can integrate them into our code!
-				Pikachu, I choose you!!!`,
-				youtube: 'https://youtu.be/Nbst275dfyA',
-				readme: 'https://github.com/uclaacm/hoth9-workshops/tree/main/Web-APIs',
-				slides: 'https://docs.google.com/presentation/d/1RwTR04cmAl1h37xs4nX4tz4w3X8sd8nLoNgUktc2-08/edit?usp=sharing'
+				author: 'Abigail Tran',
+				description: `Sick of waiting all year for your Spotify Wrapped? Learn
+				how to build your own version of Receiptify or Spotify Pie using spotify
+				APIs! In this workshop, we will learn all about using Web APIs to integrate
+				existing software systems (like Twitter, Venmo, Spotify, Google Maps) within
+				your OWN project! So, wrap up your Spotify playlist, and queue up this workshop
+				on APIs!`,
+				youtube: '',
+				readme: 'https://github.com/uclaacm/hothX-workshops/tree/main/intro-to-apis',
+				slides: 'https://docs.google.com/presentation/d/1iQU02GAt75Y2JhRN6iniuJFAt_tKBy1xE2whg-1DJs0/edit?usp=sharing'
 			},
 			{
 				title: 'Intro to Servers',
-				author: 'Anakin Trotter',
-				description: `Learn about the brains behind what makes your favorite websites work!
-				In this workshop, we will go over the terms server, backend, and HTTP and explain
-				what these terms mean and how they can apply to your project. There is also a demo at the
-				end showing you how to program your own backend to handle GET and POST requests using
-				Node.js and Express, so take your express ticket to server expertise and enjoy this workshop!`,
-				youtube: 'https://youtu.be/NmFxHLpuvAg',
-				readme: 'https://github.com/uclaacm/hoth9-workshops/tree/main/intro-to-servers',
-				slides: 'https://docs.google.com/presentation/d/113s6r2s_LHSXV0bN1K-MIkMxi8UagFDMynRB5i78BoA/edit?usp=sharing'
+				author: 'Andy Lewis',
+				description: ``,
+				youtube: '',
+				readme: 'https://github.com/uclaacm/hothX-workshops/tree/main/intro-to-servers',
+				slides: 'https://docs.google.com/presentation/d/1RRLdpQPd8cEvC-9tqNKD9qUO08CcmGYJo30rTwJiQkU/edit?usp=sharing'
 			},
 			{
 				title: 'Intro to React.js',
-				author: 'Maggie Li',
-				description: `How are some of your favorite websites like Facebook and Netflix made?
-				Let's talk about React, a JavaScript library used to build user interfaces! In this
-				workshop, you'll learn how to set up your own React App, as well as fundamental React
-				concepts such as components, props, and state. We'll even show you how to start building
-				your own version of Disney+. Let the magic begin!`,
-				youtube: 'https://youtu.be/4YZ0KZfCcb8',
-				readme: 'https://github.com/uclaacm/hoth9-workshops/tree/main/intro-to-reactjs',
-				slides: 'https://docs.google.com/presentation/d/1Q6-zbYOSTcvS5uN2GZHnxcpBYevpkj2HTGZImfVUEPc/edit?usp=sharing'
+				author: 'Brooke Jiang',
+				description: ``,
+				youtube: '',
+				readme: 'https://github.com/uclaacm/hothX-workshops/tree/main/intro-to-react',
+				slides: 'https://docs.google.com/presentation/d/1dAx-azdKEiOLCANUMoKRm1PP2Cme5SfXaAM-xh6Ozdg/edit?usp=sharing'
 			}
 		]
 	},
@@ -130,50 +107,53 @@ const workshops = [
 		elements: [
 			{
 				title: 'Hackathon 101',
-				author: 'Rajeshwari Jadhav',
-				description: `Start here for an idea of what Hack on the Hill 9 will offer as ACM Hack's
-				first hybrid hackathon. We'll also give you some tips on how to survive and thrive during
-				this year's HOTH! Have fun, good luck, and we believe in you!`,
-				youtube: 'https://youtu.be/GskV5qMOpkE',
+				author: 'Anan Wang',
+				description: `This workshop videos explains the basics of hackathons, which are events where
+				people work together to create technology projects. You'll learn what to expect and how to make
+				the most out of your experience. By the end of the video, you'll have a better understanding of
+				what hackathons are all about and how to get started with attending one. Happy hacking, handy
+				hackers!`,
+				youtube: '',
 				readme: null,
-				slides: 'https://docs.google.com/presentation/d/1LNYFecHI-U5BGY9_OdqCTfPSFtq6wmDw9gwLld3tIVY/edit?usp=sharing'
+				slides: 'https://docs.google.com/presentation/d/1oln-vrDxRUNNjYx9DT616e8QW2x6HYdkriyty0N8Rkc/edit?usp=sharing'
 			},
 			{
 				title: 'Intro to Git',
-				author: 'Katelyn Yu',
-				description: `Welcome to the wonderous world of version control! In this
-				workshop, we'll introduce git and GitHub (two very different things) with a
-				quick guide on how to set them up and how to use them. We'll simulate creating
-				a project with git and GitHub with all the intricacies of terminal, branching,
-				merging, and merge conflicts. Curious as to what those are? Wake up your galaxy brain,
-				watch this workshop, and 'git gud' at git!`,
-				youtube: 'https://youtu.be/YWEOSz7Lo8U',
-				readme: 'https://github.com/uclaacm/hoth9-workshops/tree/main/intro-to-git',
-				slides: 'https://docs.google.com/presentation/d/11Gb0WyIzhGyTfzxS0bg_IhUuvTgwYifyVpzmMK8aOmg/edit?usp=sharing'
+				author: 'Jenna Wang',
+				description: `Git is a distributed version control system; it brings a local copy of the
+				complete repository to every team member’s computer so they can commit, branch, and merge
+				locally. The benefits of using Git include the flexibility to work offline, reliable backup
+				copies, fast merging and flexible branching, rapid feedback, fewer merge conflicts, and available
+				support. We’ll be going over how to install and configure Git and how to use various Git commands
+				to switch branches, commit, push, and pull code, so let's 'git gud' at git!`,
+				youtube: '',
+				readme: 'https://github.com/uclaacm/hothX-workshops/tree/main/intro-to-git',
+				slides: 'https://docs.google.com/presentation/d/1kzZsZGdJ4h_GscDhjbLPs4L3j0XPIpE1-F_w2_zc6N4/edit?usp=sharing'
 			},
 			{
 				title: 'Intro to Databases',
-				author: 'Nathan Zhang',
-				description: `In this workshop you will learn all about databases! Why do we use
-				databases? What are different types of databases? How do we use databases? Why does
-				this summary use the word 'databases' so much? Find out the answers to all of these
-				questions in this workshop! We'll even run through adding, retrieving, and displaying
-				data values using Firebase, a NoSQL cloud database provided by Google!`,
-				youtube: 'https://youtu.be/1qTyhlzLT-4',
-				readme: 'https://github.com/uclaacm/hoth9-workshops/tree/main/intro-to-databases',
-				slides: 'https://docs.google.com/presentation/d/1hDHHENCtzvLnjwS8mYuapRBkFIEbIU_g7SKLQwU6Vnc/edit?usp=sharing'
+				author: 'Satyen Subramaniam',
+				description: `All good projects need a strong foundation - a base for their data. Join us in this
+				workshop where we'll run through the use cases of databases, the structure of popular types of
+				databases, and how to choose a database. We'll also do a full demo using Google Firebase - a
+				beginner friendly non-relational database - and connect it to a custom website using React, all
+				completely from scratch! Get ready cus this workshop is gonna be absolutely fire (and make your
+				websites hella based) :)`,
+				youtube: '',
+				readme: 'https://github.com/uclaacm/hothX-workshops/tree/main/intro-to-databases',
+				slides: 'https://docs.google.com/presentation/d/1LE2CYSIvGKSbGdGuZuMC1hOnxjmKgP3uwH0-LPEWSFw/edit?usp=sharing'
 			},
 			{
 				title: 'Intro to Game Development',
-				author: 'Peter Sutarjo (ACM Studio)',
-				description: `In this workshop, we'll go over how to start thinking about your
-				prospective video game, such as whether you plan to create a visual novel or a
-				platformer. We'll give you some tips to succeed such as determining scope
-				and finding assets. At the end, we'll introduce you to some resources for
-				you to look at as you start diving deeper into developing your game.`,
-				youtube: 'https://youtu.be/D_mbel-Q5_0',
+				author: 'Austin Law',
+				description: `It’s gamer time! In this workshop, we cover some general tips to game development.
+				Whether you want to make an action RPG or a visual novel, it's important to keep in mind where
+				to start, how to scale properly, and how to work with a team. Then, we briefly dive into Unity
+				and the Unity Editor, and follow a condensed version of Unity's Roll-A-Ball tutorial. So grab
+				your headsets and watch this workshop cus it’s time to up your game dev game!`,
+				youtube: '',
 				readme: null,
-				slides: 'https://docs.google.com/presentation/d/1fjDNeCgPOvp4xe2yMorYeOHJZrXBI7NZ8eqSt9Fm-0Q/edit#slide=id.p'
+				slides: 'https://docs.google.com/presentation/d/1s545_VhUktrxMzpx6k6hi_kOUbsRiJP0evhJ1x9ai38/edit?usp=sharing'
 			},
 			{
 				title: 'Intro to UI/UX Design',
