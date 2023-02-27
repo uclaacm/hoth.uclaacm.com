@@ -71,7 +71,13 @@ const workshops = [
 			{
 				title: 'Intro to Servers',
 				author: 'Andy Lewis',
-				description: ``,
+				description: `The intro to servers workshop covers the basics of the client-server
+				model and touches on relevant topics like hardware and software servers, HTTP,
+				and JSON. During the accompanying demo, you will learn how to create a simple
+				server and its API using JavaScript, Node.js, and Express. The server features
+				a simulated user database with user manipulation using GET, POST, and DELETE
+				requests, which we will test using the API tester, Postman! Stay posted for this
+				workshop and take your express ticket to server expertise!`,
 				youtube: '',
 				readme: 'https://github.com/uclaacm/hothX-workshops/tree/main/intro-to-servers',
 				slides: 'https://docs.google.com/presentation/d/1RRLdpQPd8cEvC-9tqNKD9qUO08CcmGYJo30rTwJiQkU/edit?usp=sharing'
@@ -79,7 +85,12 @@ const workshops = [
 			{
 				title: 'Intro to React.js',
 				author: 'Brooke Jiang',
-				description: ``,
+				description: `In this workshop, we cover the basics of React with a simple demo
+				of creating a grocery list. We go over what React is and why we want to use it, make
+				our first component, and allow it to display different information using props and
+				array.map()! Furthermore, we learn the basics of State and useState, and how React magic
+				lets the user interact with the site. Shop no longer for ways to create your ideal website
+				and state tuned for this introduction to React!`,
 				youtube: '',
 				readme: 'https://github.com/uclaacm/hothX-workshops/tree/main/intro-to-react',
 				slides: 'https://docs.google.com/presentation/d/1dAx-azdKEiOLCANUMoKRm1PP2Cme5SfXaAM-xh6Ozdg/edit?usp=sharing'
