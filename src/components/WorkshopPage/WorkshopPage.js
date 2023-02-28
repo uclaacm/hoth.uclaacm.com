@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => ({
 		paddingTop: theme.spacing(2),
 		[theme.breakpoints.down('sm')]: {
 			display: 'none'
-		},
+		}
 	}
 }));
 
@@ -260,7 +260,7 @@ function WorkshopPage() {
 				<Button className={classes.btn} style={{ textDecoration: 'none',
 					display: 'flex', justifyContent: 'flex-start' }}>
 					<Typography variant='h6' component='h1' align='left' className={classes.anchorText}>
-						 - {item.abbrev}
+						- {item.abbrev}
 					</Typography>
 				</Button>
 			</AnchorLink>
