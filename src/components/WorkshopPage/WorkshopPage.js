@@ -86,7 +86,7 @@ const workshops = [
 				title: 'Intro to React.js',
 				author: 'Brooke Jiang',
 				description: `In this workshop, we cover the basics of React with a simple demo
-				of creating a grocery list. We will go over what React is and why we want to use it, make
+				of creating a grocery list. We will introduce React, explain why we want to use it, make
 				our first component, and allow it to display different information using props and
 				array.map()! Furthermore, we will learn the basics of State and useState, and how React magic
 				lets the user interact with the site. Shop no longer for ways to create your ideal website
