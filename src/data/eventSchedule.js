@@ -66,7 +66,7 @@ const eventSchedule = [
 			}
 		]
 	},
-    {
+	{
 		startTime: getDateObj('05', '09:30:00'),
 		events: [
 			{
@@ -94,7 +94,7 @@ const eventSchedule = [
 			}
 		]
 	},
-    {
+	{
 		startTime: getDateObj('05', '13:00:00'),
 		events: [
 			{
@@ -124,7 +124,7 @@ const eventSchedule = [
 			}
 		]
 	},
-    {
+	{
 		startTime: getDateObj('05', '19:00:00'),
 		events: [
 			{
