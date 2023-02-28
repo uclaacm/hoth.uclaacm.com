@@ -37,6 +37,9 @@ const useStyles = makeStyles(theme => ({
 		},
 		paddingBottom: theme.spacing(4)
 	},
+	topics: {
+		paddingBottom: theme.spacing(2)
+	},
 	btn: {
 		fontWeight: 500,
 		marginLeft: '20px'
@@ -44,19 +47,18 @@ const useStyles = makeStyles(theme => ({
 	anchor: {
 		textDecoration: 'none'
 	},
-	activeAnchor: {
-		fontWeight: 1000,
-		textDecoration: 'none'
-	},
-	sideBar: {
-		position: 'fixed',
-		paddingTop: '10vh',
-		paddingLeft: '5px',
-		width: '240px'
+	anchorText: {
+		fontWeight: theme.typography.fontWeightMedium,
+		color: theme.palette.primary.main,
+		fontFamily: theme.typography.fontFamily
 	},
 	sections: {
 		marginLeft: '20px',
-		marginTop: '20px'
+		marginTop: theme.spacing(9),
+		paddingTop: theme.spacing(2),
+		[theme.breakpoints.down('sm')]: {
+			display: 'none'
+		},
 	}
 }));
 
@@ -257,8 +259,8 @@ function WorkshopPage() {
 				className={classes.anchor}>
 				<Button className={classes.btn} style={{ textDecoration: 'none',
 					display: 'flex', justifyContent: 'flex-start' }}>
-					<Typography variant='h6' component='h1' align='left'>
-						{item.abbrev}
+					<Typography variant='h6' component='h1' align='left' className={classes.anchorText}>
+						 - {item.abbrev}
 					</Typography>
 				</Button>
 			</AnchorLink>
@@ -268,17 +270,11 @@ function WorkshopPage() {
 		<React.Fragment>
 			<div style={{ display: 'flex', alignItems: 'flex-start' }}>
 				<StickyBox offsetTop={20} offsetBottom={20} className={classes.sections}>
-					<Typography variant='h4' component='h1' align='left'>
+					<Typography variant='h4' component='h1' align='left' className={classes.topics}>
 						Topics
 					</Typography>
 					{sectionLinks}
 				</StickyBox>
-				{/* <div className={classes.sideBar} hidden={!renderBar}>
-					<Typography variant='h4' component='h1' align='left'>
-						Topics
-					</Typography>
-					{sectionLinks}
-				</div> */}
 				<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
 					<Typography variant='h4' component='h1' className={classes.title}>
 						Workshops
