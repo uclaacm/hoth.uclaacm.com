@@ -116,7 +116,7 @@ const eventSchedule = [
 				name: 'Dinner',
 				duration: '60 min',
 				location: 'Carnesale Commons Palisades Room',
-				description: `Do you know what's better than one free meal? Two
+				description: `Do you know what's better than two free meal? Three
 				free meals! And you've earned it! It's time to gorge yourself on pizza from
 				Papa John's while you recoup for your last sprint to the finish line!
 				Just like lunch, there will be alternate food options if you have dietary
@@ -167,7 +167,7 @@ const eventSchedule = [
 			{
 				name: 'Closing Ceremony',
 				duration: '20 min',
-				location: 'Covel Grand Horizon/Zoom',
+				location: 'Carnesale Commons Palisades Room',
 				description: `Find out the winners of our raffle and prize tracks at our closing 
                 ceremony!`
 			}
