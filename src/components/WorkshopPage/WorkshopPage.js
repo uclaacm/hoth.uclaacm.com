@@ -51,7 +51,7 @@ const workshops = [
 				JavaScript to add some fun little tricks. As a practice, we will
 				be creating a personal website for Anya from Spy x Family! Hope to
 				spy you there, fam ;)`,
-				youtube: '',
+				youtube: 'https://youtu.be/bU1C5UoKlSU',
 				readme: 'https://github.com/uclaacm/hothX-workshops/tree/main/intro-to-html-css-js',
 				slides: 'https://docs.google.com/presentation/d/1mpto8de9naxHfKPpK9p8updtKn-Z2wSzQV-Ravq6I58/edit?usp=sharing'
 			},
@@ -64,7 +64,7 @@ const workshops = [
 				existing software systems (like Twitter, Venmo, Spotify, Google Maps) within
 				your OWN project! So, wrap up your Spotify playlist, and queue up this workshop
 				on APIs!`,
-				youtube: '',
+				youtube: 'https://youtu.be/U2MOLOC6GAI',
 				readme: 'https://github.com/uclaacm/hothX-workshops/tree/main/intro-to-apis',
 				slides: 'https://docs.google.com/presentation/d/1iQU02GAt75Y2JhRN6iniuJFAt_tKBy1xE2whg-1DJs0/edit?usp=sharing'
 			},
@@ -78,7 +78,7 @@ const workshops = [
 				a simulated user database with user manipulation using GET, POST, and DELETE
 				requests, which we will test using the API tester, Postman! Stay posted for this
 				workshop and take your express ticket to server expertise!`,
-				youtube: '',
+				youtube: 'https://youtu.be/pdE3bA_S4q8',
 				readme: 'https://github.com/uclaacm/hothX-workshops/tree/main/intro-to-servers',
 				slides: 'https://docs.google.com/presentation/d/1RRLdpQPd8cEvC-9tqNKD9qUO08CcmGYJo30rTwJiQkU/edit?usp=sharing'
 			},
@@ -91,7 +91,7 @@ const workshops = [
 				array.map()! Furthermore, we learn the basics of State and useState, and how React magic
 				lets the user interact with the site. Shop no longer for ways to create your ideal website
 				and state tuned for this introduction to React!`,
-				youtube: '',
+				youtube: 'https://youtu.be/1GNq5ez2Lxg',
 				readme: 'https://github.com/uclaacm/hothX-workshops/tree/main/intro-to-react',
 				slides: 'https://docs.google.com/presentation/d/1dAx-azdKEiOLCANUMoKRm1PP2Cme5SfXaAM-xh6Ozdg/edit?usp=sharing'
 			}
@@ -124,7 +124,7 @@ const workshops = [
 				the most out of your experience. By the end of the video, you'll have a better understanding of
 				what hackathons are all about and how to get started with attending one. Happy hacking, handy
 				hackers!`,
-				youtube: '',
+				youtube: 'https://youtu.be/p8ssQybQsd8',
 				readme: null,
 				slides: 'https://docs.google.com/presentation/d/1oln-vrDxRUNNjYx9DT616e8QW2x6HYdkriyty0N8Rkc/edit?usp=sharing'
 			},
@@ -137,7 +137,7 @@ const workshops = [
 				copies, fast merging and flexible branching, rapid feedback, fewer merge conflicts, and available
 				support. We’ll be going over how to install and configure Git and how to use various Git commands
 				to switch branches, commit, push, and pull code, so let's 'git gud' at git!`,
-				youtube: '',
+				youtube: 'https://youtu.be/BefzoplcCzs',
 				readme: 'https://github.com/uclaacm/hothX-workshops/tree/main/intro-to-git',
 				slides: 'https://docs.google.com/presentation/d/1kzZsZGdJ4h_GscDhjbLPs4L3j0XPIpE1-F_w2_zc6N4/edit?usp=sharing'
 			},
@@ -150,7 +150,7 @@ const workshops = [
 				beginner friendly non-relational database - and connect it to a custom website using React, all
 				completely from scratch! Get ready cus this workshop is gonna be absolutely fire (and make your
 				websites hella based) :)`,
-				youtube: '',
+				youtube: 'https://youtu.be/l6D8X0L_L_g',
 				readme: 'https://github.com/uclaacm/hothX-workshops/tree/main/intro-to-databases',
 				slides: 'https://docs.google.com/presentation/d/1LE2CYSIvGKSbGdGuZuMC1hOnxjmKgP3uwH0-LPEWSFw/edit?usp=sharing'
 			},
@@ -162,7 +162,7 @@ const workshops = [
 				to start, how to scale properly, and how to work with a team. Then, we briefly dive into Unity
 				and the Unity Editor, and follow a condensed version of Unity's Roll-A-Ball tutorial. So grab
 				your headsets and watch this workshop cus it’s time to up your game dev game!`,
-				youtube: '',
+				youtube: 'https://youtu.be/WkqycKI6vdc',
 				readme: null,
 				slides: 'https://docs.google.com/presentation/d/1s545_VhUktrxMzpx6k6hi_kOUbsRiJP0evhJ1x9ai38/edit?usp=sharing'
 			},
