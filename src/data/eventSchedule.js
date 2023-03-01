@@ -116,7 +116,7 @@ const eventSchedule = [
 				name: 'Dinner',
 				duration: '60 min',
 				location: 'Carnesale Commons Palisades Room',
-				description: `Do you know what's better than two free meal? Three
+				description: `Do you know what's better than two free meals? Three
 				free meals! And you've earned it! It's time to gorge yourself on pizza from
 				Papa John's while you recoup for your last sprint to the finish line!
 				Just like lunch, there will be alternate food options if you have dietary
