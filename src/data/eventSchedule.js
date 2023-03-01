@@ -101,7 +101,7 @@ const eventSchedule = [
 				name: 'Interdisciplinary Research Panel',
 				duration: '60 min',
 				location: 'Carnesale Commons Palisades Room',
-				description: `We have an amazing panel of UCLA professors/researches whose
+				description: `We have a wonderful panel of UCLA professors/researchers whose
                 expertise centers around the intersection of computer science and another field
                 such as biomedicine, chemistry, and humanities! Join us in learning about them,
                 their work, and how you can get involved. You'll even receive raffle entries for
