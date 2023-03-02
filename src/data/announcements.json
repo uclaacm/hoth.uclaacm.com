@@ -1,5 +1,11 @@
 [
     {
+        "id": 1,
+        "subject": "HOTH X is this Sunday!",
+        "body": "HOTH X acceptance and waitlist emails have been sent out! If you were accepted, make sure to arrive at Carnesale Commons Palisades Room at 8:00am on Sunday, March 5 for check in. Bring your Bruincard, water bottle, laptop, and laptop charger! We will be letting in waitlist participants starting at 8:30am.",
+        "timestamp": "2023-03-02T01:07:21Z"
+    },
+    {
         "id": 0,
         "subject": "HOTH X Applications Are Open!",
         "body": "HOTH X applications are now out! The deadline to apply is Friday of Week 7, February 24, 2023.",
