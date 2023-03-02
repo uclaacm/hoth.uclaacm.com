@@ -41,7 +41,7 @@ const workshops = [
 		type: 'Web Development',
 		elements: [
 			{
-				title: 'Intro to HTML, CSS, and JavaScript',
+				title: 'Intro to HTML, CSS, and JS',
 				author: 'Shiyu Ye',
 				description: `This workshop will take you on a fun and interactive
 				journey through the three amigos of web development: HTML, CSS, and
