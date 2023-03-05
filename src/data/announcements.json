@@ -1,5 +1,11 @@
 [
     {
+        "id": 8,
+        "subject": "Post-Lunch hacking has begun!",
+        "body": "Hello!\r\n\r\nThe dedicated lunch break is now over and it is time to get back to hacking! Our next break will be for dinner @ 6:00pm. In the meantime, don\u2019t forget to check out the #\ud83d\ude4b\u200d\u2642\ufe0fask-a-mentor channel if you need any help on your projects or approach our officer table at the back of the room!\r\n\r\nWe wish you luck and can\u2019t wait to see what you build! Happy Hacking!",
+        "timestamp": "2023-03-05T22:04:30Z"
+    },
+    {
         "id": 7,
         "subject": "Interdisciplinary Research Panel",
         "body": "It\u2019s time to welcome our special interdisciplinary research panel! Come hear about how computer science is used in different fields ranging from biomedicine to chemistry and more! This will begin in the main room soon, so make sure to participate and ask questions to get an additional 5 raffle points.",
