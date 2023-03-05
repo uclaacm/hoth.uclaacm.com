@@ -1,5 +1,11 @@
 [
     {
+        "id": 2,
+        "subject": "Time to check in!",
+        "body": "Good morning HOTH X participants! Check In has officially started at Carnesale Commons Palisades Room! We\u2019re excited to see you here!",
+        "timestamp": "2023-03-05T16:03:49Z"
+    },
+    {
         "id": 1,
         "subject": "HOTH X is this Sunday!",
         "body": "HOTH X acceptance and waitlist emails have been sent out! If you were accepted, make sure to arrive at Carnesale Commons Palisades Room at 8:00am on Sunday, March 5 for check in. Bring your Bruincard, water bottle, laptop, and laptop charger! We will be letting in waitlist participants starting at 8:30am.",
