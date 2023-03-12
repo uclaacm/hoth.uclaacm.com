@@ -9,6 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { Button } from '@material-ui/core';
 import StickyBox from 'react-sticky-box';
+import Divider from '@mui/material/Divider';
 
 const useStyles = makeStyles(theme => ({
 	itemType: {
@@ -42,7 +43,8 @@ const useStyles = makeStyles(theme => ({
 	},
 	btn: {
 		fontWeight: 500,
-		marginLeft: '20px'
+		marginRight: '30px'
+
 	},
 	anchor: {
 		textDecoration: 'none'
@@ -232,6 +234,7 @@ function WorkshopPage() {
 	const theme = useTheme();
 	const classes = useStyles();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+	const renderSidebar = true;
 
 	const workshopCards = workshops.map(item =>
 		<React.Fragment key={item.type}>
@@ -260,7 +263,7 @@ function WorkshopPage() {
 				<Button className={classes.btn} style={{ textDecoration: 'none',
 					display: 'flex', justifyContent: 'flex-start' }}>
 					<Typography variant='h6' component='h1' align='left' className={classes.anchorText}>
-						- {item.abbrev}
+						{item.abbrev}
 					</Typography>
 				</Button>
 			</AnchorLink>
@@ -269,12 +272,15 @@ function WorkshopPage() {
 	return (
 		<React.Fragment>
 			<div style={{ display: 'flex', alignItems: 'flex-start' }}>
-				<StickyBox offsetTop={20} offsetBottom={20} className={classes.sections}>
-					<Typography variant='h4' component='h1' align='left' className={classes.topics}>
-						Topics
-					</Typography>
-					{sectionLinks}
-				</StickyBox>
+				{renderSidebar ?
+					<StickyBox offsetTop={20} offsetBottom={20} className={classes.sections}>
+						<Typography variant='h4' component='h1' align='left' className={classes.topics}>
+							Topics
+						</Typography>
+						{sectionLinks}
+					</StickyBox> :
+					null }
+				<Divider orientation="vertical" variant="middle" flexItem className={classes.sideBarVertical} />
 				<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
 					<Typography variant='h4' component='h1' className={classes.title}>
 						Workshops
