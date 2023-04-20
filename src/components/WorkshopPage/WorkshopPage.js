@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -6,6 +6,10 @@ import useTheme from '@material-ui/core/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Workshop from './Workshop.js';
 import { makeStyles } from '@material-ui/core/styles';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import { Button } from '@material-ui/core';
+import StickyBox from 'react-sticky-box';
+import Divider from '@mui/material/Divider';
 
 const useStyles = makeStyles(theme => ({
 	itemType: {
@@ -33,12 +37,37 @@ const useStyles = makeStyles(theme => ({
 			paddingTop: theme.spacing(4)
 		},
 		paddingBottom: theme.spacing(4)
+	},
+	topics: {
+		paddingBottom: theme.spacing(2)
+	},
+	btn: {
+		fontWeight: 500,
+		marginRight: '30px'
+
+	},
+	anchor: {
+		textDecoration: 'none'
+	},
+	anchorText: {
+		fontWeight: theme.typography.fontWeightMedium,
+		color: theme.palette.primary.main,
+		fontFamily: theme.typography.fontFamily
+	},
+	sections: {
+		marginLeft: '20px',
+		marginTop: theme.spacing(9),
+		paddingTop: theme.spacing(2),
+		[theme.breakpoints.down('sm')]: {
+			display: 'none'
+		}
 	}
 }));
 
 const workshops = [
 	{
 		type: 'Web Development',
+		abbrev: 'Web Dev',
 		elements: [
 			{
 				title: 'Intro to HTML, CSS, and JS',
@@ -98,6 +127,7 @@ const workshops = [
 	},
 	{
 		type: 'Mobile Development',
+		abbrev: 'Mobile Dev',
 		elements: [
 			{
 				title: 'Intro to React Native',
@@ -114,6 +144,7 @@ const workshops = [
 	},
 	{
 		type: 'Miscellaneous',
+		abbrev: 'Misc',
 		elements: [
 			{
 				title: 'Hackathon 101',
@@ -195,13 +226,15 @@ function WorkshopPage() {
 	const theme = useTheme();
 	const classes = useStyles();
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+	const renderSidebar = true;
 
 	const workshopCards = workshops.map(item =>
 		<React.Fragment key={item.type}>
 			<Typography
 				variant='h4'
 				component='h2'
-				className={classes.itemType}>
+				className={classes.itemType}
+				id={'id_' + item.type.replace(/ /g, '_')}>
 				{item.type}
 			</Typography>
 
@@ -215,13 +248,39 @@ function WorkshopPage() {
 			</Grid>
 		</React.Fragment>);
 
+	const sectionLinks = workshops.map(item =>
+		<React.Fragment key={item.type}>
+			<AnchorLink to={'/workshops#id_' + item.type.replace(/ /g, '_')}
+				className={classes.anchor}>
+				<Button className={classes.btn} style={{ textDecoration: 'none',
+					display: 'flex', justifyContent: 'flex-start' }}>
+					<Typography variant='h6' component='h1' align='left' className={classes.anchorText}>
+						{item.abbrev}
+					</Typography>
+				</Button>
+			</AnchorLink>
+		</React.Fragment>);
+
 	return (
-		<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
-			<Typography variant='h4' component='h1' className={classes.title}>
-				Workshops
-			</Typography>
-			{workshopCards}
-		</Container>
+		<React.Fragment>
+			<div style={{ display: 'flex', alignItems: 'flex-start' }}>
+				{renderSidebar ?
+					<StickyBox offsetTop={20} offsetBottom={20} className={classes.sections}>
+						<Typography variant='h4' component='h1' align='left' className={classes.topics}>
+							Topics
+						</Typography>
+						{sectionLinks}
+					</StickyBox> :
+					null }
+				<Divider orientation="vertical" variant="middle" flexItem className={classes.sideBarVertical} />
+				<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
+					<Typography variant='h4' component='h1' className={classes.title}>
+						Workshops
+					</Typography>
+					{workshopCards}
+				</Container>
+			</div>
+		</React.Fragment>
 	);
 }
 
