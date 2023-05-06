@@ -17,7 +17,9 @@ const useStyles = makeStyles(theme => ({
 		paddingBottom: theme.spacing(4),
 		[theme.breakpoints.down('sm')]: {
 			paddingBottom: theme.spacing(2)
-		}
+		},
+		// scrollMarginTop: '40px',
+		paddingTop: '20px'
 	},
 	itemElements: {
 		// This counteracts the negative margin Material-UI places on the Grid component, and
@@ -228,6 +230,12 @@ function WorkshopPage() {
 	const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
 	const renderSidebar = true;
 
+	const header =
+		<Typography variant='h4' component='h1' className={classes.title}
+			id={'id_header'}>
+		Workshops
+		</Typography>;
+
 	const workshopCards = workshops.map(item =>
 		<React.Fragment key={item.type}>
 			<Typography
@@ -248,6 +256,19 @@ function WorkshopPage() {
 			</Grid>
 		</React.Fragment>);
 
+	const topLink =
+		<React.Fragment key={"Workshops"}>
+			<AnchorLink to={'/workshops#id_header'}
+				className={classes.anchor}>
+				<Button className={classes.btn} style={{ textDecoration: 'none',
+					display: 'flex', justifyContent: 'flex-start' }}>
+					<Typography variant='h4' component='h1' align='left' className={classes.topics}>
+						Topics
+					</Typography>
+				</Button>
+			</AnchorLink>
+		</React.Fragment>;
+
 	const sectionLinks = workshops.map(item =>
 		<React.Fragment key={item.type}>
 			<AnchorLink to={'/workshops#id_' + item.type.replace(/ /g, '_')}
@@ -266,17 +287,13 @@ function WorkshopPage() {
 			<div style={{ display: 'flex', alignItems: 'flex-start' }}>
 				{renderSidebar ?
 					<StickyBox offsetTop={20} offsetBottom={20} className={classes.sections}>
-						<Typography variant='h4' component='h1' align='left' className={classes.topics}>
-							Topics
-						</Typography>
+						{topLink}
 						{sectionLinks}
 					</StickyBox> :
 					null }
 				<Divider orientation="vertical" variant="middle" flexItem className={classes.sideBarVertical} />
 				<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
-					<Typography variant='h4' component='h1' className={classes.title}>
-						Workshops
-					</Typography>
+					{header}
 					{workshopCards}
 				</Container>
 			</div>
