@@ -257,7 +257,7 @@ function WorkshopPage() {
 		</React.Fragment>);
 
 	const topLink =
-		<React.Fragment key={"Workshops"}>
+		<React.Fragment key={'Workshops'}>
 			<AnchorLink to={'/workshops#id_header'}
 				className={classes.anchor}>
 				<Button className={classes.btn} style={{ textDecoration: 'none',
@@ -291,7 +291,7 @@ function WorkshopPage() {
 						{sectionLinks}
 					</StickyBox> :
 					null }
-				<Divider orientation="vertical" variant="middle" flexItem className={classes.sideBarVertical} />
+				<Divider orientation='vertical' variant='middle' flexItem className={classes.sideBarVertical} />
 				<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
 					{header}
 					{workshopCards}
