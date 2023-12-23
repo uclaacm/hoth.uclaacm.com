@@ -72,13 +72,7 @@ const workshops = [
 			{
 				title: 'Intro to HTML, CSS, and JS',
 				author: 'Shiyu Ye',
-				description: `This workshop will take you on a fun and interactive
-				journey through the three amigos of web development: HTML, CSS, and
-				JavaScript. We will go over how to use HTML to structure your web
-				pages, CSS to style them up with colors, fonts, and layouts, and
-				JavaScript to add some fun little tricks. As a practice, we will
-				be creating a personal website for Anya from Spy x Family! Hope to
-				spy you there, fam ;)`,
+				description: `bye bye`,
 				youtube: 'https://youtu.be/bU1C5UoKlSU',
 				readme: 'https://github.com/uclaacm/hothX-workshops/tree/main/intro-to-html-css-js',
 				slides: 'https://docs.google.com/presentation/d/1mpto8de9naxHfKPpK9p8updtKn-Z2wSzQV-Ravq6I58/edit?usp=sharing'
