@@ -15,6 +15,14 @@ There is also hardware available for hackers to check out and hack with.
 This website is developed with [Gatsby](https://www.gatsbyjs.org/) and
 [Material UI](https://material-ui.com/), and is a work-in-progress being
 developed by ACM Hack’s Dev Team: 
+- Aazel Tan [(@aazeltan)](https://github.com/aazeltan)
+- Hannah Kendall [(@hannahkendall04)](https://github.com/hannahkendall04)
+- Kayla Hamakawa [(@kaylahama)](https://github.com/kaylahama)
+- Kaylin Chung [(@kaylin-chung)](https://github.com/kaylin-chung)
+- Lillian Gonick [(@lilliangonick)](https://github.com/lilliangonick)
+- Max Lee [(@maxywaxyy)](https://github.com/maxywaxyy)
+- Samuel Perrott [(@sperrott22)](https://github.com/sperrott22)
+- Sneha Agarwal [(@snehaagar2023)](https://github.com/snehaagar2023)
 - Alex Xia [(@khxia)](https://github.com/khxia)
 - Jakob Reinwald [(@jakobreinwald)](https://github.com/jakobreinwald)
 - Maggie Li [(@maggieelli)](https://github.com/maggieelli)
@@ -23,12 +31,12 @@ developed by ACM Hack’s Dev Team:
 - Nathan Zhang [(@nathanzzhang)](https://github.com/nathanzzhang)
 - Jenna Wang [(@ariyin)](https://github.com/ariyin)
 - Shiyu Ye [(@Monicaaawa)](https://github.com/Monicaaawa)
-- Brooke Jiang [(@jiangxuann)](https://github.com/jiangxuann)
 - Jonathan Si [(@jsi19)](https://github.com/jsi19)
 - Andy Lewis [(@datowq)](https://github.com/datowq)
 - Satyen Subramaniam [(@SubramaniamSatyen)](https://github.com/SubramaniamSatyen)
 
 Past contributors: 
+- Brooke Jiang [(@jiangxuann)](https://github.com/jiangxuann)
 - Timothy Gu [(@TimothyGu)](https://github.com/TimothyGu/)
 - Jamie Liu [(@jamieliu386)](https://github.com/jamieliu386/)
 - Timothy Rediehs [(@Timthetic)](https://github.com/Timthetic)
