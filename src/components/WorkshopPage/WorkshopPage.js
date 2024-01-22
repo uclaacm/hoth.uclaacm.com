@@ -276,9 +276,8 @@ function WorkshopPage() {
 				<Container maxWidth='md' style={{ marginBottom: theme.spacing(8) }}>
 					<Typography variant='h4' component='h1' className={classes.title}>
 						Workshops
-					</Typography>
-					<Typography variant='h5' component='h1' className={classes.title}>
-						Workshops coming soon, here are the ones from last year!
+						<br/>
+						<span className={classes.title}>Workshops coming soon, here are the ones from last year!</span>
 					</Typography>
 					{workshopCards}
 				</Container>
