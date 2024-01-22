@@ -173,7 +173,7 @@ function FAQSection() {
 				<>
 					We would love to have you as a mentor to answer participants&apos; technical
 					questions and help them with their projects. If you are interested, send us an email
-					at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com</Link> or dm us on
+					at <Link href='mailto:hack@uclaacm.com'>hack@uclaacm.com</Link> or dm us on
 					our <Link href='https://discord.gg/MStu2cnBV9'>discord server</Link>!
 				</>
 		},
@@ -189,7 +189,7 @@ function FAQSection() {
 			question: `I have some other questions.`,
 			answer:
 				<>
-					Send us an email at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com</Link>!
+					Send us an email at <Link href='mailto:hack@uclaacm.com'>hack@uclaacm.com</Link>!
 				</>
 		}
 	];
