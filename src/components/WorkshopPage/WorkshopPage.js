@@ -277,6 +277,9 @@ function WorkshopPage() {
 					<Typography variant='h4' component='h1' className={classes.title}>
 						Workshops
 					</Typography>
+					<Typography variant='h5' component='h2' className={classes.title}>
+						Workshops coming soon, here are the ones from last year!
+					</Typography>
 					{workshopCards}
 				</Container>
 			</div>
