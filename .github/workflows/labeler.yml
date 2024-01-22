@@ -10,6 +10,6 @@ jobs:
       checks: write
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/labeler@master
+    - uses: actions/labeler@v4
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
