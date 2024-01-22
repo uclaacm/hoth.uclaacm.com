@@ -277,7 +277,10 @@ function WorkshopPage() {
 					<Typography variant='h4' component='h1' className={classes.title}>
 						Workshops
 					</Typography>
-					<Typography variant='h5' className={classes.title}>
+					<Typography variant='h5' component='h2'
+						style={{
+							paddingBottom: theme.spacing(isSmall ? 4 : 8)
+						}}>
 						Workshops coming soon, here are the ones from last year!
 					</Typography>
 					{workshopCards}
