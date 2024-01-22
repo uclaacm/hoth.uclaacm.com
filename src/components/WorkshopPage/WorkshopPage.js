@@ -6,11 +6,12 @@ import useTheme from '@material-ui/core/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Workshop from './Workshop.js';
 import { makeStyles } from '@material-ui/core/styles';
+import ComingSoon from '../ComingSoon/ComingSoon';
 // import { AnchorLink } from 'gatsby-plugin-anchor-links';
 // import { Button } from '@material-ui/core';
 // import StickyBox from 'react-sticky-box';
 // import Divider from '@mui/material/Divider';
-
+const workshopsAvailable = false;
 const useStyles = makeStyles(theme => ({
 	itemType: {
 		fontWeight: 'medium',
@@ -53,6 +54,10 @@ const useStyles = makeStyles(theme => ({
 		fontWeight: theme.typography.fontWeightMedium,
 		color: theme.palette.primary.main,
 		fontFamily: theme.typography.fontFamily
+	},
+	note: {
+		color: '#858585',
+		marginBottom: theme.spacing(workshopsAvailable ? 4 : 11)
 	},
 	sections: {
 		marginLeft: '20px',
@@ -277,13 +282,12 @@ function WorkshopPage() {
 					<Typography variant='h4' component='h1' className={classes.title}>
 						Workshops
 					</Typography>
-					<Typography variant='h5' component='h2'
-						style={{
-							paddingBottom: theme.spacing(isSmall ? 4 : 8)
-						}}>
-						Workshops coming soon, here are the ones from last year!
-					</Typography>
-					{workshopCards}
+					{!workshopsAvailable ?
+						<ComingSoon alignment='left' /> :
+						<div>
+							{workshopCards}
+						</div>
+					}
 				</Container>
 			</div>
 		</React.Fragment>
