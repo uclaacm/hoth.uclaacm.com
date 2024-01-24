@@ -55,10 +55,6 @@ const useStyles = makeStyles(theme => ({
 		color: theme.palette.primary.main,
 		fontFamily: theme.typography.fontFamily
 	},
-	note: {
-		color: '#858585',
-		marginBottom: theme.spacing(workshopsAvailable ? 4 : 11)
-	},
 	sections: {
 		marginLeft: '20px',
 		marginTop: theme.spacing(9),
