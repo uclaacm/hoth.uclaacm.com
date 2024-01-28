@@ -279,9 +279,7 @@ function WorkshopPage() {
 					</Typography>
 					{!workshopsAvailable ?
 						<ComingSoon alignment='left' /> :
-						<div>
-							{workshopCards}
-						</div>
+						{ workshopCards }
 					}
 				</Container>
 			</div>
