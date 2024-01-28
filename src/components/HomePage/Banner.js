@@ -233,7 +233,7 @@ function Banner() {
 				</Box>
 
 				{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
-                    <Button className={classes.apply} href={'https://forms.gle/4zSBeQh3cjRtqcg79'} target='_blank'>
+                    <Button className={classes.apply} href={'https://forms.gle/N7VHpwUMSkGLhBdd6'} target='_blank'>
                         Apply Now
                     </Button>
 				}
