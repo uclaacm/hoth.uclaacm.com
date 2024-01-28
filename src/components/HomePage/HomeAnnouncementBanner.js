@@ -8,6 +8,7 @@ import data from '../../data/announcements.json';
 import PropTypes from 'prop-types';
 import Collapse from '@material-ui/core/Collapse';
 import { Link } from 'gatsby';
+import { getDateTime } from '../../utils/datetime_utils';
 
 import ClearIcon from '@material-ui/icons/Clear';
 import IconButton from '@material-ui/core/IconButton';
@@ -61,9 +62,7 @@ const useStyles = makeStyles(theme => ({
 
 function HomeAnnouncement({ subject, timestamp, body }) {
 	const classes = useStyles();
-	const d = new Date(timestamp);
-	const date = d.toLocaleDateString('en-US');
-	const time = d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+	const datetime = getDateTime(timestamp);
 
 	return (
 		<Grid container direction='column' justify='space-between'>
@@ -76,7 +75,7 @@ function HomeAnnouncement({ subject, timestamp, body }) {
 					</Grid>
 					<Grid item>
 						<Typography variant='subtitle2' className={classes.date}>
-							{date}, {time}
+							{datetime.date}, {datetime.time}
 						</Typography>
 					</Grid>
 				</Grid>

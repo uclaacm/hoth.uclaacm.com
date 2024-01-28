@@ -13,7 +13,7 @@ import Button from '@material-ui/core/Button';
 
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { getTimeZoneWithFormat } from '../../utils/timezone_names.js';
+import { getTimeZoneWithFormat, getDayOfWeek } from '../../utils/datetime_utils.js';
 
 import {
 	hothStart,
@@ -192,6 +192,8 @@ function Banner() {
 		const endDay = hothEnd.getDate();
 		const eventCrossesDate = startDay !== endDay;
 		const endDayString = eventCrossesDate ? `–${endDay}` : '';
+		const eventYear = hothStart.getFullYear();
+		const eventDayOfWeek = getDayOfWeek(hothStart.getDay());
 
 		return (
 			<>
@@ -224,10 +226,9 @@ function Banner() {
 							style={{ marginBottom: 10, fontWeight: 500 }}
 							component='h3'
 						>
-							<time dateTime={hothStart.toISOString()} hidden>
-								{month} {startDay}{endDayString}, 2022
+							<b>Date: </b><time dateTime={hothStart.toISOString()} >
+								{eventDayOfWeek}, {month} {startDay}{endDayString}, {eventYear}
 							</time>
-							<b>Date:</b> Sunday, March 5, 2023
 						</Typography>
 					</Tooltip>
 				</Box>
