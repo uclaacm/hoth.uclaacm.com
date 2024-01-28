@@ -111,7 +111,7 @@ AccordionQA.propTypes = {
 
 function FAQSection() {
 	const hothNum = 'XI';
-	const appDeadline = 'Tuesday, February 20, 2024';
+	const appDeadline = 'Monday, February 26, 2024';
 	const hothDate = 'Saturday, March 2, 2024';
 	const hothLocation = 'TBD';
 	const faqs = [
