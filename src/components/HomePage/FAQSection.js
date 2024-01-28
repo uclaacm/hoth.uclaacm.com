@@ -113,7 +113,7 @@ function FAQSection() {
 	const hothNum = 'XI';
 	const appDeadline = 'Monday, February 26, 2024';
 	const hothDate = 'Saturday, March 2, 2024';
-	const hothLocation = 'TBD';
+	const hothLocation = 'Hill';
 	const faqs = [
 		{
 			question: `What's a hackathon?`,
