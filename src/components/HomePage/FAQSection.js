@@ -110,10 +110,10 @@ AccordionQA.propTypes = {
 };
 
 function FAQSection() {
-	const hothNum = 'X';
-	const appDeadline = 'Friday, February 24, 2023';
-	const hothDate = 'Sunday, March 5, 2023';
-	const hothLocation = 'Carnesale Commons Palisades Room';
+	const hothNum = 'XI';
+	const appDeadline = 'Tuesday, February 20, 2024';
+	const hothDate = 'Saturday, March 2, 2024';
+	const hothLocation = 'TBD';
 	const faqs = [
 		{
 			question: `What's a hackathon?`,
