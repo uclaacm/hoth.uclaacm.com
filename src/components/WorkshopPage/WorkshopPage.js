@@ -45,7 +45,6 @@ const useStyles = makeStyles(theme => ({
 	btn: {
 		fontWeight: 500,
 		marginRight: '30px'
-
 	},
 	anchor: {
 		textDecoration: 'none'
