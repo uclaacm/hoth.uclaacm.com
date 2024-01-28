@@ -35,8 +35,8 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           commit-message: "Update Announcements"
-          committer: "Hack Bot <hack+ghbot@uclaacm.com>"
-          author: "Hack Bot <hack+ghbot@uclaacm.com>"
+          committer: "Hack Bot <uclaacmhack+ghbot@gmail.com>"
+          author: "Hack Bot <uclaacmhack+ghbot@gmail.com>"
           branch: bot/updateAnnouncements
           title: '[Automated] Update announcement.json file'
           delete-branch: true
