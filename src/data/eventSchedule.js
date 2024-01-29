@@ -144,7 +144,7 @@ const eventSchedule = [
 				duration: '',
 				location: '',
 				description: `Your amazing project should be done and submitted to
-				Devpost for judging. Also remember to submit the 'HOTH X Team Submission'
+				Devpost for judging. Also remember to submit the 'HOTH XI Team Submission'
 				Google form.`
 			}
 		]
@@ -181,7 +181,7 @@ const eventSchedule = [
 				duration: '',
 				location: '',
 				description: `So long, farewell, au revoir, auf Wiedersehen. The day is done,
-				and with it HOTH X. We hope you had as much fun as we did, and we hope to see
+				and with it HOTH XI. We hope you had as much fun as we did, and we hope to see
 				you again soon!!`
 			}
 		]

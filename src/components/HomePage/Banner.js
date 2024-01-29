@@ -198,7 +198,7 @@ function Banner() {
 				<Typography component='h1' variant='h1' className={classes.text} style={{
 					fontWeight: 'bold'
 				}}>
-                    HOTH <span className={classes.hothNumber}>X</span>
+					HOTH <span className={classes.hothNumber}>XI</span>
 				</Typography>
 
 				<NoSsr>
@@ -209,7 +209,7 @@ function Banner() {
 				</NoSsr>
 
 				<Typography variant='h5' className={classes.text} component='h3'
-					style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> Carnesale Commons Palisades Room
+					style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> The Hill, room TBD
 				</Typography>
 
 				<Box display='flex' alignItems='left' color='white'>
@@ -227,15 +227,15 @@ function Banner() {
 							<time dateTime={hothStart.toISOString()} hidden>
 								{month} {startDay}{endDayString}, 2022
 							</time>
-							<b>Date:</b> Sunday, March 5, 2023
+							<b>Date:</b> Saturday, March 2, 2024
 						</Typography>
 					</Tooltip>
 				</Box>
 
 				{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
-                    <Button className={classes.apply} href={'https://forms.gle/4zSBeQh3cjRtqcg79'} target='_blank'>
-                        Apply Now
-                    </Button>
+					<Button className={classes.apply} href={'https://forms.gle/N7VHpwUMSkGLhBdd6'} target='_blank'>
+						Apply Now
+					</Button>
 				}
 			</>
 		);
