@@ -57,7 +57,7 @@ const useStyles = makeStyles(theme => ({
 const LeftGridItem = ({ children }) => <Grid item xs={12} sm={8} md={6}>{children}</Grid>;
 const RightGridItem = ({ children }) => <Grid item sm={10} md={6}>{children}</Grid>;
 
-const SideImage = ({ fluidImage }) => <Img fluid={fluidImage} width='100%' style={{ borderRadius: '14px' }}/>;
+const SideImage = ({ fluidImage }) => <Img fluid={fluidImage} width='100%' style={{ borderRadius: '14px' }} />;
 
 export default function HothDescription() {
 	const theme = useTheme();
@@ -106,18 +106,18 @@ export default function HothDescription() {
 				</hgroup>
 				<Grid container spacing={isSmall ? 3 : 8} alignItems='center' justify='center'>
 					<LeftGridItem>
-						<SideImage fluidImage={data.actionShot1.childImageSharp.fluid}/>
+						<SideImage fluidImage={data.actionShot1.childImageSharp.fluid} />
 					</LeftGridItem>
 					<RightGridItem>
 						<Typography variant='body1' style={{ paddingBottom: isSmall ? theme.spacing(2) : 0 }}>
-							Hack on the Hill (HOTH X) is a{' '}
+							Hack on the Hill (HOTH XI) is a{' '}
 							<strong>12-hour beginner-friendly</strong>
 							{' '}hackathon designed to be your first hackathon experience.
-							HOTH X will be in-person in Carnesale Commons Palisades Room. We hope to see you there!
+							HOTH XI will be in-person in Carnesale Commons Palisades Room. We hope to see you there!
 						</Typography>
 					</RightGridItem>
 				</Grid>
-				<Grid container spacing={ isSmall ? 3 : 8 } wrap='wrap-reverse' justify='center' alignItems='center'>
+				<Grid container spacing={isSmall ? 3 : 8} wrap='wrap-reverse' justify='center' alignItems='center'>
 					<LeftGridItem>
 						<Typography
 							variant='body1'
@@ -133,14 +133,14 @@ export default function HothDescription() {
 					<RightGridItem>
 						<SideImage fluidImage={data.actionShot2.childImageSharp.fluid} width='100%' style={{
 							borderRadius: '14px'
-						}}/>
+						}} />
 					</RightGridItem>
 				</Grid>
 				<Grid container spacing={isSmall ? 3 : 8} alignItems='center' justify='center'>
 					<LeftGridItem>
 						<SideImage fluidImage={data.hackBanner.childImageSharp.fluid} width='100%' style={{
 							borderRadius: '14px'
-						}}/>
+						}} />
 					</LeftGridItem>
 					<RightGridItem>
 						<Typography variant='body1' style={{ paddingBottom: isSmall ? theme.spacing(2) : 0 }}>

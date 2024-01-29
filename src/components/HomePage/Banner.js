@@ -198,7 +198,7 @@ function Banner() {
 				<Typography component='h1' variant='h1' className={classes.text} style={{
 					fontWeight: 'bold'
 				}}>
-                    HOTH <span className={classes.hothNumber}>X</span>
+					HOTH <span className={classes.hothNumber}>XI</span>
 				</Typography>
 
 				<NoSsr>
@@ -233,9 +233,9 @@ function Banner() {
 				</Box>
 
 				{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
-                    <Button className={classes.apply} href={'https://forms.gle/N7VHpwUMSkGLhBdd6'} target='_blank'>
-                        Apply Now
-                    </Button>
+					<Button className={classes.apply} href={'https://forms.gle/N7VHpwUMSkGLhBdd6'} target='_blank'>
+						Apply Now
+					</Button>
 				}
 			</>
 		);
