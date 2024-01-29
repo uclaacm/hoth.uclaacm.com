@@ -209,7 +209,7 @@ function Banner() {
 				</NoSsr>
 
 				<Typography variant='h5' className={classes.text} component='h3'
-					style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> Carnesale Commons Palisades Room
+					style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> The Hill, room TBD
 				</Typography>
 
 				<Box display='flex' alignItems='left' color='white'>
@@ -227,7 +227,7 @@ function Banner() {
 							<time dateTime={hothStart.toISOString()} hidden>
 								{month} {startDay}{endDayString}, 2022
 							</time>
-							<b>Date:</b> Sunday, March 5, 2023
+							<b>Date:</b> Saturday, March 2, 2024
 						</Typography>
 					</Tooltip>
 				</Box>
