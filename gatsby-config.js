@@ -34,7 +34,7 @@ module.exports = {
 				background_color: '#fff',
 				theme_color: '#c960ff',
 				display: 'minimal-ui',
-				icon: 'src/images/hothX-logo.svg' // This path is relative to the root of the site.
+				icon: 'src/images/hothXI-logo.png' // This path is relative to the root of the site.
 			}
 			/* eslint-enable camelcase */
 		},
