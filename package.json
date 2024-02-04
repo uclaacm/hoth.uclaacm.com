@@ -58,7 +58,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo \"nononono!\"",
+      "pre-commit": "./.husky/pre-commit",
       "pre-push": "echo \"prepush\""
     }
   },
