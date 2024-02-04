@@ -59,7 +59,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "./.husky/pre-commit",
-      "pre-push": "echo \"prepush\""
+      "pre-push": "./.husky/pre-push"
     }
   },
   "repository": {
