@@ -27,7 +27,7 @@ const monthFormatter = new Intl.DateTimeFormat('en-US', { month: 'short' });
 
 const useStyles = makeStyles(theme => ({
 	background: {
-		backgroundColor: '#11002E',
+		backgroundColor: '#010101',
 		height: 'auto',
 		[theme.breakpoints.down('sm')]: {
 			padding: '12px 2px'
@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	info: {
 		position: 'absolute',
-		left: '0px',
+		right: '0px',
 		zIndex: 1,
 		maxWidth: '50%',
 		[theme.breakpoints.down('sm')]: {
@@ -84,7 +84,7 @@ const useStyles = makeStyles(theme => ({
 		flexDirection: 'row',
 		justifyContent: 'center',
 		alignItems: 'baseline',
-		alignSelf: 'flex-start',
+		alignSelf: 'flex-end',
 		paddingBottom: theme.spacing(2),
 		[theme.breakpoints.down('sm')]: {
 			alignSelf: 'center'
@@ -123,11 +123,12 @@ const useStyles = makeStyles(theme => ({
 	},
 	img: {
 		position: 'relative',
-		width: '110%'
+		width: '110%',
+		left: '-10%'
 	},
 	grid: {
-		justifyContent: 'flex-start',
-		alignItems: 'flex-start',
+		justifyContent: 'flex-end',
+		alignItems: 'flex-end',
 		[theme.breakpoints.down('sm')]: {
 			justifyContent: 'center',
 			alignItems: 'center'
@@ -141,7 +142,7 @@ function Banner() {
 	const smallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 	const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "hothX-banner.png" }) {
+      placeholderImage: file(relativePath: { eq: "hothXI-banner.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -198,7 +199,7 @@ function Banner() {
 				<Typography component='h1' variant='h1' className={classes.text} style={{
 					fontWeight: 'bold'
 				}}>
-                    HOTH <span className={classes.hothNumber}>X</span>
+					HOTH <span className={classes.hothNumber}>XI</span>
 				</Typography>
 
 				<NoSsr>
@@ -209,7 +210,7 @@ function Banner() {
 				</NoSsr>
 
 				<Typography variant='h5' className={classes.text} component='h3'
-					style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> Carnesale Commons Palisades Room
+					style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> The Hill, room TBD
 				</Typography>
 
 				<Box display='flex' alignItems='left' color='white'>
@@ -227,15 +228,15 @@ function Banner() {
 							<time dateTime={hothStart.toISOString()} hidden>
 								{month} {startDay}{endDayString}, 2022
 							</time>
-							<b>Date:</b> Sunday, March 5, 2023
+							<b>Date:</b> Saturday, March 2, 2024
 						</Typography>
 					</Tooltip>
 				</Box>
 
 				{Date.now() > applicationOpen.getTime() && Date.now() < applyDeadline.getTime() &&
-                    <Button className={classes.apply} href={'https://forms.gle/4zSBeQh3cjRtqcg79'} target='_blank'>
-                        Apply Now
-                    </Button>
+					<Button className={classes.apply} href={'https://forms.gle/N7VHpwUMSkGLhBdd6'} target='_blank'>
+						Apply Now
+					</Button>
 				}
 			</>
 		);
