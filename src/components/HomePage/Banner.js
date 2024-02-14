@@ -210,7 +210,7 @@ function Banner() {
 				</NoSsr>
 
 				<Typography variant='h5' className={classes.text} component='h3'
-					style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> Carnesale Commons, Palisades
+					style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> Carnesale Commons, Palisades Room
 				</Typography>
 
 				<Box display='flex' alignItems='left' color='white'>
