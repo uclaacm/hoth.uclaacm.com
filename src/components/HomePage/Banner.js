@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
 	text: {
 		color: 'white',
 		fontWeight: 400,
-		textAlign: 'left',
+		textAlign: 'right',
 		justifyItems: 'left',
 		[theme.breakpoints.down('sm')]: {
 			textAlign: 'center'
@@ -210,7 +210,7 @@ function Banner() {
 				</NoSsr>
 
 				<Typography variant='h5' className={classes.text} component='h3'
-					style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> Carnesale Commons, Palisades Room
+					style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> Carnesale Commons, Palisades
 				</Typography>
 
 				<Box display='flex' alignItems='left' color='white'>
