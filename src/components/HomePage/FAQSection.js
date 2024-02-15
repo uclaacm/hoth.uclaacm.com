@@ -112,8 +112,8 @@ AccordionQA.propTypes = {
 function FAQSection() {
 	const hothNum = 'XI';
 	const appDeadline = 'Monday, February 26, 2024';
-	const hothDate = 'Saturday, March 2, 2024';
-	const hothLocation = 'Hill';
+	const hothDate = 'Sunday, March 3, 2024';
+	const hothLocation = 'Carnesale Commons, Palisades Room';
 	const faqs = [
 		{
 			question: `What's a hackathon?`,
@@ -162,7 +162,7 @@ function FAQSection() {
 		},
 		{
 			question: `What if I have never made a project before?`,
-			answer:	`No worries! Throughout HOTH ${hothNum}, you'll have access to workshops on all sorts of
+			answer: `No worries! Throughout HOTH ${hothNum}, you'll have access to workshops on all sorts of
 				topics to help you start bringing your ideas to life and mentors to support you through
 				any road blocks.`
 		},

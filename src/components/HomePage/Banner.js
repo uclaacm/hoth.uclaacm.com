@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
 	text: {
 		color: 'white',
 		fontWeight: 400,
-		textAlign: 'left',
+		textAlign: 'right',
 		justifyItems: 'left',
 		[theme.breakpoints.down('sm')]: {
 			textAlign: 'center'
@@ -210,7 +210,7 @@ function Banner() {
 				</NoSsr>
 
 				<Typography variant='h5' className={classes.text} component='h3'
-					style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> The Hill, room TBD
+					style={{ fontWeight: 500, marginTop: 10 }}><b>Location:</b> Carnesale Commons, Palisades Room
 				</Typography>
 
 				<Box display='flex' alignItems='left' color='white'>
@@ -226,9 +226,9 @@ function Banner() {
 							component='h3'
 						>
 							<time dateTime={hothStart.toISOString()} hidden>
-								{month} {startDay}{endDayString}, 2022
+								{month} {startDay}{endDayString}, 2024
 							</time>
-							<b>Date:</b> Saturday, March 2, 2024
+							<b>Date:</b> Sunday, March 3, 2024
 						</Typography>
 					</Tooltip>
 				</Box>
