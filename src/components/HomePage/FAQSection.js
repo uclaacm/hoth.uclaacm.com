@@ -75,7 +75,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function AccordionQA({ index, question, answer }) {
-	const [expanded, setExpanded] = useState(index === 0);
+	const [expanded, setExpanded] = useState(index === -1);
 	const classes = useStyles();
 	const panelName = 'faqPanel' + index;
 	const theme = useTheme();
