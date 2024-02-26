@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Link as GatsbyLink } from 'gatsby';
 import { Link as MUILink } from '@material-ui/core';
 
-import { applicationOpen, applyDeadline } from '../constants.js';
+import { applicationOpen, applyDeadline, hothStart, hothEnd } from '../constants.js';
 
 const useStyles = makeStyles(theme => {
 	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm * 1.3;
@@ -80,13 +80,20 @@ function ButtonBar({ isMobile }) {
 				<PoppinLink to={link.to} key={`nav-${index}`}>
 					{link.name}
 				</PoppinLink>)}
-			{
+
+			{Date.now() < hothStart.getTime() ?
 				<BorderLink
 					disabled={Date.now() < applicationOpen.getTime() || Date.now() > applyDeadline.getTime()}
 					href={'https://forms.gle/VMhdCzMov8RvGUfP8'}
 					target='_blank'
 				>
-					Apply
+				Apply
+				</BorderLink>			 :
+				<BorderLink
+					disabled={Date.now() < hothStart.getTime() || Date.now() > hothEnd.getTime()}
+					href='/submissions'
+				>
+				Submit
 				</BorderLink>
 			}
 		</>
