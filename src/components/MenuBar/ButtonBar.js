@@ -7,6 +7,7 @@ import { Link as MUILink } from '@material-ui/core';
 
 import { applicationOpen, applyDeadline, hothStart, hothEnd } from '../constants.js';
 
+
 const useStyles = makeStyles(theme => {
 	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm * 1.3;
 	return {
@@ -81,21 +82,22 @@ function ButtonBar({ isMobile }) {
 					{link.name}
 				</PoppinLink>)}
 
-			{Date.now() < hothStart.getTime() ?
+			{Date.now() < hothStart.getTime() ? (
 				<BorderLink
 					disabled={Date.now() < applicationOpen.getTime() || Date.now() > applyDeadline.getTime()}
 					href={'https://forms.gle/VMhdCzMov8RvGUfP8'}
 					target='_blank'
 				>
 				Apply
-				</BorderLink>			 :
+				</BorderLink>	
+			):(
 				<BorderLink
 					disabled={Date.now() < hothStart.getTime() || Date.now() > hothEnd.getTime()}
 					href='/submissions'
 				>
 				Submit
 				</BorderLink>
-			}
+			)}
 		</>
 	);
 }

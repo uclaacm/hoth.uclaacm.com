@@ -42,12 +42,12 @@ const SubmissionsPage = () => {
 		</Typography>
 
 		<Typography className={classes.info}>
-			1{')'} Submit the project on the HOTH XI devpost: {' '}
-			<Link to='https://hoth-xi.devpost.com/?ref_feature=challenge&ref_medium=discover'>devvvvpostttt</Link>
+			1{')'} Submit the project on the HOTH XI {' '}
+			<Link to='https://hoth-xi.devpost.com/?ref_feature=challenge&ref_medium=discover'>devpost</Link>
 		</Typography>
 
 		<Typography className={classes.info}>
-			2{')'} Fill out the HOTH XI submission Google Form: {' '}
+			2{')'} Fill out the {' '}
 			<Link to='https://forms.gle/VPBHtLTyPo1pn7pn9'>HOTH XI Submission Form</Link>
 		</Typography>
 	</Container>;
