@@ -1,4 +1,4 @@
-const hothYrMnth = '2023-03-'; // replace with real date later
+const hothYrMnth = '2024-03-'; // replace with real date later
 const utcOffset = '-08:00'; // PST
 // time is a string of the form "HH:mm:ss"
 function getDateObj(day, time) {
@@ -7,7 +7,7 @@ function getDateObj(day, time) {
 
 const eventSchedule = [
 	{
-		startTime: getDateObj('05', '08:00:00'),
+		startTime: getDateObj('03', '08:00:00'),
 		events: [
 			{
 				name: 'Check In',
@@ -19,7 +19,7 @@ const eventSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('05', '08:30:00'),
+		startTime: getDateObj('03', '08:30:00'),
 		events: [
 			{
 				name: 'Opening Ceremony',
@@ -31,7 +31,7 @@ const eventSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('05', '09:00:00'),
+		startTime: getDateObj('03', '09:00:00'),
 		events: [
 			{
 				name: 'Breakfast',
@@ -40,6 +40,13 @@ const eventSchedule = [
 				description: `What's the best way to start off a hackathon?
 				Food! And good company! All of which we've got right here. Enjoy a
 				breakfast of champions from Noah's Bagels as we begin the hackathon.`
+			},
+			{
+				name: 'Team Formation',
+				duration: '30 min',
+				location: 'Carnesale Commons Palisades Room',
+				description: `Looking for a team? Find one to hack with during
+				our team building session put on by ACM W!`
 			},
 			{
 				name: 'Hacking Begins',
@@ -56,23 +63,29 @@ const eventSchedule = [
 				description: `Drop your best meme in the #memes channel on Discord and 
                 get a raffle entry for participating! This is an all-day event, so take 
                 your time in coming up with that singular meme-tastic work of art.`
-			},
-			{
-				name: 'Team Formation',
-				duration: '30 min',
-				location: 'Carnesale Commons Palisades Room',
-				description: `Looking for a team? Find one to hack with during
-				our team building session!`
 			}
 		]
 	},
 	{
-		startTime: getDateObj('05', '09:30:00'),
+		startTime: getDateObj('03', '10:00:00'),
+		events: [
+			{
+				name: 'Workshop Q&A',
+				duration: '60 min',
+				location: 'Carnesale Commons Palisades Room',
+				description: `Got any burning questions about our HOTH XI workshops? 
+				Take this time to work on shopping for some answers from our amazing 
+				interns who put them together! `
+			}
+		]
+	},
+	{
+		startTime: getDateObj('03', '11:00:00'),
 		events: [
 			{
 				name: 'Common Experience Workshop',
-				duration: '30 min',
-				location: 'Carnesale Commons Hermosa Room',
+				duration: '60 min',
+				location: 'Carnesale Commons Palisades Room',
 				description: `Learn more about the Common Experience theme of intersectional 
                 environmentalism and brainstorm project ideas! You'll receive raffle entries for
                 attending as well :)`
@@ -80,7 +93,7 @@ const eventSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('05', '12:30:00'),
+		startTime: getDateObj('03', '12:30:00'),
 		events: [
 			{
 				name: 'Lunch',
@@ -95,7 +108,7 @@ const eventSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('05', '13:00:00'),
+		startTime: getDateObj('03', '13:00:00'),
 		events: [
 			{
 				name: 'Interdisciplinary Research Panel',
@@ -110,7 +123,7 @@ const eventSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('05', '18:00:00'),
+		startTime: getDateObj('03', '18:00:00'),
 		events: [
 			{
 				name: 'Dinner',
@@ -118,14 +131,14 @@ const eventSchedule = [
 				location: 'Carnesale Commons Palisades Room',
 				description: `Do you know what's better than two free meals? Three
 				free meals! And you've earned it! It's time to gorge yourself on pizza from
-				Papa John's while you recoup for your last sprint to the finish line!
+				Enzo's while you recoup for your last sprint to the finish line!
 				Just like lunch, there will be alternate food options if you have dietary
 				restrictions, and you can also work during this time.`
 			}
 		]
 	},
 	{
-		startTime: getDateObj('05', '19:00:00'),
+		startTime: getDateObj('03', '19:00:00'),
 		events: [
 			{
 				name: 'Meme Compeition Ends',
@@ -137,7 +150,7 @@ const eventSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('05', '21:00:00'),
+		startTime: getDateObj('03', '21:00:00'),
 		events: [
 			{
 				name: 'Hacking Ends',
@@ -150,7 +163,7 @@ const eventSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('05', '21:15:00'),
+		startTime: getDateObj('03', '21:15:00'),
 		events: [
 			{
 				name: 'Judging',
@@ -162,7 +175,7 @@ const eventSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('05', '22:30:00'),
+		startTime: getDateObj('03', '22:30:00'),
 		events: [
 			{
 				name: 'Closing Ceremony',
@@ -174,7 +187,7 @@ const eventSchedule = [
 		]
 	},
 	{
-		startTime: getDateObj('05', '23:00:00'),
+		startTime: getDateObj('03', '23:00:00'),
 		events: [
 			{
 				name: 'Hackathon Ends',

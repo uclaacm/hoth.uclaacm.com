@@ -16,37 +16,37 @@ const allPrizes = [
 	{
 		img: 'overall',
 		track: 'Best Overall',
-		prize: '$250 Amazon Gift Card'
+		prize: '$150 Amazon Gift Card'
 		// caption: '1 Echo Studio'
 	},
 	{
 		img: 'web',
 		track: 'Best Web',
-		prize: '$100 Amazon Gift Card'
+		prize: '$80 Amazon Gift Card'
 		// caption: '1 Massage Gun'
 	},
 	{
 		img: 'mobile',
 		track: 'Best Mobile',
-		prize: '$100 Amazon Gift Card'
+		prize: '$80 Amazon Gift Card'
 		// caption: '4 Yeti Mugs'
 	},
 	{
 		img: 'game',
 		track: 'Best Game',
-		prize: '$100 Amazon Gift Card'
+		prize: '$80 Amazon Gift Card'
 		// caption: '4 Laptop Stands'
 	},
 	{
 		img: 'ie',
 		track: 'Best in Intersectional Environmentalism',
-		prize: '$100 Amazon Gift Card'
+		prize: '2 Camping Hammocks and 2 Wireless Charging Pads'
 		// caption: '4 Mini Phone Printers'
 	},
 	{
 		img: 'beg',
 		track: 'Best Beginner',
-		prize: '$100 Amazon Gift Card'
+		prize: '4 Wireless 3-in-1 Charging Stations'
 		// caption: '4 Butt Cushions'
 	}
 ];
