@@ -73,8 +73,9 @@ const eventSchedule = [
 				name: 'Workshop Q&A',
 				duration: '60 min',
 				location: 'Carnesale Commons Palisades Room',
-				description: `Learn more about our HOTH XI workshops and ask specific questions to
-				our amazing interns who put them together! `
+				description: `Got any burning questions about our HOTH XI workshops? 
+				Take this time to work on shopping for some answers from our amazing 
+				interns who put them together! `
 			}
 		]
 	},
