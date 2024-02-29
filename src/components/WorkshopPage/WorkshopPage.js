@@ -76,7 +76,7 @@ const workshops = [
 				Together, they make up the structure (HTML), the style (CSS), and the functionality (JS) of a 
 				web application. Keep reading or watch the workshop to learn how to utilize these tools to 
 				make a super cool web application of your own!`,
-				youtube: 'https://www.youtube.com/watch?v=fSvbqxaAWqE&list=PLPO7_kXilXFYCo6UngcitrjAHnRXyBmwi&index=2',
+				youtube: 'https://youtu.be/fSvbqxaAWqE?si=mBKZSfSBflfU0Jsm',
 				readme: 'https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-html-css-js',
 				slides: 'https://docs.google.com/presentation/d/1Z6rnFfiFMpTCIxXbZz9fndr4hMB4XVyQbtid2ET0BSk/edit?usp=drive_link'
 			},
@@ -87,15 +87,19 @@ const workshops = [
 				to the foundations of Web APIs that will allow you to integrate them into any fullstack project. We 
 				will be covering the client-server model, HTTP requests & responses, and how we can leverage external 
 				servers to retrieve data and services for an app. Keep reading to learn more!`,
-				youtube: 'https://www.youtube.com/watch?v=ZIamyNtujBY&list=PLPO7_kXilXFYCo6UngcitrjAHnRXyBmwi&index=3',
+				youtube: 'https://youtu.be/ZIamyNtujBY?si=r0v5ojIThiKzzcsQ',
 				readme: 'https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-webapis',
 				slides: 'https://docs.google.com/presentation/d/1CpiERteBZsqKqRjnYgGruBO2aZnonjRWibSqnthcRws/edit?usp=drive_link'
 			},
 			{
 				title: 'Intro to Servers',
 				author: 'Andy Lewis',
-				description: null,
-				youtube: 'https://www.youtube.com/watch?v=1w60BwDG6hs&list=PLPO7_kXilXFYCo6UngcitrjAHnRXyBmwi&index=5',
+				description: `In this workshop, you will learn server-side programming in the context of full stack 
+				applications! Topics covered include HTTP, CRUD, and REST APIs. The second half of the workshop 
+				will include a hands-on demo building your own REST API using Flask and connecting it with a React 
+				frontend. By the end of the workshop you will become a server savant savvy with tools such as Postman. 
+				Viewers are recommended to have a strong foundation in JavaScript and Python.`,
+				youtube: 'https://youtu.be/1w60BwDG6hs?si=vSZTMTo7ntuUlmO4',
 				readme: 'https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-servers',
 				slides: 'https://docs.google.com/presentation/d/1ZvL1TrNetVCnJHxDT0ffca0QwEP678LnVAGC846DtZ4/edit?usp=drive_link'
 			},
@@ -106,7 +110,7 @@ const workshops = [
 				will be introducing frontend web development using React. In this workshop we will utilize 
 				HTML, CSS, and JavaScript, so I would recommend watching the workshop on those if you are not already 
 				familiar with them!`,
-				youtube: 'https://www.youtube.com/watch?v=JZrRLf5Gmqg&list=PLPO7_kXilXFYCo6UngcitrjAHnRXyBmwi&index=6',
+				youtube: 'https://youtu.be/JZrRLf5Gmqg?si=CZOJhja-tA5qpo0M',
 				readme: 'https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-react',
 				slides: 'https://docs.google.com/presentation/d/1VsaDQLJS2ShCG8dLjvUt0BP7f9Zrq0oIPf73wCQtbNM/edit?usp=drive_link'
 			}
@@ -119,9 +123,11 @@ const workshops = [
 			{
 				title: 'Intro to React Native',
 				author: 'Max Lee',
-				description: null,
-				youtube: 'https://www.youtube.com/watch?v=ulqijuEyi5Y&list=PLPO7_kXilXFYCo6UngcitrjAHnRXyBmwi&index=8',
-				readme: null,
+				description: `Hello and welcome to our Intro to React Native workshop! We'll be covering the 
+				basics of React Native in a way that I hope is simple to understand and impactful enough to teach 
+				some key features of app development. Happy hacking!`,
+				youtube: 'https://youtu.be/ulqijuEyi5Y?si=aZfrltAPnZMBoCbW',
+				readme: 'https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-react-native',
 				slides: 'https://docs.google.com/presentation/d/1_7WB4HkKUErKpaTbwc2Z7R__20CiRZ8BXlc5oo7FcLw/edit?usp=drive_link'
 			}
 		]
@@ -148,7 +154,7 @@ const workshops = [
 				description: `Hello everyone! Welcome to the Intro to Git workshop README! In this workshop, we will
 				 be covering the version control system: Git. Together, we will walk through installing git, creating 
 				 our first repository, and merging two branches!`,
-				youtube: 'https://www.youtube.com/watch?v=Gw2AGGJKnbg&list=PLPO7_kXilXFYCo6UngcitrjAHnRXyBmwi&index=4',
+				youtube: 'https://youtu.be/Gw2AGGJKnbg?si=0b5FhNxT__V_2Svk',
 				readme: 'https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-git',
 				slides: 'https://docs.google.com/presentation/d/1fU0VoWGm95IsHadN5STolL6PO74Et_sfQFq7WQ5_d24/edit?usp=drive_link'
 			},
@@ -159,25 +165,31 @@ const workshops = [
 				the basics of what a database is and walkthrough how to set up, retrieve information, and
 				add information to our database! Before starting this workshop I recommend checking out 
 				the React JS or React Native workshops if you're not familar with them.`,
-				youtube: 'https://www.youtube.com/watch?v=09dT8CcrgTw&list=PLPO7_kXilXFYCo6UngcitrjAHnRXyBmwi&index=7',
+				youtube: 'https://youtu.be/JZrRLf5Gmqg?si=BVWuiqDqKvcMYTxH',
 				readme: 'https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-databases',
 				slides: 'https://docs.google.com/presentation/d/1rkeQNLEeXlpSXsoHmFdx77FY4HgK-rTUSqRSs7JOe5E/edit?usp=drive_link'
 			},
 			{
-				title: 'Intro to Game Development',
-				author: 'TODO (ACM Game Studio)',
-				description: ``,
-				youtube: 'https://www.youtube.com/watch?v=WkqycKI6vdc&list=PLPO7_kXilXFYCo6UngcitrjAHnRXyBmwi&index=9',
-				readme: null,
+				title: 'Intro to Deep Learning',
+				author: 'Leon Lenk, Maxine Wu, & Jordan Lin (ACM AI)',
+				description: `Shoutout to the folks over at ACM AI for putting this together! They created this workshop
+				so serve as an introduction to deep learning, including a notebook linked on the readme to show you 
+				actual deep learning code and take you through a hands-on of how you can build this code yourself! 
+				In the process of building this model, they go over Big Data, avoiding bias and unintended patterns, 
+				understanding our data, making the network, and training`,
+				youtube: 'https://youtu.be/RggC7sb1_cE?si=4FLeRtfCLOgZezhU',
+				readme: 'https://bit.ly/acm_ai_24w_intro_dl',
 				slides: null
 			},
 			{
-				title: 'Intro to Deep Learning',
-				author: 'Leon Lenk, Maxine Wu, & Jordan Lin (ACM AI)',
-				description: ``,
-				youtube: 'https://www.youtube.com/watch?v=RggC7sb1_cE&list=PLPO7_kXilXFYCo6UngcitrjAHnRXyBmwi&index=10',
+				title: 'Intro to Game Development',
+				author: 'Austin Law (ACM Game Studio)',
+				description: `Shoutout to Austin Law from ACM Game Studio for putting this workshop together
+				for us! In this section, he talks about game development, some tips to success, and lastly, 
+				a short introduction to using the Unity game engine`,
+				youtube: 'https://youtu.be/WkqycKI6vdc?si=ub0ytPWJGkXAhkj8',
 				readme: null,
-				slides: null
+				slides: 'https://docs.google.com/presentation/d/1s545_VhUktrxMzpx6k6hi_kOUbsRiJP0evhJ1x9ai38/edit?usp=sharing'
 			}
 			// {
 			// 	title: 'Intro to UI/UX Design',
