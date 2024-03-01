@@ -55,12 +55,15 @@ function Workshop({ title, youtube, author, description, readme, slides }) {
 				{description}
 			</Typography>
 			<Box component="span" display="flex" justifyContent="space-around">
-				<Button variant='text' disableElevation color="secondary" component='a'
-					href={youtube} target='_blank' rel='noreferrer noopener'
-					className={classes.button}>
-					<YouTubeIcon color="secondary" className={classes.icon} />
-					Video
-				</Button>
+				{
+					youtube !== null &&
+					<Button variant='text' disableElevation color="secondary" component='a'
+						href={youtube} target='_blank' rel='noreferrer noopener'
+						className={classes.button}>
+						<YouTubeIcon color="secondary" className={classes.icon} />
+						Video
+					</Button>
+				}
 				{
 					readme !== null &&
 					<Button variant='text' disableElevation color="secondary" component='a'
@@ -70,12 +73,15 @@ function Workshop({ title, youtube, author, description, readme, slides }) {
 						README
 					</Button>
 				}
-				<Button variant='text' disableElevation color="secondary" component='a'
-					href={slides} target='_blank' rel='noreferrer noopener'
-					className={classes.button}>
-					<SlideshowIcon color="secondary" className={classes.icon} />
-					Slides
-				</Button>
+				{
+					slides !== null &&
+					<Button variant='text' disableElevation color="secondary" component='a'
+						href={slides} target='_blank' rel='noreferrer noopener'
+						className={classes.button}>
+						<SlideshowIcon color="secondary" className={classes.icon} />
+						Slides
+					</Button>
+				}
 			</Box>
 		</Grid>);
 }

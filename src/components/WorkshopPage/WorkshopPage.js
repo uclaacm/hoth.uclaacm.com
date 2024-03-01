@@ -93,7 +93,7 @@ const workshops = [
 			},
 			{
 				title: 'Intro to Servers',
-				author: 'Andy Lewis',
+				author: 'Samuel Perrott',
 				description: `In this workshop, you will learn server-side programming in the context of full stack 
 				applications! Topics covered include HTTP, CRUD, and REST APIs. The second half of the workshop 
 				will include a hands-on demo building your own REST API using Flask and connecting it with a React 
@@ -165,7 +165,7 @@ const workshops = [
 				the basics of what a database is and walkthrough how to set up, retrieve information, and
 				add information to our database! Before starting this workshop I recommend checking out 
 				the React JS or React Native workshops if you're not familar with them.`,
-				youtube: 'https://youtu.be/JZrRLf5Gmqg?si=BVWuiqDqKvcMYTxH',
+				youtube: 'https://youtu.be/09dT8CcrgTw?si=TVP-hXHPBUk_xX1x',
 				readme: 'https://github.com/uclaacm/hothXI-workshops/tree/main/intro-to-databases',
 				slides: 'https://docs.google.com/presentation/d/1rkeQNLEeXlpSXsoHmFdx77FY4HgK-rTUSqRSs7JOe5E/edit?usp=drive_link'
 			},
