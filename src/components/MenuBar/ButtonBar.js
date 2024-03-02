@@ -6,7 +6,7 @@ import LinkNoStyle from '../LinkNoStyle/LinkNoStyle.js';
 import { applicationOpen, applyDeadline } from '../constants.js';
 
 const useStyles = makeStyles(theme => {
-	// const menuBarAdaptiveThreshold = theme.breakpoints.values.sm * 1.3;
+	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm * 1.3;
 	return {
 		link: {
 			fontWeight: 500,
@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => {
 		applyLink: {
 			fontFamily: theme.typography.fontFamily,
 			fontWeight: 600,
-			backgroundColor: theme.palette.primary.main,
+			backgroundColor: theme.palette.secondary.main,
 			margin: props => props.isMobile ? '10px auto 0' : '0 25px 0 0',
 			padding: '7px 20px',
 			borderRadius: '20px',
