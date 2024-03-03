@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => {
 			fontFamily: theme.typography.fontFamily,
 			fontWeight: 600,
 			backgroundColor: theme.palette.secondary.main,
-			margin: props => props.isMobile ? '20px auto 0' : '0 25px 0 0',
+			margin: isMobile => isMobile ? '20px auto 0' : '0 0 0 15px',
 			padding: '7px 20px',
 			borderRadius: '20px',
 			color: 'white',
@@ -54,7 +54,7 @@ const useStyles = makeStyles(theme => {
 
 
 function ButtonBar({ isMobile }) {
-	const classes = useStyles();
+	const classes = useStyles(isMobile);
 
 	const PoppinLink = ({ to, ...props }) => {
 		return !isMobile ?
@@ -99,7 +99,7 @@ function ButtonBar({ isMobile }) {
 		},
 		{
 			name: 'Gallery',
-			to: '/gallery/hoth-xi' // need to update this link to be latest HOTH
+			to: '/gallery/hoth-x' // need to update this link to be latest HOTH
 		}
 	];
 

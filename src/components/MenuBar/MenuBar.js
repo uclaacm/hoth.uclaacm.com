@@ -56,7 +56,7 @@ function MenuBar() {
 	const theme = useTheme();
 	const [menuOpen, setMenuOpen] = useState(false);
 	const toggleMenu = () => setMenuOpen(open => !open);
-	const isMobile = useMediaQuery(theme.breakpoints.down(theme.breakpoints.values.sm * 1.8));
+	const isMobile = useMediaQuery(theme.breakpoints.down(theme.breakpoints.values.sm * 1.86));
 
 	const wordmark = useMediaQuery(theme.breakpoints.down('xs')) ? 'HOTH' : 'Hack on the Hill';
 
