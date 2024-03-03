@@ -1,5 +1,11 @@
 [
     {
+        "id": 4,
+        "subject": "Workshop Q&A",
+        "body": "Got any burning questions about our HOTH XI workshops? Starting at 10:00am, take the hour to shop for some answers from our amazing interns who put them together. Feel free to pay a visit to them at the round tables and ask them anything!",
+        "timestamp": "2024-03-03T17:54:51Z"
+    },
+    {
         "id": 3,
         "subject": "Breakfast, team formation, and time to start hacking!",
         "body": "Thank you to everyone who came out to our opening ceremony and a round of applause for our speaker Eugene Lo!\r\n\r\nThe moment you\u2019ve all been waiting for is here! It\u2019s time to start hacking! We wish you all the best of luck and can\u2019t wait to see what you come up with!\r\n\r\nIf you do not have a team, ACM-W will be hosting an official team formation event now by the round tables!\r\n\r\nAdditionally, breakfast is from Noah\u2019s Bagels and is being served at the back of the room. Get up and to it hackers!\r\n\r\nHave fun and happy hacking!",
