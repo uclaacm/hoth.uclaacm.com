@@ -1,41 +1,41 @@
-import React, { useState } from "react"
-import { makeStyles } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
-import Container from "@material-ui/core/Container"
+import React, { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles(theme => ({
 	title: {
 		fontWeight: theme.typography.fontWeightBold,
 		paddingTop: theme.spacing(11),
-		[theme.breakpoints.down("sm")]: {
-			paddingTop: theme.spacing(4),
+		[theme.breakpoints.down('sm')]: {
+			paddingTop: theme.spacing(4)
 		},
-		paddingBottom: theme.spacing(4),
+		paddingBottom: theme.spacing(4)
 	},
 	info: {
-		paddingTop: theme.spacing(4),
+		paddingTop: theme.spacing(4)
 	},
 	link: {
-		color: theme.palette.secondary.main,
+		color: theme.palette.secondary.main
 	},
 	linkClicked: {
-		color: theme.palette.secondary.dark,
-	},
-}))
+		color: theme.palette.secondary.dark
+	}
+}));
 
 const SubmissionsPage = () => {
-	const classes = useStyles()
+	const classes = useStyles();
 
-	const [formClicked, setFormClicked] = useState(false)
-	const [devPostClicked, setDevPostClicked] = useState(false)
+	const [formClicked, setFormClicked] = useState(false);
+	const [devPostClicked, setDevPostClicked] = useState(false);
 
 	const handleFormClick = () => {
-		setFormClicked(true)
-	}
+		setFormClicked(true);
+	};
 
 	const handleDevPostClick = () => {
-		setDevPostClicked(true)
-	}
+		setDevPostClicked(true);
+	};
 
 	return (
 		<Container maxWidth="md">
@@ -53,24 +53,24 @@ const SubmissionsPage = () => {
 			</Typography>
 
 			<Typography className={classes.info}>
-				1{")"} Submit the project on the HOTH XI{" "}
+				1{')'} Submit the project on the HOTH XI{' '}
 				<a
 					href="https://hoth-xi.devpost.com/?ref_feature=challenge&ref_medium=discover"
 					target="_blank"
 					className={devPostClicked ? classes.linkClicked : classes.link}
-					onClick={handleDevPostClick}
+					onClick={handleDevPostClick} rel="noreferrer"
 				>
 					devpost
 				</a>
 			</Typography>
 
 			<Typography className={classes.info}>
-				2{")"} Fill out the{" "}
+				2{')'} Fill out the{' '}
 				<a
 					href="https://forms.gle/VPBHtLTyPo1pn7pn9"
 					target="_blank"
 					className={formClicked ? classes.linkClicked : classes.link}
-					onClick={handleFormClick}
+					onClick={handleFormClick} rel="noreferrer"
 				>
 					HOTH XI Submission Form
 				</a>
@@ -85,7 +85,7 @@ const SubmissionsPage = () => {
 				Thank You for Participating in HOTH XI!
 			</Typography>
 		</Container>
-	)
-}
+	);
+};
 
-export default SubmissionsPage
+export default SubmissionsPage;
