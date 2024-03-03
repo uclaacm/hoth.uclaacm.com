@@ -1,56 +1,91 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-import { Link } from 'gatsby';
+import React, { useState } from "react"
+import { makeStyles } from "@material-ui/core/styles"
+import Typography from "@material-ui/core/Typography"
+import Container from "@material-ui/core/Container"
 
 const useStyles = makeStyles(theme => ({
 	title: {
 		fontWeight: theme.typography.fontWeightBold,
 		paddingTop: theme.spacing(11),
-		[theme.breakpoints.down('sm')]: {
-			paddingTop: theme.spacing(4)
+		[theme.breakpoints.down("sm")]: {
+			paddingTop: theme.spacing(4),
 		},
-		paddingBottom: theme.spacing(4)
+		paddingBottom: theme.spacing(4),
 	},
 	info: {
-		paddingTop: theme.spacing(4)
-
+		paddingTop: theme.spacing(4),
 	},
-	divider: {
-		height: '2px',
-		marginLeft: theme.spacing(4),
-		marginRight: theme.spacing(4),
-		marginBottom: theme.spacing(4)
-	}
-}));
-
+	link: {
+		color: theme.palette.secondary.main,
+	},
+	linkClicked: {
+		color: theme.palette.secondary.dark,
+	},
+}))
 
 const SubmissionsPage = () => {
-	const classes = useStyles();
-	return <Container maxWidth='md'>
-		<Typography align='left' variant='h4' component='h1' className={classes.title}>
-			Submission Info
-		</Typography>
+	const classes = useStyles()
 
-		<Typography align='left' variant='h5' component='h2'>
-			Thank You for Participating in HOTH XI!
-		</Typography>
+	const [formClicked, setFormClicked] = useState(false)
+	const [devPostClicked, setDevPostClicked] = useState(false)
 
-		<Typography align='left' variant='h5' component='h2'>
-			Follow These 2 Final Steps to Submit Your Project:
-		</Typography>
+	const handleFormClick = () => {
+		setFormClicked(true)
+	}
 
-		<Typography className={classes.info}>
-			1{')'} Submit the project on the HOTH XI {' '}
-			<Link to='https://hoth-xi.devpost.com/?ref_feature=challenge&ref_medium=discover'>devpost</Link>
-		</Typography>
+	const handleDevPostClick = () => {
+		setDevPostClicked(true)
+	}
 
-		<Typography className={classes.info}>
-			2{')'} Fill out the {' '}
-			<Link to='https://forms.gle/VPBHtLTyPo1pn7pn9'>HOTH XI Submission Form</Link>
-		</Typography>
-	</Container>;
-};
+	return (
+		<Container maxWidth="md">
+			<Typography
+				align="left"
+				variant="h4"
+				component="h1"
+				className={classes.title}
+			>
+				Submission Info
+			</Typography>
 
-export default SubmissionsPage;
+			<Typography align="left" variant="h5" component="h2">
+				Follow These 2 Final Steps to Submit Your Project:
+			</Typography>
+
+			<Typography className={classes.info}>
+				1{")"} Submit the project on the HOTH XI{" "}
+				<a
+					href="https://hoth-xi.devpost.com/?ref_feature=challenge&ref_medium=discover"
+					target="_blank"
+					className={devPostClicked ? classes.linkClicked : classes.link}
+					onClick={handleDevPostClick}
+				>
+					devpost
+				</a>
+			</Typography>
+
+			<Typography className={classes.info}>
+				2{")"} Fill out the{" "}
+				<a
+					href="https://forms.gle/VPBHtLTyPo1pn7pn9"
+					target="_blank"
+					className={formClicked ? classes.linkClicked : classes.link}
+					onClick={handleFormClick}
+				>
+					HOTH XI Submission Form
+				</a>
+			</Typography>
+
+			<Typography
+				className={classes.info}
+				align="left"
+				variant="h6"
+				component="h3"
+			>
+				Thank You for Participating in HOTH XI!
+			</Typography>
+		</Container>
+	)
+}
+
+export default SubmissionsPage
