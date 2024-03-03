@@ -5,7 +5,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Link as GatsbyLink } from 'gatsby';
 import { Link as MUILink } from '@material-ui/core';
 
-import { applicationOpen, applyDeadline } from '../constants.js';
+import {
+	applicationOpen,
+	applyDeadline,
+	hothStart,
+	hothEnd
+} from '../constants.js';
 
 const useStyles = makeStyles(theme => {
 	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm * 1.3;
@@ -34,18 +39,26 @@ function ButtonBar({ isMobile }) {
 	const classes = useStyles();
 
 	const PoppinLink = ({ ...props }) =>
-		<Button component={GatsbyLink} role='link' fullWidth={isMobile} className={classes.btn} {...props} />;
+		<Button
+			component={GatsbyLink}
+			role="link"
+			fullWidth={isMobile}
+			className={classes.btn}
+			{...props}
+		/>;
+
 
 	const BorderLink = ({ ...props }) =>
 		<Button
 			component={MUILink}
-			role='link'
+			role="link"
 			className={classes.borderBtn}
 			style={{ margin: 10, textDecoration: 'none' }}
-			variant='contained'
+			variant="contained"
 			{...props}
-			color='secondary'
+			color="secondary"
 		/>;
+
 
 	const links = [
 		{
@@ -80,13 +93,25 @@ function ButtonBar({ isMobile }) {
 				<PoppinLink to={link.to} key={`nav-${index}`}>
 					{link.name}
 				</PoppinLink>)}
-			{
+
+			{Date.now() < hothStart.getTime() ?
 				<BorderLink
-					disabled={Date.now() < applicationOpen.getTime() || Date.now() > applyDeadline.getTime()}
+					disabled={
+						Date.now() < applicationOpen.getTime() ||
+						Date.now() > applyDeadline.getTime()
+					}
 					href={'https://forms.gle/VMhdCzMov8RvGUfP8'}
-					target='_blank'
+					target="_blank"
 				>
 					Apply
+				</BorderLink>			 :
+				<BorderLink
+					disabled={
+						Date.now() < hothStart.getTime() || Date.now() > hothEnd.getTime()
+					}
+					href="/submissions"
+				>
+					Submit
 				</BorderLink>
 			}
 		</>
