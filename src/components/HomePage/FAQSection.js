@@ -122,7 +122,7 @@ function FAQSection() {
 					A hackathon is an event during which people from different backgrounds
 					come together to create a project from start to finish in a limited time frame.
 					Check out some examples from last year&apos;s
-					HOTH <Link href='https://hoth9.devpost.com/project-gallery'>here</Link>!
+					HOTH <Link href='https://hothx.devpost.com/project-gallery'>here</Link>!
 				</>
 		},
 		{
