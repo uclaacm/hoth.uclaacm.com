@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles(theme => ({
 	title: {
@@ -54,26 +55,28 @@ const SubmissionsPage = () => {
 
 			<Typography className={classes.info}>
 				1{')'} Submit the project on the HOTH XI{' '}
-				<a
+				<Link
 					href="https://hoth-xi.devpost.com/?ref_feature=challenge&ref_medium=discover"
 					target="_blank"
 					className={devPostClicked ? classes.linkClicked : classes.link}
-					onClick={handleDevPostClick} rel="noreferrer"
+					onClick={handleDevPostClick}
+					rel="noopener noreferrer"
 				>
-					devpost
-				</a>
+					Devpost
+				</Link>
 			</Typography>
 
 			<Typography className={classes.info}>
-				2{')'} Fill out the{' '}
-				<a
+				2{')'} Fill out the HOTH XI{' '}
+				<Link
 					href="https://forms.gle/VPBHtLTyPo1pn7pn9"
 					target="_blank"
 					className={formClicked ? classes.linkClicked : classes.link}
-					onClick={handleFormClick} rel="noreferrer"
+					onClick={handleFormClick}
+					rel="noopener noreferrer"
 				>
-					HOTH XI Submission Form
-				</a>
+					Submission Google Form
+				</Link>
 			</Typography>
 
 			<Typography
