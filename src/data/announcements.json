@@ -1,5 +1,11 @@
 [
     {
+        "id": 10,
+        "subject": "Dinner coming soon!",
+        "body": "Hello again hackers!\r\n\r\nOur dinner break is starting soon! Congrats for making it this far, reward yourself with some yummy food! We will be serving pizza from Papa John\u2019s.\r\n\r\nIMPORTANT NOTE FOR DIETARY RESTRICTIONS: if your dietary restriction (vegan or allergies) prevents you from eating the food we have planned, please come to our officer table in the back NOW, as we will be trying our best to provide other accommodating food options. Please note that we have vegetarian options for each meal.",
+        "timestamp": "2024-03-04T02:14:22Z"
+    },
+    {
         "id": 9,
         "subject": "Meme competition ending soon",
         "body": "Only a few more hours to send in your best meme to #hoth-memes! Send them in by 7:00pm and get 1 raffle point, with a chance to get 5 raffle points for winning!",
