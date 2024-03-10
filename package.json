@@ -56,6 +56,12 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "lint": "eslint --ext js,jsx ."
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./.husky/pre-commit",
+      "pre-push": "./.husky/pre-push"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/uclaacm/hoth.uclaacm.com"

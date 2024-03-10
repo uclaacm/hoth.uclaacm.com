@@ -3,7 +3,13 @@ import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import LinkNoStyle from '../LinkNoStyle/LinkNoStyle.js';
-import { applicationOpen, applyDeadline } from '../constants.js';
+
+import {
+	applicationOpen,
+	applyDeadline,
+	hothStart,
+	hothEnd
+} from '../constants.js';
 
 const useStyles = makeStyles(theme => {
 	return {
@@ -76,6 +82,7 @@ function ButtonBar({ isMobile }) {
 		to: PropTypes.string.isRequired
 	};
 
+
 	const links = [
 		{
 			name: 'Home',
@@ -109,13 +116,25 @@ function ButtonBar({ isMobile }) {
 				<PoppinLink to={link.to} key={`nav-${index}`}>
 					{link.name}
 				</PoppinLink>)}
-			{
+
+			{Date.now() < hothStart.getTime() ?
 				<ApplyLink
-					disabled={Date.now() < applicationOpen.getTime() || Date.now() > applyDeadline.getTime()}
+					disabled={
+						Date.now() < applicationOpen.getTime() ||
+						Date.now() > applyDeadline.getTime()
+					}
 					href={'https://forms.gle/VMhdCzMov8RvGUfP8'}
-					target='_blank'
+					target="_blank"
 				>
 					Apply
+				</ApplyLink>			 :
+				<ApplyLink
+					disabled={
+						Date.now() < hothStart.getTime() || Date.now() > hothEnd.getTime()
+					}
+					href="/submissions"
+				>
+					Submit
 				</ApplyLink>
 			}
 		</>

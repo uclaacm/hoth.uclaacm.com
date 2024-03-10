@@ -30,7 +30,9 @@ const useStyles = makeStyles(theme => ({
 		textAlign: 'center',
 		fontSize: '4em',
 		fontWeight: theme.typography.fontWeightBold,
-		color: theme.palette.primary.main,
+		background: 'linear-gradient(199.69deg, #FF5F96 21.64%, #BD01FF 72.25%)',
+		WebkitBackgroundClip: 'text',
+		WebkitTextFillColor: 'transparent',
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '3.5em'
 		},
@@ -41,8 +43,8 @@ const useStyles = makeStyles(theme => ({
 	catchphrase: {
 		textAlign: 'center',
 		fontSize: '2.5em',
-		fontWeight: theme.typography.fontWeightBold,
-		color: theme.palette.primary.dark,
+		fontWeight: 400,
+		color: theme.palette.secondary.light,
 		padding: theme.spacing(2),
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '2em'
@@ -100,7 +102,7 @@ export default function HothDescription() {
 						Hack on the Hill?
 					</Typography>
 					<Typography variant='h2' className={classes.catchphrase}
-						style={{ fontWeight: 500, paddingBottom: isSmall ? theme.spacing(2) : theme.spacing(8) }}>
+						style={{ paddingBottom: isSmall ? theme.spacing(2) : theme.spacing(8) }}>
 						Explore. Build. Empower.
 					</Typography>
 				</hgroup>
@@ -113,7 +115,8 @@ export default function HothDescription() {
 							Hack on the Hill (HOTH XI) is a{' '}
 							<strong>12-hour beginner-friendly</strong>
 							{' '}hackathon designed to be your first hackathon experience.
-							HOTH XI will be in-person on the Hill with the specific room TBD. We hope to see you there!
+							HOTH XI will be in-person on the Hill in the Carnesale Commons Palisades Room.
+							We hope to see you there!
 						</Typography>
 					</RightGridItem>
 				</Grid>

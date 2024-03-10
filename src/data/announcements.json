@@ -1,1 +1,104 @@
-[]
+[
+    {
+        "id": 16,
+        "subject": "Thank you HOTH XI participants!",
+        "body": "Congratulations everyone! And a big round of applause to all the winning teams!\r\n\r\nThanks to everyone who participated and helped make HOTH XI a success! We\u2019re so glad to have had you all and we hope you\u2019ve enjoyed your experience! Give yourself a pat on the back and a well-deserved rest.\r\n\r\nWinning teams should expect to receive their prizes within the next 3 weeks. For anyone who missed the closing ceremony, here are the winning teams for all prize tracks:\r\n\r\n- Best Overall: Stride\r\n- Best Web: Cafe Hopper\r\n- Best Mobile: Bruin Bite and Books\r\n- Best Game: Timber\r\n- Best in Intersectional Environmentalism: Westwood Community Garden\r\n- Best Beginner: Near Miss\r\n\r\nCongratulations again to everyone who participated! We will be reaching out to all the winners to send their well-earned prizes!\r\n\r\nThank you everyone! Enjoy the rest of your week!",
+        "timestamp": "2024-03-04T07:48:47Z"
+    },
+    {
+        "id": 15,
+        "subject": "Closing ceremony",
+        "body": "Thank you everyone for your patience!\r\n\r\nThe end of HOTH XI approaches as the judging period wraps up shortly! We\u2019re excited to be announcing the winners at the Closing Ceremony in 10 minutes, STARTING AT 10:50PM! Be sure to show up as we congratulate you all on a job well done and award the prizes to the winning projects!\r\n\r\nLet\u2019s end the day with a bang!",
+        "timestamp": "2024-03-04T06:44:13Z"
+    },
+    {
+        "id": 14,
+        "subject": "Submission closed",
+        "body": "Lay down your keyboards hackers!\r\n\r\nSubmissions for HOTH XI are officially closed! Breathe a sigh of relief as the catharsis of the experience washes over you! Be proud of yourselves! You just finished a 12-hour hackathon!\r\n\r\nAt this point, our judging period will begin and last until the CLOSING CEREMONY STARTS AT 10:30PM! Please hang around and relax until then to hear the announcement of the winners and to potentially receive prizes! \r\n\r\nThank you all for participating!",
+        "timestamp": "2024-03-04T05:39:26Z"
+    },
+    {
+        "id": 13,
+        "subject": "LAST CALL FOR PROJECT SUBMISSIONS!!!",
+        "body": "Please make sure to submit your projects ASAP if you have not already done so! We are allowing a grace period UNTIL 9:15PM for any last minute submissions. Any submissions after this time WILL NOT BE ACCEPTED!\r\n\r\nMake sure you submit to BOTH THE DEVPOST AND THE GOOGLE FORM linked on the Submission page! Again, as a reminder, the only information we are requiring from your submission are the following:\r\n- Maximum 3 minute long demo video\r\n- Project Overview\r\n- Link to your code \r\n\r\nAfter you submit, make sure to stick around for the announcement of the winners during our CLOSING CEREMONY AT 10:30PM!",
+        "timestamp": "2024-03-04T04:54:46Z"
+    },
+    {
+        "id": 12,
+        "subject": "Submissions due in less than 1 hour!",
+        "body": "Attention all hackers!\r\n\r\nThe submission period is open and we will be taking submissions UNTIL 9:00PM so make sure you set aside time to go through that process!\r\n\r\nONLY ONE member of your team has to SUBMIT TO THE DEVPOST AND THE GOOGLE FORM, found on the submission page of this website. Make sure you have provided the following information on Devpost:\r\n- Maximum 3 minute demo video of your project\r\n- Project overview (description of project)\r\n- Link to your code (either Github, Google Drive, or otherwise)\r\n\r\nNote: all other fields that Devpost asks for are NOT strictly required. Once the submission period is over, we will have a 1.5 hour long judging period before announcing winners at our closing ceremony!\r\n\r\nKeep pushing through! You got this!",
+        "timestamp": "2024-03-04T04:01:56Z"
+    },
+    {
+        "id": 11,
+        "subject": "Final stretch is here!",
+        "body": "Get ready for the final stretch hackers!\r\n\r\nThe dedicated dinner break is now over and it is back to hacking until the end of the event! SUBMISSIONS WILL BE DUE AT 9:00PM. Submission information can be found by clicking on the Submit button in the top right corner. Only one team member has to make a submission on both the Devpost and the Google Form. PLEASE MAKE SURE YOU SUBMIT BOTH!\r\n\r\nWe are rooting for you, keep pushing through till the end!",
+        "timestamp": "2024-03-04T03:22:38Z"
+    },
+    {
+        "id": 10,
+        "subject": "Dinner coming soon!",
+        "body": "Hello again hackers!\r\n\r\nOur dinner break is starting soon! Congrats for making it this far, reward yourself with some yummy food! We will be serving pizza from Papa John\u2019s.\r\n\r\nIMPORTANT NOTE FOR DIETARY RESTRICTIONS: if your dietary restriction (vegan or allergies) prevents you from eating the food we have planned, please come to our officer table in the back NOW, as we will be trying our best to provide other accommodating food options. Please note that we have vegetarian options for each meal.",
+        "timestamp": "2024-03-04T02:14:22Z"
+    },
+    {
+        "id": 9,
+        "subject": "Meme competition ending soon",
+        "body": "Only a few more hours to send in your best meme to #hoth-memes! Send them in by 7:00pm and get 1 raffle point, with a chance to get 5 raffle points for winning!",
+        "timestamp": "2024-03-03T22:57:38Z"
+    },
+    {
+        "id": 8,
+        "subject": "Post-Lunch hacking has begun!",
+        "body": "Hello!\r\n\r\nThe dedicated lunch break is now over and it is time to get back to hacking! Our next break will be for dinner @ 6:00pm. In the meantime, don\u2019t forget to check out the #hoth-front-desk and our help room voice channels if you need any help on your projects or approach our office table at the back of the room!\r\n\r\nWe wish you luck and can\u2019t wait to see what you build! Happy hacking!",
+        "timestamp": "2024-03-03T21:58:58Z"
+    },
+    {
+        "id": 7,
+        "subject": "Interdisciplinary Research Panel",
+        "body": "It\u2019s time to welcome our special interdisciplinary research panel! Come hear about how computer science is used in different fields ranging from biomedicine to chemistry and more! This will begin in the main room soon, so make sure to participate and ask questions to get an additional 5 raffle points.",
+        "timestamp": "2024-03-03T21:05:31Z"
+    },
+    {
+        "id": 6,
+        "subject": "Lunch break!",
+        "body": "Our dedicated lunch break is starting soon! Take a break, stretch your legs, stay hydrated, and grab a bite to eat! We will be serving In N Out!.\r\n\r\nHacking will continue @ 2:00pm!\r\n\r\nAdditionally, we will be having an interdisciplinary research panel with special guests Prof. Christine Borgman, Prof. Olivera Grujic, Dr. Debasish Jana, Ph.D Candidate Sven Malama! This will take place in the main room @ 1:00pm! \r\n\r\nIMPORTANT NOTE FOR DIETARY RESTRICTIONS: if your dietary restriction (vegan or allergies) prevents you from eating the food we have planned, please come to our officer table in the back NOW, as we will be trying our best to provide other accommodating food options. Please note that we have vegetarian options for each meal.",
+        "timestamp": "2024-03-03T20:32:58Z"
+    },
+    {
+        "id": 5,
+        "subject": "Common Experience Workshop Happening Now!",
+        "body": "Join Common Experience for a workshop on intersectional environmentalism located in the front of the room at 11:00am! This is a great opportunity to learn and brainstorm some project ideas, as well as get 3 raffle points just for attending :)",
+        "timestamp": "2024-03-03T18:51:19Z"
+    },
+    {
+        "id": 4,
+        "subject": "Workshop Q&A",
+        "body": "Got any burning questions about our HOTH XI workshops? Starting at 10:00am, take the hour to shop for some answers from our amazing interns who put them together. Feel free to pay a visit to them at the round tables and ask them anything!",
+        "timestamp": "2024-03-03T17:54:51Z"
+    },
+    {
+        "id": 3,
+        "subject": "Breakfast, team formation, and time to start hacking!",
+        "body": "Thank you to everyone who came out to our opening ceremony and a round of applause for our speaker Eugene Lo!\r\n\r\nThe moment you\u2019ve all been waiting for is here! It\u2019s time to start hacking! We wish you all the best of luck and can\u2019t wait to see what you come up with!\r\n\r\nIf you do not have a team, ACM-W will be hosting an official team formation event now by the round tables!\r\n\r\nAdditionally, breakfast is from Noah\u2019s Bagels and is being served at the back of the room. Get up and to it hackers!\r\n\r\nHave fun and happy hacking!",
+        "timestamp": "2024-03-03T16:35:06Z"
+    },
+    {
+        "id": 2,
+        "subject": "Opening ceremony starts soon!",
+        "body": "Hello hackers! The beginning of Hack on the Hill is coming! \r\n\r\nWe\u2019re kicking things off at our OPENING CEREMONY in a few minutes in the Carnesale Commons Palisades Room! Excited to see everyone there and welcome you all to our 12-hour hackathon experience!",
+        "timestamp": "2024-03-03T16:26:54Z"
+    },
+    {
+        "id": 1,
+        "subject": "Time to check in!",
+        "body": "Good morning HOTH XI participants!\r\n\r\nCheck in has officially started at Carnesale Commons Palisades Room! We\u2019re excited to see you here!",
+        "timestamp": "2024-03-03T15:58:16Z"
+    },
+    {
+        "id": 0,
+        "subject": "HOTH Applications Closing Soon!",
+        "body": "Hello all, thank you so much for visiting our website and for your interest in HOTH! HOTH XI is coming up this weekend on Sunday, March 3rd! Our application link can be found in the top right corner of this website using the \"Apply\" button, and as a thank you to everyone for signing up, we decided to extend the application deadline two more days to this Wednesday! The event is going to be PACKED with excellent competition, workshops, prizes, raffles, and opportunities to learn from esteemed professors and Common Experience personnel (and free food)!! \r\n\r\nCurrent and future applicants, stay posted for our official RSVP being sent out later this week!! Questions? Hit us up on our discord server for all the deets on the hackathon and other awesome stuff! \r\n\r\n\ud83d\udcc6 When: Week 9 Sunday, March 3, 2024\r\n\ud83d\udccd Where: Palisades Room, Carnesale Commons\r\n\ud83c\udfa8 Theme: Intersections\r\n\u270f\ufe0f Applications Due: February 28th (this Wednesday), 2024",
+        "timestamp": "2024-02-27T03:16:11Z"
+    }
+]
