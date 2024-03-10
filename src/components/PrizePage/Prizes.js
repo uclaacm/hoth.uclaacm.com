@@ -16,37 +16,37 @@ const allPrizes = [
 	{
 		img: 'overall',
 		track: 'Best Overall',
-		prize: '$250 Amazon Gift Card'
+		prize: '$150 Amazon Gift Card'
 		// caption: '1 Echo Studio'
 	},
 	{
 		img: 'web',
 		track: 'Best Web',
-		prize: '$100 Amazon Gift Card'
+		prize: '$80 Amazon Gift Card'
 		// caption: '1 Massage Gun'
 	},
 	{
 		img: 'mobile',
 		track: 'Best Mobile',
-		prize: '$100 Amazon Gift Card'
+		prize: '$80 Amazon Gift Card'
 		// caption: '4 Yeti Mugs'
 	},
 	{
 		img: 'game',
 		track: 'Best Game',
-		prize: '$100 Amazon Gift Card'
+		prize: '$80 Amazon Gift Card'
 		// caption: '4 Laptop Stands'
 	},
 	{
 		img: 'ie',
 		track: 'Best in Intersectional Environmentalism',
-		prize: '$100 Amazon Gift Card'
+		prize: '2 Camping Hammocks and 2 Wireless Charging Pads'
 		// caption: '4 Mini Phone Printers'
 	},
 	{
 		img: 'beg',
 		track: 'Best Beginner',
-		prize: '$100 Amazon Gift Card'
+		prize: '4 Wireless 3-in-1 Charging Stations'
 		// caption: '4 Butt Cushions'
 	}
 ];
@@ -138,7 +138,7 @@ export default function Prizes() {
 		<>
 			<Container maxWidth='md'>
 				<Typography align='center' gutterBottom>
-					Below are the total prize amounts for each category :)
+					Below are the total prize amounts for each prize track! :)
 				</Typography>
 				{/* <Typography align='center' gutterBottom>
 					Due to current restrictions with the CS Department we are unable
@@ -152,7 +152,7 @@ export default function Prizes() {
 								<Box className={classes.imageBox}>
 									<Img fluid={iconImageMap.get(prize.img)}
 										style={{ height: '70%', width: '70%' }}
-										objectFit = "contain"
+										objectFit="contain"
 									/>
 								</Box>
 								<Box className={classes.prizeCard}>
@@ -163,9 +163,11 @@ export default function Prizes() {
 										<Squiggle />
 									</Box>
 									<Box className={classes.prizeDescription}>
-										<Typography style={{ color: '#a1a1a1',
+										<Typography style={{
+											color: '#a1a1a1',
 											fontSize: '14px',
-											textTransform: 'uppercase' }}>
+											textTransform: 'uppercase'
+										}}>
 											prize
 										</Typography>
 										<Typography style={{ paddingLeft: '10px', paddingRight: '10px' }}>

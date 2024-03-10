@@ -75,7 +75,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function AccordionQA({ index, question, answer }) {
-	const [expanded, setExpanded] = useState(index === 0);
+	const [expanded, setExpanded] = useState(index === -1);
 	const classes = useStyles();
 	const panelName = 'faqPanel' + index;
 	const theme = useTheme();
@@ -110,10 +110,10 @@ AccordionQA.propTypes = {
 };
 
 function FAQSection() {
-	const hothNum = 'X';
-	const appDeadline = 'Friday, February 24, 2023';
-	const hothDate = 'Sunday, March 5, 2023';
-	const hothLocation = 'Carnesale Commons Palisades Room';
+	const hothNum = 'XI';
+	const appDeadline = 'Monday, February 26, 2024';
+	const hothDate = 'Sunday, March 3, 2024';
+	const hothLocation = 'Carnesale Commons, Palisades Room';
 	const faqs = [
 		{
 			question: `What's a hackathon?`,
@@ -122,7 +122,7 @@ function FAQSection() {
 					A hackathon is an event during which people from different backgrounds
 					come together to create a project from start to finish in a limited time frame.
 					Check out some examples from last year&apos;s
-					HOTH <Link href='https://hoth9.devpost.com/project-gallery'>here</Link>!
+					HOTH <Link href='https://hothx.devpost.com/project-gallery'>here</Link>!
 				</>
 		},
 		{
@@ -162,7 +162,7 @@ function FAQSection() {
 		},
 		{
 			question: `What if I have never made a project before?`,
-			answer:	`No worries! Throughout HOTH ${hothNum}, you'll have access to workshops on all sorts of
+			answer: `No worries! Throughout HOTH ${hothNum}, you'll have access to workshops on all sorts of
 				topics to help you start bringing your ideas to life and mentors to support you through
 				any road blocks.`
 		},
@@ -173,7 +173,7 @@ function FAQSection() {
 				<>
 					We would love to have you as a mentor to answer participants&apos; technical
 					questions and help them with their projects. If you are interested, send us an email
-					at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com</Link> or dm us on
+					at <Link href='mailto:hack@uclaacm.com'>hack@uclaacm.com</Link> or dm us on
 					our <Link href='https://discord.gg/MStu2cnBV9'>discord server</Link>!
 				</>
 		},
@@ -189,7 +189,7 @@ function FAQSection() {
 			question: `I have some other questions.`,
 			answer:
 				<>
-					Send us an email at <Link href='mailto:uclaacmhack@gmail.com'>uclaacmhack@gmail.com</Link>!
+					Send us an email at <Link href='mailto:hack@uclaacm.com'>hack@uclaacm.com</Link>!
 				</>
 		}
 	];
