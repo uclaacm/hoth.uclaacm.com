@@ -7,9 +7,10 @@ import Divider from '@material-ui/core/Divider';
 import StickyTimeSlot from '../SchedulePage/StickyTimeSlot';
 import eventSchedule from '../../data/eventSchedule';
 import ComingSoon from '../ComingSoon/ComingSoon';
+import { scheduleAvailableTime, hothEnd } from '../constants';
 
 // When changing this, make sure to update src/components/HomePage/UpcomingEvents.js as well.
-const scheduleAvailable = false;
+const scheduleAvailable = Date.now() > scheduleAvailableTime.getTime() && Date.now() < hothEnd.getTime();
 
 const useStyles = makeStyles(theme => ({
 	title: {
