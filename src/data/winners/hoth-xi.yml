@@ -1,0 +1,34 @@
+- name: "HOTH XI"
+  devpost: https://hoth-xi.devpost.com/project-gallery
+
+  winners:
+    - title: stride
+      category: Best Overall
+      description: "stride is an app that makes sustainable commutes fun. Log and track your walks and rides to see their environmental impact, earn achievements and connect with your friends to stay motivated!"
+      link: "https://devpost.com/software/stride-bslo5u"
+      image: stride
+    - title: Cafe Hopper
+      category: Best Web
+      description: "Cafes are pretty cool. Check out nearby cafes."
+      link: "https://devpost.com/software/cafe-hopper"
+      image: cafehopper
+    - title: BruinBites & Books
+      category: Best Mobile
+      description: "Say goodbye to lonely meals with this platform that streamlines dining meetups, sparking lively discussions and culinary adventures."
+      link: "https://devpost.com/software/bruinbites-books"
+      image: bruinbitesbooks
+    - title: Timber
+      category: Best Game
+      description: "A game about deforestation"
+      link: "https://devpost.com/software/timber-wtsfdz"
+      image: timber
+    - title: Westwood Community Garden
+      category: Best in Intersectional Environmentalism
+      description: "Our mission is to grow together, sustainably."
+      link: "https://devpost.com/software/westwood-community-garden"
+      image: westwoodcommunitygarden
+    - title: Near Miss
+      category: Best Beginner
+      description: "Near Miss lies at the intersecting fields of statistics and finance to democratize knowledge and expose casino scams."
+      link: "https://devpost.com/software/team-near-miss"
+      image: nearmiss
