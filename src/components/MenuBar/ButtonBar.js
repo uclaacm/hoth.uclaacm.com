@@ -2,8 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import { Link as GatsbyLink } from 'gatsby';
-import { Link as MUILink } from '@material-ui/core';
+import LinkNoStyle from '../LinkNoStyle/LinkNoStyle.js';
 
 import {
 	applicationOpen,
@@ -13,51 +12,75 @@ import {
 } from '../constants.js';
 
 const useStyles = makeStyles(theme => {
-	const menuBarAdaptiveThreshold = theme.breakpoints.values.sm * 1.3;
 	return {
-		btn: {
-			fontWeight: 500
-		},
-		borderBtn: {
-			margin: 10,
-			color: '#FFFFFF',
-			transition: theme.transitions.create(['color', 'background'], {
-				duration: theme.transitions.duration.complex
-			}),
-			'&:hover': {
-				background: '#DB99FD'
+		link: {
+			fontWeight: 500,
+			color: 'black',
+			margin: '0 13px',
+			position: 'relative',
+			textDecoration: 'none',
+			'&::after': {
+				content: '""',
+				position: 'absolute',
+				height: '2px',
+				width: '100%',
+				left: '0px',
+				bottom: '-5px',
+				backgroundColor: theme.palette.primary.dark,
+				transform: 'scaleX(0)',
+				transformOrigin: 'bottom right',
+				transition: 'transform 0.3s ease-in-out'
 			},
-			[theme.breakpoints.down(menuBarAdaptiveThreshold)]: {
-				// mobile
-				margin: 0
+			'&:hover::after': {
+				transform: 'scaleX(1)',
+				transformOrigin: 'bottom left'
+			}
+		},
+		mobileLink: {
+			fontFamily: theme.typography.fontFamily,
+			fontWeight: 500,
+			margin: '25px 0px 0px',
+			textAlign: 'center',
+			color: 'black'
+		},
+		applyLink: {
+			fontFamily: theme.typography.fontFamily,
+			fontWeight: 600,
+			backgroundColor: theme.palette.secondary.main,
+			margin: isMobile => isMobile ? '20px auto 0' : '0 0 0 15px',
+			padding: '7px 20px',
+			borderRadius: '20px',
+			color: 'white',
+			'&:hover': {
+				backgroundColor: theme.palette.primary.light
 			}
 		}
 	};
 });
 
+
 function ButtonBar({ isMobile }) {
-	const classes = useStyles();
+	const classes = useStyles(isMobile);
 
-	const PoppinLink = ({ ...props }) =>
-		<Button
-			component={GatsbyLink}
-			role="link"
-			fullWidth={isMobile}
-			className={classes.btn}
-			{...props}
-		/>;
+	const PoppinLink = ({ to, ...props }) => {
+		return !isMobile ?
+			<LinkNoStyle to={to} fullWidth={isMobile} className={classes.link} {...props} /> :
+			<LinkNoStyle to={to} fullWidth={isMobile} className={classes.mobileLink} {...props} />;
+	};
 
+	PoppinLink.propTypes = {
+		to: PropTypes.string.isRequired
+	};
 
-	const BorderLink = ({ ...props }) =>
-		<Button
-			component={MUILink}
-			role="link"
-			className={classes.borderBtn}
-			style={{ margin: 10, textDecoration: 'none' }}
-			variant="contained"
-			{...props}
-			color="secondary"
-		/>;
+	const ApplyLink = ({ to, ...props }) => {
+		return <LinkNoStyle to={to}>
+			<Button fullWidth={isMobile} className={classes.applyLink} {...props} />
+		</LinkNoStyle>;
+	};
+
+	ApplyLink.propTypes = {
+		to: PropTypes.string.isRequired
+	};
 
 
 	const links = [
@@ -95,7 +118,7 @@ function ButtonBar({ isMobile }) {
 				</PoppinLink>)}
 
 			{Date.now() < hothStart.getTime() ?
-				<BorderLink
+				<ApplyLink
 					disabled={
 						Date.now() < applicationOpen.getTime() ||
 						Date.now() > applyDeadline.getTime()
@@ -104,15 +127,15 @@ function ButtonBar({ isMobile }) {
 					target="_blank"
 				>
 					Apply
-				</BorderLink>			 :
-				<BorderLink
+				</ApplyLink>			 :
+				<ApplyLink
 					disabled={
 						Date.now() < hothStart.getTime() || Date.now() > hothEnd.getTime()
 					}
 					href="/submissions"
 				>
 					Submit
-				</BorderLink>
+				</ApplyLink>
 			}
 		</>
 	);
@@ -125,5 +148,6 @@ ButtonBar.propTypes = {
 ButtonBar.defaultProps = {
 	isMobile: false
 };
+
 
 export default ButtonBar;
