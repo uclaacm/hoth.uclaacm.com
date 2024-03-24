@@ -83,7 +83,7 @@ function ButtonBar({ isMobile }) {
 		},
 		{
 			name: 'Gallery',
-			to: '/gallery/hoth-x' // need to update this link to be latest HOTH
+			to: '/gallery/hoth-xi' // need to update this link to be latest HOTH
 		}
 	];
 
