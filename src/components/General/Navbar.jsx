@@ -39,6 +39,7 @@ export default function Navbar() {
 		<nav className='navbar'>
 			<Link to='/' onClick={closeMenu} className='nav-hack'>
 				<img src={HackLogo} alt='ACM Hack Logo' className='nav-hack-logo' />
+				<h1>Hack on the Hill</h1>
 			</Link>
 
 			{/* Show hamburger only when isMobile is true (screen width <= 950px) */}
@@ -52,32 +53,32 @@ export default function Navbar() {
 			<ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
 				<li>
 					<Link to='/' onClick={closeMenu}>
-						Home
+						HOME
 					</Link>
 				</li>
 				<li>
 					<Link to='/announcements' onClick={closeMenu}>
-						Announcements
+						ANNOUNCEMENTS
 					</Link>
 				</li>
 				<li>
 					<Link to='/schedule' onClick={closeMenu}>
-						Schedule
+						SCHEDULE
 					</Link>
 				</li>
 				<li>
 					<Link to='/workshops' onClick={closeMenu}>
-						Workshops
+						WORKSHOPS
 					</Link>
 				</li>
 				<li>
 					<Link to='/prizes' onClick={closeMenu}>
-						Prizes
+						PRIZES
 					</Link>
 				</li>
 				<li>
 					<Link to='/gallery' onClick={closeMenu}>
-						Gallery
+						GALLERY
 					</Link>
 				</li>
 			</ul>
