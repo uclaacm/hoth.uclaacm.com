@@ -21,15 +21,15 @@ export default function Home() {
 	);
 
 	return (
-		<div>
+		<div id='home'>
 			<Banner />
-			<Container1>
-				<HothDescription />
-			</Container1>
-
 			<Container2>
-				<PhotoCarousel />
+				<HothDescription />
 			</Container2>
+
+			<Container1>
+				<PhotoCarousel />
+			</Container1>
 		</div>
 	);
 }
