@@ -28,50 +28,30 @@
 	width: 100%;
 }
 
-/* 
-.banner-content {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	max-width: 960px;
-	width: 100%;
-	overflow: unset;
-} */
-
 .hoth-banner {
 	width: 100%;
+	display: block;
 }
 
-@media (max-width: 950px) {
-	.left-banner,
-	.right-banner,
-	.wordmark {
-		width: 240px;
-	}
-	.banner-content {
-		justify-content: center;
-	}
+.banner-text {
+	position: absolute;
+	top: 20%;
+	left: 55%;
 }
 
-@media (max-width: 750px) {
-	.left-banner,
-	.right-banner,
-	.wordmark {
-		width: 200px;
-	}
+.banner-subtext {
+	line-height: 2rem;
 }
 
-@media (max-width: 600px) {
-	.right-banner {
-		display: none;
-	}
+.banner-text h1 {
+	color: #fff;
+	font-size: 6.5rem;
 }
 
-@media (max-width: 450px) {
-	.left-banner,
-	.wordmark {
-		width: 180px;
-	}
+.banner-text p {
+	color: #fff;
+	font-size: 1.5rem;
+	margin: 0;
 }
 
 /* ========== HothDescription.jsx ========== */

@@ -8,6 +8,7 @@ import Schedule from './pages/Schedule';
 import Workshops from './pages/Workshops';
 import Prizes from './pages/Prizes';
 import Gallery from './pages/Gallery';
+import Footer from './components/General/Footer';
 import './styles/App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
 				<Route path='/prizes' element={<Prizes />} />
 				<Route path='/gallery' element={<Gallery />} />
 			</Routes>
+			<Footer />
 		</div>
 	);
 }

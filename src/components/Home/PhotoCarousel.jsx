@@ -11,7 +11,6 @@ import image4 from '../../images/carousel/image4.jpg';
 import image5 from '../../images/carousel/image5.jpg';
 import image6 from '../../images/carousel/image6.jpg';
 import image7 from '../../images/carousel/image7.jpg';
-import image8 from '../../images/carousel/image8.jpg';
 
 export default function PhotoCarousel() {
 	const settings = {
@@ -23,16 +22,7 @@ export default function PhotoCarousel() {
 		className: 'slides',
 	};
 
-	const images = [
-		image1,
-		image2,
-		image3,
-		image4,
-		image5,
-		image6,
-		image7,
-		image8,
-	];
+	const images = [image1, image2, image3, image4, image5, image6, image7];
 
 	return (
 		<Slider {...settings}>
