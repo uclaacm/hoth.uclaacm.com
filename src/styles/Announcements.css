@@ -1,0 +1,14 @@
+#announcements {
+	width: 100%;
+	max-width: 60rem;
+	padding: 2rem 3rem;
+}
+
+.announcements-title {
+	font-size: 3rem;
+}
+
+.announcements-container {
+	display: flex;
+	flex-direction: column;
+}

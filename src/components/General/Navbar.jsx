@@ -61,11 +61,12 @@ export default function Navbar() {
 						ANNOUNCEMENTS
 					</Link>
 				</li>
-				<li>
+				{/* RE-ACTIVATE SCHEDULE TAB WHEN SOLIDIFIED */}
+				{/* <li>
 					<Link to='/schedule' onClick={closeMenu}>
 						SCHEDULE
 					</Link>
-				</li>
+				</li> */}
 				<li>
 					<Link to='/workshops' onClick={closeMenu}>
 						WORKSHOPS
