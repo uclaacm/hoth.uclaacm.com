@@ -8,7 +8,10 @@ export default function Banner() {
 			<img className='hoth-banner' src={hothBanner} alt='HOTH Banner' />
 
 			<div className='banner-text'>
-				<h1>HOTH XI</h1>
+				<h1>
+					HOTH <span className='gradient-text'>XI</span>
+				</h1>
+
 				<div className='banner-subtext'>
 					<p>
 						<strong>Location:</strong> Carnesale Commons, Palisades Room

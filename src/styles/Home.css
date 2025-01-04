@@ -54,6 +54,13 @@
 	margin: 0;
 }
 
+.gradient-text {
+	background: linear-gradient(135deg, #ff5f96, #bd00ff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: inline-block;
+}
+
 /* ========== HothDescription.jsx ========== */
 .hoth-title-container {
 	padding: 0 3rem;
