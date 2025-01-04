@@ -12,8 +12,9 @@ export default [
 	pluginReact.configs.flat.recommended,
 	{
 		rules: {
-			quotes: ['error', 'single'],
+			quotes: ['error', 'single', { avoidEscape: true }],
 			'react/prop-types': 'off',
+			'react/no-unescaped-entities': 'off',
 		},
 		settings: {
 			react: {

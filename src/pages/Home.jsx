@@ -4,6 +4,7 @@ import useTitle from '../components/General/useTitle';
 import Banner from '../components/Home/Banner';
 import HothDescription from '../components/Home/HothDescription';
 import PhotoCarousel from '../components/Home/PhotoCarousel';
+import FAQSection from '../components/Home/FAQSection';
 
 export default function Home() {
 	useTitle('');
@@ -30,6 +31,10 @@ export default function Home() {
 			<Container1>
 				<PhotoCarousel />
 			</Container1>
+
+			<Container2>
+				<FAQSection />
+			</Container2>
 		</div>
 	);
 }
