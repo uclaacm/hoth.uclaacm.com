@@ -15,6 +15,7 @@
   "dependencies": {
     "@geist-ui/icons": "^1.0.2",
     "@szhsin/react-accordion": "^1.4.0",
+    "@szhsin/react-menu": "^4.2.3",
     "react": "^18.3.1",
     "react-animate-on-scroll": "^2.1.9",
     "react-dom": "^18.3.1",
