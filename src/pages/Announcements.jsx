@@ -1,7 +1,10 @@
 import React from 'react';
+import useTitle from '../components/General/useTitle';
 import '../styles/Announcements.css';
 
 export default function Announcements() {
+	useTitle(' | Announcements');
+
 	return (
 		<div id='announcements'>
 			<h1 className='announcements-title'>Announcements</h1>

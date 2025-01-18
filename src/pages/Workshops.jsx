@@ -4,7 +4,7 @@ import useTitle from '../components/General/useTitle';
 import Workshop from '../components/Workshops/Workshop';
 
 export default function Workshops() {
-	useTitle('Workshops');
+	useTitle(' | Workshops');
 
 	const Container = ({ title, children }) => (
 		<div className='section-container'>
@@ -12,13 +12,13 @@ export default function Workshops() {
 			<div className='workshops-container'>{children}</div>
 		</div>
 	);
-	
+
 	return (
 		<div id='workshops'>
 			<h1 className='page-title'>Workshops</h1>
 			<Container title='Web Development'>
 				<Workshop
-				    title='Intro to HTML, CSS, and JS'
+					title='Intro to HTML, CSS, and JS'
 					youtube='https://youtu.be/fSvbqxaAWqE'
 					author='Hannah Kendall'
 					description='This workshop covers the basics of Web Development - HTML, CSS, and JavaScript! Together, they make up the structure (HTML), the style (CSS), and the functionality (JS) of a web application. Keep reading or watch the workshop to learn how to utilize these tools to make a super cool web application of your own!'
@@ -42,7 +42,7 @@ export default function Workshops() {
 					slides='https://docs.google.com/presentation/d/1ZvL1TrNetVCnJHxDT0ffca0QwEP678LnVAGC846DtZ4/edit?usp=drive_link'
 				/>
 				<Workshop
-				    title='Intro to React.js'
+					title='Intro to React.js'
 					author='Kayla Hamakawa'
 					youtube='https://youtu.be/JZrRLf5Gmqg'
 					description='Hello! Welcome to the Intro to React JS workshop for HOTH XI! Here we will be introducing frontend web development using React. In this workshop we will utilize HTML, CSS, and JavaScript, so I would recommend watching the workshop on those if you are not already familiar with them!'
@@ -52,7 +52,7 @@ export default function Workshops() {
 			</Container>
 			<Container title='Mobile Development'>
 				<Workshop
-				    title='Intro to React Native'
+					title='Intro to React Native'
 					author='Max Lee'
 					youtube='https://youtu.be/ulqijuEyi5Y'
 					description='Hello and welcome to our Intro to React Native workshop! We&#39;ll be covering the basics of React Native in a way that I hope is simple to understand and impactful enough to teach some key features of app development. Happy hacking!'
@@ -91,14 +91,14 @@ export default function Workshops() {
 					description='Shoutout to the folks over at ACM AI for putting this together! They created this workshop so serve as an introduction to deep learning, including a notebook linked on the readme to show you actual deep learning code and take you through a hands-on of how you can build this code yourself! In the process of building this model, they go over Big Data, avoiding bias and unintended patterns, understanding our data, making the network, and training.'
 					readme='https://bit.ly/acm_ai_24w_intro_dl'
 				/>
-				<Workshop 
+				<Workshop
 					title='Intro to Game Development'
 					author='Austin Law (ACM Game Studio)'
 					youtube='https://youtu.be/WkqycKI6vdc'
 					description='Shoutout to Austin Law from ACM Game Studio for putting this workshop together for us! In this section, he talks about game development, some tips to success, and lastly, a short introduction to using the Unity game engine.'
 					slides='https://docs.google.com/presentation/d/1s545_VhUktrxMzpx6k6hi_kOUbsRiJP0evhJ1x9ai38/edit?usp=sharing'
 				/>
-			</Container>			
+			</Container>
 		</div>
 	);
 }
