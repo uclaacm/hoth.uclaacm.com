@@ -1,0 +1,147 @@
+/* ========== Home.jsx ========== */
+#home {
+	width: 100%;
+	background-color: var(--bgGray);
+}
+.container-md {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.white-container {
+	background-color: #ffffff;
+	padding: 2rem 0;
+	overflow: hidden;
+}
+
+.transparent-container {
+	background-color: transparent;
+	padding: 2rem 0;
+	overflow: hidden;
+}
+
+/* ========== Banner.jsx ========== */
+.banner-container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.hoth-banner {
+	width: 100%;
+	display: block;
+}
+
+.banner-text {
+	position: absolute;
+	top: 20%;
+	left: 55%;
+}
+
+.banner-subtext {
+	line-height: 2rem;
+}
+
+.banner-text h1 {
+	color: #fff;
+	font-size: 6.5rem;
+}
+
+.banner-text p {
+	color: #fff;
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+.gradient-text {
+	background: linear-gradient(135deg, #ff5f96, #bd00ff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: inline-block;
+}
+
+/* ========== HothDescription.jsx ========== */
+.hoth-title-container {
+	padding: 0 3rem;
+	margin-bottom: 5rem;
+}
+
+.hoth-what {
+	font-weight: bold;
+	font-size: 2.5rem;
+	color: var(--lightGrayV3);
+}
+
+.title-left {
+	flex: 1;
+}
+
+.title-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex: 2;
+}
+
+.hoth-title {
+	font-weight: bolder;
+	font-size: 4rem;
+	margin: 0;
+	background: linear-gradient(135deg, var(--lightPurple), var(--darkPink));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.hoth-desc {
+	font-weight: 400;
+	font-size: 2.3rem;
+	color: var(--hackAccent);
+}
+
+.home-hack-logo {
+	flex-basis: 15%;
+	margin-left: 4rem;
+	height: 10rem;
+}
+
+.hoth-img {
+	max-width: 27rem;
+	border-radius: 1rem;
+}
+
+.img-left-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin-bottom: 2rem;
+}
+
+.img-right-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row-reverse;
+	margin-bottom: 2rem;
+}
+
+.img-right-p {
+	margin-right: 4rem;
+	font-size: 1.2rem;
+}
+
+.img-left-p {
+	margin-left: 4rem;
+	font-size: 1.2rem;
+}
+
+.hack-website-link {
+	text-decoration: none;
+	color: var(--hackPrimary);
+}
+
+.hack-website-link:hover {
+	text-decoration: underline;
+}

@@ -1,0 +1,86 @@
+#prizes {
+	width: 100%;
+	max-width: 60rem;
+	padding: 2rem 3rem;
+	margin: 0 auto; /* centers the container */
+}
+
+.prizes-title {
+	font-size: 3rem;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.prizes-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.squiggle-divider {
+	width: 8rem;
+	margin-top: 0.5rem;
+}
+
+.prize-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+	width: 100%;
+}
+
+.prize-card {
+	background: #fff;
+	border: 1px solid #eee;
+	border-radius: 0.75rem;
+	padding: 1.5rem 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.prize-card-icon-circle {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: #f3f0fe;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+.prize-card-icon {
+	width: 64px;
+	height: 64px;
+}
+
+.prize-card h2 {
+	font-size: 1.25rem;
+	margin-bottom: 0.5rem;
+}
+
+.card-squiggle {
+	width: 4rem;
+	margin: 0.5rem 0;
+}
+
+.prize-label {
+	margin-top: 0.5rem;
+	font-size: 0.8rem;
+	color: #888;
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
+	margin-bottom: 0.25rem;
+}
+
+.prize-amount {
+	font-size: 1rem;
+	font-weight: 500;
+	color: #333;
+	line-height: 1.4;
+	max-width: 12rem;
+}
