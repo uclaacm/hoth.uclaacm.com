@@ -4,7 +4,7 @@ import useTitle from '../components/General/useTitle';
 import Workshop from '../components/Workshops/Workshop';
 
 export default function Workshops() {
-	useTitle('Workshops');
+	useTitle(' | Workshops');
 
 	const Container = ({ title, children }) => (
 		<div className='section-container'>
