@@ -1,0 +1,157 @@
+/* ========== Winner.jsx ========== */
+
+.winner-container {
+    display: flex;
+    flex-direction: column;
+    font-family: Poppins;
+    margin: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.winner-image {
+    border-radius: var(--rounded-lg);
+    overflow: hidden;
+    max-height: 300px;
+}
+
+.winner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.winner-info {
+    margin-top: .5rem;
+}
+
+.winner-title {
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.winner-category {
+    text-transform: uppercase;
+    font-size: .9em;
+    letter-spacing: .5px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.winner-description {
+    font-size: .9em;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.winner-button {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--darkPink);
+    border: none;
+    border-radius: var(--rounded-md);
+    padding: .5rem 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.winner-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.winner-button:hover {
+    text-decoration: none;
+    background-color: var(--bgGray);
+}
+
+.winner-button:hover a {
+    color: var(--darkPink);
+}
+
+/* ========== Winners.jsx ========== */
+.winners-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.all-posts-button {
+    width: fit-content;
+    padding: .5rem 1rem;
+    border-radius: var(--rounded-md);
+    background-color: var(--bgWhite);
+    border: solid 0.1rem var(--darkPink);
+}
+
+.all-posts-button a {
+    color: var(--darkPink);
+    text-decoration: none;
+}
+
+.outer-winners-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* ========== Gallery.jsx ========== */
+.section-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.past-winners {
+    display: flex;
+    width: 10rem;
+    color: var(--darkPink);
+    border: none;
+    background-color: var(--bgWhite);
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    border-radius: var(--rounded-md); 
+    font-size: 1em;
+    letter-spacing: .5px;
+    font-weight: 400;   
+}
+
+.past-winners:hover {
+    color: var(--darkPink);
+    background-color: var(--bgGray);
+}
+
+.menu-item {
+    background-color: var(--bgWhite);
+    color: black;
+}
+
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.section-title {
+    font-size: 2em;
+    font-weight: bolder;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 4rem;
+    width: 100%;
+}
