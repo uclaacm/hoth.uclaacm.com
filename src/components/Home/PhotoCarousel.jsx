@@ -12,6 +12,8 @@ import image5 from '../../images/carousel/image5.jpg';
 import image6 from '../../images/carousel/image6.jpg';
 import image7 from '../../images/carousel/image7.jpg';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 export default function PhotoCarousel() {
 	const settings = {
 		dots: true,
@@ -27,7 +29,7 @@ export default function PhotoCarousel() {
 	return (
 		<Slider {...settings}>
 			{images.map((image, index) => (
-				<img
+				<LazyLoadImage
 					src={image}
 					alt={`Carousel ${index + 1}`}
 					className='carousel-image'

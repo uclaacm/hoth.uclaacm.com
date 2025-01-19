@@ -3,6 +3,7 @@ import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
 import { Link } from 'react-router-dom';
 import chevronDown from '../../images/chevron-down.svg';
 import '../../styles/FAQSection.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const hothNum = 'XI';
 const appDeadline = 'Monday, February 26, 2024';
@@ -124,7 +125,7 @@ const AccordionItem = ({ header, ...rest }) => (
 		header={
 			<>
 				{header}
-				<img className='chevron' src={chevronDown} alt='Expand/Collapse' />
+				<LazyLoadImage className='chevron' src={chevronDown} alt='Expand/Collapse' />
 			</>
 		}
 		className='item'

@@ -4,6 +4,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import img1 from '../../images/hoth-title/IMG_1914.jpg';
 import img2 from '../../images/hoth-title/IMG_2030.jpg';
 import img3 from '../../images/hoth-title/hack_motif_applied.jpg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function HothDescription() {
 	return (
@@ -24,7 +25,7 @@ export default function HothDescription() {
 			<ScrollAnimation animateIn='fadeIn'>
 				<div className='img-left-container'>
 					<div className='img-left'>
-						<img
+						<LazyLoadImage
 							src={img1}
 							alt='Participants at Hack on the Hill'
 							className='hoth-img'
@@ -42,7 +43,7 @@ export default function HothDescription() {
 			<ScrollAnimation animateIn='fadeIn'>
 				<div className='img-right-container'>
 					<div className='img-right'>
-						<img
+						<LazyLoadImage
 							src={img2}
 							alt='Participants at Hack on the Hill'
 							className='hoth-img'
@@ -61,7 +62,7 @@ export default function HothDescription() {
 			<ScrollAnimation animateIn='fadeIn'>
 				<div className='img-left-container'>
 					<div className='img-left'>
-						<img src={img3} alt='Hack banner' className='hoth-img' />
+						<LazyLoadImage src={img3} alt='Hack banner' className='hoth-img' />
 					</div>
 					<p className='img-left-p'>
 						Hack on the Hill is an event hosted by ACM Hack. A student run

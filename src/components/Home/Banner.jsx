@@ -1,11 +1,12 @@
 import React from 'react';
 import '../../styles/Home.css';
 import hothBanner from '../../images/hothXI-banner.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Banner() {
 	return (
 		<div className='banner-container'>
-			<img className='hoth-banner' src={hothBanner} alt='HOTH Banner' />
+			<LazyLoadImage className='hoth-banner' src={hothBanner} alt='HOTH Banner' />
 
 			<div className='banner-text'>
 				<h1>
