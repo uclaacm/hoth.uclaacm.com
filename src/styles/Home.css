@@ -21,6 +21,12 @@
 	overflow: hidden;
 }
 
+@media (max-width: 800px) {
+	.transparent-container {
+		padding: 1vw 0;
+	}
+}
+
 /* ========== Banner.jsx ========== */
 .banner-container {
 	display: flex;
@@ -35,22 +41,18 @@
 
 .banner-text {
 	position: absolute;
-	top: 20%;
-	left: 55%;
-}
-
-.banner-subtext {
-	line-height: 2rem;
+	top: 19%;
+	right: 5%;
 }
 
 .banner-text h1 {
 	color: #fff;
-	font-size: 6.5rem;
+	font-size: 7.3vw;
 }
 
 .banner-text p {
 	color: #fff;
-	font-size: 1.5rem;
+	font-size: 1.6vw;
 	margin: 0;
 }
 
@@ -59,6 +61,23 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	display: inline-block;
+}
+
+@media screen and (max-width: 550px) {
+	.banner-text {
+		top: 15%;
+		right: 6%;
+	}
+
+	.banner-text p {
+		font-size: 1.4vw;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.banner-text {
+		top: 11%
+	}
 }
 
 /* ========== HothDescription.jsx ========== */
@@ -144,4 +163,22 @@
 
 .hack-website-link:hover {
 	text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+	.hoth-title-container {
+		padding: 0 1vw;
+	}
+
+	.hoth-what {
+		font-size: 5vw;
+	}
+
+	.hoth-title {
+		font-size: 8vw;
+	}
+
+	.hoth-desc {
+		font-size: 4.5vw;
+	}
 }
