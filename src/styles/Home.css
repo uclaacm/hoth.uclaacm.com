@@ -168,6 +168,7 @@
 @media (max-width: 800px) {
 	.hoth-title-container {
 		padding: 0 1vw;
+		margin-bottom: 5vw;
 	}
 
 	.hoth-what {
@@ -180,5 +181,27 @@
 
 	.hoth-desc {
 		font-size: 4.5vw;
+	}
+
+	.hoth-img {
+		width: 40vw;
+	}
+
+	.img-left-container {
+		margin-bottom: 5vw;
+	}
+	
+	.img-right-container {
+		margin-bottom: 5vw;
+	}
+	
+	.img-right-p {
+		margin-right: 4vw;
+		font-size: 2.4vw;
+	}
+	
+	.img-left-p {
+		margin-left: 4vw;
+		font-size: 2.4vw;
 	}
 }
