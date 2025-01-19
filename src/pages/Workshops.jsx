@@ -13,7 +13,7 @@ export default function Workshops() {
 		</div>
 	);
 
-	{/*YouTube links MUST be in https://youtu.be/(ID) format*/}
+	{/*YouTube links MUST be in https://youtu.be/(ID) format nothing can trail the ID field*/}
 	return (
 		<div id='workshops'>
 			<h1 className='page-title'>Workshops</h1>
