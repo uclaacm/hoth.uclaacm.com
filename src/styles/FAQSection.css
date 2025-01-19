@@ -79,3 +79,23 @@
 .itemBtnExpanded .chevron {
 	transform: rotate(180deg);
 }
+
+@media (max-width: 450px) {
+	.faq-header h2 {
+		font-size: 9vw;
+	}
+
+	.faq-header h3 {
+		font-size: 6vw;
+	}
+
+	.itemBtn {
+		padding: 3vw;
+		font-size: 5vw;
+	}
+
+	.itemPanel {
+		padding: 3vw 4vw;
+		font-size: 4vw;
+	}
+}
