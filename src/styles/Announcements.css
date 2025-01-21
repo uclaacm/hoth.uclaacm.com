@@ -19,20 +19,18 @@
 	}
 
 	.announcements-title {
-		font-size: 2.25rem;
-	}
-
-	.announcements-container p {
-		font-size: 0.8rem;
+		font-size: 2.5rem;
 	}
 }
 
 @media (max-width: 400px) {
 	.announcements-title {
-		font-size: 1.5rem;
+		font-size: 2.1rem;
 	}
+}
 
-	.announcements-container p {
-		font-size: 0.5rem;
+@media (max-width: 350px) {
+	.announcements-title {
+		font-size: 1.9rem;
 	}
 }
