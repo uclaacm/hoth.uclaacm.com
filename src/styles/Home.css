@@ -313,26 +313,22 @@
 		font-size: 1.5rem;
 	}
 
-	.hoth-img {
-		width: 100%;
-	}
-
 	.img-left-container {
-		margin-bottom: 1.5rem;
+		margin: 0 2rem 5rem;
+		flex-direction: column;
 	}
 	
 	.img-right-container {
-		margin-bottom: 1.5rem;
+		margin: 0 2rem 5rem;
+		flex-direction: column;
 	}
 	
 	.img-right-p {
-		margin-right: 2rem;
-		width: 100%;
+		margin-right: 0;
 	}
 	
 	.img-left-p {
-		margin-left: 2rem;
-		width: 100%;
+		margin-left: 0;
 	}
 }
 
@@ -349,12 +345,26 @@
 		font-size: 1.1rem;
 	}
 
+	.img-left-container {
+		margin-bottom: 3rem;
+		flex-direction: column;
+	}
+	
+	.img-right-container {
+		margin-bottom: 3rem;
+		flex-direction: column;
+	}
+
+	.hoth-img {
+		width: 100%;
+	}
+
 	.img-right-p {
-		font-size: 0.7rem;
+		font-size: 1.1rem;
 	}
 	
 	.img-left-p {
-		font-size: 0.7rem;
+		font-size: 1.1rem;
 	}
 }
 
@@ -374,11 +384,11 @@
 	}
 
 	.img-right-p {
-		font-size: 0.5rem;
+		font-size: 0.8rem;
 	}
 	
 	.img-left-p {
-		font-size: 0.5rem;
+		font-size: 0.8rem;
 	}
 }
 
