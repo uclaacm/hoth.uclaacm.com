@@ -85,6 +85,18 @@
 	fill: var(--bgBlack);
 }
 
+/* Apply Button */
+.ApplyActive {
+	font-weight: bold;
+	background-color: var(--lightPurple);
+}
+
+.ApplyInactive {
+	pointer-events: none;
+	color: rgb(161, 161, 161);
+	background-color: rgb(205, 205, 205);
+}
+
 @media (max-width: 950px) {
 	.navbar {
 		padding: 1rem 2rem;
