@@ -55,10 +55,20 @@
 
 @media (max-width: 600px) {
 	.carousel-image {
-		height: 50vw;
+		height: 20rem;
 	}
 
 	.slick-dots li button:before {
-		font-size: 1vw;
+		font-size: 0.5rem;
+	}
+}
+
+@media (max-width: 400px) {
+	.carousel-image {
+		height: 13rem;
+	}
+
+	.slick-dots li button:before {
+		font-size: 0.3rem;
 	}
 }
