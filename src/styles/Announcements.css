@@ -12,3 +12,27 @@
 	display: flex;
 	flex-direction: column;
 }
+
+@media (max-width: 550px) {
+	#announcements {
+		padding: 1rem 1.5rem;
+	}
+
+	.announcements-title {
+		font-size: 2.25rem;
+	}
+
+	.announcements-container p {
+		font-size: 0.8rem;
+	}
+}
+
+@media (max-width: 400px) {
+	.announcements-title {
+		font-size: 1.5rem;
+	}
+
+	.announcements-container p {
+		font-size: 0.5rem;
+	}
+}
