@@ -7,8 +7,8 @@ export default function Workshops() {
 	useTitle(' | Workshops');
 
 	const Container = ({ title, children }) => (
-		<div className='section-container'>
-			<h2 className='section-title'>{title}</h2>
+		<div className='workshop-section-container'>
+			<h2 className='workshop-section-title'>{title}</h2>
 			<div className='workshops-container'>{children}</div>
 		</div>
 	);
