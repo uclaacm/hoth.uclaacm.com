@@ -82,20 +82,22 @@
 
 @media (max-width: 450px) {
 	.faq-header h2 {
-		font-size: 9vw;
+		font-size: 2rem;
 	}
 
 	.faq-header h3 {
-		font-size: 6vw;
+		font-size: 1rem;
+		line-height: 1.2rem;
 	}
 
 	.itemBtn {
-		padding: 3vw;
-		font-size: 5vw;
+		padding: 0.5rem;
+		font-size: 1rem;
+		line-height: 1.2rem;
 	}
 
 	.itemPanel {
-		padding: 3vw 4vw;
-		font-size: 4vw;
+		padding: 1rem;
+		font-size: 0.9rem;
 	}
 }
