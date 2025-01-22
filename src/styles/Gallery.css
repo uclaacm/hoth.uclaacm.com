@@ -105,6 +105,12 @@
 }
 
 /* ========== Gallery.jsx ========== */
+#gallery {
+	width: 100%;
+	background-color: var(--bgGray);
+}
+
+
 .section-header {
     display: flex;
     justify-content: center;
