@@ -84,3 +84,23 @@
 	line-height: 1.4;
 	max-width: 12rem;
 }
+
+@media (max-width: 550px) {
+	#prizes {
+		padding: 1rem 2rem;
+	}
+
+	.prizes-title {
+		font-size: 2rem;
+	}
+
+	.prizes-subtitle {
+		font-size: 0.75rem;
+	}
+
+	.prize-grid {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+}
