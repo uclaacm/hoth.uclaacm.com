@@ -25,25 +25,35 @@ export default function Workshop({ title, youtube, author, description, readme, 
 
             {/* Lazy loads thumbnail images
             video player is not actually loaded until a thumbnail is clicked */}
-            {!isPlayerVisible && (
-                <LazyLoadImage
-                    className='video-thumbnail'
-                    src={`https://img.youtube.com/vi/${youtube.split('/').pop()}/0.jpg`}
-                    alt={title}
-                    effect='blur'
-                    onClick={() => setIsPlayerVisible(true)}
-                    style={{ cursor: 'pointer', width: '100%' }}
-                />
-            )}
-            {isPlayerVisible && (
-                <ReactPlayer
-                    className='workshop-video'
-                    id={'id_' + title.replace(/ /g, '_')}
-                    controls={true}
-                    width='100%'
-                    url={youtube}
-                />
-            )}
+            <div className='video-container'>
+                {!isPlayerVisible ? (
+                    <>
+                        <LazyLoadImage
+                            className='video-thumbnail'
+                            src={`https://img.youtube.com/vi/${youtube.split('/').pop()}/0.jpg`}
+                            alt={title}
+                            effect='blur'
+                            onClick={() => setIsPlayerVisible(true)}
+                        />
+                        <div 
+                            className='video-overlay'
+                            onClick={() => setIsPlayerVisible(true)}
+                        >
+                            <div className='play-button'>
+                                <div className='play-button-triangle' />
+                            </div>
+                        </div>
+                    </>
+                ) : (
+                    <ReactPlayer
+                        className='workshop-video'
+                        id={'id_' + title.replace(/ /g, '_')}
+                        controls={true}
+                        width='100%'
+                        url={youtube}
+                    />
+                )}
+            </div>
 
             <hgroup className='workshop-header'>
                 <h3 className='workshop-title'>{title}</h3>
