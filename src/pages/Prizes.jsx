@@ -16,7 +16,7 @@ export default function Prizes() {
 		<div id='prizes'>
 			<h1 className='prizes-title'>Prize Tracks</h1>
 			<div className='prizes-container'>
-				<p>Below are the total prize amounts for each prize track! :)</p>
+				<p className='prizes-subtitle'>Below are the total prize amounts for each prize track! :)</p>
 
 				<div className='prize-grid'>
 					{/* Best Overall */}

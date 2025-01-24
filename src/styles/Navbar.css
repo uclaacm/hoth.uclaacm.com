@@ -93,7 +93,6 @@
 	.navbar-links {
 		position: absolute;
 		user-select: none;
-		top: -300px;
 		right: 0;
 		width: 100%;
 		flex-direction: column;
@@ -134,5 +133,28 @@
 			top: 65px;
 			opacity: 1;
 		}
+	}
+}
+
+@media (max-width: 400px) {
+	.navbar {
+		padding: 0.75rem;
+	}
+
+	.nav-hack-logo {
+		height: 1.5rem;
+	}
+
+	.nav-hack h1 {
+		font-size: 1.1rem;
+		margin-left: 0.5rem;
+	}
+
+	.hamburger {
+		transform: scale(0.8);
+	}
+
+	.navbar-links.active {
+		top: 3.5rem;
 	}
 }
