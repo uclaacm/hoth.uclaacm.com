@@ -25,7 +25,10 @@ export default function Gallery() {
 				<h2 className='section-title'>HOTH {year} Winners! 🎉</h2>
 				<Menu menuButton={<MenuButton className='past-winners'>Past Winners</MenuButton>}
 					  onItemClick={(e) => setYear(e.value)}
-					  overflow='auto'>
+					  overflow='auto'
+					  boundingBoxPadding='60 10 0 0'
+					  position='auto'>
+					  
 					<MenuItem className='menu-item' value='X'>HOTH X</MenuItem>
 					<MenuItem className='menu-item' value='9'>HOTH 9</MenuItem>
 					<MenuItem className='menu-item' value='8'>HOTH 8</MenuItem>
