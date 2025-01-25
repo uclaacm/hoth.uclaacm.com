@@ -8,6 +8,7 @@ import Announcements from './pages/Announcements';
 import Workshops from './pages/Workshops';
 import Prizes from './pages/Prizes';
 import Gallery from './pages/Gallery';
+import NotFound from './pages/NotFound';
 import Footer from './components/General/Footer';
 import './styles/App.css';
 
@@ -24,6 +25,7 @@ function App() {
 				<Route path='/workshops' element={<Workshops />} />
 				<Route path='/prizes' element={<Prizes />} />
 				<Route path='/gallery' element={<Gallery />} />
+				<Route path = '*' element = {<NotFound/>} />
 			</Routes>
 			<Footer />
 		</div>
