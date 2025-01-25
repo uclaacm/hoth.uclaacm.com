@@ -11,23 +11,66 @@
 .page-title {
     margin-top: 1rem;
     margin-bottom: 0;
-    margin-left: 7.75rem;
+    padding-left: 7.75rem;
 }
 
-.section-title {
-    font-size: 1.5em;
+.workshop-section-title {
+    font-size: 1.5rem;
     font-weight: 400;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    margin-left: 4rem;
-    width: 100%;
+    padding-left: 4rem;
 }
 
-.section-container {
+.workshop-section-container {
     display: flex;
     flex-wrap: wrap;
     margin-left: 4rem;
     margin-right: 4rem;
+}
+
+@media (max-width: 800px) {
+    .workshops-container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .workshop-section-container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+        padding-left: 3rem;
+    }
+    
+    .workshop-section-title {
+        font-size: 1.75rem;
+        padding-left: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .workshops-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .workshop-section-container {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .page-title {
+        padding-left: 1.5rem;
+    }
+    
+    .workshop-section-title {
+        font-size: 1.5rem;
+        padding-left: 1rem;
+    }
 }
 
 /* ========== Workshop.jsx ========== */
@@ -74,6 +117,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    gap: 0.8rem;
     background-color: var(--bgWhite);
     border: none;
     border-radius: var(--rounded-md);
@@ -89,6 +133,35 @@
 .workshop-link {
     color: var(--hackAccent);
     text-decoration: none;
+}
+
+@media (max-width: 550px) {
+    .workshop-video {
+        max-height: 15rem;
+    }
+
+    .workshop-description {
+        font-size: 0.8rem;
+    }
+
+    .workshop-button {
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .workshop-button {
+        padding: 0.25rem 0.5rem;
+        gap: 0.3rem;
+    }
+
+    .workshop-link {
+        font-size: 0.7rem;
+    }
 }
 
 .video-container {
@@ -138,3 +211,4 @@
     border-left: 16px solid white;
     margin-left: 4px;
 }
+
