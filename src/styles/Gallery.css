@@ -161,9 +161,17 @@
     background-color: var(--bgGray);
 }
 
+.past-winners-menu {
+    background-color: var(--bgWhite);
+}
+
 .menu-item {
     background-color: var(--bgWhite);
-    color: black;
+    color: var(--bgBlack);
+}
+
+.menu-item:hover {
+    background-color: var(--bgGray);
 }
 
 .section-container {

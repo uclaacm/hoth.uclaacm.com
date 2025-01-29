@@ -27,7 +27,8 @@ export default function Gallery() {
 					  onItemClick={(e) => setYear(e.value)}
 					  overflow='auto'
 					  boundingBoxPadding='60 10 0 0'
-					  position='auto'>
+					  position='auto'
+						menuClassName='past-winners-menu'>
 					  
 					<MenuItem className='menu-item' value='X'>HOTH X</MenuItem>
 					<MenuItem className='menu-item' value='9'>HOTH 9</MenuItem>

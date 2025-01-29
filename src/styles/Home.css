@@ -10,7 +10,7 @@
 }
 
 .white-container {
-	background-color: #ffffff;
+	background-color: var(--bgWhite);
 	padding: 2rem 0;
 	overflow: hidden;
 }

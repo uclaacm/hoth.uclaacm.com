@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu } from '@geist-ui/icons';
+import DarkModeToggle from '../General/DarkModeToggle';
 import '../../styles/Navbar.css';
 import HackLogo from '../../images/hothXI-logo.svg';
 
@@ -51,6 +52,9 @@ export default function Navbar() {
 
 			{/* Toggle 'active' class based on isOpen state */}
 			<ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
+				<li>
+					<DarkModeToggle />
+				</li>
 				<li>
 					<Link to='/' onClick={closeMenu}>
 						HOME

@@ -33,6 +33,7 @@
 .navbar-links {
 	list-style: none;
 	display: flex;
+	align-items: center;
 	gap: 0.2rem;
 	margin: 0;
 	padding: 0;
