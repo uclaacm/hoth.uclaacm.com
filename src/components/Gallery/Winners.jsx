@@ -4,6 +4,8 @@ import Winner from './Winner';
 
 export default function Winners({ year }) {
 
+    const hothXI = [];
+
     const hothX = [
         {
             year: 'X',
@@ -483,6 +485,7 @@ export default function Winners({ year }) {
     ]
 
     const winners = {
+        'XI': hothXI,
         'X': hothX,
         '9': hoth9,
         '8': hoth8,

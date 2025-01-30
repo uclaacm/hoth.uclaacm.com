@@ -24,6 +24,7 @@ export default function Gallery() {
 				<Menu menuButton={<MenuButton className='past-winners'>Past Winners</MenuButton>}
 					  onItemClick={(e) => setYear(e.value)}
 					  overflow='auto'>
+					<MenuItem className='menu-item' value='XI'>HOTH XI</MenuItem>
 					<MenuItem className='menu-item' value='X'>HOTH X</MenuItem>
 					<MenuItem className='menu-item' value='9'>HOTH 9</MenuItem>
 					<MenuItem className='menu-item' value='8'>HOTH 8</MenuItem>
