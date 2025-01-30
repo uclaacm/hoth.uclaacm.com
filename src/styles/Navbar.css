@@ -86,15 +86,15 @@
 }
 
 /* Apply Button */
-.ApplyActive {
-	font-weight: bold;
+a.apply-active {
+	color: white;
 	background-color: var(--lightPurple);
 }
 
-.ApplyInactive {
+a.apply-inactive {
 	pointer-events: none;
-	color: rgb(161, 161, 161);
-	background-color: rgb(205, 205, 205);
+	color: var(--gray);
+	background-color: var(--bgGray);
 }
 
 @media (max-width: 950px) {

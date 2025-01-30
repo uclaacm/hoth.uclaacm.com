@@ -7,8 +7,8 @@ import HackLogo from '../../images/hothXI-logo.svg';
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
-	const IsApplyActive = true;
-	const ApplyButtonClassName = IsApplyActive?'ApplyActive':'ApplyInactive';
+	const IsApplyActive = false;
+	const ApplyButtonClassName = IsApplyActive?'apply-active':'apply-inactive';
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
@@ -85,10 +85,7 @@ export default function Navbar() {
 					</Link>
 				</li>
 				<li>
-					{/* The link should be changed to appropriate link  */}
-					<Link to='/link' onClick={closeMenu} className={ApplyButtonClassName}>
-						APPLY
-					</Link>
+					<a href="https://www.google.com" className={ApplyButtonClassName}>APPLY</a>
 				</li>
 			</ul>
 		</nav>
