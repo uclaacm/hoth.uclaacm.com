@@ -2,6 +2,7 @@ import { React, useState } from 'react';
 import useTitle from '../components/General/useTitle';
 import { Menu, MenuItem, MenuButton } from '@szhsin/react-menu';
 import Winners from '../components/Gallery/Winners';
+import PhotoCarousel from '../components/Gallery/PhotoCarousel';
 import '../styles/Gallery.css';
 import '@szhsin/react-menu/dist/index.css';
 import '@szhsin/react-menu/dist/transitions/zoom.css';
@@ -18,12 +19,16 @@ export default function Gallery() {
 	);
 
 	return (
-		<div>
+		<div id='gallery'>
+			<PhotoCarousel year={year} />
 			<div className='section-header'>
 				<h2 className='section-title'>HOTH {year} Winners! 🎉</h2>
 				<Menu menuButton={<MenuButton className='past-winners'>Past Winners</MenuButton>}
 					  onItemClick={(e) => setYear(e.value)}
-					  overflow='auto'>
+					  overflow='auto'
+					  boundingBoxPadding='60 10 0 0'
+					  position='auto'>
+					  
 					<MenuItem className='menu-item' value='X'>HOTH X</MenuItem>
 					<MenuItem className='menu-item' value='9'>HOTH 9</MenuItem>
 					<MenuItem className='menu-item' value='8'>HOTH 8</MenuItem>
