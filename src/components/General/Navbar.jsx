@@ -20,7 +20,7 @@ export default function Navbar() {
 	// Hook to listen for screen width changes
 	useEffect(() => {
 		const handleResize = () => {
-			if (window.innerWidth <= 950) {
+			if (window.innerWidth <= 1000) {
 				setIsMobile(true);
 			} else {
 				setIsMobile(false);
@@ -43,7 +43,7 @@ export default function Navbar() {
 				<h1>Hack on the Hill</h1>
 			</Link>
 
-			{/* Show hamburger only when isMobile is true (screen width <= 950px) */}
+			{/* Show hamburger only when isMobile is true (screen width <= 1000px) */}
 			{isMobile && (
 				<div className='hamburger' onClick={toggleMenu}>
 					<Menu size={32} />

@@ -86,7 +86,7 @@
 	fill: var(--bgBlack);
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
 	.navbar {
 		padding: 1rem 2rem;
 	}
