@@ -13,6 +13,7 @@ export default function Workshops() {
 		</div>
 	);
 
+	{/*YouTube links MUST be in https://youtu.be/(ID) format nothing can trail the ID field*/}
 	return (
 		<div id='workshops'>
 			<h1 className='page-title'>Workshops</h1>
@@ -64,7 +65,7 @@ export default function Workshops() {
 				<Workshop
 					title='Hackathon 101'
 					author='Aazel Tan'
-					youtube='https://youtu.be/Plz5kfY8JLs?list=PLPO7_kXilXFYCo6UngcitrjAHnRXyBmwi'
+					youtube='https://youtu.be/Plz5kfY8JLs'
 					description='This workshop video explains the basics of hackathons, which are events where people work together to create technology projects. You&#39;ll learn what to expect and how to make the most out of your experience. By the end of the video, you&#39;ll have a better understanding of what hackathons are all about and how to get started with attending one. Happy hacking, handy hackers!'
 					slides='https://docs.google.com/presentation/d/1omzpuEm3yUB92c0uwrMp79aXWa74Ft99jgSNZoUOb7I/edit?usp=drive_link'
 				/>
