@@ -4,7 +4,26 @@ import '../../styles/DarkModeToggle.css';
 import { Sun, Moon } from '@geist-ui/icons';
 
 export default function DarkModeToggle() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(localStorage.getItem('theme') === 'dark' || false);
+
+  const toggleTheme = checked => {
+    setIsDark(checked);
+    localStorage.setItem('theme', checked ? 'dark' : 'light');
+  }
+
+  useEffect(() => {
+    const updateThemeFromStorage = () => {
+      if (localStorage.getItem('theme') === 'dark') setIsDark(true);
+      else setIsDark(false);
+    }
+
+    updateThemeFromStorage();
+    window.addEventListener('storage', updateThemeFromStorage);
+
+    return () => {
+      window.removeEventListener('storage', updateThemeFromStorage);
+    };
+  }, []);
 
   useEffect(() => {
     if (isDark) {
@@ -17,7 +36,7 @@ export default function DarkModeToggle() {
   return (
     <div className='toggle'>
       <Switch
-        onChange={checked => setIsDark(checked)}
+        onChange={toggleTheme}
         checked={isDark}
         aria-label='Dark mode toggle'
         handleDiameter={32}
