@@ -162,12 +162,13 @@
 }
 
 .past-winners-menu {
-    background-color: var(--bgWhite);
+    background-color: var(--bgWhite) !important;
 }
 
 .menu-item {
     background-color: var(--bgWhite);
     color: var(--bgBlack);
+    transition: all 0.1s ease-in-out;
 }
 
 .menu-item:hover {
