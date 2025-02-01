@@ -14,16 +14,16 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function Prizes() {
 	useTitle(' | Prizes');
 
-	const getPrizeIcon = (type) => {
-		switch(type) {
-			case 'overall': return overallIcon;
-			case 'web': return webIcon;
-			case 'mobile': return mobileIcon;
-			case 'game': return gameIcon;
-			case 'ie': return ieIcon;
-			case 'beginner': return begIcon;
-			default: return overallIcon;
-		}
+	const getPrizeIcon = (name) => {
+		const iconMap = {
+			'Best Overall': overallIcon,
+			'Best Web': webIcon,
+			'Best Mobile': mobileIcon,
+			'Best Game': gameIcon,
+			'Best in Intersectional Environmentalism': ieIcon,
+			'Best Beginner': begIcon
+		};
+		return iconMap[name] || overallIcon;
 	};
 
 	return (
@@ -33,15 +33,17 @@ export default function Prizes() {
 				<p className='prizes-subtitle'>Below are the total prize amounts for each prize track! :)</p>
 				<div className='prize-grid'>
 				{prizeData.map(prize => (
-					<div className='prize-card' key={prize.id}>
+					<div className='prize-card' key={prize.name}>
+					<div className='prize-card-icon-circle'>
 					<LazyLoadImage
-						src={getPrizeIcon(prize.type)}
+						src={getPrizeIcon(prize.name)}
 						alt={`${prize.name} Icon`}
 						className='prize-card-icon'
 					/>
+					</div>
 					<h2>{prize.name}</h2>
 					<LazyLoadImage src={squiggle} alt='Squiggle' className='card-squiggle' />
-					<p className='prize-label'>{prize.label || 'PRIZE'}</p>
+					<p className='prize-label'>'PRIZE'</p>
 					<p className='prize-amount'>{prize.amount}</p>
 					</div>
 					))}
