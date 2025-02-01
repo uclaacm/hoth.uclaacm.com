@@ -88,13 +88,17 @@
 /* Apply Button */
 a.apply-active {
 	color: white;
-	background-color: var(--lightPurple);
+	background-color: var(--hackAccent);
 }
 
 a.apply-inactive {
 	pointer-events: none;
 	color: var(--gray);
 	background-color: var(--bgGray);
+}
+
+.apply-btn {
+	margin-left: 8px;
 }
 
 @media (max-width: 950px) {
