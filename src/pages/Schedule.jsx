@@ -44,7 +44,7 @@ export default function Schedule() {
 			))}
 		</div>
 	) : (
-		<div>
+		<div id='announcements'>
 			<h1 className='announcements-title'>Schedule</h1>
 			<div className='announcements-container'>
 				<p>
