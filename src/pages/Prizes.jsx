@@ -1,6 +1,7 @@
 import React from 'react';
 import useTitle from '../components/General/useTitle';
 import '../styles/Prizes.css';
+import prizeData from '../data/PrizeData'
 import squiggle from '../images/prizes/squiggle.svg';
 import overallIcon from '../images/prizes/overall.png';
 import webIcon from '../images/prizes/web.png';
@@ -13,96 +14,37 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function Prizes() {
 	useTitle(' | Prizes');
 
+	const getPrizeIcon = (type) => {
+		switch(type) {
+			case 'overall': return overallIcon;
+			case 'web': return webIcon;
+			case 'mobile': return mobileIcon;
+			case 'game': return gameIcon;
+			case 'ie': return ieIcon;
+			case 'beginner': return begIcon;
+			default: return overallIcon;
+		}
+	};
+
 	return (
 		<div id='prizes'>
 			<h1 className='prizes-title'>Prize Tracks</h1>
 			<div className='prizes-container'>
 				<p className='prizes-subtitle'>Below are the total prize amounts for each prize track! :)</p>
-
 				<div className='prize-grid'>
-					{/* Best Overall */}
-					<div className='prize-card'>
-						<div className='prize-card-icon-circle'>
-							<LazyLoadImage
-								src={overallIcon}
-								alt='Trophy Icon'
-								className='prize-card-icon'
-							/>
-						</div>
-						<h2>Best Overall</h2>
-						<LazyLoadImage src={squiggle} alt='Squiggle' className='card-squiggle' />
-						<p className='prize-label'>PRIZE</p>
-						<p className='prize-amount'>$150 Amazon Gift Card</p>
+				{prizeData.map(prize => (
+					<div className='prize-card' key={prize.id}>
+					<LazyLoadImage
+						src={getPrizeIcon(prize.type)}
+						alt={`${prize.name} Icon`}
+						className='prize-card-icon'
+					/>
+					<h2>{prize.name}</h2>
+					<LazyLoadImage src={squiggle} alt='Squiggle' className='card-squiggle' />
+					<p className='prize-label'>{prize.label || 'PRIZE'}</p>
+					<p className='prize-amount'>{prize.amount}</p>
 					</div>
-
-					{/* Best Web */}
-					<div className='prize-card'>
-						<div className='prize-card-icon-circle'>
-							<LazyLoadImage src={webIcon} alt='Web Icon' className='prize-card-icon' />
-						</div>
-						<h2>Best Web</h2>
-						<LazyLoadImage src={squiggle} alt='Squiggle' className='card-squiggle' />
-						<p className='prize-label'>PRIZE</p>
-						<p className='prize-amount'>$80 Amazon Gift Card</p>
-					</div>
-
-					{/* Best Mobile */}
-					<div className='prize-card'>
-						<div className='prize-card-icon-circle'>
-							<LazyLoadImage
-								src={mobileIcon}
-								alt='Mobile Icon'
-								className='prize-card-icon'
-							/>
-						</div>
-						<h2>Best Mobile</h2>
-						<LazyLoadImage src={squiggle} alt='Squiggle' className='card-squiggle' />
-						<p className='prize-label'>PRIZE</p>
-						<p className='prize-amount'>$80 Amazon Gift Card</p>
-					</div>
-
-					{/* Best Game */}
-					<div className='prize-card'>
-						<div className='prize-card-icon-circle'>
-							<LazyLoadImage src={gameIcon} alt='Game Icon' className='prize-card-icon' />
-						</div>
-						<h2>Best Game</h2>
-						<LazyLoadImage src={squiggle} alt='Squiggle' className='card-squiggle' />
-						<p className='prize-label'>PRIZE</p>
-						<p className='prize-amount'>$80 Amazon Gift Card</p>
-					</div>
-
-					{/* Best in Intersectional Environmentalism */}
-					<div className='prize-card'>
-						<div className='prize-card-icon-circle'>
-							<LazyLoadImage
-								src={ieIcon}
-								alt='Intersectional Environmentalism Icon'
-								className='prize-card-icon'
-							/>
-						</div>
-						<h2>Best in Intersectional Environmentalism</h2>
-						<LazyLoadImage src={squiggle} alt='Squiggle' className='card-squiggle' />
-						<p className='prize-label'>PRIZE</p>
-						<p className='prize-amount'>
-							2 Camping Hammocks and 2 Wireless Charging Pads
-						</p>
-					</div>
-
-					{/* Best Beginner */}
-					<div className='prize-card'>
-						<div className='prize-card-icon-circle'>
-							<LazyLoadImage
-								src={begIcon}
-								alt='Beginner Icon'
-								className='prize-card-icon'
-							/>
-						</div>
-						<h2>Best Beginner</h2>
-						<LazyLoadImage src={squiggle} alt='Squiggle' className='card-squiggle' />
-						<p className='prize-label'>PRIZE</p>
-						<p className='prize-amount'>4 Wireless 3-in-1 Charging Stations</p>
-					</div>
+					))}
 				</div>
 			</div>
 		</div>
