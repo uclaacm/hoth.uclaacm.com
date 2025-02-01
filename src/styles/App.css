@@ -56,3 +56,13 @@ body {
 	justify-content: space-between;
 	min-height: 100vh;
 }
+
+[data-aos='light-fade-up'] {
+	transform: translateY(36px);
+	opacity: 0;
+	transition-property: transform, opacity;
+	&.aos-animate {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
