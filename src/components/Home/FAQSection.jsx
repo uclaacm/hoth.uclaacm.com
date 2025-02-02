@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import chevronDown from '../../images/chevron-down.svg';
 import '../../styles/FAQSection.css';
 
-const hothNum = 'XI';
+const hothNum = 'XII';
 const appDeadline = 'Monday, February 26, 2024';
 const hothDate = 'Sunday, March 3, 2024';
 const hothLocation = 'Carnesale Commons, Palisades Room';
