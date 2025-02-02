@@ -40,12 +40,12 @@
 
 :root.dark {
 	--bgBlack: white;
-	--bgWhite: black;
-	--bgGray: rgb(31, 28, 36);
+	--bgWhite: rgb(31, 28, 36);
+	--bgGray: rgb(41, 35, 50);
 	--bgPink: #faddff;
 	--lightPink: #2d2a37;
 	--darkPink: #f64580;
-	--darkPurple: #3c3050;
+	--darkPurple: #563f7c;
 	--lightPurple: #ed4fff;
 	--lightGray: rgb(25, 25, 25);
 	--lightGrayV2: #aba4a4;
