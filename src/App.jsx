@@ -4,7 +4,7 @@ import ScrollToTop from './ScrollToTop';
 import Navbar from './components/General/Navbar';
 import Home from './pages/Home';
 import Announcements from './pages/Announcements';
-// import Schedule from './pages/Schedule';
+import Schedule from './pages/Schedule';
 import Workshops from './pages/Workshops';
 import Prizes from './pages/Prizes';
 import Gallery from './pages/Gallery';
@@ -20,8 +20,7 @@ function App() {
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/announcements' element={<Announcements />} />
-				{/* RE-ACTIVATE SCHEDULE TAB WHEN SOLIDIFIED */}
-				{/* <Route path='/schedule' element={<Schedule />} /> */}
+				<Route path='/schedule' element={<Schedule />} />
 				<Route path='/workshops' element={<Workshops />} />
 				<Route path='/prizes' element={<Prizes />} />
 				<Route path='/gallery' element={<Gallery />} />
