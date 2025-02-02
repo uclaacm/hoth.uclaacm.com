@@ -32,11 +32,16 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	position: relative;
+	aspect-ratio: 2.5 / 1;
+	background-color: var(--bgGray);
 }
 
 .hoth-banner {
 	width: 100%;
+	height: 100%;
 	display: block;
+	object-fit: cover;
 }
 
 .banner-text {
@@ -257,7 +262,11 @@
 
 .hoth-img {
 	max-width: 27rem;
+	width: 100%;
+	aspect-ratio: 3 / 2;
 	border-radius: 1rem;
+	background-color: var(--bgGray);
+	object-fit: cover;
 }
 
 .img-left-container {
@@ -266,6 +275,7 @@
 	align-items: center;
 	flex-direction: row;
 	margin-bottom: 2rem;
+	gap: 2rem;
 }
 
 .img-right-container {
@@ -274,14 +284,17 @@
 	align-items: center;
 	flex-direction: row-reverse;
 	margin-bottom: 2rem;
+	gap: 2rem;
 }
 
 .img-right-p {
+	flex: 1;
 	margin-right: 4rem;
 	font-size: 1.2rem;
 }
 
 .img-left-p {
+	flex: 1;
 	margin-left: 4rem;
 	font-size: 1.2rem;
 }

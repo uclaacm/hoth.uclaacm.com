@@ -1,11 +1,19 @@
 import React from 'react';
 import '../../styles/Home.css';
 import hothBanner from '../../images/hothXI-banner.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function Banner() {
 	return (
 		<div className='banner-container'>
-			<img className='hoth-banner' src={hothBanner} alt='HOTH Banner' />
+			<LazyLoadImage 
+				className='hoth-banner' 
+				src={hothBanner} 
+				alt='HOTH Banner' 
+				placeholderSrc={hothBanner} 
+				effect='blur'
+			/>
 
 			<div className='banner-text'>
 				<h1>
