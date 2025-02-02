@@ -40,10 +40,14 @@ export default function DarkModeToggle() {
         checked={isDark}
         aria-label='Dark mode toggle'
         handleDiameter={32}
-        offColor="#FAE9B1"
-        onColor="#092E40"
-        offHandleColor="#F3C136"
-        onHandleColor="#2BADE7"
+        // offColor="#FAE9B1"
+        // onColor="#092E40"
+        // offHandleColor="#F3C136"
+        // onHandleColor="#2BADE7"
+        offColor="#faddff"
+        onColor="#3e2961"
+        offHandleColor="#fca3fc"
+        onHandleColor="#9c52b5"
         uncheckedIcon={false}
         uncheckedHandleIcon={<Sun size={24} className='theme-icon' />}
         checkedIcon={false}

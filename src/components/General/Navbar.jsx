@@ -53,9 +53,6 @@ export default function Navbar() {
 			{/* Toggle 'active' class based on isOpen state */}
 			<ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
 				<li>
-					<DarkModeToggle />
-				</li>
-				<li>
 					<Link to='/' onClick={closeMenu}>
 						HOME
 					</Link>
@@ -85,6 +82,9 @@ export default function Navbar() {
 					<Link to='/gallery' onClick={closeMenu}>
 						GALLERY
 					</Link>
+				</li>
+				<li>
+					<DarkModeToggle />
 				</li>
 			</ul>
 		</nav>
