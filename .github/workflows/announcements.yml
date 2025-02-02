@@ -10,7 +10,8 @@ jobs:
       (github.event.comment.author_association == 'OWNER' ||
       github.event.comment.author_association == 'MEMBER' ||
       github.event.comment.author_association == 'CONTRIBUTOR' ||
-      github.event.comment.author_association == 'COLLABORATOR')
+      github.event.comment.author_association == 'COLLABORATOR') ||
+      github.event.comment.user.login == 'danielhzhou'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -30,7 +31,7 @@ jobs:
           python -m pip install -r .github/python_requirements.txt
       - name: Run update_announcements script
         run: |
-          python update_announcements.py
+          python src/scripts/update_announcements.py
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
