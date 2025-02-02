@@ -15,3 +15,4 @@
 1. Remove all console.log() statements.
 2. Remove all unused variables/imports/etc.
 3. Perform a self-review and simplify your code to be as clean as possible.
+4. Remove this section from your PR description.
