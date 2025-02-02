@@ -8,6 +8,8 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
+	const isApplyActive = true;
+	const applyButtonClassName = 'apply-btn ' + (isApplyActive?'apply-active':'apply-inactive');
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
@@ -82,6 +84,9 @@ export default function Navbar() {
 					<Link to='/gallery' onClick={closeMenu}>
 						GALLERY
 					</Link>
+				</li>
+				<li>
+					<a href="https://www.google.com" className={applyButtonClassName}>APPLY</a>
 				</li>
 			</ul>
 		</nav>
