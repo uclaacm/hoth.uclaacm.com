@@ -1,7 +1,6 @@
 import React from 'react';
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
 import { Link } from 'react-router-dom';
-import chevronDown from '../../images/chevron-down.svg';
 import '../../styles/FAQSection.css';
 
 const hothNum = 'XII';
@@ -124,7 +123,11 @@ const AccordionItem = ({ header, ...rest }) => (
 		header={
 			<>
 				{header}
-				<img className='chevron' src={chevronDown} alt='Expand/Collapse' />
+				<svg className='chevron' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+					<title>Expand/Collapse</title>
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+					<polyline points="6 9 12 15 18 9" />
+				</svg>
 			</>
 		}
 		className='item'

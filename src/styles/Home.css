@@ -10,7 +10,7 @@
 }
 
 .white-container {
-	background-color: #ffffff;
+	background-color: var(--bgWhite);
 	padding: 2rem 0;
 	overflow: hidden;
 }
@@ -89,7 +89,7 @@
 	}
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
 	.banner-text {
 		right: 2rem;
 	}
