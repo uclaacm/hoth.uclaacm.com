@@ -9,7 +9,7 @@ export default function Banner() {
 
 			<div className='banner-text'>
 				<h1>
-					HOTH <span className='gradient-text'>XI</span>
+					HOTH <span className='gradient-text'>XII</span>
 				</h1>
 
 				<div className='banner-subtext'>
