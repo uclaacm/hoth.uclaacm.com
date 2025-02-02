@@ -196,3 +196,4 @@ The workshop page is implemented in `src/components/WorkshopPage`, and the works
 	},
   ```
   Each workshop type has an `elements` array with all of its workshops. In order to add workshops to the page, just add the workshops to an existing type's elements array under the given format or add a new workshop type and add the workshop to that type's new elements array.
+# Testing PR Template
