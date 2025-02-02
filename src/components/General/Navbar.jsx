@@ -7,7 +7,7 @@ import HackLogo from '../../images/hothXI-logo.svg';
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
-	const isApplyActive = true;
+	const isApplyActive = false;
 	const applyButtonClassName = 'apply-btn ' + (isApplyActive?'apply-active':'apply-inactive');
 
 	const toggleMenu = () => {

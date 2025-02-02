@@ -85,7 +85,6 @@
 	fill: var(--bgBlack);
 }
 
-/* Apply Button */
 a.apply-active {
 	color: white;
 	background-color: var(--hackAccent);
