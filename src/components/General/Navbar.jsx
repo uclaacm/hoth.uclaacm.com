@@ -7,7 +7,7 @@ import HackLogo from '../../images/hothXI-logo.svg';
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
-	const isApplyActive = false;
+	const isApplyActive = true;
 	const applyButtonClassName = 'apply-btn ' + (isApplyActive?'apply-active':'apply-inactive');
 
 	const toggleMenu = () => {
@@ -85,7 +85,7 @@ export default function Navbar() {
 					</Link>
 				</li>
 				<li>
-					<a href="https://www.google.com" className={applyButtonClassName}>APPLY</a>
+					<a href="https://forms.gle/HbxpV3dDnVExy1F3A" className={applyButtonClassName} target='_blank' rel='noreferrer'>APPLY</a>
 				</li>
 			</ul>
 		</nav>
