@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/Gallery.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Winner({ year, appName, description, category, image, link}) {
 
@@ -12,7 +13,7 @@ export default function Winner({ year, appName, description, category, image, li
     return (
         <div className='winner-container'>
             <div className='winner-image'>
-                <img src={currentImage} alt={appName} />
+                <LazyLoadImage src={currentImage} alt={appName} />
             </div>
             <div className='winner-info'>
                 <h2 className='winner-title'>{appName}</h2>

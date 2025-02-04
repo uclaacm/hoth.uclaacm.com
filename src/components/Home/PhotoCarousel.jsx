@@ -3,6 +3,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../../styles/PhotoCarousel.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import image1 from '../../images/carousel/image1.jpg';
 import image2 from '../../images/carousel/image2.jpg';
@@ -11,6 +13,7 @@ import image4 from '../../images/carousel/image4.jpg';
 import image5 from '../../images/carousel/image5.jpg';
 import image6 from '../../images/carousel/image6.jpg';
 import image7 from '../../images/carousel/image7.jpg';
+
 
 export default function PhotoCarousel() {
 	const settings = {
@@ -27,10 +30,15 @@ export default function PhotoCarousel() {
 	return (
 		<Slider {...settings}>
 			{images.map((image, index) => (
-				<img
+				<LazyLoadImage
 					src={image}
 					alt={`Carousel ${index + 1}`}
 					className='carousel-image'
+					wrapperProps={{
+						style: {transitionDelay: '0.4s'},
+					}}
+					placeholderSrc={image}
+					effect='blur'
 					key={index}
 				/>
 			))}
