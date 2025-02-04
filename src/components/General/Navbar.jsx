@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu } from '@geist-ui/icons';
 import DarkModeToggle from '../General/DarkModeToggle';
 import '../../styles/Navbar.css';
-import HackLogo from '../../images/hothXI-logo.svg';
+import HackLogo from '../../images/hothXII-logo.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Navbar() {
@@ -40,7 +40,11 @@ export default function Navbar() {
 	return (
 		<nav className='navbar'>
 			<Link to='/' onClick={closeMenu} className='nav-hack'>
-				<LazyLoadImage src={HackLogo} alt='ACM Hack Logo' className='nav-hack-logo' />
+				<LazyLoadImage
+					src={HackLogo}
+					alt='ACM Hack Logo'
+					className='nav-hack-logo'
+				/>
 				<h1>Hack on the Hill</h1>
 			</Link>
 
