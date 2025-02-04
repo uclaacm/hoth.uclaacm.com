@@ -9,6 +9,9 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
+	const isApplyActive = true;
+	const applyButtonClassName =
+		'apply-btn ' + (isApplyActive ? 'apply-active' : 'apply-inactive');
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
@@ -40,7 +43,11 @@ export default function Navbar() {
 	return (
 		<nav className='navbar'>
 			<Link to='/' onClick={closeMenu} className='nav-hack'>
-				<LazyLoadImage src={HackLogo} alt='ACM Hack Logo' className='nav-hack-logo' />
+				<LazyLoadImage
+					src={HackLogo}
+					alt='ACM Hack Logo'
+					className='nav-hack-logo'
+				/>
 				<h1>Hack on the Hill</h1>
 			</Link>
 
@@ -86,6 +93,16 @@ export default function Navbar() {
 				</li>
 				<li>
 					<DarkModeToggle />
+				</li>
+				<li>
+					<a
+						href='https://forms.gle/HbxpV3dDnVExy1F3A'
+						className={applyButtonClassName}
+						target='_blank'
+						rel='noreferrer'
+					>
+						APPLY
+					</a>
 				</li>
 			</ul>
 		</nav>

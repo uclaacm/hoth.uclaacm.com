@@ -86,6 +86,21 @@
 	fill: var(--bgBlack);
 }
 
+a.apply-active {
+	color: white;
+	background-color: var(--hackAccent);
+}
+
+a.apply-inactive {
+	pointer-events: none;
+	color: var(--gray);
+	background-color: var(--bgGray);
+}
+
+.apply-btn {
+	margin-left: 0.4rem;
+}
+
 @media (max-width: 1000px) {
 	.navbar {
 		padding: 1rem 2rem;

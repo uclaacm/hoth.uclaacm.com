@@ -1,19 +1,18 @@
 .toggle {
-    height: 2rem;
-    color: white;
-    padding-left: 1rem;
+	height: 2rem;
+	color: white;
+	padding: 0 1rem;
 }
 
 .theme-icon {
-    width: 2rem;
-    height: 2rem;
-    padding: 0.4rem;
+	width: 2rem;
+	height: 2rem;
+	padding: 0.4rem;
 }
 
 @media (max-width: 1000px) {
 	.toggle {
-        padding-left: 0;
-        padding-top: 0.5rem;
-        height: 3rem;
+		padding-top: 0.5rem;
+		height: 3rem;
 	}
 }
