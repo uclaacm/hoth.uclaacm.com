@@ -1,0 +1,50 @@
+[
+    {
+        "id": 7,
+        "subject": "hello",
+        "body": "bye",
+        "timestamp": "2025-02-04T04:01:50Z"
+    },
+    {
+        "id": 6,
+        "subject": "Hello",
+        "body": "",
+        "timestamp": "2025-02-02T06:04:56Z"
+    },
+    {
+        "id": 5,
+        "subject": "hello",
+        "body": "bye",
+        "timestamp": "2025-02-02T01:13:55Z"
+    },
+    {
+        "id": 4,
+        "subject": "hello",
+        "body": "bye",
+        "timestamp": "2025-02-02T01:06:22Z"
+    },
+    {
+        "id": 3,
+        "subject": "hello",
+        "body": "bye",
+        "timestamp": "2025-02-02T01:05:09Z"
+    },
+    {
+        "id": 2,
+        "subject": "Your announcement text here",
+        "body": "The subject/title of your announcement",
+        "timestamp": "2025-02-02T01:01:26Z"
+    },
+    {
+        "id": 1,
+        "subject": "Hello1",
+        "body": "",
+        "timestamp": "2025-02-02T00:58:11Z"
+    },
+    {
+        "id": 0,
+        "subject": "Hello",
+        "body": "",
+        "timestamp": "2025-02-02T00:57:26Z"
+    }
+]
