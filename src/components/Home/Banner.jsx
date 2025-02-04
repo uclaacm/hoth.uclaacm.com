@@ -14,6 +14,7 @@ export default function Banner() {
 				placeholderSrc={hothBanner}
 				effect='blur'
 			/>
+
 		</div>
 	);
 }

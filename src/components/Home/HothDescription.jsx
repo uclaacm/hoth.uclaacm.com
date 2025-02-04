@@ -35,8 +35,9 @@ export default function HothDescription() {
 					/>
 				</div>
 				<p className='img-left-p'>
-					Hack on the Hill (HOTH XI) is a <strong>12-hour beginner-friendly</strong> hackathon designed to be
-					your first hackathon experience. HOTH XI will be in-person on the
+					Hack on the Hill (HOTH XII) is a{' '}
+					<strong>12-hour beginner-friendly</strong> hackathon designed to be
+					your first hackathon experience. HOTH XII will be in-person on the
 					Hill in the Carnesale Commons Palisades Room. We hope to see you
 					there!
 				</p>

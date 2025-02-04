@@ -10,6 +10,7 @@
 	--bgWhite: white;
 	--bgGray: #f7f7f7;
 	--bgPink: #faddff;
+	--lightPink: #f3f0fe;
 	--darkPink: #f64580;
 	--darkPurple: #23133c;
 	--lightPurple: #ed4fff;
@@ -17,6 +18,9 @@
 	--lightGrayV2: #979797;
 	--lightGrayV3: #bcbcbc;
 	--gray: #666;
+	--offBlack: #333;
+	--shadow: rgba(0, 0, 0, 0.2);
+	--lightShadow: rgba(0, 0, 0, 0.08);
 
 	--hackPrimary: #c960ff;
 	--hackSecondaryV1: #c137d8;
@@ -32,6 +36,30 @@
 	--rounded-2xl: 1rem;
 	--rounded-3xl: 1.5rem;
 	--rouned-full: 9999px;
+}
+
+:root.dark {
+	--bgBlack: white;
+	--bgWhite: rgb(31, 28, 36);
+	--bgGray: rgb(41, 35, 50);
+	--bgPink: #faddff;
+	--lightPink: #2d2a37;
+	--darkPink: #f64580;
+	--darkPurple: #3e2961;
+	--lightPurple: #ed4fff;
+	--lightGray: rgb(60, 50, 74);
+	--lightGrayV2: #aba4a4;
+	--lightGrayV3: #bcbcbc;
+	--gray: #666;
+	--offBlack: #d4d4d4;
+	--shadow: rgba(255, 255, 255, 0.2);
+	--lightShadow: rgba(255, 255, 255, 0.08);
+
+	--hackPrimary: #c960ff;
+	--hackSecondaryV1: #c137d8;
+	--hackSecondaryV2: #9c28c5;
+	--hackSecondaryV3: #3e2961;
+	--hackAccent: #ff477e;
 }
 
 h1 {
