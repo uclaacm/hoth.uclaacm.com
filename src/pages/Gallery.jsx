@@ -10,7 +10,7 @@ import '@szhsin/react-menu/dist/transitions/zoom.css';
 export default function Gallery() {
 	useTitle(' | Gallery');
 
-	const [year, setYear] = useState('XI');
+	const [year, setYear] = useState('X');
 
 	const Container = ({ children }) => (
 		<section className='section-container'>
