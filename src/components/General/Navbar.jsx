@@ -51,10 +51,13 @@ export default function Navbar() {
 				<h1>Hack on the Hill</h1>
 			</Link>
 
-			{/* Show hamburger only when isMobile is true (screen width <= 1000px) */}
+			{/* Show theme toggler and hamburger on navbar only when isMobile is true (screen width <= 1000px) */}
 			{isMobile && (
-				<div className='hamburger' onClick={toggleMenu}>
-					<Menu size={32} />
+				<div className='mobile-nav-container'>
+					<DarkModeToggle />
+					<div className='hamburger' onClick={toggleMenu}>
+						<Menu size={32} />
+					</div>
 				</div>
 			)}
 
@@ -91,9 +94,11 @@ export default function Navbar() {
 						GALLERY
 					</Link>
 				</li>
-				<li>
-					<DarkModeToggle />
-				</li>
+				{!isMobile && (
+					<li>
+						<DarkModeToggle />
+					</li>
+				)}
 				<li>
 					<a
 						href='https://forms.gle/HbxpV3dDnVExy1F3A'
