@@ -33,6 +33,16 @@ import hothX_image3 from '../../images/gallery-carousel/hoth-X/image3.jpg';
 import hothX_image4 from '../../images/gallery-carousel/hoth-X/image4.jpg';
 import hothX_image5 from '../../images/gallery-carousel/hoth-X/image5.jpg';
 
+import hothXI_image1 from '../../images/gallery-carousel/hoth-XI/image1.jpg';
+import hothXI_image2 from '../../images/gallery-carousel/hoth-XI/image2.jpg';
+import hothXI_image3 from '../../images/gallery-carousel/hoth-XI/image3.jpg';
+import hothXI_image4 from '../../images/gallery-carousel/hoth-XI/image4.jpg';
+import hothXI_image5 from '../../images/gallery-carousel/hoth-XI/image5.jpg';
+import hothXI_image6 from '../../images/gallery-carousel/hoth-XI/image6.jpg';
+import hothXI_image7 from '../../images/gallery-carousel/hoth-XI/image7.jpg';
+import hothXI_image8 from '../../images/gallery-carousel/hoth-XI/image8.jpg';
+import hothXI_image9 from '../../images/gallery-carousel/hoth-XI/image9.jpg';
+
 export default function PhotoCarousel({year}) {
 	const settings = {
 		dots: true,
@@ -53,6 +63,8 @@ export default function PhotoCarousel({year}) {
 		images = [hoth9_image1, hoth9_image2, hoth9_image3];
 	} else if (year === 'X') {
 		images = [hothX_image1, hothX_image2, hothX_image3, hothX_image4, hothX_image5];
+	} else if (year === 'XI') {
+		images = [hothXI_image1, hothXI_image2, hothXI_image3, hothXI_image4, hothXI_image5, hothXI_image6, hothXI_image7, hothXI_image8, hothXI_image9];
 	}
 
 	return (

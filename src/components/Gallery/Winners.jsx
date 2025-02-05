@@ -3,6 +3,57 @@ import '../../styles/Gallery.css';
 import Winner from './Winner';
 
 export default function Winners({ year }) {
+    const hothXI = [
+        {
+            year: 'XI',
+            appName: 'Stride',
+            description: 'stride is an app that makes sustainable commutes fun. Log and track your walks and rides to see their environmental impact, earn achievements and connect with your friends to stay motivated!',
+            category: 'Best Overall',
+            image: 'stride',
+            link: 'https://devpost.com/software/stride-bslo5u'
+        },
+        {
+            year: 'XI',
+            appName: 'Cafe Hopper',
+            description: 'Cafes are pretty cool. Check out nearby cafes.',
+            category: 'Best Web',
+            image: 'cafehopper',
+            link: 'https://devpost.com/software/cafe-hopper'
+        },
+        {
+            year: 'XI',
+            appName: 'BruinBites & Books',
+            description: 'Say goodbye to lonely meals with this platform that streamlines dining meetups, sparking lively discussions and culinary adventures.',
+            category: 'Best Mobile',
+            image: 'bruinbitesandbooks',
+            link: 'https://devpost.com/software/bruinbites-books'
+        },
+        {
+            year: 'XI',
+            appName: 'Timber',
+            description: 'A game about deforestation',
+            category: 'Best Game',
+            image: 'timber',
+            link: 'https://devpost.com/software/timber-wtsfdz'
+        },
+        {
+            year: 'XI',
+            appName: 'Westwood Community Garden',
+            description: 'Our mission is to grow together, sustainably.',
+            category: 'Best in Intersectional Environmentalism',
+            image: 'westwoodcommunitygarden',
+            link: 'https://devpost.com/software/westwood-community-garden'
+        },
+        {
+            year: 'XI',
+            appName: 'Near Miss',
+            description: 'Near Miss lies at the intersecting fields of statistics and finance to democratize knowledge and expose casino scams.',
+            category: 'Best Beginner',
+            image: 'nearmiss',
+            link: 'https://devpost.com/software/team-near-miss'
+        },
+    ];
+    
     const hothX = [
         {
             year: 'X',
@@ -514,6 +565,7 @@ export default function Winners({ year }) {
 	];
 
     const winners = {
+        'XI': hothXI,
         'X': hothX,
         '9': hoth9,
         '8': hoth8,
