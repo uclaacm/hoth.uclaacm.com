@@ -16,7 +16,7 @@
 .faq-header h3 {
 	font-size: 1.5rem;
 	font-weight: 400;
-	color: #888;
+	color: var(--lightGrayV2);
 	margin: 0;
 }
 
@@ -44,11 +44,11 @@
 }
 
 .itemBtn:hover {
-	background-color: #f3f3f3;
+	background-color: var(--lightGray);
 }
 
 .itemBtnExpanded {
-	background-color: #e7e7e7;
+	background-color: var(--lightGray);
 }
 
 .itemContent {
@@ -57,7 +57,7 @@
 
 .itemPanel {
 	padding: 1rem 1.5rem;
-	color: #333;
+	color: var(--offBlack);
 	line-height: 1.6;
 	font-size: 1.1rem;
 }
@@ -74,8 +74,31 @@
 .chevron {
 	margin-left: auto;
 	transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
+	color: var(--bgBlack);
 }
 
 .itemBtnExpanded .chevron {
 	transform: rotate(180deg);
+}
+
+@media (max-width: 450px) {
+	.faq-header h2 {
+		font-size: 2rem;
+	}
+
+	.faq-header h3 {
+		font-size: 1rem;
+		line-height: 1.2rem;
+	}
+
+	.itemBtn {
+		padding: 0.5rem;
+		font-size: 1rem;
+		line-height: 1.2rem;
+	}
+
+	.itemPanel {
+		padding: 1rem;
+		font-size: 0.9rem;
+	}
 }

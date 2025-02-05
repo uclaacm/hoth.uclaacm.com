@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu } from '@geist-ui/icons';
+import DarkModeToggle from '../General/DarkModeToggle';
 import '../../styles/Navbar.css';
-import HackLogo from '../../images/hothXI-logo.svg';
+import HackLogo from '../../images/hothXII-logo.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
-	const IsApplyActive = true;
-	const ApplyButtonClassName = IsApplyActive?'ApplyActive':'ApplyInactive';
+	const isApplyActive = true;
+	const applyButtonClassName =
+		'apply-btn ' + (isApplyActive ? 'apply-active' : 'apply-inactive');
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
@@ -21,7 +24,7 @@ export default function Navbar() {
 	// Hook to listen for screen width changes
 	useEffect(() => {
 		const handleResize = () => {
-			if (window.innerWidth <= 950) {
+			if (window.innerWidth <= 1000) {
 				setIsMobile(true);
 			} else {
 				setIsMobile(false);
@@ -40,14 +43,21 @@ export default function Navbar() {
 	return (
 		<nav className='navbar'>
 			<Link to='/' onClick={closeMenu} className='nav-hack'>
-				<img src={HackLogo} alt='ACM Hack Logo' className='nav-hack-logo' />
+				<LazyLoadImage
+					src={HackLogo}
+					alt='ACM Hack Logo'
+					className='nav-hack-logo'
+				/>
 				<h1>Hack on the Hill</h1>
 			</Link>
 
-			{/* Show hamburger only when isMobile is true (screen width <= 950px) */}
+			{/* Show theme toggler and hamburger on navbar only when isMobile is true (screen width <= 1000px) */}
 			{isMobile && (
-				<div className='hamburger' onClick={toggleMenu}>
-					<Menu size={32} />
+				<div className='mobile-nav-container'>
+					<DarkModeToggle />
+					<div className='hamburger' onClick={toggleMenu}>
+						<Menu size={32} />
+					</div>
 				</div>
 			)}
 
@@ -63,12 +73,12 @@ export default function Navbar() {
 						ANNOUNCEMENTS
 					</Link>
 				</li>
-				{/* RE-ACTIVATE SCHEDULE TAB WHEN SOLIDIFIED */}
-				{/* <li>
+
+				<li>
 					<Link to='/schedule' onClick={closeMenu}>
 						SCHEDULE
 					</Link>
-				</li> */}
+				</li>
 				<li>
 					<Link to='/workshops' onClick={closeMenu}>
 						WORKSHOPS
@@ -84,11 +94,20 @@ export default function Navbar() {
 						GALLERY
 					</Link>
 				</li>
+				{!isMobile && (
+					<li>
+						<DarkModeToggle />
+					</li>
+				)}
 				<li>
-					{/* The link should be changed to appropriate link  */}
-					<Link to='/link' onClick={closeMenu} className={ApplyButtonClassName}>
+					<a
+						href='https://forms.gle/HbxpV3dDnVExy1F3A'
+						className={applyButtonClassName}
+						target='_blank'
+						rel='noreferrer'
+					>
 						APPLY
-					</Link>
+					</a>
 				</li>
 			</ul>
 		</nav>

@@ -1,6 +1,7 @@
 import React from 'react';
 import useTitle from '../components/General/useTitle';
 import '../styles/Prizes.css';
+import prizeData from '../data/PrizeData'
 import squiggle from '../images/prizes/squiggle.svg';
 import overallIcon from '../images/prizes/overall.png';
 import webIcon from '../images/prizes/web.png';
@@ -8,100 +9,44 @@ import mobileIcon from '../images/prizes/mobile.png';
 import gameIcon from '../images/prizes/game.png';
 import ieIcon from '../images/prizes/ie.png';
 import begIcon from '../images/prizes/beg.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Prizes() {
 	useTitle(' | Prizes');
+
+	const getPrizeIcon = (name) => {
+		const iconMap = {
+			'Best Overall': overallIcon,
+			'Best Web': webIcon,
+			'Best Mobile': mobileIcon,
+			'Best Game': gameIcon,
+			'Best in Intersectional Environmentalism': ieIcon,
+			'Best Beginner': begIcon
+		};
+		return iconMap[name] || overallIcon;
+	};
 
 	return (
 		<div id='prizes'>
 			<h1 className='prizes-title'>Prize Tracks</h1>
 			<div className='prizes-container'>
-				<p>Below are the total prize amounts for each prize track! :)</p>
-
+				<p className='prizes-subtitle'>Below are the total prize amounts for each prize track! :)</p>
 				<div className='prize-grid'>
-					{/* Best Overall */}
-					<div className='prize-card'>
-						<div className='prize-card-icon-circle'>
-							<img
-								src={overallIcon}
-								alt='Trophy Icon'
-								className='prize-card-icon'
-							/>
-						</div>
-						<h2>Best Overall</h2>
-						<img src={squiggle} alt='Squiggle' className='card-squiggle' />
-						<p className='prize-label'>PRIZE</p>
-						<p className='prize-amount'>$150 Amazon Gift Card</p>
+				{prizeData.map(prize => (
+					<div className='prize-card' key={prize.name}>
+					<div className='prize-card-icon-circle'>
+					<LazyLoadImage
+						src={getPrizeIcon(prize.name)}
+						alt={`${prize.name} Icon`}
+						className='prize-card-icon'
+					/>
 					</div>
-
-					{/* Best Web */}
-					<div className='prize-card'>
-						<div className='prize-card-icon-circle'>
-							<img src={webIcon} alt='Web Icon' className='prize-card-icon' />
-						</div>
-						<h2>Best Web</h2>
-						<img src={squiggle} alt='Squiggle' className='card-squiggle' />
-						<p className='prize-label'>PRIZE</p>
-						<p className='prize-amount'>$80 Amazon Gift Card</p>
+					<h2>{prize.name}</h2>
+					<LazyLoadImage src={squiggle} alt='Squiggle' className='card-squiggle' />
+					<p className='prize-label'>'PRIZE'</p>
+					<p className='prize-amount'>{prize.amount}</p>
 					</div>
-
-					{/* Best Mobile */}
-					<div className='prize-card'>
-						<div className='prize-card-icon-circle'>
-							<img
-								src={mobileIcon}
-								alt='Mobile Icon'
-								className='prize-card-icon'
-							/>
-						</div>
-						<h2>Best Mobile</h2>
-						<img src={squiggle} alt='Squiggle' className='card-squiggle' />
-						<p className='prize-label'>PRIZE</p>
-						<p className='prize-amount'>$80 Amazon Gift Card</p>
-					</div>
-
-					{/* Best Game */}
-					<div className='prize-card'>
-						<div className='prize-card-icon-circle'>
-							<img src={gameIcon} alt='Game Icon' className='prize-card-icon' />
-						</div>
-						<h2>Best Game</h2>
-						<img src={squiggle} alt='Squiggle' className='card-squiggle' />
-						<p className='prize-label'>PRIZE</p>
-						<p className='prize-amount'>$80 Amazon Gift Card</p>
-					</div>
-
-					{/* Best in Intersectional Environmentalism */}
-					<div className='prize-card'>
-						<div className='prize-card-icon-circle'>
-							<img
-								src={ieIcon}
-								alt='Intersectional Environmentalism Icon'
-								className='prize-card-icon'
-							/>
-						</div>
-						<h2>Best in Intersectional Environmentalism</h2>
-						<img src={squiggle} alt='Squiggle' className='card-squiggle' />
-						<p className='prize-label'>PRIZE</p>
-						<p className='prize-amount'>
-							2 Camping Hammocks and 2 Wireless Charging Pads
-						</p>
-					</div>
-
-					{/* Best Beginner */}
-					<div className='prize-card'>
-						<div className='prize-card-icon-circle'>
-							<img
-								src={begIcon}
-								alt='Beginner Icon'
-								className='prize-card-icon'
-							/>
-						</div>
-						<h2>Best Beginner</h2>
-						<img src={squiggle} alt='Squiggle' className='card-squiggle' />
-						<p className='prize-label'>PRIZE</p>
-						<p className='prize-amount'>4 Wireless 3-in-1 Charging Stations</p>
-					</div>
+					))}
 				</div>
 			</div>
 		</div>
