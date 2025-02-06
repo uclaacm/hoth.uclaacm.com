@@ -39,6 +39,7 @@ import hothXI_image3 from '../../images/gallery-carousel/hoth-XI/image3.jpg';
 import hothXI_image4 from '../../images/gallery-carousel/hoth-XI/image4.jpg';
 import hothXI_image5 from '../../images/gallery-carousel/hoth-XI/image5.jpg';
 import hothXI_image6 from '../../images/gallery-carousel/hoth-XI/image6.jpg';
+import hothXI_image7 from '../../images/gallery-carousel/hoth-XI/image7.jpg';
 
 export default function PhotoCarousel({year}) {
 	const settings = {
@@ -61,7 +62,7 @@ export default function PhotoCarousel({year}) {
 	} else if (year === 'X') {
 		images = [hothX_image1, hothX_image2, hothX_image3, hothX_image4, hothX_image5];
 	} else if (year === 'XI') {
-		images = [hothXI_image1, hothXI_image2, hothXI_image3, hothXI_image4, hothXI_image5, hothXI_image6];
+		images = [hothXI_image1, hothXI_image2, hothXI_image3, hothXI_image4, hothXI_image5, hothXI_image6, hothXI_image7];
 	}
 
 	return (
