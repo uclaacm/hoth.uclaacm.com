@@ -10,7 +10,7 @@
 }
 
 .white-container {
-	background-color: #ffffff;
+	background-color: var(--bgWhite);
 	padding: 2rem 0;
 	overflow: hidden;
 }
@@ -32,7 +32,6 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	position: relative;
 	aspect-ratio: 2.5 / 1;
 	background-color: var(--bgGray);
 }
@@ -89,7 +88,7 @@
 	}
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
 	.banner-text {
 		right: 2rem;
 	}
