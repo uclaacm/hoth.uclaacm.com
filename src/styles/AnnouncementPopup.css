@@ -1,0 +1,72 @@
+.popup {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.popup-content {
+    background: #f7f7f7;
+    padding: 1.5rem;
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+    margin-left: 2rem;
+    max-width: 16rem;
+}
+
+.dark .popup-content {
+    background: #362d40;
+    border: 1px solid #362d40;
+}
+
+.speaker-icon {
+    position: absolute;
+    background-color: yellow;
+    top: -3.4rem;
+    right: 0rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+}
+
+.speaker-icon:hover {
+    background-color: #FFFFC5;
+}
+
+.popup-label {
+    font-size: 1.5rem;
+}
+
+.popup-date {
+    font-size: 0.9rem;
+}
+
+.popup-body {
+    font-size: 0.95rem;
+}
+
+.close {
+    position: absolute;
+    top: 0.5rem;
+    left: 2.5rem;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: transparent;
+    cursor: pointer;
+  }
+
+.dark .close {
+    color: white;
+}

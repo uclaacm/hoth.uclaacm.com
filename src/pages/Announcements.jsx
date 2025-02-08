@@ -9,25 +9,24 @@ export default function Announcements() {
 	const formatDate = (timestamp) => {
 		const date = new Date(timestamp);
 		return date.toLocaleDateString('en-US', {
+			weekday: 'long',
 			year: 'numeric',
-			month: 'long',
-			day: 'numeric',
-			hour: '2-digit',
-			minute: '2-digit'
+    		month: 'long',
+    		day: 'numeric',
 		});
 	};
 
 	return (
 		<div id='announcements'>
-			<h1>Announcements</h1>
-			<div>
+			<h1 className = 'announcements-title'>Announcements</h1>
+			<div className = 'announcements-container'>
 				{announcements.map((announcement) => (
-					<div key={announcement.id}>
-						<h2>{announcement.subject}</h2>
-						<p >{announcement.body}</p>
-						<p>
-							Posted on {formatDate(announcement.timestamp)}
+					<div key={announcement.id} className='announcements-label'>
+						<h2 className = 'announcements-subject'>{announcement.subject}</h2>
+						<p className = 'announcements-date'>
+							{formatDate(announcement.timestamp)}
 						</p>
+						<p className = 'announcements-body'>{announcement.body}</p>
 					</div>
 				))}
 			</div>
