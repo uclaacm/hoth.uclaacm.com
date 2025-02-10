@@ -173,7 +173,7 @@ FAQs can be added to the FAQ section by adding the new question and answer to th
 
 ### Schedule
 
-The implementation of the Schedule Page is within `src/components/SchedulePage`. All of the information for the actual schedule is displayed in `src/data/eventSchedule.js`, in the constant `eventSchedule`. In this constant, events are defined as follows:
+The implementation of the Schedule Page is within `src/pages/Schedule.jsx`. All of the information for the actual schedule is displayed in `src/data/eventSchedule.js`, in the constant `eventSchedule`. In this constant, events are defined as follows:
 
 ```
 	{
@@ -191,7 +191,7 @@ The implementation of the Schedule Page is within `src/components/SchedulePage`.
 	},
 ```
 
-Portions of the schedule are denoted via their start time (a date object with the day number of the month and time specified), with each json element having its own start time. Add events to the schedule using this format, making sure to order them by time. Notice that the `events` prop of each json element is an array, meaning that multiple events can be part of the same start time. Just add a comma to that element's last event and another set of brackets corresponding with the next event. Make sure to add each event's `name`, `duration`, `location`, and `description`.
+Portions of the schedule are denoted via their start time (a date object with the day number of the month and time specified), with each element having its own start time. Add events to the schedule using this format, making sure to order them by time. Notice that the `events` prop of each json element is an array, meaning that multiple events can be part of the same start time. Just add a comma to that element's last event and another set of brackets corresponding with the next event. Make sure to add each event's `name`, `duration`, `location`, and `description`.
 
 ### Workshop Page
 
