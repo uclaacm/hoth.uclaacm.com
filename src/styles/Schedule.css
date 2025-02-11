@@ -1,0 +1,73 @@
+#schedule {
+	width: 100%;
+	max-width: 80rem;
+	padding: 2rem 10rem;
+}
+
+.schedule-page {
+	padding: 2rem;
+	position: relative;
+	overflow: auto;
+	max-width: 900px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.schedule-title {
+	text-align: left;
+	font-size: 2.5rem;
+	padding-top: 30px;
+}
+
+.event-container {
+	display: grid;
+	flex-direction: column;
+	gap: 16px;
+	padding-bottom: 80px;
+	padding-top: 20px;
+}
+
+.event-container:not(:last-child) {
+	border-bottom: 3px solid #e7e4e4;
+}
+
+.event-row {
+	display: grid;
+	grid-template-columns: 3fr 6fr;
+	gap: 35px;
+	row-gap: 0;
+	align-items: start;
+	padding: 8px 0;
+	padding-left: 25px;
+	padding-top: 25px;
+}
+
+.event-name {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: var(--darkPink);
+	text-transform: uppercase;
+}
+
+.time-container {
+	display: flex;
+	align-items: center;
+	color: var(--gray);
+	gap: 8px;
+	top: 20px;
+}
+
+.clock {
+	color: grey;
+	font-size: 1.2em;
+}
+
+.event-duration,
+.event-location {
+	color: var(--lightGrayV2);
+	font-size: 0.9rem;
+	margin: 0;
+	padding: 0.5;
+}

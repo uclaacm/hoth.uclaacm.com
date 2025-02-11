@@ -98,31 +98,37 @@ If something breaks in a weird way, try the following in order:
 - delete the `node_modules` directory entirely and reinstall dependencies
   by running `npm install`
 
+### Gallery
+
+The main Gallery Page is implemented in `src/pages/Gallery.jsx`, which utilizes the components in the `src/components/Gallery` directory. The Gallery Page opens up to the winners of the most recent HOTH, with the option of seeing the winners of the other HOTHS as well. The winners data for each HOTH is located in the `src/components/Gallery/Winners.jsx` file. There is a constant list for each HOTH, which contains JS objects for the winners in each category. An example of the data for HOTH 5 is shown below:
+
+```
+    const hoth5 = [
+        {
+            year: '5',
+            appName: 'BelpDining',
+            description: 'Yelp for UCLA Bruins!!!',
+            category: 'Best Overall Hack',
+            image: 'belpdining',
+            link: 'https://devpost.com/software/belpdining'
+        },
+		...
+	];
+```
+
+Images for the Winners Carousel are located in the `src\images\gallery-carousel` directory, and images for the Winners blocks on the page are located in the `src\images\gallery-winners` directory. To add a new HOTH to the Gallery Page, follow these steps:
+1. Create a new folder in the `src/images/gallery-carousel` directory with the name `hoth-$(hoth number)` and add the images of the winners of the new HOTH to this folder.
+    a. Follow the naming convention of the other HOTH folders - images should all be .jpg files, with the name of the image being `image{number}.jpg`.
+2. Create a new folder in the `src/images/gallery-winners` directory with the name `hoth-$(hoth number)` and add the images for the winners projects of the new HOTH to this folder.
+	a. The images can have any name, but should be .png files to allow for dynamic import
+3. Navigate to the `src/components/Gallery/Winners.jsx` file and create a new list for the new HOTH. Make sure to follow the format of the other HOTH lists.
+4. In the `Winners.jsx` file, add the new HOTH to the `winners` object.
+5. In the `src/pages/Gallery.jsx` file, add a new MenuItem to the return statement and change the default value of the `year` state to the new HOTH number.
+
+
 <!-- TODO: Rewrite this maintenance section after we've finished all the long-term infrastructure changes needed for HOTH XII. -->
 <!-- # Maintenance -->
 <!--
-### Gallery
-
-The Gallery Page is implemented in `src/components/GalleryPage`. Images can be added to the gallery carousel by adding images to `src/images/gallery-carousel`. The page opens up to the winners of the most recent HOTH, with the option of seeing the winners of the other HOTHS as well. The actual implementation of each HOTH's gallery is in `src/data/winners`, with each HOTH having a yaml file with its gallery. In order to add a new HOTH, just create a new yaml file with the name `hoth-$(hoth number).yml`, and use the following format (this is HOTH 1's, as an example):
-
-```
-- name: "HOTH 1"
-  devpost: https://hoth.devpost.com/project-gallery
-
-  winners:
-    - title: Nector
-      category: Best Hack
-      description: "Breaking the ice, one word at a time."
-      link: "https://devpost.com/software/nector"
-      image: nector
-    - title: Granny Simulator
-      category: Best Design
-      description: "A fun look into the daily life of a seemingly normal granny (feat. missing dentures & hungry children)."
-      link: "https://devpost.com/software/supergranny"
-      image: grannysim
-```
-
-The images referenced by the `image` prop of each winner can be inserted into `src/images/gallery-winners` in its respective HOTH number folder. Finally, make sure to change the `to` prop of the Gallery Page in `const links` in `src/components/MenuBar/ButtonBar.js` to the most recent HOTH (`/gallery/hoth-$(#)`).
 
 ### Homepage Carousel
 
@@ -173,7 +179,7 @@ FAQs can be added to the FAQ section by adding the new question and answer to th
 
 ### Schedule
 
-The implementation of the Schedule Page is within `src/components/SchedulePage`. All of the information for the actual schedule is displayed in `src/data/eventSchedule.js`, in the constant `eventSchedule`. In this constant, events are defined as follows:
+The implementation of the Schedule Page is within `src/pages/Schedule.jsx`. All of the information for the actual schedule is displayed in `src/data/eventSchedule.js`, in the constant `eventSchedule`. In this constant, events are defined as follows:
 
 ```
 	{
@@ -191,7 +197,7 @@ The implementation of the Schedule Page is within `src/components/SchedulePage`.
 	},
 ```
 
-Portions of the schedule are denoted via their start time (a date object with the day number of the month and time specified), with each json element having its own start time. Add events to the schedule using this format, making sure to order them by time. Notice that the `events` prop of each json element is an array, meaning that multiple events can be part of the same start time. Just add a comma to that element's last event and another set of brackets corresponding with the next event. Make sure to add each event's `name`, `duration`, `location`, and `description`.
+Portions of the schedule are denoted via their start time (a date object with the day number of the month and time specified), with each element having its own start time. Add events to the schedule using this format, making sure to order them by time. Notice that the `events` prop of each json element is an array, meaning that multiple events can be part of the same start time. Just add a comma to that element's last event and another set of brackets corresponding with the next event. Make sure to add each event's `name`, `duration`, `location`, and `description`.
 
 ### Workshop Page
 
