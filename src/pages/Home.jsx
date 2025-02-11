@@ -5,6 +5,7 @@ import Banner from '../components/Home/Banner';
 import HothDescription from '../components/Home/HothDescription';
 import PhotoCarousel from '../components/Home/PhotoCarousel';
 import FAQSection from '../components/Home/FAQSection';
+import AnnouncementPopup from '../components/General/AnnouncementPopup';
 
 export default function Home() {
 	useTitle('');
@@ -35,6 +36,8 @@ export default function Home() {
 			<Container2>
 				<FAQSection />
 			</Container2>
+			
+			<AnnouncementPopup />
 		</div>
 	);
 }
