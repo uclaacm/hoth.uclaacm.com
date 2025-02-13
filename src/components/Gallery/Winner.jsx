@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../styles/Gallery.css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Winner({ year, appName, description, category, image, link}) {
-
     const [currentImage, setCurrentImage] = React.useState(null);
     
-    import(`../../images/gallery-winners/hoth-${year}/${image}.png`).then((image) => {
-        setCurrentImage(image.default);
-    });
+    useEffect(() => {
+        import(`../../images/gallery-winners/hoth-${year}/${image}.png`)
+            .then((image) => {
+                setCurrentImage(image.default);
+            })
+            .catch(err => console.error(`Failed to load winner image: ${image}`, err));
+    }, [year, image]);
     
     return (
         <div className='winner-container'>
