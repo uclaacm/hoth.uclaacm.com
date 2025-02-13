@@ -9,8 +9,7 @@ export default function Winner({ year, appName, description, category, image, li
         import(`../../images/gallery-winners/hoth-${year}/${image}.png`)
             .then((image) => {
                 setCurrentImage(image.default);
-            })
-            .catch(err => console.error(`Failed to load winner image: ${image}`, err));
+            });
     }, [year, image]);
     
     return (

@@ -29,17 +29,12 @@ export default function PhotoCarousel({year}) {
 
 			const loadedImages = await Promise.all(
 				yearImages.map(async (path) => {
-					try {
-						const module = await imageFiles[path]();
-						return module.default;
-					} catch (err) {
-						console.error(`Failed to load image ${path}:`, err);
-						return undefined;
-					}
+					const module = await imageFiles[path]();
+					return module.default;
 				})
 			);
 
-			setImages(loadedImages.filter(img => img !== undefined));
+			setImages(loadedImages.filter(Boolean));
 		};
 
 		loadImages();
