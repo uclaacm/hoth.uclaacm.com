@@ -18,7 +18,7 @@ const faqs = [
 			<>
 				A hackathon is an event during which people from different backgrounds
 				come together to create a project from start to finish in a limited time
-				frame. Check out some examples from last year's HOTH{' '}
+				period. Check out some examples from last year's HOTH{' '}
 				<Link to={projectGalleryLink}>here</Link>!
 			</>
 		),
