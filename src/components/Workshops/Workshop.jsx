@@ -33,6 +33,8 @@ export default function Workshop({ title, youtube, author, description, readme, 
                             src={`https://img.youtube.com/vi/${youtube.split('/').pop()}/0.jpg`}
                             alt={title}
                             effect='blur'
+                            width='100%'
+                            height='auto'
                             onClick={() => setIsPlayerVisible(true)}
                         />
                         <div 
