@@ -6,6 +6,7 @@ import '../../styles/FAQSection.css';
 const hothNum = 'XII';
 const hothDate = 'Sunday, March 2, 2025';
 const hothLocation = 'Covel Commons, Grand Horizon Ballroom';
+const appDeadline = 'Wednesday, February 26, 2025'
 const discordLink = 'https://discord.gg/MStu2cnBV9';
 const email = 'hack@uclaacm.com';
 const projectGalleryLink = 'https://hothx.devpost.com/project-gallery';
@@ -71,7 +72,8 @@ const faqs = [
 			<>
 				Hit the apply button above and fill out the application! A few days
 				before the event, you'll be emailed a confirmation form along with
-				appropriate links and additional event information.
+				appropriate links and additional event information. Applications close 
+				on {appDeadline} at 11:59 pm PST.
 			</>
 		),
 	},
