@@ -38,7 +38,7 @@ export default function HothDescription() {
 					Hack on the Hill (HOTH XII) is a{' '}
 					<strong>12-hour beginner-friendly</strong> hackathon designed to be
 					your first hackathon experience. HOTH XII will be in-person on the
-					Hill in the Carnesale Commons Palisades Room. We hope to see you
+					Hill in the Covel Commons Grand Horizon Ballroom. We hope to see you
 					there!
 				</p>
 			</div>

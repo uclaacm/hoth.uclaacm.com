@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 import '../../styles/FAQSection.css';
 
 const hothNum = 'XII';
-const appDeadline = 'Monday, February 26, 2024';
-const hothDate = 'Sunday, March 3, 2024';
-const hothLocation = 'Carnesale Commons, Palisades Room';
+const hothDate = 'Sunday, March 2, 2025';
+const hothLocation = 'Covel Commons, Grand Horizon Ballroom';
 const discordLink = 'https://discord.gg/MStu2cnBV9';
 const email = 'hack@uclaacm.com';
 const projectGalleryLink = 'https://hothx.devpost.com/project-gallery';
@@ -72,8 +71,7 @@ const faqs = [
 			<>
 				Hit the apply button above and fill out the application! A few days
 				before the event, you'll be emailed a confirmation form along with
-				appropriate links and additional event information. Applications close
-				on {appDeadline} at 11:59 pm PST.
+				appropriate links and additional event information.
 			</>
 		),
 	},
