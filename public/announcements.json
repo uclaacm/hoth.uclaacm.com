@@ -1,1 +1,8 @@
-[]
+[
+    {
+        "id": 0,
+        "subject": "test",
+        "body": "announcement",
+        "timestamp": "2025-02-26T05:34:53Z"
+    }
+]
