@@ -29,7 +29,6 @@ coverage
 
 # Gatsby files
 .cache/
-public
 
 # Typescript v1 declaration files
 typings/

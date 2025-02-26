@@ -42,7 +42,7 @@ for index, element in enumerate(announcements_json):
         valid_comments.append(comment)
 
 # Insert all valid comment json objects into a file in reverse order
-filename = 'src/data/announcements.json'
+filename = 'public/announcements.json'
 json_string = json.dumps(valid_comments[::-1], indent=4)
 try:
     with open(filename, 'w') as f:
