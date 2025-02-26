@@ -9,7 +9,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
-	const isApplyActive = true;
+	const isApplyActive = false;
 	const applyButtonClassName =
 		'apply-btn ' + (isApplyActive ? 'apply-active' : 'apply-inactive');
 
