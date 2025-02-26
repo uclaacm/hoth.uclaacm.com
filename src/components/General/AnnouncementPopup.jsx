@@ -19,7 +19,7 @@ const AnnouncementPopup = () => {
 	};
 
 	useEffect(() => {
-		fetch('/announcements.json')
+		fetch('announcements.json')
 			.then(response => response.json())
 			.then(data => {
 				if (data.length > 0) {
