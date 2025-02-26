@@ -1,43 +1,96 @@
-// const getDateObj = (day, time) => new Date(`2025-01-${day}T${time}`);
+const getDateObj = (day, time) => new Date(`2025-03-${day}T${time}`);
 
 export const eventSchedule = [
-	// {
-	// 	startTime: getDateObj('26', '08:00:00'),
-	// 	events: [
-	// 		{
-	// 			name: 'Check in',
-	// 			duration: '30 min',
-	// 			location: 'Carnesale Commons Palisades Room',
-	// 			description: `Bring your bruin card and daily symptoms monitoring
-	// 			survey to check in with one of the Hack officers at the front.
-	// 			Remember to bring some snacks, water, your laptop, and your laptop charger!`,
-	// 		},
-	// 		{
-	// 			name: 'Panel Talk',
-	// 			duration: '30 min',
-	// 			location: 'Covel Grand Horizon',
-	// 			description: `Testing sausce here.
-	// 			Remember to bring some snacks, water, your laptop, and your laptop charger!`,
-	// 		},
-	// 		{
-	// 			name: 'Lunch Break',
-	// 			duration: '1 hr',
-	// 			location: 'Covel Dining Hall',
-	// 			description: `Enjoy a complimentary lunch while networking with other participants.`,
-	// 		},
-	// 	],
-	// },
-	// {
-	// 	startTime: getDateObj('26', '12:00:00'),
-	// 	events: [
-	// 		{
-	// 			name: 'Lunch Break',
-	// 			duration: '1 hr',
-	// 			location: 'Covel Dining Hall',
-	// 			description: `Enjoy a complimentary lunch while networking with other participants.`,
-	// 		},
-	// 	],
-	// },
+	{
+		startTime: getDateObj('02', '08:30:00'),
+		events: [
+			{
+				name: 'Check In',
+				duration: '1 hour',
+				location: 'Covel Commons Grand Horizon Ballroom',
+				description:
+					'Come check in with the organizers and get settled before the opening ceremony!',
+			},
+		],
+	},
+	{
+		startTime: getDateObj('02', '09:00:00'),
+		events: [
+			{
+				name: 'Opening Ceremony & Breakfast',
+				duration: '30 min',
+				location: 'Covel Commons Grand Horizon Ballroom',
+				description:
+					'Welcome remarks, team formation overview, and a light breakfast to kick off HOTH XII!',
+			},
+		],
+	},
+	{
+		startTime: getDateObj('02', '09:30:00'),
+		events: [
+			{
+				name: 'Hacking Begins',
+				description: 'Teams settle in and start working on their projects.',
+			},
+		],
+	},
+	{
+		startTime: getDateObj('02', '12:30:00'),
+		events: [
+			{
+				name: 'Lunch Break',
+				duration: '1 hr',
+				location: 'Covel Commons Grand Horizon Ballroom',
+				description:
+					'Enjoy lunch while chatting with fellow hackers and mentors.',
+			},
+		],
+	},
+	{
+		startTime: getDateObj('02', '15:00:00'),
+		events: [
+			{
+				name: 'Meme Competition',
+				duration: '30 min',
+				description: 'Show off your best coding-related memes for a fun break.',
+			},
+		],
+	},
+	{
+		startTime: getDateObj('02', '18:00:00'),
+		events: [
+			{
+				name: 'Dinner',
+				duration: '1 hour',
+				location: 'Covel Commons Grand Horizon Ballroom',
+				description:
+					'Refuel and mingle with other teams before the final hacking push.',
+			},
+		],
+	},
+	{
+		startTime: getDateObj('02', '21:00:00'),
+		events: [
+			{
+				name: 'Judging Begins',
+				duration: '45 min',
+				description:
+					'Projects are due and will be reviewed by our judges. Good luck!',
+			},
+		],
+	},
+	{
+		startTime: getDateObj('02', '21:45:00'),
+		events: [
+			{
+				name: 'Closing Ceremony',
+				duration: '30 min',
+				location: 'Covel Commons Grand Horizon Ballroom',
+				description:
+					'Award announcements and closing remarks to wrap up HOTH XII!',
+			},
+		],
+	},
 ];
 
 export default eventSchedule;
