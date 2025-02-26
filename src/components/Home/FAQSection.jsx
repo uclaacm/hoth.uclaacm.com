@@ -6,7 +6,7 @@ import '../../styles/FAQSection.css';
 const hothNum = 'XII';
 const hothDate = 'Sunday, March 2, 2025';
 const hothLocation = 'Covel Commons, Grand Horizon Ballroom';
-const appDeadline = 'Wednesday, February 26, 2025'
+const appDeadline = 'Tuesday, February 25, 2025';
 const discordLink = 'https://discord.gg/MStu2cnBV9';
 const email = 'hack@uclaacm.com';
 const projectGalleryLink = 'https://hothx.devpost.com/project-gallery';
@@ -72,7 +72,7 @@ const faqs = [
 			<>
 				Hit the apply button above and fill out the application! A few days
 				before the event, you'll be emailed a confirmation form along with
-				appropriate links and additional event information. Applications close 
+				appropriate links and additional event information. Applications close
 				on {appDeadline} at 11:59 pm PST.
 			</>
 		),
@@ -123,10 +123,21 @@ const AccordionItem = ({ header, ...rest }) => (
 		header={
 			<>
 				{header}
-				<svg className='chevron' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+				<svg
+					className='chevron'
+					xmlns='http://www.w3.org/2000/svg'
+					width='24'
+					height='24'
+					viewBox='0 0 24 24'
+					strokeWidth='2'
+					stroke='currentColor'
+					fill='none'
+					strokeLinecap='round'
+					strokeLinejoin='round'
+				>
 					<title>Expand/Collapse</title>
-					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-					<polyline points="6 9 12 15 18 9" />
+					<path stroke='none' d='M0 0h24v24H0z' fill='none' />
+					<polyline points='6 9 12 15 18 9' />
 				</svg>
 			</>
 		}
