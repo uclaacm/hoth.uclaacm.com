@@ -12,8 +12,3 @@ NODE_VERSION = "20.17.0"
 
 [context.production]
 ignore = "true"
-
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
