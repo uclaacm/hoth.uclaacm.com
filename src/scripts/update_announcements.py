@@ -10,7 +10,7 @@ import sys
 import os
 
 # User whitelist and issue number we are looking for
-user_whitelist = ['jamesmwu', 'danielhzhou']
+user_whitelist = ['jamesmwu', 'danielhzhou', 'Nishant-Ray', 'ariyin', 'maxakiralee', 'lilliangonick', 'jeffhuangt']
 # HOTH repository issues accessed via Github API
 repo_issues = "https://api.github.com/repos/uclaacm/hoth.uclaacm.com/issues"
 
