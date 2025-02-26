@@ -30,7 +30,15 @@ export default function Announcements() {
 
 	return (
 		<div id='announcements'>
-			<h1 className='announcements-title'>Announcements</h1>
+			{announcements.length > 0 ? (
+				<div>
+					<h1 className='announcements-title'>Announcements</h1>
+				</div>
+			) : (
+				<div style={{ display: 'flex' }}>
+					<h1 className='announcements-title'>Announcements</h1>
+				</div>
+			)}
 			<div className='announcements-container'>
 				{announcements.length > 0 ? (
 					announcements.map(announcement => (
@@ -43,7 +51,13 @@ export default function Announcements() {
 						</div>
 					))
 				) : (
-					<p>Loading announcements...</p>
+					<div>
+						<p>
+							HOTH XII will take place later this quarter, and our team is
+							working hard to organize a fantastic hackathon for you all!
+						</p>
+						<p>Announcements will be posted soon! Stay tuned!</p>
+					</div>
 				)}
 			</div>
 		</div>
