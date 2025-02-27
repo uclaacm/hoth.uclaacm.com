@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import '../../styles/Workshops.css';
 import ReactPlayer from 'react-player/youtube';
-import { Github, Youtube, Folder } from '@geist-ui/icons';
+import { Github, Youtube, Monitor } from '@geist-ui/icons';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
@@ -12,14 +12,14 @@ export default function Workshop({ title, youtube, author, description, readme, 
     const README =  readme ?
                     <button className='workshop-button'>
                         <a className='workshop-link' href={readme} target='_blank' rel='noreferrer'>
-                            <Github color='var(--hackAccent)' size={28} />
+                            <Github size={28} />
                         </a>
                     </button> : null;
 
     const SLIDES =  slides ? 
                     <button className='workshop-button'>
                         <a className='workshop-link' href={slides} target='_blank' rel='noreferrer'>
-                            <Folder color='var(--hackAccent)' size={28} />
+                            <Monitor size={28} />
                         </a>
                     </button> : null;
     return (
@@ -66,7 +66,7 @@ export default function Workshop({ title, youtube, author, description, readme, 
             <div className='workshop-links'>
                 <button className='workshop-button'>
                     <a className='workshop-link' href={youtube} target='_blank' rel='noreferrer'>
-                        <Youtube color='var(--hackAccent)' size={28} />
+                        <Youtube size={28} />
                     </a>
                 </button>
                 {README}
