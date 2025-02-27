@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import '../../styles/FAQSection.css';
 
 const hothNum = 'XII';
-const appDeadline = 'Monday, February 26, 2024';
-const hothDate = 'Sunday, March 3, 2024';
-const hothLocation = 'Carnesale Commons, Palisades Room';
+const hothDate = 'Sunday, March 2, 2025';
+const hothLocation = 'Covel Commons, Grand Horizon Ballroom';
+const appDeadline = 'Tuesday, February 25, 2025';
 const discordLink = 'https://discord.gg/MStu2cnBV9';
 const email = 'hack@uclaacm.com';
 const projectGalleryLink = 'https://hothx.devpost.com/project-gallery';
@@ -123,10 +123,21 @@ const AccordionItem = ({ header, ...rest }) => (
 		header={
 			<>
 				{header}
-				<svg className='chevron' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+				<svg
+					className='chevron'
+					xmlns='http://www.w3.org/2000/svg'
+					width='24'
+					height='24'
+					viewBox='0 0 24 24'
+					strokeWidth='2'
+					stroke='currentColor'
+					fill='none'
+					strokeLinecap='round'
+					strokeLinejoin='round'
+				>
 					<title>Expand/Collapse</title>
-					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-					<polyline points="6 9 12 15 18 9" />
+					<path stroke='none' d='M0 0h24v24H0z' fill='none' />
+					<polyline points='6 9 12 15 18 9' />
 				</svg>
 			</>
 		}

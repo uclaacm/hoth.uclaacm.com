@@ -6,6 +6,7 @@
     margin-bottom: 3rem;
     margin-left: 3rem;
     margin-right: 3rem;
+    overflow: hidden;
 }
 
 .page-title {
@@ -85,11 +86,14 @@
     margin: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    overflow: hidden;
+    border-radius: var(--rounded-lg);
 }
 
 .workshop-video {
     border-radius: var(--rounded-lg);
     overflow: hidden;
+    width: 100%;
 }
 
 .workshop-header {
