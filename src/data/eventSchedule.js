@@ -2,7 +2,7 @@ const getDateObj = (day, time) => new Date(`2025-03-${day}T${time}`);
 
 export const eventSchedule = [
 	{
-		startTime: getDateObj('02', '08:30:00'),
+		startTime: getDateObj('02', '08:10:00'),
 		events: [
 			{
 				name: 'Check In',
@@ -14,7 +14,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('02', '09:00:00'),
+		startTime: getDateObj('02', '08:30:00'),
 		events: [
 			{
 				name: 'Opening Ceremony & Breakfast',
@@ -26,7 +26,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('02', '09:30:00'),
+		startTime: getDateObj('02', '09:00:00'),
 		events: [
 			{
 				name: 'Hacking Begins',
@@ -43,16 +43,6 @@ export const eventSchedule = [
 				location: 'Covel Commons Grand Horizon Ballroom',
 				description:
 					'Enjoy lunch while chatting with fellow hackers and mentors.',
-			},
-		],
-	},
-	{
-		startTime: getDateObj('02', '15:00:00'),
-		events: [
-			{
-				name: 'Meme Competition',
-				duration: '30 min',
-				description: 'Show off your best coding-related memes for a fun break.',
 			},
 		],
 	},
