@@ -38,7 +38,7 @@ export default function Workshops() {
 					title='Intro to Svelte'
 					author='Henry Wei'
 					youtube='https://youtu.be/HrWgND1YHrM'
-					description='This workshop introduces Svelte, a modern frontend framework that simplifies UI development by combining markup, styles, and behavior in a single component-based structure. By the end, you&#39;ll understand components in Svelte, learn state management and reactivity, and build a basic Cookie Clicker app using Svelte.'
+					description='Learn the fundamentals of Svelte, a modern frontend framework that makes building web apps simple and efficient! We&#39;ll dive into reactivity, props, and component-based development. By the end of the workshop, you&#39;ll know how to create Svelte projects such as Cookie Clicker from scratch!'
 					readme='https://github.com/uclaacm/hothXII-workshops/tree/main/intro-to-svelte'
 					slides='https://docs.google.com/presentation/d/1oMb0hlhLrTFJRBAnaFEQY3i8TOuDXrQ99NerYBPg3H0/edit?usp=sharing'
 				/>
