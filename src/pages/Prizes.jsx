@@ -6,7 +6,7 @@ import squiggle from '../images/prizes/squiggle.svg';
 import overallIcon from '../images/prizes/overall.png';
 import webIcon from '../images/prizes/web.png';
 import mobileIcon from '../images/prizes/mobile.png';
-import gameIcon from '../images/prizes/game.png';
+// import gameIcon from '../images/prizes/game.png';
 import ieIcon from '../images/prizes/ie.png';
 import begIcon from '../images/prizes/beg.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -19,7 +19,6 @@ export default function Prizes() {
 			'Best Overall': overallIcon,
 			'Best Web': webIcon,
 			'Best Mobile': mobileIcon,
-			'Best Game': gameIcon,
 			'Best in Tech for Kindness': ieIcon,
 			'Best Beginner': begIcon,
 		};

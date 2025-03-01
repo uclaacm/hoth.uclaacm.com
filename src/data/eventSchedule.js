@@ -17,11 +17,11 @@ export const eventSchedule = [
 		startTime: getDateObj('02', '08:30:00'),
 		events: [
 			{
-				name: 'Opening Ceremony & Breakfast',
+				name: 'Opening Ceremony',
 				duration: '30 min',
 				location: 'Covel Commons Grand Horizon Ballroom',
 				description:
-					'Welcome remarks, team formation overview, and a light breakfast to kick off HOTH XII!',
+					'Welcome remarks, guest speakers, and a brief overview to kick off HOTH XII!',
 			},
 		],
 	},
@@ -29,8 +29,19 @@ export const eventSchedule = [
 		startTime: getDateObj('02', '09:00:00'),
 		events: [
 			{
-				name: 'Hacking Begins',
-				description: 'Teams settle in and start working on their projects.',
+				name: 'Breakfast & Team Formation-- Hacking Begins!',
+				description:
+					"Enjoy a hearty breakfast and form a team if you don't already have one! Teams settle in and start working on their projects.",
+			},
+		],
+	},
+	{
+		startTime: getDateObj('02', '09:30:00'),
+		events: [
+			{
+				name: 'Intern Q&A Session',
+				description:
+					'Interested in being a part of the team that puts together HOTH and many other events? Ask current Hack interns about their experience!',
 			},
 		],
 	},
@@ -70,7 +81,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('02', '21:45:00'),
+		startTime: getDateObj('02', '22:00:00'),
 		events: [
 			{
 				name: 'Closing Ceremony',
