@@ -32,11 +32,11 @@ export default function Workshop({ title, youtube, author, description, readme, 
                     <>
                         <LazyLoadImage
                             className='video-thumbnail'
-                            src={`https://img.youtube.com/vi/${youtube.split('/').pop()}/0.jpg`}
+                            src={`https://img.youtube.com/vi/${youtube.split('/').pop()}/maxresdefault.jpg`}
                             alt={title}
                             effect='blur'
                             width='100%'
-                            height='auto'
+                            height='100%'
                             onClick={() => setIsPlayerVisible(true)}
                         />
                         <div 
@@ -54,6 +54,7 @@ export default function Workshop({ title, youtube, author, description, readme, 
                         id={'id_' + title.replace(/ /g, '_')}
                         controls={true}
                         width='100%'
+                        height='100%'
                         url={youtube}
                     />
                 )}

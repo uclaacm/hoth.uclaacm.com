@@ -91,9 +91,12 @@
 }
 
 .workshop-video {
+    position: absolute;
     border-radius: var(--rounded-lg);
     overflow: hidden;
     width: 100%;
+    top: 0;
+    left: 0;
 }
 
 .workshop-header {
@@ -184,13 +187,16 @@
     width: 100%;
     border-radius: var(--rounded-lg);
     overflow: hidden;
-    line-height: 0;
+    aspect-ratio: 16/9;
 }
 
 .video-thumbnail {
+    position: absolute;
     width: 100%;
     cursor: pointer;
     display: block;
+    top: 0;
+    left: 0;
 }
 
 .video-overlay {
@@ -203,7 +209,7 @@
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0);
-    transition: background 0.2s;
+    transition: all 0.2s;
 }
 
 .video-overlay:hover {
