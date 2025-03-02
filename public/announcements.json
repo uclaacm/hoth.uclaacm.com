@@ -1,5 +1,11 @@
 [
     {
+        "id": 1,
+        "subject": "test",
+        "body": "announcement",
+        "timestamp": "2025-03-02T00:27:28Z"
+    },
+    {
         "id": 0,
         "subject": "Welcome to HOTH XII!",
         "body": "Welcome to Hack on the Hill XII! We're glad to have you, and excited to see what you'll build. HOTH XII takes place this Sunday March 2nd, 2025. We'll be periodically updating these announcements with new information, so be sure to keep an eye out! Happy hacking! :)",
