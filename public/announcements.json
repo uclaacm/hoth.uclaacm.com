@@ -1,5 +1,11 @@
 [
     {
+        "id": 4,
+        "subject": "Mentors!",
+        "body": "If you have any questions or technical issues, feel free to ask one of our mentors. We're located in the back right corner!",
+        "timestamp": "2025-03-02T17:49:04Z"
+    },
+    {
         "id": 3,
         "subject": "Breakfast, team formation, and time to start hacking!",
         "body": "Thank you to everyone who came out to our opening ceremony and a round of applause for our speaker Anakin Trotter! If you do not have a team, we will be hosting an official team formation event now next to the Connect-4 sets by the round tables. We'll also be serving breakfast from Noah's Bagels!\n\nHave fun and Happy hacking!",
