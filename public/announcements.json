@@ -1,5 +1,11 @@
 [
     {
+        "id": 3,
+        "subject": "Breakfast, team formation, and time to start hacking!",
+        "body": "Thank you to everyone who came out to our opening ceremony and a round of applause for our speaker Anakin Trotter! If you do not have a team, we will be hosting an official team formation event now next to the Connect-4 sets by the round tables. We'll also be serving breakfast from Noah's Bagels!\n\nHave fun and Happy hacking!",
+        "timestamp": "2025-03-02T16:58:31Z"
+    },
+    {
         "id": 2,
         "subject": "Opening ceremony starts soon!",
         "body": "Hello hackers! The beginning of Hack on the Hill is coming! \n\nWe\u2019re kicking things off at our OPENING CEREMONY in the Carnesale Commons Palisades Room! Excited to see everyone there and welcome you all to our 12-hour hackathon experience!",
