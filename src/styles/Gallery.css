@@ -154,6 +154,7 @@
     font-size: 1em;
     letter-spacing: .5px;
     font-weight: 400;  
+    cursor: pointer;
 }
 
 .past-winners:hover {
