@@ -1,5 +1,11 @@
 [
     {
+        "id": 5,
+        "subject": "Workshop Q&A",
+        "body": "Got any burning questions about our HOTH XII workshops? Feel free to shop for some answers from our amazing interns who put them together. Feel free to pay a visit to them at the round tables and ask them anything!",
+        "timestamp": "2025-03-02T18:23:20Z"
+    },
+    {
         "id": 4,
         "subject": "Mentors!",
         "body": "If you have any questions or technical issues, feel free to ask one of our mentors. We're located in the back right corner!",
