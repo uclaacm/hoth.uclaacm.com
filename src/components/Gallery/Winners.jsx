@@ -3,60 +3,107 @@ import '../../styles/Gallery.css';
 import Winner from './Winner';
 
 export default function Winners({ year }) {
-	const hothX = [
-		{
-			year: 'X',
-			appName: 'QuakeAlert',
-			description:
-				'QuakeAlert is an earthquake detection web application that can inform people within the affected radius of an earthquake so they can reach safety.',
-			category: 'Best Overall',
-			image: 'quakealert',
-			link: 'https://devpost.com/software/quakealert',
-		},
-		{
-			year: 'X',
-			appName: 'Sportify',
-			description: 'Enjoy sports and save the planet!',
-			category: 'Best Web',
-			image: 'sportify',
-			link: 'https://devpost.com/software/sportify-aju8pv',
-		},
-		{
-			year: 'X',
-			appName: 'Allies',
-			description:
-				'Find UCLA students who are going to the same places you are. Plan ahead, or in real-time. Save the environment and your wallets by splitting hefty rideshare fees with ease (that LAX → UCLA Uber x__x).',
-			category: 'Best Mobile',
-			image: 'allies',
-			link: 'https://devpost.com/software/allies',
-		},
-		{
-			year: 'X',
-			appName: 'Road Rager',
-			description:
-				'Road Rager is an educational game that teaches about aggressive driving. Players drive a car, and an ML-generated model trained on real-world data will determine if the player is driving recklessly.',
-			category: 'Best Game',
-			image: 'roadrager',
-			link: 'https://devpost.com/software/road-rager',
-		},
-		{
-			year: 'X',
-			appName: 'BruinThrift',
-			description:
-				'Bruin Thrift connects UCLA students seeking to sell/give away their clothing, furniture, or other belongings.',
-			category: 'Best in Intersectional Environmentalism',
-			image: 'bruinthrift',
-			link: 'https://devpost.com/software/bruinthrift',
-		},
-		{
-			year: 'X',
-			appName: 'HandiWalk',
-			description: 'Accessible Travels for all Bruins.',
-			category: 'Best Beginner',
-			image: 'handiwalk',
-			link: 'https://devpost.com/software/handiwalk',
-		},
-	];
+    const hothXI = [
+        {
+            year: 'XI',
+            appName: 'Stride',
+            description: 'stride is an app that makes sustainable commutes fun. Log and track your walks and rides to see their environmental impact, earn achievements and connect with your friends to stay motivated!',
+            category: 'Best Overall',
+            image: 'stride',
+            link: 'https://devpost.com/software/stride-bslo5u'
+        },
+        {
+            year: 'XI',
+            appName: 'Cafe Hopper',
+            description: 'Cafes are pretty cool. Check out nearby cafes.',
+            category: 'Best Web',
+            image: 'cafehopper',
+            link: 'https://devpost.com/software/cafe-hopper'
+        },
+        {
+            year: 'XI',
+            appName: 'BruinBites & Books',
+            description: 'Say goodbye to lonely meals with this platform that streamlines dining meetups, sparking lively discussions and culinary adventures.',
+            category: 'Best Mobile',
+            image: 'bruinbitesandbooks',
+            link: 'https://devpost.com/software/bruinbites-books'
+        },
+        {
+            year: 'XI',
+            appName: 'Timber',
+            description: 'A game about deforestation',
+            category: 'Best Game',
+            image: 'timber',
+            link: 'https://devpost.com/software/timber-wtsfdz'
+        },
+        {
+            year: 'XI',
+            appName: 'Westwood Community Garden',
+            description: 'Our mission is to grow together, sustainably.',
+            category: 'Best in Intersectional Environmentalism',
+            image: 'westwoodcommunitygarden',
+            link: 'https://devpost.com/software/westwood-community-garden'
+        },
+        {
+            year: 'XI',
+            appName: 'Near Miss',
+            description: 'Near Miss lies at the intersecting fields of statistics and finance to democratize knowledge and expose casino scams.',
+            category: 'Best Beginner',
+            image: 'nearmiss',
+            link: 'https://devpost.com/software/team-near-miss'
+        },
+    ];
+    
+    const hothX = [
+        {
+            year: 'X',
+            appName: 'QuakeAlert',
+            description: 'QuakeAlert is an earthquake detection web application that can inform people within the affected radius of an earthquake so they can reach safety.',
+            category: 'Best Overall',
+            image: 'quakealert',
+            link: 'https://devpost.com/software/quakealert'
+        },
+        {
+            year: 'X',
+            appName: 'Sportify',
+            description: 'Enjoy sports and save the planet!',
+            category: 'Best Web',
+            image: 'sportify',
+            link: 'https://devpost.com/software/sportify-aju8pv'
+        },
+        {
+            year: 'X',
+            appName: 'Allies',
+            description: 'Find UCLA students who are going to the same places you are. Plan ahead, or in real-time. Save the environment and your wallets by splitting hefty rideshare fees with ease (that LAX → UCLA Uber x__x).',
+            category: 'Best Mobile',
+            image: 'allies',
+            link: 'https://devpost.com/software/allies'
+        },
+        {
+            year: 'X',
+            appName: 'Road Rager',
+            description: 'Road Rager is an educational game that teaches about aggressive driving. Players drive a car, and an ML-generated model trained on real-world data will determine if the player is driving recklessly.',
+            category: 'Best Game',
+            image: 'roadrager',
+            link: 'https://devpost.com/software/road-rager'
+        },
+        {
+            year: 'X',
+            appName: 'BruinThrift',
+            description: 'Bruin Thrift connects UCLA students seeking to sell/give away their clothing, furniture, or other belongings.',
+            category: 'Best in Intersectional Environmentalism',
+            image: 'bruinthrift',
+            link: 'https://devpost.com/software/bruinthrift'
+        },
+        {
+            year: 'X',
+            appName: 'HandiWalk',
+            description: 'Accessible Travels for all Bruins.',
+            category: 'Best Beginner',
+            image: 'handiwalk',
+            link: 'https://devpost.com/software/handiwalk'
+        }
+    ]
 
 	const hoth9 = [
 		{
@@ -517,23 +564,21 @@ export default function Winners({ year }) {
 		},
 	];
 
-	const winners = {
-		X: hothX,
-		9: hoth9,
-		8: hoth8,
-		7: hoth7,
-		6: hoth6,
-		5: hoth5,
-		4: hoth4,
-		3: hoth3,
-		2: hoth2,
-		1: hoth1,
-	};
+    const winners = {
+        'XI': hothXI,
+        'X': hothX,
+        '9': hoth9,
+        '8': hoth8,
+        '7': hoth7,
+        '6': hoth6,
+        '5': hoth5,
+        '4': hoth4,
+        '3': hoth3,
+        '2': hoth2,
+        '1': hoth1
+    }
 
-	const allPosts =
-		year !== '1'
-			? `https://hoth${year}.devpost.com/project-gallery`
-			: 'https://hoth.devpost.com/project-gallery';
+    const allPosts = year !== '1' ? `https://hoth${year}.devpost.com/project-gallery` : 'https://hoth.devpost.com/project-gallery';
 
 	return (
 		<div className='outer-winners-container'>

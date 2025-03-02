@@ -6,6 +6,7 @@
     margin-bottom: 3rem;
     margin-left: 3rem;
     margin-right: 3rem;
+    overflow: hidden;
 }
 
 .page-title {
@@ -27,6 +28,10 @@
     flex-wrap: wrap;
     margin-left: 4rem;
     margin-right: 4rem;
+}
+
+.workshop-description {
+    margin-top: 0px;
 }
 
 @media (max-width: 800px) {
@@ -81,11 +86,14 @@
     margin: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    overflow: hidden;
+    border-radius: var(--rounded-lg);
 }
 
 .workshop-video {
     border-radius: var(--rounded-lg);
     overflow: hidden;
+    width: 100%;
 }
 
 .workshop-header {
@@ -102,15 +110,16 @@
     font-size: .9em;
     letter-spacing: .5px;
     font-weight: 300;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .workshop-links {
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    gap: 1rem;
     width: 100%;
     text-decoration: none;
+    margin: 0.5rem 0;
 }
 
 .workshop-button {
@@ -121,13 +130,18 @@
     background-color: var(--bgWhite);
     border: none;
     border-radius: var(--rounded-md);
-    padding: .5rem 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    padding: 0;
+    margin-right: 2rem;
+    flex-direction: column;
+    cursor: pointer;
 }
 
-.workshop-button:hover {
-    background-color: var(--lightGray);
+.workshop-button a {
+    line-height: 0;
+}
+
+.workshop-button:hover .workshop-link{
+    color: #9C28C5;
 }
 
 .workshop-link {
@@ -141,6 +155,7 @@
     }
 
     .workshop-description {
+        margin-block-start: 0rem;
         font-size: 0.8rem;
     }
 

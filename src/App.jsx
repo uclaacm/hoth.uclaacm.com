@@ -10,6 +10,7 @@ import Prizes from './pages/Prizes';
 import Gallery from './pages/Gallery';
 import NotFound from './pages/NotFound';
 import Footer from './components/General/Footer';
+import AnnouncementPopup from './components/General/AnnouncementPopup';
 import './styles/App.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
 				<Route path = '*' element = {<NotFound/>} />
 			</Routes>
 			<Footer />
+			<AnnouncementPopup />
 		</div>
 	);
 }
