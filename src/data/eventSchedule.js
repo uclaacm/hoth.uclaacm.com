@@ -30,6 +30,8 @@ export const eventSchedule = [
 		events: [
 			{
 				name: 'Breakfast & Team Formation-- Hacking Begins!',
+				duration: '1 hour',
+				location: 'Covel Commons Grand Horizon Ballroom',
 				description:
 					"Enjoy a hearty breakfast and form a team if you don't already have one! Teams settle in and start working on their projects.",
 			},
@@ -40,6 +42,8 @@ export const eventSchedule = [
 		events: [
 			{
 				name: 'Intern Q&A Session',
+				duration: '1 hour',
+				location: 'Covel Commons Grand Horizon Ballroom',
 				description:
 					'Interested in being a part of the team that puts together HOTH and many other events? Ask current Hack interns about their experience!',
 			},
@@ -50,7 +54,7 @@ export const eventSchedule = [
 		events: [
 			{
 				name: 'Lunch Break',
-				duration: '1 hr',
+				duration: '1 hour',
 				location: 'Covel Commons Grand Horizon Ballroom',
 				description:
 					'Enjoy lunch while chatting with fellow hackers and mentors.',
@@ -75,6 +79,7 @@ export const eventSchedule = [
 			{
 				name: 'Judging Begins',
 				duration: '45 min',
+				location: 'Covel Commons Grand Horizon Ballroom',
 				description:
 					'Projects are due and will be reviewed by our judges. Good luck!',
 			},
