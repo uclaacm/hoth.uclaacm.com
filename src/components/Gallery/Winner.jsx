@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import '../../styles/Gallery.css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function Winner({ year, appName, description, category, image, link}) {
     const [currentImage, setCurrentImage] = React.useState(null);
@@ -15,7 +16,15 @@ export default function Winner({ year, appName, description, category, image, li
     return (
         <div className='winner-container'>
             <div className='winner-image'>
-                <LazyLoadImage src={currentImage} alt={appName} />
+                <LazyLoadImage 
+                    src={currentImage} 
+                    alt={appName} 
+                    effect="blur"
+                    wrapperProps={{
+                        style: {transitionDelay: '0.4s'},
+                    }}
+                    placeholderSrc={currentImage}
+                />
             </div>
             <div className='winner-info'>
                 <h2 className='winner-title'>{appName}</h2>
