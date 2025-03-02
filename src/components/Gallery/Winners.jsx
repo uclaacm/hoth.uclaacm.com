@@ -578,7 +578,7 @@ export default function Winners({ year }) {
         '1': hoth1
     }
 
-    const allPosts = year !== '1' ? `https://hoth${year}.devpost.com/project-gallery` : 'https://hoth.devpost.com/project-gallery';
+	const allPosts = (year.length == 1)?(year !== '1' ? `https://hoth${year}.devpost.com/project-gallery` : 'https://hoth.devpost.com/project-gallery'):`https://hoth-${year}.devpost.com/project-gallery`;
 
 	return (
 		<div className='outer-winners-container'>
