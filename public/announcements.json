@@ -1,5 +1,11 @@
 [
     {
+        "id": 1,
+        "subject": "Direct from Hack to HOTH",
+        "body": "Hello! If you are joining the Hack server and are here for HOTH XII, please go to the #rules-and-roles-select channel, react to the Role Menu message with the HOTH XII logo to get the HOTH XI role. Then you can head to the #hoth-getting-started channel for more information!",
+        "timestamp": "2025-03-02T16:48:02Z"
+    },
+    {
         "id": 0,
         "subject": "Welcome to HOTH XII!",
         "body": "Welcome to Hack on the Hill XII! We're glad to have you, and excited to see what you'll build. HOTH XII takes place this Sunday March 2nd, 2025. We'll be periodically updating these announcements with new information, so be sure to keep an eye out! Happy hacking! :)",
