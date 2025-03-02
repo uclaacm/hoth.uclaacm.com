@@ -1,5 +1,11 @@
 [
     {
+        "id": 2,
+        "subject": "Opening ceremony starts soon!",
+        "body": "Hello hackers! The beginning of Hack on the Hill is coming! \n\nWe\u2019re kicking things off at our OPENING CEREMONY in the Carnesale Commons Palisades Room! Excited to see everyone there and welcome you all to our 12-hour hackathon experience!",
+        "timestamp": "2025-03-02T16:51:06Z"
+    },
+    {
         "id": 1,
         "subject": "Direct from Hack to HOTH",
         "body": "Hello! If you are joining the Hack server and are here for HOTH XII, please go to the #rules-and-roles-select channel, react to the Role Menu message with the HOTH XII logo to get the HOTH XI role. Then you can head to the #hoth-getting-started channel for more information!",
