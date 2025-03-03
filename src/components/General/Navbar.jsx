@@ -9,7 +9,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
-	const isApplyActive = false;
+	const isApplyActive = true;
 	const applyButtonClassName =
 		'apply-btn ' + (isApplyActive ? 'apply-active' : 'apply-inactive');
 
@@ -101,12 +101,12 @@ export default function Navbar() {
 				)}
 				<li>
 					<a
-						href='https://forms.gle/HbxpV3dDnVExy1F3A'
+						href='https://docs.google.com/forms/d/e/1FAIpQLSe-D77hcvmW6T4KzabYsP0Jsee3NbySxmXgygN_yjQl42Iesg/viewform'
 						className={applyButtonClassName}
 						target='_blank'
 						rel='noreferrer'
 					>
-						APPLY
+						SUBMIT
 					</a>
 				</li>
 			</ul>
