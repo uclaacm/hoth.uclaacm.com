@@ -1,5 +1,17 @@
 [
     {
+        "id": 7,
+        "subject": "Post-Lunch hacking has begun!",
+        "body": "The dedicated lunch break is now over and it is time to get back to hacking! Our next break will be for dinner @ 6:00pm. In the meantime, don\u2019t forget to check out the #hoth-front-desk and our help room voice channels if you need any help on your projects or approach our office table at the back of the room!",
+        "timestamp": "2025-03-03T00:33:00Z"
+    },
+    {
+        "id": 6,
+        "subject": "Lunch break!",
+        "body": "Our dedicated lunch break is starting soon! Take a break, stretch your legs, stay hydrated, and grab a bite to eat! We will be serving In N Out!.\n\nHacking will continue @ 1:30pm!",
+        "timestamp": "2025-03-03T00:32:19Z"
+    },
+    {
         "id": 5,
         "subject": "Workshop Q&A",
         "body": "Got any burning questions about our HOTH XII workshops? Feel free to shop for some answers from our amazing interns who put them together. Feel free to pay a visit to them at the round tables and ask them anything!",
