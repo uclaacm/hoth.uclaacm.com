@@ -1,5 +1,17 @@
 [
     {
+        "id": 11,
+        "subject": "Hackathon is over!",
+        "body": "Thank you all for coming to this year's Hack on the Hill and congrats to all of the winners. Hope to see you all at next year's HOTH :)",
+        "timestamp": "2025-03-10T04:43:46Z"
+    },
+    {
+        "id": 10,
+        "subject": "Submissions are in!",
+        "body": "Thank you all for your hard work today! We will now spend some time judging all your wonderful submissions. Stay in Grand Horizon to get updated on who's won once the decisions are out!",
+        "timestamp": "2025-03-03T05:18:05Z"
+    },
+    {
         "id": 9,
         "subject": "Final stretch is here!",
         "body": "Get ready for the final stretch hackers!\n\nThe dedicated dinner break is now over and it is back to hacking until the end of the event! SUBMISSIONS WILL BE DUE AT 9:00PM. Submission information can be found by going to the Submit page on this website. Only one team member has to make a submission on both the Devpost and the Google Form. PLEASE MAKE SURE YOU SUBMIT BOTH!\n\nWe are rooting for you, keep pushing through till the end!",
