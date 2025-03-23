@@ -279,7 +279,7 @@
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
-	border-radius: 16px;
+	border-radius: 0;
 	object-fit: cover;
 	width: 100%;
 	transition: border-radius 0.3s ease;
