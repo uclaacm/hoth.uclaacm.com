@@ -20,15 +20,15 @@ function App() {
 			<ScrollToTop />
 			<Routes>
 				<Route path='/' element={<Home />} />
-				<Route path='/announcements' element={<Announcements />} />
+				{/* <Route path='/announcements' element={<Announcements />} /> */}
 				<Route path='/schedule' element={<Schedule />} />
-				<Route path='/workshops' element={<Workshops />} />
-				<Route path='/prizes' element={<Prizes />} />
+				{/* <Route path='/workshops' element={<Workshops />} /> */}
+				{/* <Route path='/prizes' element={<Prizes />} /> */}
 				<Route path='/gallery' element={<Gallery />} />
 				<Route path = '*' element = {<NotFound/>} />
 			</Routes>
 			<Footer />
-			<AnnouncementPopup />
+			{/* <AnnouncementPopup /> */}
 		</div>
 	);
 }

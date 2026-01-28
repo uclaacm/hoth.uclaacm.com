@@ -6,6 +6,7 @@ import '../../styles/PhotoCarousel.css';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
+import image0 from '../../images/carousel/image0.jpg';
 import image1 from '../../images/carousel/image1.jpg';
 import image2 from '../../images/carousel/image2.jpg';
 import image3 from '../../images/carousel/image3.jpg';
@@ -25,7 +26,7 @@ export default function PhotoCarousel() {
 		className: 'slides',
 	};
 
-	const images = [image1, image2, image3, image4, image5, image6, image7];
+	const images = [image0, image1, image2, image3, image4, image5, image6, image7];
 
 	return (
 		<Slider {...settings}>

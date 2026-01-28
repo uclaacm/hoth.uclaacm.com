@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { Menu } from '@geist-ui/icons';
 import DarkModeToggle from '../General/DarkModeToggle';
 import '../../styles/Navbar.css';
-import HackLogo from '../../images/hothXII-logo.png';
+import HackLogo from '../../images/hothXIII-logo.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
-	const isApplyActive = false;
+	const isApplyActive = true;
 	const applyButtonClassName =
 		'apply-btn ' + (isApplyActive ? 'apply-active' : 'apply-inactive');
 
@@ -68,27 +68,26 @@ export default function Navbar() {
 						HOME
 					</Link>
 				</li>
-				<li>
+				{/* <li>
 					<Link to='/announcements' onClick={closeMenu}>
 						ANNOUNCEMENTS
 					</Link>
-				</li>
-
+				</li> */}
 				<li>
 					<Link to='/schedule' onClick={closeMenu}>
 						SCHEDULE
 					</Link>
 				</li>
-				<li>
+				{/* <li>
 					<Link to='/workshops' onClick={closeMenu}>
 						WORKSHOPS
 					</Link>
-				</li>
-				<li>
+				</li> */}
+				{/* <li>
 					<Link to='/prizes' onClick={closeMenu}>
 						PRIZES
 					</Link>
-				</li>
+				</li> */}
 				<li>
 					<Link to='/gallery' onClick={closeMenu}>
 						GALLERY
@@ -101,12 +100,12 @@ export default function Navbar() {
 				)}
 				<li>
 					<a
-						href='https://docs.google.com/forms/d/e/1FAIpQLSe-D77hcvmW6T4KzabYsP0Jsee3NbySxmXgygN_yjQl42Iesg/viewform'
+						href='https://tinyurl.com/HOTH-XIII'
 						className={applyButtonClassName}
 						target='_blank'
 						rel='noreferrer'
 					>
-						SUBMIT
+						APPLY
 					</a>
 				</li>
 			</ul>

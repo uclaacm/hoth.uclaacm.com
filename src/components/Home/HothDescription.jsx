@@ -35,9 +35,9 @@ export default function HothDescription() {
 					/>
 				</div>
 				<p className='img-left-p'>
-					Hack on the Hill (HOTH XII) is a{' '}
+					Hack on the Hill (HOTH XIII) is a{' '}
 					<strong>12-hour beginner-friendly</strong> hackathon designed to be
-					your first hackathon experience. HOTH XII will be in-person on the
+					your first hackathon experience. HOTH XIII will be in-person on the
 					Hill in the Covel Commons Grand Horizon Ballroom. We hope to see you
 					there!
 				</p>

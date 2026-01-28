@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../styles/Home.css';
-import hothBanner from '../../images/hothXII-banner.png';
+import hothBanner from '../../images/hothXIII-banner.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
