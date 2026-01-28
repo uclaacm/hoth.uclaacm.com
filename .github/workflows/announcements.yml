@@ -6,7 +6,7 @@ jobs:
     name: Update Announcements
     if: |
       !github.event.issue.pull_request &&
-      github.event.issue.number == 469 &&
+      github.event.issue.number == 570 &&
       (github.event.comment.author_association == 'OWNER' ||
       github.event.comment.author_association == 'MEMBER' ||
       github.event.comment.author_association == 'CONTRIBUTOR' ||

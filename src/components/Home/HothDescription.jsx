@@ -82,7 +82,7 @@ export default function HothDescription() {
 						className='hack-website-link'
 						href='https://hack.uclaacm.com/'
 						target='_blank'
-						rel='noreferrer'
+						rel='noopener noreferrer'
 					>
 						website
 					</a>

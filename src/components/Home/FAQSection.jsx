@@ -19,7 +19,7 @@ const faqs = [
 				A hackathon is an event during which people from different backgrounds
 				come together to create a project from start to finish in a limited time
 				frame. Check out some examples from last year's HOTH{' '}
-				<Link target="_blank" to={projectGalleryLink}>here</Link>!
+				<Link target="_blank" rel="noopener noreferrer" to={projectGalleryLink}>here</Link>!
 			</>
 		),
 	},
@@ -92,7 +92,7 @@ const faqs = [
 				We would love to have you as a mentor to answer participants' technical
 				questions and help them with their projects. If you are interested, send
 				us an email at <Link to={`mailto:${email}`}>{email}</Link> or DM us on
-				our <Link target="_blank" to={discordLink}>Discord server</Link>!
+				our <Link target="_blank" rel="noopener noreferrer" to={discordLink}>Discord server</Link>!
 			</>
 		),
 	},
@@ -100,7 +100,7 @@ const faqs = [
 		question: `Where can I get updates on HOTH ${hothNum} and learn more about what ACM Hack is doing?`,
 		answer: (
 			<>
-				Come join us on our <Link target="_blank" to={discordLink}>Discord server</Link>. We'd
+				Come join us on our <Link target="_blank" rel="noopener noreferrer" to={discordLink}>Discord server</Link>. We'd
 				love to have you!
 			</>
 		),

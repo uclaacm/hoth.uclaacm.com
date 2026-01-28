@@ -68,11 +68,11 @@ export default function Navbar() {
 						HOME
 					</Link>
 				</li>
-				{/* <li>
+				<li>
 					<Link to='/announcements' onClick={closeMenu}>
 						ANNOUNCEMENTS
 					</Link>
-				</li> */}
+				</li>
 				<li>
 					<Link to='/schedule' onClick={closeMenu}>
 						SCHEDULE
@@ -103,7 +103,7 @@ export default function Navbar() {
 						href='https://tinyurl.com/HOTH-XIII'
 						className={applyButtonClassName}
 						target='_blank'
-						rel='noreferrer'
+						rel='noopener noreferrer'
 					>
 						APPLY
 					</a>
