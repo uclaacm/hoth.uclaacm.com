@@ -9,12 +9,15 @@
 }
 
 .popup-content {
-    background: #f7f7f7;
+    background: var(--bgWhite);
     padding: 1.5rem;
     border: 1px solid lightgray;
     border-radius: 1rem;
     margin-left: 2rem;
     max-width: 16rem;
+
+    max-height: 450px;
+    overflow-y: auto;
 }
 
 .dark .popup-content {
@@ -24,7 +27,7 @@
 
 .speaker-icon {
     position: absolute;
-    background-color: yellow;
+    background-color: var(--lightPurple);
     top: -3.4rem;
     right: 0rem;
     width: 50px;
@@ -41,7 +44,7 @@
 }
 
 .speaker-icon:hover {
-    background-color: #FFFFC5;
+    background-color: var(--hackSecondaryV1);
 }
 
 .popup-label {
@@ -70,3 +73,9 @@
 .dark .close {
     color: white;
 }
+
+@media (max-width: 700px) {
+    .announcement-popup {
+      display: none;
+    }
+  }
