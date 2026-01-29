@@ -53,7 +53,7 @@ export default function Announcements() {
 				) : (
 					<div>
 						<p>
-							HOTH XII will take place later this quarter, and our team is
+							HOTH XIII will take place later this quarter, and our team is
 							working hard to organize a fantastic hackathon for you all!
 						</p>
 						<p>Announcements will be posted soon! Stay tuned!</p>

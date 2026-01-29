@@ -14,7 +14,7 @@ user_whitelist = ['jamesmwu', 'danielhzhou', 'Nishant-Ray', 'ariyin', 'maxakiral
 # HOTH repository issues accessed via Github API
 repo_issues = "https://api.github.com/repos/uclaacm/hoth.uclaacm.com/issues"
 
-issue_num = '469'
+issue_num = '570'
 
 url = repo_issues + '/' + issue_num + '/' + 'comments'
 

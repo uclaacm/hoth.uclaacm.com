@@ -31,7 +31,7 @@ export default function Winner({ year, appName, description, category, image, li
                 <p className='winner-category'>{category}</p>
                 <p className='winner-description'>{description}</p>
                 <button className='winner-button'>
-                    <a href={link} target='_blank' rel='noreferrer'>See Project</a>
+                    <a href={link} target='_blank' rel='noopener noreferrer'>See Project</a>
                 </button>
             </div>
         </div>

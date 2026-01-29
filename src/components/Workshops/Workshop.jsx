@@ -11,14 +11,14 @@ export default function Workshop({ title, youtube, author, description, readme, 
     
     const README =  readme ?
                     <button className='workshop-button'>
-                        <a className='workshop-link' href={readme} target='_blank' rel='noreferrer'>
+                        <a className='workshop-link' href={readme} target='_blank' rel='noopener noreferrer'>
                             <Github size={28} />
                         </a>
                     </button> : null;
 
     const SLIDES =  slides ? 
                     <button className='workshop-button'>
-                        <a className='workshop-link' href={slides} target='_blank' rel='noreferrer'>
+                        <a className='workshop-link' href={slides} target='_blank' rel='noopener noreferrer'>
                             <Monitor size={28} />
                         </a>
                     </button> : null;
@@ -66,7 +66,7 @@ export default function Workshop({ title, youtube, author, description, readme, 
             </hgroup>
             <div className='workshop-links'>
                 <button className='workshop-button'>
-                    <a className='workshop-link' href={youtube} target='_blank' rel='noreferrer'>
+                    <a className='workshop-link' href={youtube} target='_blank' rel='noopener noreferrer'>
                         <Youtube size={28} />
                     </a>
                 </button>

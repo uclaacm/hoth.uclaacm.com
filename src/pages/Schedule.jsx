@@ -47,10 +47,10 @@ export default function Schedule() {
 			<h1 className='schedule-title'>Schedule</h1>
 			<div className='events-container'>
 				<p>
-					HOTH XII will take place later this quarter, and our team is working
+					HOTH XIII will take place later this quarter, and our team is working
 					hard to organize a fantastic hackathon for you all!{' '}
 				</p>
-				<p>The schedule for HOTH XII will be coming out soon. Stay tuned!</p>
+				<p>The schedule for HOTH XIII will be coming out soon. Stay tuned!</p>
 			</div>
 		</div>
 	);
