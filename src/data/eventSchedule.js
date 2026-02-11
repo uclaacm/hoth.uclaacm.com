@@ -2,7 +2,7 @@ const getDateObj = (day, time) => new Date(`2025-03-${day}T${time}`);
 
 export const eventSchedule = [
 	{
-		startTime: getDateObj('02', '08:10:00'),
+		startTime: getDateObj('01', '08:10:00'),
 		events: [
 			{
 				name: 'Check In',
@@ -14,7 +14,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('02', '08:30:00'),
+		startTime: getDateObj('01', '08:30:00'),
 		events: [
 			{
 				name: 'Opening Ceremony',
@@ -26,7 +26,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('02', '09:00:00'),
+		startTime: getDateObj('01', '09:00:00'),
 		events: [
 			{
 				name: 'Breakfast & Team Formation-- Hacking Begins!',
@@ -38,7 +38,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('02', '09:30:00'),
+		startTime: getDateObj('01', '09:30:00'),
 		events: [
 			{
 				name: 'Intern Q&A Session',
@@ -50,7 +50,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('02', '12:30:00'),
+		startTime: getDateObj('01', '12:30:00'),
 		events: [
 			{
 				name: 'Lunch Break',
@@ -62,7 +62,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('02', '18:00:00'),
+		startTime: getDateObj('01', '18:00:00'),
 		events: [
 			{
 				name: 'Dinner',
@@ -74,7 +74,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('02', '21:00:00'),
+		startTime: getDateObj('01', '21:00:00'),
 		events: [
 			{
 				name: 'Judging Begins',
@@ -86,7 +86,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('02', '22:00:00'),
+		startTime: getDateObj('01', '22:00:00'),
 		events: [
 			{
 				name: 'Closing Ceremony',

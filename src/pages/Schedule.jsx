@@ -12,6 +12,7 @@ const formatTime = date => {
 		minute: '2-digit',
 		hour12: true,
 		timeZoneName: 'short',
+		timeZone: 'America/Los_Angeles',
 	};
 	return date.toLocaleString('en-US', options);
 };
