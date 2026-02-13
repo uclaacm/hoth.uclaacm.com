@@ -1,8 +1,14 @@
-const getDateObj = (day, time) => new Date(`2025-03-${day}T${time}`);
+function getPacificDateObj(time) {
+	const year = '2026';
+	const month = '03';
+	const day = '01';
+	const iso = `${year}-${month}-${day}T${time}-08:00`; // Add PST offset
+	return new Date(iso);
+}
 
 export const eventSchedule = [
 	{
-		startTime: getDateObj('01', '08:10:00'),
+		startTime: getPacificDateObj('08:10:00'),
 		events: [
 			{
 				name: 'Check In',
@@ -14,7 +20,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('01', '08:30:00'),
+		startTime: getPacificDateObj('08:30:00'),
 		events: [
 			{
 				name: 'Opening Ceremony',
@@ -26,7 +32,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('01', '09:00:00'),
+		startTime: getPacificDateObj('09:00:00'),
 		events: [
 			{
 				name: 'Breakfast & Team Formation-- Hacking Begins!',
@@ -38,7 +44,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('01', '09:30:00'),
+		startTime: getPacificDateObj('09:30:00'),
 		events: [
 			{
 				name: 'Intern Q&A Session',
@@ -50,7 +56,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('01', '12:30:00'),
+		startTime: getPacificDateObj('12:30:00'),
 		events: [
 			{
 				name: 'Lunch Break',
@@ -62,7 +68,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('01', '18:00:00'),
+		startTime: getPacificDateObj('18:00:00'),
 		events: [
 			{
 				name: 'Dinner',
@@ -74,7 +80,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('01', '21:00:00'),
+		startTime: getPacificDateObj('21:00:00'),
 		events: [
 			{
 				name: 'Judging Begins',
@@ -86,7 +92,7 @@ export const eventSchedule = [
 		],
 	},
 	{
-		startTime: getDateObj('01', '22:00:00'),
+		startTime: getPacificDateObj('22:00:00'),
 		events: [
 			{
 				name: 'Closing Ceremony',
