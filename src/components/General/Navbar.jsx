@@ -83,11 +83,11 @@ export default function Navbar() {
 						WORKSHOPS
 					</Link>
 				</li> */}
-				{/* <li>
+				<li>
 					<Link to='/prizes' onClick={closeMenu}>
 						PRIZES
 					</Link>
-				</li> */}
+				</li>
 				<li>
 					<Link to='/gallery' onClick={closeMenu}>
 						GALLERY

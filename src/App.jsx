@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Announcements from './pages/Announcements';
 import Schedule from './pages/Schedule';
 // import Workshops from './pages/Workshops';
-// import Prizes from './pages/Prizes';
+import Prizes from './pages/Prizes';
 import Gallery from './pages/Gallery';
 import NotFound from './pages/NotFound';
 import Footer from './components/General/Footer';
@@ -23,7 +23,7 @@ function App() {
 				<Route path='/announcements' element={<Announcements />} />
 				<Route path='/schedule' element={<Schedule />} />
 				{/* <Route path='/workshops' element={<Workshops />} /> */}
-				{/* <Route path='/prizes' element={<Prizes />} /> */}
+				<Route path='/prizes' element={<Prizes />} />
 				<Route path='/gallery' element={<Gallery />} />
 				<Route path = '*' element = {<NotFound/>} />
 			</Routes>
