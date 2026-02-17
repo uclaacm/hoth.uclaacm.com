@@ -4,10 +4,14 @@ import '../styles/Prizes.css';
 import prizeData from '../data/PrizeData';
 import squiggle from '../images/prizes/squiggle.svg';
 import overallIcon from '../images/prizes/overall.png';
-import webIcon from '../images/prizes/web.png';
-import mobileIcon from '../images/prizes/mobile.png';
+import firstIcon from '../images/prizes/1.png';
+import secondIcon from '../images/prizes/2.png';
+import thirdIcon from '../images/prizes/3.png';
+import aiIcon from '../images/prizes/ai.png';
+// import webIcon from '../images/prizes/web.png';
+// import mobileIcon from '../images/prizes/mobile.png';
 // import gameIcon from '../images/prizes/game.png';
-import ieIcon from '../images/prizes/ie.png';
+import storytellingIcon from '../images/prizes/storytelling.png';
 import begIcon from '../images/prizes/beg.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
@@ -16,10 +20,11 @@ export default function Prizes() {
 
 	const getPrizeIcon = name => {
 		const iconMap = {
-			'Best Overall': overallIcon,
-			'Best Web': webIcon,
-			'Best Mobile': mobileIcon,
-			'Best in Tech for Kindness': ieIcon,
+			'1st Place Overall': firstIcon,
+			'2nd Place Overall': secondIcon,
+			'3rd Place Overall': thirdIcon,
+			'Best AI': aiIcon,
+			'Best in Storytelling': storytellingIcon,
 			'Best Beginner': begIcon,
 		};
 		return iconMap[name] || overallIcon;
