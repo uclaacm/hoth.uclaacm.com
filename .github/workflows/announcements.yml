@@ -6,7 +6,7 @@ jobs:
     name: Update Announcements
     if: |
       !github.event.issue.pull_request &&
-      github.event.issue.number == 469 &&
+      github.event.issue.number == 570 &&
       (github.event.comment.author_association == 'OWNER' ||
       github.event.comment.author_association == 'MEMBER' ||
       github.event.comment.author_association == 'CONTRIBUTOR' ||
@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         name: configure pip caching
         with:
           path: ~/.cache/pip

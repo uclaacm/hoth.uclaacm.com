@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu } from '@geist-ui/icons';
 import DarkModeToggle from '../General/DarkModeToggle';
 import '../../styles/Navbar.css';
-import HackLogo from '../../images/hothXII-logo.png';
+import HackLogo from '../../images/hothXIII-logo.png';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function Navbar() {
@@ -73,17 +73,16 @@ export default function Navbar() {
 						ANNOUNCEMENTS
 					</Link>
 				</li>
-
 				<li>
 					<Link to='/schedule' onClick={closeMenu}>
 						SCHEDULE
 					</Link>
 				</li>
-				<li>
+				{/* <li>
 					<Link to='/workshops' onClick={closeMenu}>
 						WORKSHOPS
 					</Link>
-				</li>
+				</li> */}
 				<li>
 					<Link to='/prizes' onClick={closeMenu}>
 						PRIZES
@@ -101,10 +100,10 @@ export default function Navbar() {
 				)}
 				<li>
 					<a
-						href='https://forms.gle/HbxpV3dDnVExy1F3A'
+						href='https://tinyurl.com/HOTH-XIII'
 						className={applyButtonClassName}
 						target='_blank'
-						rel='noreferrer'
+						rel='noopener noreferrer'
 					>
 						APPLY
 					</a>

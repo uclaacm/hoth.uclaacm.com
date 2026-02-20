@@ -13,14 +13,14 @@ provide technical support and help beginners get started on their projects.
 
 This website is developed by ACM Hack’s Dev Team:
 
-- James Wu [(@jamesmwu)](https://github.com/jamesmwu)
+- Max Lee [(@maxywaxyy)](https://github.com/maxywaxyy)
+- Nishant Ray [(@Nishant-Ray)](https://github.com/Nishant-Ray)
 - Arnav Roy [(@aroy23)](https://github.com/aroy23)
 - Daniel Zhou [(@danielhzhou)](https://github.com/danielhzhou)
 - Hannah Kendall [(@hannahkendall04)](https://github.com/hannahkendall04)
 - Jaewook Cho [(@dcho-jaewook)](https://github.com/dcho-jaewook)
 - Jenna Wang [(@ariyin)](https://github.com/ariyin)
 - Kayla Hamakawa [(@kaylahama)](https://github.com/kaylahama)
-- Nishant Ray [(@Nishant-Ray)](https://github.com/Nishant-Ray)
 
 Past contributors:
 
@@ -34,6 +34,7 @@ Past contributors:
 - Eric Yang [(@eric8yang)](https://github.com/eric8yang)
 - Galen Wong [(@GalenWong)](https://github.com/GalenWong)
 - Jakob Reinwald [(@jakobreinwald)](https://github.com/jakobreinwald)
+- James Wu [(@jamesmwu)](https://github.com/jamesmwu)
 - Jamie Liu [(@jamieliu386)](https://github.com/jamieliu386/)
 - Jody Lin [(@jodymlin)](https://github.com/jodymlin)
 - Jonathan Si [(@jsi19)](https://github.com/jsi19)
@@ -41,7 +42,6 @@ Past contributors:
 - Kaylin Chung [(@kaylin-chung)](https://github.com/kaylin-chung)
 - Lillian Gonick [(@lilliangonick)](https://github.com/lilliangonick)
 - Maggie Li [(@maggieelli)](https://github.com/maggieelli)
-- Max Lee [(@maxywaxyy)](https://github.com/maxywaxyy)
 - Miles Wu [(@milesswu)](https://github.com/milesswu)
 - Nathan Zhang [(@nathanzzhang)](https://github.com/nathanzzhang)
 - Samuel Perrott [(@sperrott22)](https://github.com/sperrott22)
@@ -62,7 +62,7 @@ do!
 You’ll need:
 
 - [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en/) – we are currently using v20.
+- [Node.js](https://nodejs.org/en/) – we are currently using v20.
 
 ### Running the Project
 
@@ -127,8 +127,7 @@ Images for the Winners Carousel are located in the `src\images\gallery-carousel`
 
 
 <!-- TODO: Rewrite this maintenance section after we've finished all the long-term infrastructure changes needed for HOTH XII. -->
-<!-- # Maintenance -->
-<!--
+# Maintenance
 
 ### Homepage Carousel
 
@@ -136,13 +135,11 @@ Photos for the homepage carousel are stored in the following directory: `src/ima
 
 ### Announcements
 
-Announcements are implemented the Announcements page and via a Github Actions script that pulls data from the `HOTH Announcements Data` issue on the HOTH website's Github page. Each comment serving as its own separate announcement. Every time a new comment is added on this issue, the Github Actions script re-scrapes the data from the issue and publishes it onto the Announcements Page with the new comment included.
+Announcements are implemented the Announcements page and via a Github Actions script that pulls data from the `=== ADD ANNOUNCEMENT (HOTH XIII)===` issue [`#570`](https://github.com/uclaacm/hoth.uclaacm.com/issues/570) on the HOTH website's GitHub page. Each comment serves as its own separate announcement. Every time a new comment is added on this issue, the Github Actions script rescrapes the data from the issue and publishes it onto the Announcements Page with the new comment included. Announcements ONLY reset if a new comment is added to the issue, or if `public/announcements.json` is directly modified.
 
-Therefore, announcements can be added to the announcements page by adding a comment to this issue in the following format: `${Subject}(Subject)${Body}`.
+Therefore, announcements can be added to the announcements page by adding a comment to this issue in the following format: `${Announcement Title} (Subject) ${Announcement Body}`. For example, a comment only containing `My Amazing Title (Subject) My amazing announcement's body` would create an announcement with the title `My Amazing Title` and body `My amazing announcement's body`.
 
-To enumerate, comments/announcements should have the subject/title of the announcement, followed by `(Subject)`, followed by the body/description of the announcement.
-
-### Prizes
+<!-- ### Prizes
 
 The Prize Page is implemented in the files `src/components/PrizePage/Prizes.js` and `src/components/PrizePage/PrizeHeader.js`. In the `Prizes.js` file, we can see a constant that defines how prizes are implemented:
 
@@ -154,9 +151,10 @@ const allPrizes = [
 		prize: '$240 Amazon Gift Card',
 		caption: '1 Echo Studio'
 	},
+	...
 ```
 
-Prizes can be added to the Prize Page by adding the new prize with the following format. As for the `img` section of `allPrizes`, this defines the name of both the prize icon and prize image, which are held in the `src/images/prize-icons` and `src/images/prize-images` folders, respectively. When adding the prize, make sure to add the icon and image to these folders, each image with the same filename you used for the `img` section of `allPrizes`.
+Prizes can be added to the Prize Page by adding the new prize with the following format. As for the `img` section of `allPrizes`, this defines the name of both the prize icon and prize image, which are held in the `src/images/prize-icons` and `src/images/prize-images` folders, respectively. When adding the prize, make sure to add the icon and image to these folders, each image with the same filename you used for the `img` section of `allPrizes`. -->
 
 ### FAQ
 
@@ -179,7 +177,7 @@ FAQs can be added to the FAQ section by adding the new question and answer to th
 
 ### Schedule
 
-The implementation of the Schedule Page is within `src/components/SchedulePage`. All of the information for the actual schedule is displayed in `src/data/eventSchedule.js`, in the constant `eventSchedule`. In this constant, events are defined as follows:
+The implementation of the Schedule Page is within `src/pages/Schedule.jsx`. All of the information for the actual schedule is displayed in `src/data/eventSchedule.js`, in the constant `eventSchedule`. In this constant, events are defined as follows:
 
 ```
 	{
@@ -197,7 +195,7 @@ The implementation of the Schedule Page is within `src/components/SchedulePage`.
 	},
 ```
 
-Portions of the schedule are denoted via their start time (a date object with the day number of the month and time specified), with each json element having its own start time. Add events to the schedule using this format, making sure to order them by time. Notice that the `events` prop of each json element is an array, meaning that multiple events can be part of the same start time. Just add a comma to that element's last event and another set of brackets corresponding with the next event. Make sure to add each event's `name`, `duration`, `location`, and `description`.
+Portions of the schedule are denoted via their start time (a date object with the day number of the month and time specified), with each element having its own start time. Add events to the schedule using this format, making sure to order them by time. Notice that the `events` prop of each json element is an array, meaning that multiple events can be part of the same start time. Just add a comma to that element's last event and another set of brackets corresponding with the next event. Make sure to add each event's `name`, `duration`, `location`, and `description`.
 
 ### Workshop Page
 
@@ -222,4 +220,4 @@ The workshop page is implemented in `src/components/WorkshopPage`, and the works
 	},
 ```
 
-Each workshop type has an `elements` array with all of its workshops. In order to add workshops to the page, just add the workshops to an existing type's elements array under the given format or add a new workshop type and add the workshop to that type's new elements array. -->
+Each workshop type has an `elements` array with all of its workshops. In order to add workshops to the page, just add the workshops to an existing type's elements array under the given format or add a new workshop type and add the workshop to that type's new elements array.

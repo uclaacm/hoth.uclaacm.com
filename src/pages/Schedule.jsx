@@ -3,7 +3,6 @@ import useTitle from '../components/General/useTitle';
 import eventSchedule from '../data/eventSchedule';
 import '../styles/Schedule.css';
 import { FaRegClock } from 'react-icons/fa';
-import '../styles/Announcements.css';
 
 const formatTime = date => {
 	const options = {
@@ -13,6 +12,7 @@ const formatTime = date => {
 		minute: '2-digit',
 		hour12: true,
 		timeZoneName: 'short',
+		timeZone: 'America/Los_Angeles',
 	};
 	return date.toLocaleString('en-US', options);
 };
@@ -44,14 +44,14 @@ export default function Schedule() {
 			))}
 		</div>
 	) : (
-		<div id='announcements'>
-			<h1 className='announcements-title'>Schedule</h1>
-			<div className='announcements-container'>
+		<div id='schedule'>
+			<h1 className='schedule-title'>Schedule</h1>
+			<div className='events-container'>
 				<p>
-					HOTH XII will take place later this quarter, and our team is working
+					HOTH XIII will take place later this quarter, and our team is working
 					hard to organize a fantastic hackathon for you all!{' '}
 				</p>
-				<p>The schedule for HOTH XII will be coming out soon. Stay tuned!</p>
+				<p>The schedule for HOTH XIII will be coming out soon. Stay tuned!</p>
 			</div>
 		</div>
 	);

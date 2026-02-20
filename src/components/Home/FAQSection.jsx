@@ -3,13 +3,13 @@ import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
 import { Link } from 'react-router-dom';
 import '../../styles/FAQSection.css';
 
-const hothNum = 'XII';
-const appDeadline = 'Monday, February 26, 2024';
-const hothDate = 'Sunday, March 3, 2024';
-const hothLocation = 'Carnesale Commons, Palisades Room';
+const hothNum = 'XIII';
+const hothDate = 'Sunday, March 1, 2026';
+const hothLocation = 'Palisades Room, Carnesale Commons';
+const appDeadline = 'Thursday, February 27, 2026';
 const discordLink = 'https://discord.gg/MStu2cnBV9';
 const email = 'hack@uclaacm.com';
-const projectGalleryLink = 'https://hothx.devpost.com/project-gallery';
+const projectGalleryLink = 'https://ucla-hack-on-the-hill-xii.devpost.com/';
 
 const faqs = [
 	{
@@ -19,7 +19,7 @@ const faqs = [
 				A hackathon is an event during which people from different backgrounds
 				come together to create a project from start to finish in a limited time
 				frame. Check out some examples from last year's HOTH{' '}
-				<Link to={projectGalleryLink}>here</Link>!
+				<Link target="_blank" rel="noopener noreferrer" to={projectGalleryLink}>here</Link>!
 			</>
 		),
 	},
@@ -27,9 +27,7 @@ const faqs = [
 		question: 'Who can join?',
 		answer: (
 			<>
-				Applications for HOTH {hothNum} are open to anyone! However, we are
-				prioritizing UCLA students for our prize tracks as well as in-person
-				hacking.
+				Applications for HOTH {hothNum} are ONLY open to UCLA students!
 			</>
 		),
 	},
@@ -70,8 +68,8 @@ const faqs = [
 		question: 'How do I sign up?',
 		answer: (
 			<>
-				Hit the apply button above and fill out the application! A few days
-				before the event, you'll be emailed a confirmation form along with
+				Hit the apply button at the top of the page and fill our quick application! A few days
+				before the event, you'll be emailed a confirmation along with
 				appropriate links and additional event information. Applications close
 				on {appDeadline} at 11:59 pm PST.
 			</>
@@ -94,7 +92,7 @@ const faqs = [
 				We would love to have you as a mentor to answer participants' technical
 				questions and help them with their projects. If you are interested, send
 				us an email at <Link to={`mailto:${email}`}>{email}</Link> or DM us on
-				our <Link to={discordLink}>Discord server</Link>!
+				our <Link target="_blank" rel="noopener noreferrer" to={discordLink}>Discord server</Link>!
 			</>
 		),
 	},
@@ -102,7 +100,7 @@ const faqs = [
 		question: `Where can I get updates on HOTH ${hothNum} and learn more about what ACM Hack is doing?`,
 		answer: (
 			<>
-				Come join us on our <Link to={discordLink}>Discord server</Link>. We'd
+				Come join us on our <Link target="_blank" rel="noopener noreferrer" to={discordLink}>Discord server</Link>. We'd
 				love to have you!
 			</>
 		),
@@ -123,10 +121,21 @@ const AccordionItem = ({ header, ...rest }) => (
 		header={
 			<>
 				{header}
-				<svg className='chevron' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+				<svg
+					className='chevron'
+					xmlns='http://www.w3.org/2000/svg'
+					width='24'
+					height='24'
+					viewBox='0 0 24 24'
+					strokeWidth='2'
+					stroke='currentColor'
+					fill='none'
+					strokeLinecap='round'
+					strokeLinejoin='round'
+				>
 					<title>Expand/Collapse</title>
-					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-					<polyline points="6 9 12 15 18 9" />
+					<path stroke='none' d='M0 0h24v24H0z' fill='none' />
+					<polyline points='6 9 12 15 18 9' />
 				</svg>
 			</>
 		}

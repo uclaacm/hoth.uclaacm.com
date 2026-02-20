@@ -1,28 +1,28 @@
 const prizeData = [
-{
-    name: 'Best Overall',
-    amount: '$150 Amazon Gift Card'
-},
-{
-    name: 'Best Web',
-    amount: '$80 Amazon Gift Card'
-},
-{
-    name: 'Best Mobile',
-    amount: '$80 Amazon Gift Card'
-},
-{
-    name: 'Best Game',
-    amount: '$80 Amazon Gift Card'
-},
-{
-    name: 'Best in Intersectional Environmentalism',
-    amount: '2 Camping Hammocks and 2 Wireless Charging Pads'
-},
-{
-    name: 'Best Beginner',
-    amount: '4 Wireless 3-in-1 Charging Stations'
-}
-]
+	{
+		name: '1st Place Overall',
+		amount: '$300 Amazon Gift Card',
+	},
+	{
+		name: '2nd Place Overall',
+		amount: '$200 Amazon Gift Card',
+	},
+	{
+		name: '3rd Place Overall',
+		amount: '$100 Amazon Gift Card',
+	},
+	{
+		name: 'Best AI',
+		amount: '$250 Amazon Gift Card',
+	},
+	{
+		name: 'Best in Storytelling',
+		amount: '$150 Amazon Gift Card',
+	},
+	{
+		name: 'Best Beginner',
+		amount: '$150 Amazon Gift Card',
+	},
+];
 
 export default prizeData;
