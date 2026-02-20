@@ -629,7 +629,7 @@ export default function Winners({ year }) {
 			allPosts = 'https://ucla-hack-on-the-hill-xii.devpost.com/project-gallery';
 			break;
 		} case ('XI'): {
-			allPosts = "https://hoth-xi.devpost.com/project-gallery";
+			allPosts = 'https://hoth-xi.devpost.com/project-gallery';
 			break; 
 		} case('1'): {
 			allPosts = 'https://hoth.devpost.com/project-gallery';
