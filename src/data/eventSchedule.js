@@ -38,7 +38,7 @@ export const eventSchedule = [
 				name: 'Hacking Begins / Breakfast Served / Team Formation / Common Experience Room',
 				location: 'Palisades Room, Carnesale Commons',
 				description:
-					"Hacking officially begins! Enjoy breakfast, form a team if you don't already have one, settle into the CE Room for a quick break, and start working on your projects!",
+					"Hacking officially begins! Enjoy breakfast, form a team if you don't already have one, settle into the Common Experience breakoom for a quick break, and start working on your projects!",
 			},
 		],
 	},
@@ -72,7 +72,7 @@ export const eventSchedule = [
 				name: 'Alumni SWE Fireside Chat',
 				location: 'Palisades Room, Carnesale Commons',
 				description:
-					'Hear from alumni software engineers about their career journeys and advice for aspiring developers.',
+					'Hear from ACM Hack alumni software engineers about their career journeys and advice for aspiring developers.',
 			},
 		],
 	},
