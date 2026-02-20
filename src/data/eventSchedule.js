@@ -8,11 +8,11 @@ function getPacificDateObj(time) {
 
 export const eventSchedule = [
 	{
-		startTime: getPacificDateObj('08:10:00'),
+		startTime: getPacificDateObj('08:00:00'),
 		events: [
 			{
 				name: 'Check In',
-				duration: '1 hour',
+				duration: '30 min',
 				location: 'Palisades Room, Carnesale Commons',
 				description:
 					'Come check in with the organizers and get settled before the opening ceremony!',
@@ -35,23 +35,22 @@ export const eventSchedule = [
 		startTime: getPacificDateObj('09:00:00'),
 		events: [
 			{
-				name: 'Breakfast & Team Formation-- Hacking Begins!',
-				duration: '1 hour',
+				name: 'Hacking Begins / Breakfast Served / Team Formation / Common Experience Room',
 				location: 'Palisades Room, Carnesale Commons',
 				description:
-					"Enjoy a hearty breakfast and form a team if you don't already have one! Teams settle in and start working on their projects.",
+					"Hacking officially begins! Enjoy breakfast, form a team if you don't already have one, settle into the Common Experience breakoom for a quick break, and start working on your projects!",
 			},
 		],
 	},
 	{
-		startTime: getPacificDateObj('09:30:00'),
+		startTime: getPacificDateObj('10:00:00'),
 		events: [
 			{
-				name: 'Intern Q&A Session',
-				duration: '1 hour',
+				name: 'Oracle Workshop',
+				duration: '30 min',
 				location: 'Palisades Room, Carnesale Commons',
 				description:
-					'Interested in being a part of the team that puts together HOTH and many other events? Ask current Hack interns about their experience!',
+					'Join Oracle for a workshop to learn about their technologies and tools!',
 			},
 		],
 	},
@@ -59,8 +58,7 @@ export const eventSchedule = [
 		startTime: getPacificDateObj('12:30:00'),
 		events: [
 			{
-				name: 'Lunch Break',
-				duration: '1 hour',
+				name: 'Lunch Served',
 				location: 'Palisades Room, Carnesale Commons',
 				description:
 					'Enjoy lunch while chatting with fellow hackers and mentors.',
@@ -68,11 +66,43 @@ export const eventSchedule = [
 		],
 	},
 	{
+		startTime: getPacificDateObj('13:00:00'),
+		events: [
+			{
+				name: 'Alumni SWE Fireside Chat',
+				location: 'Palisades Room, Carnesale Commons',
+				description:
+					'Hear from ACM Hack alumni software engineers about their career journeys and advice for aspiring developers.',
+			},
+		],
+	},
+	{
+		startTime: getPacificDateObj('14:30:00'),
+		events: [
+			{
+				name: 'Learn About Vanta',
+				location: 'Palisades Room, Carnesale Commons',
+				description:
+					'Learn about Vanta and what they do!',
+			},
+		],
+	},
+	{
+		startTime: getPacificDateObj('17:00:00'),
+		events: [
+			{
+				name: 'Poker',
+				location: 'Palisades Room, Carnesale Commons',
+				description:
+					'Take a break from hacking and enjoy a round of poker with fellow hackers!',
+			},
+		],
+	},
+	{
 		startTime: getPacificDateObj('18:00:00'),
 		events: [
 			{
-				name: 'Dinner',
-				duration: '1 hour',
+				name: 'Dinner Served',
 				location: 'Palisades Room, Carnesale Commons',
 				description:
 					'Refuel and mingle with other teams before the final hacking push.',
@@ -83,8 +113,7 @@ export const eventSchedule = [
 		startTime: getPacificDateObj('21:00:00'),
 		events: [
 			{
-				name: 'Judging Begins',
-				duration: '45 min',
+				name: 'Hacking Ends / Judging Begins',
 				location: 'Palisades Room, Carnesale Commons',
 				description:
 					'Projects are due and will be reviewed by our judges. Good luck!',
