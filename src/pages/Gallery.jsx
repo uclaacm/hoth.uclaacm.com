@@ -10,7 +10,7 @@ import '@szhsin/react-menu/dist/transitions/zoom.css';
 export default function Gallery() {
 	useTitle(' | Gallery');
 
-	const [year, setYear] = useState('XI');
+	const [year, setYear] = useState('XII');
 
 	const Container = ({ children }) => (
 		<section className='section-container'>
@@ -33,6 +33,9 @@ export default function Gallery() {
 					position='auto'
 					menuClassName='past-winners-menu'
 				>
+					<MenuItem className='menu-item' value='XII'>
+						HOTH XII
+					</MenuItem>
 					<MenuItem className='menu-item' value='XI'>
 						HOTH XI
 					</MenuItem>

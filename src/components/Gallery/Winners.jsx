@@ -3,6 +3,49 @@ import '../../styles/Gallery.css';
 import Winner from './Winner';
 
 export default function Winners({ year }) {
+	const hothXII = [
+        {
+            year: 'XII',
+            appName: 'ActiveReader',
+            description: 'Tool that helps read actively and better comprehend the text through word omitting, auto AI quizzes, summary validation, and an AI chat specific to your material.',
+            category: 'Best Overall',
+            image: 'activereader',
+            link: 'https://devpost.com/software/activereader'
+        },
+		{
+            year: 'XII',
+            appName: 'Hot Takes, Your Live Debate Forum',
+            description: 'Defeat others in real-time online debates on today’s most pressing topics.',
+            category: 'Best Web',
+            image: 'hottakes',
+            link: 'https://devpost.com/software/hot-takes-your-live-debate-forum'
+        },
+		{
+            year: 'XII',
+            appName: 'LiterAlly',
+            description: 'Ever stood by the trash cans with no idea where your trash should go? LitterAlly is a mobile app where you can take a picture of your trash and automatically identify which bin to put your trash!',
+            category: 'Best Mobile',
+            image: 'literally',
+            link: 'https://devpost.com/software/litterally'
+        },
+		{
+            year: 'XII',
+            appName: 'TimeCapsule',
+            description: 'With nearly 322 million people being affected by depression worldwide, it is important to recognise the need for empathy, bridging social divides, and combating loneliness. Which brings : TimeCapsule',
+            category: 'Best in Tech for Kindness',
+            image: 'timecapsule',
+            link: 'https://devpost.com/software/timecapsule-ku48ml'
+        },
+		{
+            year: 'XII',
+            appName: 'Sleuth',
+            description: 'Sleuth is a personalized, machine-learning powered platform that matches Bruins to clubs and organizations based on their interests and goals.',
+            category: 'Best Beginner',
+            image: 'sleuth',
+            link: 'https://devpost.com/software/sleuth-xgr8sj'
+        },
+	]
+
     const hothXI = [
         {
             year: 'XI',
@@ -565,6 +608,7 @@ export default function Winners({ year }) {
 	];
 
     const winners = {
+		'XII': hothXII,
         'XI': hothXI,
         'X': hothX,
         '9': hoth9,
@@ -578,7 +622,23 @@ export default function Winners({ year }) {
         '1': hoth1
     }
 
-	const allPosts = (year.length == 1)?(year !== '1' ? `https://hoth${year}.devpost.com/project-gallery` : 'https://hoth.devpost.com/project-gallery'):`https://hoth-${year}.devpost.com/project-gallery`;
+    let allPosts;
+
+	switch(year) {
+		case ('XII'): {
+			allPosts = 'https://ucla-hack-on-the-hill-xii.devpost.com/project-gallery';
+			break;
+		} case ('XI'): {
+			allPosts = 'https://hoth-xi.devpost.com/project-gallery';
+			break; 
+		} case('1'): {
+			allPosts = 'https://hoth.devpost.com/project-gallery';
+			break;
+		} default: {
+			allPosts = `https://hoth${year}.devpost.com/project-gallery`;
+		}
+
+	}
 
 	return (
 		<div className='outer-winners-container'>
