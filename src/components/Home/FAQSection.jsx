@@ -6,7 +6,7 @@ import '../../styles/FAQSection.css';
 const hothNum = 'XIII';
 const hothDate = 'Sunday, March 1, 2026';
 const hothLocation = 'Palisades Room, Carnesale Commons';
-const appDeadline = 'Thursday, February 27, 2026';
+const appDeadline = 'Thursday, February 26, 2026';
 const discordLink = 'https://discord.gg/MStu2cnBV9';
 const email = 'hack@uclaacm.com';
 const projectGalleryLink = 'https://ucla-hack-on-the-hill-xii.devpost.com/';
