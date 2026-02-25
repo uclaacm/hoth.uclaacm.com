@@ -65,32 +65,27 @@ export default function Navbar() {
 			<ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
 				<li>
 					<Link to='/' onClick={closeMenu}>
-						HOME
+						Home
 					</Link>
 				</li>
 				<li>
 					<Link to='/announcements' onClick={closeMenu}>
-						ANNOUNCEMENTS
+						Announcements
 					</Link>
 				</li>
 				<li>
 					<Link to='/schedule' onClick={closeMenu}>
-						SCHEDULE
+						Schedule
 					</Link>
 				</li>
-				{/* <li>
-					<Link to='/workshops' onClick={closeMenu}>
-						WORKSHOPS
-					</Link>
-				</li> */}
 				<li>
 					<Link to='/prizes' onClick={closeMenu}>
-						PRIZES
+						Prizes
 					</Link>
 				</li>
 				<li>
 					<Link to='/gallery' onClick={closeMenu}>
-						GALLERY
+						Gallery
 					</Link>
 				</li>
 				{!isMobile && (
@@ -105,7 +100,7 @@ export default function Navbar() {
 						target='_blank'
 						rel='noopener noreferrer'
 					>
-						APPLY
+						Apply
 					</a>
 				</li>
 			</ul>

@@ -21,6 +21,7 @@
 	--offBlack: #333;
 	--shadow: rgba(0, 0, 0, 0.2);
 	--lightShadow: rgba(0, 0, 0, 0.08);
+	--navHover: #f0e6ff;
 
 	--hackPrimary: #c960ff;
 	--hackSecondaryV1: #c137d8;
@@ -54,6 +55,7 @@
 	--offBlack: #d4d4d4;
 	--shadow: rgba(255, 255, 255, 0.2);
 	--lightShadow: rgba(255, 255, 255, 0.08);
+	--navHover: rgba(201, 96, 255, 0.2);
 
 	--hackPrimary: #c960ff;
 	--hackSecondaryV1: #c137d8;
