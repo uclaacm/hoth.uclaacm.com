@@ -35,10 +35,21 @@ export const eventSchedule = [
 		startTime: getPacificDateObj('09:00:00'),
 		events: [
 			{
-				name: 'Hacking Begins / Breakfast Served / Team Formation / Common Experience Room',
+				name: 'Hacking Begins + Breakfast Served + Team Formation',
 				location: 'Palisades Room, Carnesale Commons',
 				description:
-					"Hacking officially begins! Enjoy breakfast, form a team if you don't already have one, settle into the Common Experience breakoom for a quick break, and start working on your projects!",
+					"Hacking officially begins! Enjoy breakfast, form a team if you don't already have one, and start working on your projects!",
+			},
+		],
+	},
+	{
+		startTime: getPacificDateObj('09:00:00'),
+		events: [
+			{
+				name: 'Common Experience Rest Area Opens',
+				location: 'Hermosa Room, Carnesale Commons',
+				description:
+					"Settle into the Common Experience break room anytime during the hackathon for a break and watch this year's title!",
 			},
 		],
 	},
@@ -46,9 +57,9 @@ export const eventSchedule = [
 		startTime: getPacificDateObj('10:00:00'),
 		events: [
 			{
-				name: 'Oracle Workshop',
+				name: 'Oracle Database Workshop',
 				duration: '30 min',
-				location: 'Palisades Room, Carnesale Commons',
+				location: 'Venice Room, Carnesale Commons',
 				description:
 					'Join Oracle for a workshop to learn about their technologies and tools!',
 			},
@@ -70,9 +81,9 @@ export const eventSchedule = [
 		events: [
 			{
 				name: 'Alumni SWE Fireside Chat',
-				location: 'Palisades Room, Carnesale Commons',
+				location: 'Venice Room, Carnesale Commons',
 				description:
-					'Hear from ACM Hack alumni software engineers about their career journeys and advice for aspiring developers.',
+					'Bring your lunch and hear from ACM Hack alumni software engineers about their career journeys and advice for aspiring developers.',
 			},
 		],
 	},
@@ -80,8 +91,8 @@ export const eventSchedule = [
 		startTime: getPacificDateObj('14:30:00'),
 		events: [
 			{
-				name: 'Learn About Vanta',
-				location: 'Palisades Room, Carnesale Commons',
+				name: 'Vanta Info Session',
+				location: 'Venice Room, Carnesale Commons',
 				description:
 					'Learn about Vanta and what they do!',
 			},
@@ -91,10 +102,10 @@ export const eventSchedule = [
 		startTime: getPacificDateObj('17:00:00'),
 		events: [
 			{
-				name: 'Poker',
-				location: 'Palisades Room, Carnesale Commons',
+				name: 'Skribbl Game Break',
+				location: 'Venice Room, Carnesale Commons',
 				description:
-					'Take a break from hacking and enjoy a round of poker with fellow hackers!',
+					'Take a break from hacking and enjoy a playing skribbl.io with fellow hackers to win raffle entries!',
 			},
 		],
 	},
