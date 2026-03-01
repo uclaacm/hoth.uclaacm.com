@@ -78,6 +78,11 @@ export default function Navbar() {
 						Schedule
 					</Link>
 				</li>
+				 <li>
+					<Link to='/workshops' onClick={closeMenu}>
+						Workshops
+					</Link>
+				</li>
 				<li>
 					<Link to='/prizes' onClick={closeMenu}>
 						Prizes
