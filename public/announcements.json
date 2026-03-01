@@ -1,5 +1,11 @@
 [
     {
+        "id": 1,
+        "subject": "Time to check in!",
+        "body": "Good morning HOTH XIII participants!\n\nCheck in has officially started at Carnesale Commons Palisades Room! We\u2019re excited to see you here!",
+        "timestamp": "2026-03-01T16:15:42Z"
+    },
+    {
         "id": 0,
         "subject": "Welcome to HOTH XIII!",
         "body": "Welcome to Hack on the Hill XIII! We're glad to have you, and excited to see what you'll build. HOTH XIII takes place TODAY, Sunday, March 1st, 2026. We'll be periodically updating these announcements with new information, so be sure to keep an eye out! Happy hacking! :)",
