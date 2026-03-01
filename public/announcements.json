@@ -1,5 +1,11 @@
 [
     {
+        "id": 2,
+        "subject": "Opening ceremony starts soon!",
+        "body": "Hello hackers! The beginning of Hack on the Hill is coming! \n\nWe\u2019re kicking things off at our OPENING CEREMONY in 10 MINS in the Carnesale Commons Palisades Room! Excited to see everyone there and welcome you all to our 12-hour hackathon experience!",
+        "timestamp": "2026-03-01T16:33:33Z"
+    },
+    {
         "id": 1,
         "subject": "Time to check in!",
         "body": "Good morning HOTH XIII participants!\n\nCheck in has officially started at Carnesale Commons Palisades Room! We\u2019re excited to see you here!",
