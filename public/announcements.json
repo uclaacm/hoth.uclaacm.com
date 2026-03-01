@@ -1,5 +1,11 @@
 [
     {
+        "id": 3,
+        "subject": "Lunch break!",
+        "body": "Our dedicated lunch break is starting soon in the Palisades Room! Take a break, stretch your legs, stay hydrated, and grab a bite to eat!",
+        "timestamp": "2026-03-01T20:32:26Z"
+    },
+    {
         "id": 2,
         "subject": "Opening ceremony starts soon!",
         "body": "Hello hackers! The beginning of Hack on the Hill is coming! \n\nWe\u2019re kicking things off at our OPENING CEREMONY in 10 MINS in the Carnesale Commons Palisades Room! Excited to see everyone there and welcome you all to our 12-hour hackathon experience!",
