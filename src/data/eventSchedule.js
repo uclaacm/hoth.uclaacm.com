@@ -92,7 +92,7 @@ export const eventSchedule = [
 		events: [
 			{
 				name: 'Vanta Info Session',
-				location: 'Venice Room, Carnesale Commons',
+				location: 'Palisades Room, Carnesale Commons',
 				description:
 					'Learn about Vanta and what they do!',
 			},
