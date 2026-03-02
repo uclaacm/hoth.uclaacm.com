@@ -100,7 +100,7 @@ export default function Navbar() {
 				)}
 				<li>
 					<a
-						href='https://tinyurl.com/HOTH-XIII'
+						href='https://tinyurl.com/HOTH-XIII-submit'
 						className={applyButtonClassName}
 						target='_blank'
 						rel='noopener noreferrer'
