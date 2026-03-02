@@ -105,7 +105,7 @@ export default function Navbar() {
 						target='_blank'
 						rel='noopener noreferrer'
 					>
-						Apply
+						Submit
 					</a>
 				</li>
 			</ul>
